@@ -1,0 +1,589 @@
+--- PAGE 15 ---
+ 
+  GATE Wallah CS & IT Topic wise PYQs  
+Database Management System 
+1.6 
+8. 
+(a) 
+ 
+ 
+The relationship between strong entity set and weak 
+entity set is represented by double/bold diamond. 
+ 
+ 
+9. 
+(a) 
+ 
+ 
+ 
+Cardinality of E1 > Cardinality of E2  
+ 
+ 
+(a) Correct. Every entity of E1 is associated with 
+exactly one entity in E2. 
+ 
+ 
+( its total participation and many to one from E1 
+to E2). 
+ 
+(b) Incorrect. Because mention some entity in E1 
+but here total participation and mention more 
+than one entity in E2 but here many to one (of E2 
+side). 
+ 
+(c) Incorrect. Because there is a many to one from 
+E1 to E2, not from E2 to E1. 
+ 
+(d) Incorrect. Because there is a many to one from 
+E1 to E2. 
+ 
+10. (c) 
+ 
+ 
+Relationship R is many to one and participation of A 
+in R is total. 
+ 
+ 
+11. (4 to 4) 
+ 
+ 
+R12 is many to many relationships between E1 and E2. 
+So, separate table is created 
+ 
+E1 (a11 a12)    E2 (a21 a22)  
+R12 (a11 a21) 
+ 
+ a11 → a12 
+     a21 → a22 
+ 
+ 
+ 
+E3 R13(a31 a32 a11) a31 → a32a11 
+ 
+3NF (Third normal form): Let R be the relational 
+schema and X → Y is non trivial FD is in 3NF  
+ 
+If   X: super key 
+ 
+ 
+   or 
+ 
+      Y: prime attribute 
+ 
+E1 (a11 a12) a11 → a12  
+ 
+E2 (a21 a22) a21 → a22 
+
+
+--- PAGE 16 ---
+ 
+  GATE Wallah CS & IT Topic wise PYQs  
+Database Design and ER Model 
+1.7 
+ 
+R12 (a11a21) 
+ 
+E3R13 (a31 a32 a11)a31 → a32a11 
+ 
+X is a super key 
+ 
+So, R is in 3NF 
+ 
+Minimum 4 table required 
+ 
+ 
+12. (c) 
+ 
+(a) Statement given is correct with respect to ER 
+diagram.  
+ 
+(b) Statement given is correct with respect to ER 
+diagram. 
+ 
+ 
+(c) In ER diagram multivalued attribute and 
+composite attribute both are allowed, but in 
+RDBMS Multivalued attribute and composite 
+attribute are not allowed. 
+ 
+ 
+Each Tuple in RDBMS can have only one value 
+or NULL for each field (Attribute exactly) 
+ 
+ 
+So, option (c) is incorrect. 
+ 
+13. (b) 
+ 
+ 
+ 
+ 
+MR1P   many to one and total participation at 
+many side  
+ 
+MR1(M1M2 M3P1) , here P1 is a foreign key 
+ 
+P(P1 P2) 
+ 
+NR2(N1N2 P1) , here P1 is a foreign key 
+ 
+ 
+ 
+ 
+14. (a) 
+ 
+ 
+MR1(M1 M2 M3 P1), here P1 is a foreign key 
+ 
+P(P1 P2), P1 is primary key 
+ 
+NR2(N1N2P1), here P1 is a foreign key 
+ 
+❑❑❑ 
+
+
+--- PAGE 17 ---
+  
+ 
+  GATE Wallah CS & IT Topic wise PYQs  
+Design of springs 
+1.8 
+ 
+C H A P T E R 
+2 
+ 
+Finding Number of Candidate Key 
+1. [NAT] 
+[GATE-2022 : 1M] 
+ 
+Consider a relation R(A, B, C, D, E) with the 
+following three functional dependencies. 
+ 
+    AB → C ; BC → D ; C → E; 
+ 
+The number of super keys in the relation R is 
+_________. 
+ 
+2. [MCQ] 
+[GATE-2016 : 1M] 
+ 
+Which of the following is NOT a super key in a 
+relational schema with attributes V, W, X, Y, Z and 
+primary key VY ? 
+ 
+(a) V X Y Z 
+(b) V W X Z 
+ 
+(c) V W X Y 
+(d) V W X Y Z 
+ 
+3. [NAT] 
+[GATE-2014 : 1M] 
+ 
+The maximum number of superkeys for the relation 
+schema R (E, F, G, H) with E as the key is 
+______________. 
+ 
+4. [MCQ] 
+[GATE-2014 : 1M] 
+ 
+Consider the relation scheme R = (E, F, G, H, I, J, K, 
+L, M, N ) and the set of functional dependencies 
+ 
+{{E, F}} → {G}, {F} → {I, J},{E, H} → {K, L}, 
+{K} → {M},{L} → {N}} on R. 
+ 
+What is the key for R? 
+ 
+(a) {E, F} 
+ 
+(b) {E, F, H} 
+ 
+(c) {E, F, H, K, L} 
+ 
+(d) {E} 
+5. 
+[MCQ] 
+[GATE-2013 : 2M] 
+ 
+Relation R has eight attributes ABCDEFGH. 
+ 
+Fields of R contain only atomic values. 
+ 
+F = {CH → G, A → BC, B → CFH, E → A, F → EG} 
+is a set of functional 
+ 
+dependencies (FDs) so that F+ is exactly the set of FDs 
+that hold for R. 
+ 
+How many candidate keys does the relation R have? 
+ 
+(a) 3 
+ 
+(b) 4 
+ 
+(c) 5 
+ 
+(d) 6 
+ 
+Membership Set and Equality between FD Sets 
+6. 
+[MSQ] 
+[GATE-2021 : 2M] 
+ 
+Suppose the following functional dependencies hold 
+on a relation U with attributes P, Q, R, S, and T: 
+ 
+•   P → QR 
+ 
+•   RS → T 
+ 
+Which of the following functional dependencies can 
+be inferred from the above functional dependencies? 
+ 
+(a) PS → T 
+(b) R → T 
+ 
+(c) P → R 
+(d) PS → Q 
+ 
+7. 
+[MCQ] 
+[GATE-2015 : 1M] 
+ 
+Consider the relation X(P, Q, R, S, T, U) with the 
+following set of functional dependencies 
+ 
+F = { {P, R} → {S, T}; {P, S, U} → {Q, R};} 
+ 
+Which of the following is the trivial functional 
+dependency in F+ is closure of F ? 
+ 
+(a) {P, R} → {S, T} 
+(b) {P, R} → {R, T} 
+ 
+(c) {P, S} → {S} 
+(d) {P, S, U} → {Q} 
+
+
+--- PAGE 18 ---
+ 
+  GATE Wallah CS & IT Topic wise PYQs  
+Functional Dependency and Normalization 
+1.9 
+Minimal Cover 
+8. [MCQ] 
+[GATE-2017 : 2M] 
+ 
+The following functional dependencies hold true for 
+the relational schema R {V, W, X, Y, Z}: 
+ 
+[V → W; VW → X; Y → VX; Y → Z] 
+ 
+Which of the following is irreducible equivalent for 
+this set of functional dependencies? 
+ 
+(a) V
+W
+V
+X
+Y
+V
+Y
+Z
+→
+→
+→
+→
+ 
+(b) V
+W
+W
+X
+Y
+V
+Y
+Z
+→
+→
+→
+→
+ 
+ 
+(c) V
+W
+V
+X
+Y
+V
+Y
+X
+Y
+Z
+→
+→
+→
+→
+→
+ 
+(d) V
+W
+W
+X
+Y
+V
+Y
+X
+Y
+Z
+→
+→
+→
+→
+→
+ 
+ 
+Properties of Decomposition 
+9. [MCQ] 
+[GATE-2021 : 2M] 
+ 
+Consider the relation R(P, Q, S, T, X, Y, Z, W) with 
+the following functional dependencies 
+ 
+PQ → X ; P → YX ; Q → Y ; Y → ZW 
+ 
+Consider the decomposition of the relation R into the 
+constituent relations according to the following two 
+decomposition schemes 
+ 
+D1: R = [(P, Q, S, T); (P, T, X); (Q, Y); (Y, Z, W)]  
+ 
+D2: R = [(P, Q, S); (T, X); (Q, Y); (Y, Z, W)] 
+ 
+Which one of the following options is correct? 
+ 
+(a) D1 is a lossless decomposition, but D2 is a lossy 
+decomposition. 
+ 
+(b) D1 is a lossy decomposition, but D2 is a lossless 
+decomposition. 
+ 
+(c) Both D1 and D2 are lossless decompositions. 
+ 
+(d) Both D1 and D2 are lossy decompositions. 
+ 
+10. [MCQ] 
+[GATE-2019 : 2M] 
+ 
+Let the set of functional dependencies F = {QR → S, 
+R → P, S → Q} hold on a relation schema  
+X = (PQRS). X is not in BCNF. Suppose X is 
+decomposed into two schemas Y and Z, where Y = (P 
+R) and Z = (Q R S). 
+ 
+Consider the two statements given below. 
+ 
+I. Both Y and Z are in BCNF 
+ 
+II. Decomposition of X into Y and Z is dependency 
+preserving and lossless 
+ 
+Which of the above statements is/are correct? 
+ 
+(a) Both I and II 
+(b) I only 
+ 
+(c) II only 
+(d) Neither I nor II 
+ 
+11. [MCQ] 
+[GATE-2008 : 2M] 
+ 
+Let R(A, B, C, D) be a relational schema with the 
+following functional dependencies: 
+ 
+A → B, B → C, C → D and D → B 
+ 
+The decomposition of R into (A, B),(B, C), (B, D) 
+ 
+(a) Gives a lossless join, and is dependency 
+preserving 
+ 
+(b) Gives a lossless join, but is not dependency 
+preserving 
+ 
+(c) Does not give a lossless join, but is dependency 
+preserving 
+ 
+(d) Does not give a lossless join and is not 
+dependency preserving. 
+ 
+Normal Form 
+12. [MCQ] 
+[GATE-2022 : 1M] 
+ 
+In a relational data model, which one of the following 
+statements is TRUE? 
+ 
+(a) A relation with only two attributes is always in 
+BCNF. 
+ 
+(b) If all attributes of a relation are prime attributes, 
+then the relation is in BCNF. 
+ 
+(c) Every relation has at least one non-prime 
+attribute. 
+ 
+(d) BCNF 
+decompositions 
+preserve 
+functional 
+dependencies. 
+ 
+13. [MCQ] 
+[GATE-2020 : 2M] 
+ 
+Consider a relational table R that is in 3 NF, but not in 
+BCNF. Which one of the following statements is 
+TRUE? 
+
+
+--- PAGE 19 ---
+ 
+  GATE Wallah CS & IT Topic wise PYQs  
+Database Management System 
+1.10 
+ 
+(a) R has a non-trivial functional dependency 
+X → A, where X is not a superkey and A is a 
+prime attribute. 
+ 
+(b) R has a non-trivial functional dependency 
+X → A, where X is not a superkey and A is a non-
+prime attribute and X is not a proper subset of any 
+key. 
+ 
+(c) R has a non-trivial functional dependency 
+X → A, where X is not a superkey and A is a non-
+prime attribute and X is a proper subset of some 
+key. 
+ 
+(d) A cell in R holds a set instead of an atomic value. 
+ 
+14. [MCQ] 
+[GATE-2018 : 2M] 
+ 
+Consider the following four relational schemas. For 
+each schema, all non-trivial functional dependencies 
+are listed. The underlined attributes are the respective 
+primary keys. 
+ 
+Schema I: 
+ 
+Registration (rollno, courses) 
+ 
+Field 'courses' is a set-valued attribute containing the 
+set of courses a student has registered for. 
+ 
+Non-trivial functional dependency: 
+ 
+rollno → courses 
+ 
+Schema II: 
+ 
+Registration (rollno, courseid, email) 
+ 
+Non-trivial functional dependencies: 
+ 
+rollno, courseid → email 
+ 
+email → rollno 
+ 
+Schema III: 
+ 
+Registration (rollno, courseid, marks, grade) 
+ 
+Non-trivial functional dependencies: 
+ 
+rollno, courseid → marks, grade 
+ 
+marks → grade 
+ 
+Schema IV: 
+ 
+Registration (rollno, courseid, credit) 
+ 
+Non-trivial functional dependencies: 
+ 
+rollno, courseid → credit 
+ 
+courseid → credit 
+ 
+Which one of the relational schemas above is in 3 NF 
+but not in BCNF? 
+ 
+(a) Schema I 
+(b) Schema II 
+ 
+(c) Schema III 
+(d) Schema IV 
+ 
+15. [MCQ] 
+[GATE-2014 : 2M] 
+ 
+Given the following two statements: 
+ 
+S1: Every table with two single-valued attributes is in 
+1 NF, 2 NF, 3 NF and BCNF. 
+ 
+S2: AB → C, D → E, E → C is a minimal cover for 
+the set of functional dependencies AB → C, 
+D → E, AB → E, E → C. 
+ 
+Which one of the following is CORRECT? 
+ 
+(a) S1 is TRUE and S2 is FALSE. 
+ 
+(b) Both S1 and S2 are TRUE. 
+ 
+(c) S1 is FALSE and S2 TRUE. 
+ 
+(d) Both S1 and S2 are FALSE. 
+ 
+16. [MCQ] 
+[GATE-2013 : 2M] 
+ 
+Relation R has eight attributes ABCDEFGH. 
+ 
+Fields of R contain only atomic values. 
+ 
+F = {CH → G, A → BC, B → CFH, E → A, F → E 
+G} is a set of functional dependencies (FDs) so that 
+F+ is exactly the set of FDs that hold for R. 
+ 
+The relation R is 
+ 
+(a) in 1 NF, but not in 2 NF. 
+ 
+(b) in 2 NF, but not in 3 NF. 
+ 
+(c) in 3 NF, but not in BCNF. 
+ 
+(d) in BCNF. 
+ 
+17. [MCQ] 
+[GATE-2012 : 1M] 
+ 
+Which of the following is TRUE?  
+ 
+(a) Every relation in 3 NF is also in BCNF 
+ 
+(b) A relation R is in 3 NF if every non-prime 
+attribute of R is fully functionally dependent on 
+every key of R 
+ 
+(c) Every relation in BCNF is also in 3 NF 
+ 
+(d) No relation can be in both BCNF and 3 NF 
+
+

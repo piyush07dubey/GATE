@@ -1,0 +1,1574 @@
+[
+  {
+    "name": "Engineering Mathematics",
+    "id": "engg-math",
+    "line_index": 72,
+    "line": "SECTION 1 : ENGINEERING MATHEMATICS"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 86,
+    "line": "SECTION 2 : DIGITAL LOGIC"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 91,
+    "line": "SECTION 3 : COMPUTER ORGANIZATION AND ARCHITECTURE"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 96,
+    "line": "SECTION 4 : PROGRAMMING AND DATA STRUCTURES"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 100,
+    "line": "SECTION 5 : ALGORITHMS"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 111,
+    "line": "SECTION 6: THEORY OF COMPUTATION"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 115,
+    "line": "SECTION 7:  COMPILER DESIGN"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 129,
+    "line": "SECTION 10 : COMPUTER NETWORKS"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 548,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 776,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 946,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 1388,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 1649,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 1886,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 2109,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 2379,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 2921,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 3239,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 3513,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 3736,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 3889,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 4025,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 4199,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 4611,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 4968,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 5330,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 5644,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 5943,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 6331,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 6716,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 7088,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 7498,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 7838,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 8187,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 8484,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 8698,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 8855,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 9218,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Database Management System",
+    "id": "dbms",
+    "line_index": 9439,
+    "line": "Database Management System"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 9832,
+    "line": "CPU Scheduling Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 9838,
+    "line": "algorithms can potentially cause starvation?"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 9914,
+    "line": "algorithms Shortest Job First (SJF) and Round"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 10068,
+    "line": "following process scheduling algorithms would"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 11296,
+    "line": "comapred with other algorithms. Here it is given"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 15285,
+    "line": "page replacement algorithms."
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 15524,
+    "line": "algorithms it is possible for the page fault rate to"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 16771,
+    "line": "page replacement algorithms."
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 17516,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 17750,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 18127,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 18471,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 18870,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 19115,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 19515,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 19994,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 20436,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 20808,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 21355,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 21570,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 21658,
+    "line": "Two popular routing algorithms are Distance"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 21772,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 21978,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 22152,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 22431,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 22727,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 22967,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 23268,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 23367,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 23668,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 23839,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Networks",
+    "id": "cn",
+    "line_index": 24063,
+    "line": "Computer Networks"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 24463,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 24744,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 24917,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 25230,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 25512,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 25775,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 25971,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 26213,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 26353,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 26511,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 26791,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 27064,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 27368,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 27824,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 28258,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 28631,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 29161,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 29441,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 29687,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 30043,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 30277,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 30660,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 30966,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 31173,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 31435,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 31603,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 31881,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 32188,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 32448,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 32642,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 32791,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 33067,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Computer Organization and Architecture",
+    "id": "coa",
+    "line_index": 33381,
+    "line": "Computer Organization and Architecture"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 33849,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 34348,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 34531,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 34786,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 35105,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 35414,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 35655,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 36096,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 36408,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 36780,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 37070,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 37341,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 37459,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 37593,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 37742,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 37974,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 38311,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 38655,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 38873,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 39192,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 39478,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 39699,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 39971,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 40172,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 40356,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 40613,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 41062,
+    "line": "about the time complexity of algorithms that solve"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 41098,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 41305,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 41623,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 41883,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 42037,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 42403,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 42594,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 42757,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 42856,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 43001,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 43153,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 43469,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 43782,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44058,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44209,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44373,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44491,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44698,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44828,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 44960,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 45113,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 45345,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 45717,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 45956,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Programming and Data Structures",
+    "id": "pds",
+    "line_index": 46211,
+    "line": "Programming and Data Structures"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 46617,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 47024,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 47344,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 47715,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 48692,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 48751,
+    "line": "Assume that the algorithms considered here sorts the"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 48954,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 49424,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 49746,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 50182,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 50300,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 50463,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 50654,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 50968,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 51136,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 51488,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 51672,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 51898,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 52190,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 52363,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 52564,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 52781,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 52844,
+    "line": "Given below are some algorithms, and some"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 53063,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 53069,
+    "line": "Match the algorithms with their time complexities:"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 53165,
+    "line": "property is the basis for the algorithms that we"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 53194,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 53373,
+    "line": "Algorithms"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 53823,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 54475,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 54786,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 55000,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 55175,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 55368,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 55547,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 55756,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 55904,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 56117,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 56274,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 56422,
+    "line": "There exist parsing algorithms for some"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 56464,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 56724,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Algorithms",
+    "id": "algo",
+    "line_index": 56914,
+    "line": "\u201cThere exist parsing algorithms for some"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 56924,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 57129,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 57603,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Compiler Design",
+    "id": "compiler",
+    "line_index": 57777,
+    "line": "Compiler Design"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 58115,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 58432,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 58719,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 58931,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 59145,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 59567,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 59750,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 59923,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 60141,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 60376,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 60842,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 61144,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 61434,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 61653,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 61929,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 62166,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 62658,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 62935,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 63216,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 63404,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 63693,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Theory of Computation",
+    "id": "toc",
+    "line_index": 63915,
+    "line": "Theory of Computation"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 64290,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 64546,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 64910,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 65446,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 65724,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 66099,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 66606,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 66845,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 67142,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 67296,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 67441,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 67519,
+    "line": "Which one of the following digital logic blocks is the"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 67712,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 67988,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 68399,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 68575,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 68826,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Digital Logic",
+    "id": "digital-logic",
+    "line_index": 69179,
+    "line": "Digital Logic"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 69636,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 69977,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 70322,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 71023,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 71569,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 72044,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 72360,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 72579,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 73081,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 73426,
+    "line": "Discrete Mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 73693,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 74007,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 74268,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 74515,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 74896,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 75073,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 75315,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 75825,
+    "line": "Discrete mathematics"
+  },
+  {
+    "name": "Discrete Mathematics",
+    "id": "discrete-math",
+    "line_index": 76643,
+    "line": "Discrete mathematics"
+  }
+]
