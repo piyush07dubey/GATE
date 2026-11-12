@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { api, API_BASE } from '../lib/api';
+import { api } from '../lib/api';
 import { toast } from 'react-hot-toast';
 
 const AuthContext = createContext();
@@ -8,7 +8,7 @@ export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem('access_token');
@@ -16,11 +16,30 @@ export const AuthProvider = ({ children }) => {
     if (token && savedUser) {
       try {
         setUser(JSON.parse(savedUser));
+        // Verify with /auth/me in background
+        api.get('/auth/me')
+          .then((profile) => {
+            const updated = {
+              id: profile.email,
+              email: profile.email,
+              user_metadata: { full_name: profile.full_name },
+            };
+            setUser(updated);
+            localStorage.setItem('user', JSON.stringify(updated));
+          })
+          .catch(() => {
+            // Token expired or invalid
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('user');
+            setUser(null);
+          });
       } catch {
         localStorage.removeItem('access_token');
         localStorage.removeItem('user');
+        setUser(null);
       }
     }
+    setLoading(false);
   }, []);
 
   const signInWithEmail = async (email, password) => {
@@ -28,11 +47,16 @@ export const AuthProvider = ({ children }) => {
     try {
       const data = await api.postForm('/auth/token', { username: email, password });
       localStorage.setItem('access_token', data.access_token);
-      const user = { id: email, email, user_metadata: { full_name: email.split('@')[0] } };
-      localStorage.setItem('user', JSON.stringify(user));
-      setUser(user);
-      toast.success('Signed in successfully');
-      return data;
+      const fullName = data.user?.full_name || email.split('@')[0];
+      const userData = {
+        id: email,
+        email,
+        user_metadata: { full_name: fullName },
+      };
+      localStorage.setItem('user', JSON.stringify(userData));
+      setUser(userData);
+      toast.success(`Welcome back, ${fullName}!`);
+      return userData;
     } finally {
       setLoading(false);
     }
@@ -41,23 +65,24 @@ export const AuthProvider = ({ children }) => {
   const signUpWithEmail = async (email, password, fullName) => {
     setLoading(true);
     try {
-      const data = await api.post('/auth/register', { email, password, full_name: fullName });
-      toast.success('Account created! Please sign in.');
-      return data;
+      await api.post('/auth/register', { email, password, full_name: fullName });
+      toast.success('Account created! Signing you in...');
+      // Automatically log in upon successful sign-up
+      return await signInWithEmail(email, password);
     } finally {
       setLoading(false);
     }
   };
 
   const signInWithGoogle = async () => {
-    toast.error('Google Sign-In is not available in local mode');
+    toast.error('Google Sign-In requires OAuth configuration. Please sign in with email.');
   };
 
   const signOut = async () => {
     localStorage.removeItem('access_token');
     localStorage.removeItem('user');
     setUser(null);
-    toast.success('Logged out');
+    toast.success('Logged out successfully');
   };
 
   return (

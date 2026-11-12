@@ -63,6 +63,10 @@ echo [INFO] API docs: http://localhost:8001/docs
 echo [INFO] Press Ctrl+C to stop
 echo.
 
-uvicorn standalone_main:app --host 0.0.0.0 --port 8001 --reload
+if exist .venv\Scripts\python.exe (
+    .\.venv\Scripts\python.exe -m uvicorn standalone_main:app --host 127.0.0.1 --port 8001 --reload
+) else (
+    python -m uvicorn standalone_main:app --host 127.0.0.1 --port 8001 --reload
+)
 
 pause

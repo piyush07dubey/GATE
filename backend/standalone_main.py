@@ -15,11 +15,14 @@ import json
 import asyncio
 import hashlib
 from contextlib import asynccontextmanager
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional, List
+import jwt
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, Form
+from fastapi import FastAPI, HTTPException, Form, Depends
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -54,8 +57,37 @@ def load_questions():
 # ── Simple in-memory user store (fallback) ────────────────────────────────────
 _users: dict = {}   # email → {email, hashed_password, full_name}
 
+SECRET_KEY = os.getenv("SECRET_KEY", "change-me-in-production-use-a-strong-secret-key-here")
+ALGORITHM  = os.getenv("ALGORITHM", "HS256")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
+
+security = HTTPBearer(auto_error=False)
+
 def _hash(pw: str) -> str:
     return hashlib.sha256(pw.encode()).hexdigest()
+
+def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
+async def get_current_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)) -> Optional[dict]:
+    if not credentials:
+        return None
+    token = credentials.credentials
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        email: str = payload.get("sub")
+        if not email:
+            return None
+        if _mongo_connected and _db is not None:
+            user = await _db["users"].find_one({"email": email})
+            if user:
+                return user
+        return _users.get(email)
+    except Exception:
+        return None
 
 # ── Schemas ────────────────────────────────────────────────────────────────────
 class RegisterRequest(BaseModel):
@@ -299,7 +331,30 @@ async def login(username: str = Form(...), password: str = Form(...)):
 
     if not user or user.get("hashed_password") != hashed:
         raise HTTPException(status_code=401, detail="Incorrect email or password")
-    return {"access_token": f"local-{username}", "token_type": "bearer", "expires_in": 3600}
+
+    full_name = user.get("full_name") or user["email"].split("@")[0]
+    token = create_access_token(data={"sub": user["email"], "name": full_name})
+
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "expires_in": ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+        "user": {
+            "email": user["email"],
+            "full_name": full_name,
+        },
+    }
+
+@app.get("/auth/me", tags=["auth"])
+async def get_me(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)):
+    """Return currently authenticated user profile"""
+    user = await get_current_user(credentials)
+    if not user:
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    return {
+        "email": user["email"],
+        "full_name": user.get("full_name") or user["email"].split("@")[0],
+    }
 
 # ── Check Answer ───────────────────────────────────────────────────────────────
 @app.post("/check-answer", response_model=CheckAnswerResponse, tags=["check-answer"])
@@ -347,4 +402,4 @@ async def ask_rag(body: AskRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8001, reload=False)
+    uvicorn.run(app, host="127.0.0.1", port=8001, reload=False)

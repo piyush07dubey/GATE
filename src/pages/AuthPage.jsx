@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FcGoogle } from 'react-icons/fc';
 import { FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
@@ -14,6 +14,8 @@ const AuthPage = () => {
   
   const { signInWithEmail, signUpWithEmail, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ const AuthPage = () => {
       } else {
         await signUpWithEmail(email, password, name);
       }
-      navigate('/');
+      navigate(from, { replace: true });
     } catch (error) {
       toast.error(error.message || 'Authentication failed');
     } finally {
