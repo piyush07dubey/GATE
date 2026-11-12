@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { FiMenu, FiX, FiUser, FiLogOut } from 'react-icons/fi';
+import { FiMenu, FiX, FiLogOut, FiChevronDown } from 'react-icons/fi';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import toast from 'react-hot-toast';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,6 +46,7 @@ const Navbar = () => {
     try {
       await signOut();
       navigate('/');
+      toast.success('Signed out successfully');
     } catch (error) {
       toast.error('Failed to sign out');
     }
@@ -62,12 +60,17 @@ const Navbar = () => {
     { name: 'Resources', path: '/resources' },
   ];
 
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path.split('/').slice(0, 2).join('/'));
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo">
-          <div className="logo-icon">G</div>
-          <span className="logo-text-gradient">GATE Platform</span>
+          <img src="/gateforge-logo.png" alt="GATEForge" className="logo-img" />
+          <span className="logo-text-gradient">GATEForge</span>
         </Link>
 
         <div className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
@@ -75,12 +78,12 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`navbar-link ${location.pathname.startsWith(link.path.split('/')[1]) ? 'active' : ''}`}
+              className={`navbar-link ${isActive(link.path) ? 'active' : ''}`}
             >
               {link.name}
             </Link>
           ))}
-          
+
           {/* Mobile Auth Links */}
           {isMobileMenuOpen && !user && (
             <Link to="/auth" className="btn btn-primary" style={{ marginTop: '1rem' }}>
@@ -97,8 +100,8 @@ const Navbar = () => {
         <div className="navbar-actions">
           {user ? (
             <div className="hidden-mobile" style={{ position: 'relative' }}>
-              <div 
-                className="navbar-user" 
+              <div
+                className="navbar-user"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 <div className="navbar-avatar">
@@ -107,8 +110,9 @@ const Navbar = () => {
                 <span style={{ fontSize: '14px', fontWeight: 500 }}>
                   {user.user_metadata?.full_name?.split(' ')[0] || 'Student'}
                 </span>
+                <FiChevronDown style={{ fontSize: '12px', color: 'var(--color-text-secondary)' }} />
               </div>
-              
+
               {isDropdownOpen && (
                 <div style={{
                   position: 'absolute',
@@ -118,13 +122,18 @@ const Navbar = () => {
                   border: '1px solid var(--color-border)',
                   borderRadius: 'var(--radius-md)',
                   padding: 'var(--space-xs)',
-                  minWidth: '150px',
-                  boxShadow: 'var(--shadow-lg)'
+                  minWidth: '160px',
+                  boxShadow: 'var(--shadow-lg)',
+                  zIndex: 200,
                 }}>
-                  <button 
+                  <div style={{ padding: '0.5rem 1rem', borderBottom: '1px solid var(--color-border)', marginBottom: '0.25rem' }}>
+                    <div style={{ fontSize: '12px', color: 'var(--color-text-tertiary)', fontFamily: 'var(--font-mono)' }}>LOGGED IN AS</div>
+                    <div style={{ fontSize: '13px', fontWeight: 600, marginTop: '2px' }}>{user.email}</div>
+                  </div>
+                  <button
                     onClick={handleSignOut}
                     className="btn btn-ghost"
-                    style={{ width: '100%', justifyContent: 'flex-start' }}
+                    style={{ width: '100%', justifyContent: 'flex-start', fontSize: '13px' }}
                   >
                     <FiLogOut /> Sign Out
                   </button>
@@ -137,9 +146,10 @@ const Navbar = () => {
             </Link>
           )}
 
-          <button 
+          <button
             className="mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <FiX /> : <FiMenu />}
           </button>

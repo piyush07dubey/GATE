@@ -1,0 +1,368 @@
+[
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "m and left to right  we get    3,1,2,2,1,3,4,4,4    ? Option a is correct answer.          GATE Wallah CS & IT Topic wise PYQs   Functions and Storage Classes  5.29  15. (d)         Answer is option (d)         16. (b)    void get (int n) {    if (n < 1) return;      get (n ? 1); ? Recursion call with 1 less argument    get (n ? 3); ? Recursion call with 3 less argument    printf(?%d?",
+    "position": 574642
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "T Topic wise PYQ  Number System and binary Codes  9.5    Now, to represent the above number in hexadecimal  form, make the group of 4 bits.    (0010 1000 1111)2 = (028F)16     Hence, correct answer is option (b).      8.  (d)    The given equation is     ( ) ( ) 121 11 r r =     Let r be any base    2 1 0 1 2 1 r r r ? + ? + ? =  1 0 1 1 r r ? + ?     2 2 1 r r",
+    "position": 963872
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "gative sign     ? (r + 1) = r + 1     2r + 2 = 0    r = ?1 (radix cannot be negative)    Take positive sign     r + 1 = r + 1    for all value which is greater than 2.    Hence, correct answer is option (d).      9. (c)    To find 2?s complement of -28 first we convert +28  in binary system and then take 2?s  complement       (28)10 =(0000 0000 0001 1100)2    Now  taking 2?s complement of (000",
+    "position": 964370
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "C",
+    "context": "       (28)10 =(0000 0000 0001 1100)2    Now  taking 2?s complement of (0000 0000 0001  1100)2=1111 1111 111 0100    Hence                     ?28 ? 1111 1111 1110 0100    Therofre correct answer is option (C)  10. (0.502)  Decimal  Unsigned representation  1  0001  2  0010  3  0011  4  0100  5  0101  6  0110  4  0111  7  0111  8  1000  9  1001  10  1010  11  1011  12  1100  1",
+    "position": 964711
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": " + (2n?1 ?1)    For n = 8 (Given 8 bit number)    The minimum will be     ? ? (28?1)     ? ? (27)     ? ?128     The maximum number will be given as     (2n?1) = 127    Hence, correct answer is option (b).        18. (a)    Method 1:    The given number is     P = (F87B)16    P = 1111100001111011 = (?1925)    2?s complement of the above number will be given  as    = 0000011110000101  ",
+    "position": 967796
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " ? (?1925) = ?15400    Its binary representation will be 0011110000101000    Now, 2?s complement of the above number will be  given as    1100001111011000    8P ?(C3D8)16    Hence, correct answer is option (a)    Method 2:     P = (F87B)16      = 1111100001111011    By multiplying 21 , number will be shifted to left by  one position, and by multiplying 23 , number will be  shifted by 3 position t",
+    "position": 968373
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "21 , number will be shifted to left by  one position, and by multiplying 23 , number will be  shifted by 3 position to the left.    ? 11 00 00 1111011000      8P ? (C3D8)16    Hence, correct answer is option (a)  ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  9.8    C H A P T E R    2    Boolean Algebra  1. [MCQ]  [GATE-2022: 1M]    The dual of a Boolean function F(x1,",
+    "position": 968674
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": ":    F = FD    F = AB    FD = A+B    Dual A A ??? ?     Dual A A ??? ?     Ex-    F = AB + BC + AC    FD = (A + B) ?(B + C) (A + C)    FD= AB + BC + AC    Hence, correct answer is option (d)      2. (c)    (a) wx + w (x +y) + x(x +y) = x +wy       wx + wx +wy + x + xy        x [w +w + 1+ y] + wy       = x + wy    Therefore, option a is correct    (b)  ( ) wx y z wx",
+    "position": 980350
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "=        w x y + w x x z + w x y        wxy + wx ? ? ? ? y    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.8       ( ) xy w w +        xy       Hence correct answer is option (c)    (d) (w + y) (wxy + wyz) = wxy +wyz       wxy +wyz + wxy + wyz       wxy + wyz     Therefore, option d is correct.      3.  (b)    We can see that the given truth table is the outpu",
+    "position": 981000
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " and we know that X-OR logic follows  both commutative and associative operation.     A ?B = B ?A ? follow commutative law    (A ?B) ?C = A ? (B ?C) Follow associative  law.    Hence, correct answer is option (a).      4.  (a)    The given Boolean expression is    = D AB AC + ACD +ACD + +     =  ( ) D AB AC + CD A+A + +     = D AB AC + CD  + +           =   D CD AB + AC  + +",
+    "position": 981438
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " ? ?     ? CD A  + B A + C  ? ?? ? ? ? ?? ?     ? CD A A + AC AB + BC ? ? ? + ? ?    ? CD AC+AB + BC ? ? ? ?    = AC CD + ABCD + BCCD ?     ? ABCD    Hence, correct answer is option (a).      5.  (a)    Standard mininmal from    F = P + QR    ( )( ) ( ) F = P Q + Q R + Q P + P QR +        = PQR PQR+PQR PQR+PQR+PQR+PQR + +         = ?m(0,1,2,3,7)        =",
+    "position": 981965
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": ",1,2,3,7)        = ?M (4,5,6)      6. (a)    The equation of the given truth table will be given as     ( ) ( ) F x,y = xy xy             = x y y x + + =         Hence, correct answer is option (a)      7. (d)    Let us see the 4-bit number multiplication.      GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.9          Input = 24 ? 24      output",
+    "position": 982365
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " The amount of ROM needed to implement a 4 bit  multiplier is      ROM   = 24 ? 24 ? 8               = 28 ?23         = 211         = 2 ? 210         = 2k bits    Hence, correct answer is option (d).      8. (b)    The given expression is     (?+ ?? + ??) ?(?+ ?? + ?) ?(?+ ?+ ??)     Let P + Q x =     ?( ) ( ) ( )  x R x R P Q + R + ? + +      (By distribution Theorem",
+    "position": 982794
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": " ? x. (P + Q + R?)    ?( ) ( ) P Q P Q R + ? + +      P PQ + PR + PQ Q Q QR ? + + ? +       P 1 Q +R Q Q R ? ? = + + + ? ?     = P + Q? R?     Hence, correct answer is option (b).      9. (a)    The given expression is    ( ) F P,Q,R PQ + QR PR = +     The Standard canonical form of the above  expression will be given as:           ( ) ( ) ( ) ( ) F P",
+    "position": 983255
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " + +              PQR PQR + PQR PQR PQR PQR = + + + +        6 7 2 6 4 6 m m m m m m = + + + + +        2 4 6 7 m m m m = + + +      Hence, correct answer is option (a).      10. (a)    The given expression is    (P + Q?) (P.Q? + P.R) (P?.R? + Q?)    ?( ) ( ) PQ PR PQ PQ PR Q + + + ? + R     ?( ) ( ) PQ PR PR Q + ? +     = ( ) ",
+    "position": 983720
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "Q + ? +     = ( ) ( ) P Q + ? + Q R PR     = ( )( ) + + Q R PPR PQ    ( )( ) = + Q R PQ    = + PQ PQR    ( ) 1 = + PQ R     = PQ    Hence, correct answer is option (a).      11. (c)    We will put X1 = 1, X2 = 1, X3 = 1, X4 = 1    1 ? 1 ? 1 ? 1 = 0     By taking the above values ,we will see all the  options one-by-one.    ?  X 1. X 2. X 3. X 4 = 1.1.1",
+    "position": 984115
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": ")    x1 ? x2  ? 0 = x3 ? x4     x1 ? x2 = x3 ? x4    We know that      ? = ? A B A B    1 2 3 4 x x  x x = ? ?     1 2 3 4 x x  x x = ? ?     Hence, correct answer is option (c)            12. (a)    Given           x # 0 = x,           x #1 = ??,           x # x = 0 ,          x # ?? = 1                We can see from the given condition that the logic  operator # ",
+    "position": 985115
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "            We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,                                   x # y = xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence co",
+    "position": 985459
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "   13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Option (a)    (x + y) ? z = x ? (y + z)    (x + y) ? z= (x + y)  z? + (?+ ????????)  z    (x + y) ? z= xz? + y z? + x? y? z    x  ? (y+z)=x(?+ ????????) +x? (y + z)    x ",
+    "position": 985685
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "?              = ? ? ? ? 1 Q P 0 ? ? ?     = Q P ?     = P Q ?     Note: P 1 = P Q 0 = Q P Q = P Q = P Q Z Z = O ?? ? ? ??? ? ? ? ? ?     Hence, correct answer is option (d).         19. (d)    We know that Exclusive NOR of x and y    = ( ) x y ?     = ( ) ( ) x y xy' + x'y ' ? =     = ( )( ) ( ) x' y x y' + +     = x'y' + xy    ? ",
+    "position": 988058
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "y' + xy    ?  xy + x'y' = x y   [Exclusive OR]    ?  x ? y' = x y   [Exclusive OR]    ?  x' ? y = x y   [Exclusive OR]    ?  x' ? y' = x ? y   [Exclusive NOR]      Hence, correct answer is option (d).      20. (d)    Let us see the output of all the given options we get    (a)      (b)      (c)      (d)      Hence, correct answer is option (d).        GATE Wallah CS & IT ",
+    "position": 988463
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "clusive NOR]      Hence, correct answer is option (d).      20. (d)    Let us see the output of all the given options we get    (a)      (b)      (c)      (d)      Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.13  21. (a)    Let us see the output of the given logic circuit at  each stage, we get        ",
+    "position": 988628
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " circuit will be given  by    ( )( ) f PQ QR PR QR = + +     f PQR PQR PQR QR = + + +     f PQR QR = +     ( ) f QR P+1 =     f Q +R =     Hence, correct answer is option (a).      22. (b)    The given expression is     f = (AB + C)    By using distribution theorem, we can write above  expression as    f = (A + C)  ? (B + C)    Note: Whenever in the problem,",
+    "position": 989080
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "tes are  asked, write the function in POS.    Now, the above expression is in POS form.    Hence, three NOR gates will be required to  implement f as shown below            Hence, correct answer is option (b).      23. (a)    We now, that    NAND/NOR is functionally complete.        And from the above options only EX-NOR is not  functionally complete    Hence, correct answer is option (a).  ",
+    "position": 989507
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "ct answer is option (b).      23. (a)    We now, that    NAND/NOR is functionally complete.        And from the above options only EX-NOR is not  functionally complete    Hence, correct answer is option (a).            GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.14    24. (c)          25. (3)     The given function is     f(w,x,y,z) = ?(0, 2, 4, 5, 6, 10)      The k-map",
+    "position": 989704
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "ps  9.15  28. (a)        f(w, x, y, z) = ?m(0, 1, 2, 3, 7, 8, 10) + ?d(5, 6, 11, 15)      from above K-Map 2 quad is possible     Therefore  f(w,x,y,z) = ( x + z) ( w + z )    Hence option answer is option (a).      29. (a)    The given function is     F (P, Q, R, S) = PQ + P Q R S    Its standard canonical form will be     F (P, Q, R, S) = PQ (R? + R) (S? + S) + P?QR (S? + S) + P? Q            ",
+    "position": 990724
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "PQRS + PQ RS + PQR S + PQRS + PQRS +      PQRS+ PQRS    ?m = (12, 13, 14, 15, 6, 7, 5)    Now, the k-map of the above function will be given  as below      = PQ + QS + QR    Hence, correct answer is option (a).        30. (b)    The given function is     F (P,Q,R,S) = ? 0, 2, 5, 7, 8,10,13,15    The k-map of the above functions is given below        From the above k-map    F = Q S QS +   ",
+    "position": 991315
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": ")    The given function is     F (P,Q,R,S) = ? 0, 2, 5, 7, 8,10,13,15    The k-map of the above functions is given below        From the above k-map    F = Q S QS +     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).     ",
+    "position": 991554
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence,",
+    "position": 991746
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " 32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence, correct answer is option (a).        33. (a)    The given expression is    f (A, B, C, D) = ?m(2, 3, 6, 7, 8, 9, 10, 11, 12 13)    k-map of the above expression will be given as        AC + AC AB f = +     AC",
+    "position": 991975
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "the above expression will be given as        AC + AC AB f = +     AC + AC B C f = +           We can see from the above expression that f is     independent of D.    Hence, correct answer is option (a).        ???         GATE Wallah CS  & IT Topic wise PYQs   Design of springs  9.17    C H A P T E R    3    BCD Adder and Subtractor   1. [NAT]                        [GATE-2016: 1M",
+    "position": 992317
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "AB B C+  + C A ABC ABC ABC ABC + + +           f (ABC) = ?m (0, 1, 2, 3, 5)    Now implementing on 2 ? 1 mux.           ? (X0 X1 X2 X3 X4 X5 X6 X7) = (11011100)    Hence correct answer is option (c).      3.  (a)    F = ( ) ( ) X X YZ X X YZ + XYZ XYZ + + + +       = XYZ XYZ XY XYZ + XYZ XYZ Z + + + +      =  ( ) m 0,1,3,4,5,6 ?             GATE Walla",
+    "position": 997596
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " P?.0 + P.R = P R    MUX -2 output                X = Q?. R? + Q. f1               X = Q?. R? + Q.P.R    Its minimal sum of product form output               X= Q?.R? + PQR    Hence, correct answer is option (d).       7. (c)    Then given circuit will be as follows       From the given condition if     x =1    y = a    Otherwise, y = b    The truth table of the above circuit will be given as",
+    "position": 998683
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "   GATE Wallah CS  & IT Topic wise PYQs   Digital Logic  9.22    y (x, a, b) =  ?m(1, 3, 6, 7)    The k-map of the above function will be           y = x a + x b        Hence, correct answer is option (c).      8. (b)  Given multiplexer diagram redrawn as      The output of the given multiplexer will be given as    = + + + f PQR PQR PQR PQR        f 1 2 4 7 = m + m + m + m    ",
+    "position": 999253
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "PQR PQR        f 1 2 4 7 = m + m + m + m       f  =  ( ) m 1,2,4,7 ?     By using k-map we get       = + + + f PQR PQR PQR PQR    f = P Q R ? ?     Hence, correct answer is option (b).      9.  (1034)        1 kB RAM=1024 = 210    m = 10    n = 210 = 1024    m + n = 10 + 1024= 1034      10. (b)      We can see that the given circuit is 3 to 8  decoder and its ",
+    "position": 999620
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "be given as.    ( ) f m 1,3,4,6 = ?         GATE Wallah CS  & IT Topic wise PYQs   Combinational Logic Circuits  9.23    By using k-map we get       f = xz + xz    Hence, correct answer is option (b).      11. (a)    We know that    D0 ? MSB     D3 ? LSB    we can see that the given truth table is the truth table  of priority encoder.            V=0 is invalid output.           V=1 ",
+    "position": 1000052
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "   D0 ? MSB     D3 ? LSB    we can see that the given truth table is the truth table  of priority encoder.            V=0 is invalid output.           V=1 is valid output    Hence, correct answer is option (a).    ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  9.24    C H A P T E R    4    Flip Flops  1. [MCQ]                        [GATE-2023: 1M]    The output of ",
+    "position": 1000308
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " CLK  Qn of JK Flip Flop  0  0  1  1  2  1  3  0  4  1  5  1    From the above truth table the Output of JK Flip  Flop will be    0 ? 1?1?0?1?1    = 011011...    Hence, correct answer is option (a).      4. (c)    The truth table of the given flip-flop will be    JK-flip flop  CLK  Q2  Q1  Q0  0  0  0  0  1  1  0  0  2  1  1  0  3  1  1  1    From the above truth tab",
+    "position": 1009028
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "  Q2  Q1  Q0  0  0  0  0  1  1  0  0  2  1  1  0  3  1  1  1    From the above truth table, the state sequence for next  3 clock cycles are 100, 110 and 111.    Hence, correct answer is option (c).        5. (a)    The number of Flip Flops needed to design Mod-M  counter,          M ? 2n         ?(i)    where n = number of flip flops     to solve (i) by taking log on both si",
+    "position": 1009339
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " of flip flops     to solve (i) by taking log on both sides we get,    n ? log2 M    n ? log2 258                                [?  M = 258]    n ? 8.01122    9 n ?     Hence, correct answer is option (a).      6. (c)    As per the given conditions, the truth table will be  given as  CLOCK  P  Q  R  0  0  0  0  1  0  1  0  2  0  1  1  3  1  0  0  4  0  0  0    We can se",
+    "position": 1009701
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": " 0  2  0  1  1  3  1  0  0  4  0  0  0    We can see that the above truth table is the output of  a mod- 4 counter.     Hence total number of distinct states = 4    Hence, correct answer is option (b)        7. (d)    In the circuit PQR = 010    Before applying the clock, input of the Flip-flop  =011    So, in the D-FF whatever the inputs applied that will  come at the output along with",
+    "position": 1010055
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "pplying the clock, input of the Flip-flop  =011    So, in the D-FF whatever the inputs applied that will  come at the output along with clock.    So, output of counter = 011    Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.30  8. (d)    We know that truth table of JK flip-flop is given by   Qn  Qn+1  J  K  0  1  0  X  0  1  1  X  1  ",
+    "position": 1010336
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "0  ?  1  1  1  0  0  0  ?  1  1  1  1  ?  0     Solving J & K using k-map, we get        J xy xy x y = + = ?         K xy y x y x = + = ?     Hence, correct answer is option (d).      9. (a)      The truth table of the above sequential circuit is  given as follows.    CLK  Q1  Q0  0  0  0  1  1  1  2  1  0  3  0  1  4  0  0    From the above truth",
+    "position": 1011000
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "  CLK  Q1  Q0  0  0  0  1  1  1  2  1  0  3  0  1  4  0  0    From the above truth table, we can see that it is an  output of an Asynchronous down counter.       Hence, correct answer is option (a).      10. (a)    The characteristics table of given sequential  circuit    Clock  3 T = Q  1 D = Q  2 T = Q Q1 Q2 Q3  0  -  -  -  0  1  1  1  0  0  1  0  0  0  2  1  0  ",
+    "position": 1011318
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "1  1  6  0  1  1  1  1  0  7  1  1  1  0  1  1    From above table states involved 011, 000, 100,  010, 101, 111, 110. The only state 001 can never  be achieved.    Hence correct answer is option (a).      11. (a)    According to question , the initial state of counter is  PQR = 000        From the truth table the next three states are    011?101?000      12.. (3)     Design the",
+    "position": 1011976
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": " 0  1  1  1  1  1  0  0    For T0     GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.32      1 0 0 T = Q + Q    For T1       1 1 0 T Q Q =     Hence correct answer is option (b).      15. (d)        0 0 0 0? 0    1 0 0 0? 8    1 1 0 0? 12    1 1 1 0? 14    1 1 1 1? 15    0 1 1 1? 7    0 0 1 1? 3    0 0 0 1? 1      16. (c)    Let 2 ? 4 Decoder as sho",
+    "position": 1013055
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "0  y1  y2  y3  0  0  1  0  0  0  0  1  0  1  0  0  1  0  0  0  1  0  1  1  0  0  0  1            Ring counter of 2n bits i.e. k-bit ring counter.     Hence, correct answer is option (c)       GATE Wallah CS & IT Topic wise PYQs   Sequential Circuits  9.33  17. (c)    Number of required chips for memory capacity      = 256 ?210 ? 8    Number of available chips for RAM c",
+    "position": 1013669
+  },
+  {
+    "pattern": "answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "pacity     = 32 ?210 ? 1    Now,    Number of chips needed to build 256K-bytes will be    Number of chips = Required Avaliable =  10 10 256 2 8 64 32 ? 2 ? ? =     Hence, correct answer is option (c).    18. (d)      ROM =  Input output 4 4 2 2 2 ? ?         =  28? 23          =  211         =  2? 210          =  2k bits        ???  NOTE :         1.  Pr",
+    "position": 1014090
+  },
+  {
+    "pattern": "answer is option ([a-zA-Z])",
+    "answer": "b",
+    "context": "   III.    IV.       Network IV is the part of Network I so we can just  ignore Network IV  I. 12. 20. 164. 0/22  II. 12.20.170.0/23  III. 12.20.168.0/23        Can?t combine further so answer is option b and d.    ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  3.10    C H A P T E R  2    Flow Control Policies of Data Link Layer  1.  [MCQ]                         ",
+    "position": 300456
+  },
+  {
+    "pattern": "answer is ([a-zA-Z0-9,]+)",
+    "answer": "2",
+    "context": "16  4  (Lowest)  67  58  42      GATE Wallah CS& IT Topic wise PYQs   Process Management & CPU Scheduling  2.11    So, the value of Z could not be greater than 3, and  hence the correct answer is 2.    13.  (29)  P.No   Arrival  Time   Burst  Time  Priority  P1  0  11  2  P2  5  28  0  (Highest)  P3  12  2  3  P4  2  10  1  P5  9  16  4  (Lowest)    Gantt chart ",
+    "position": 172769
+  },
+  {
+    "pattern": "answer is ([a-zA-Z0-9,]+)",
+    "answer": "8",
+    "context": "nted.           ( ) 4 2 4 2 is pointed Hence, option d is correct answer 2 0 ??? ? ?????         22. (b)        Hence (b) is correct option        23. (b)           Correct answer is 8 i.e. option (b).      24. (55 to 55)    Let us try to understand the working of function fun1     Let fun1(3) is called first    i is an static variable         Before fun1(3) the value ",
+    "position": 577285
+  },
+  {
+    "pattern": "answer is ([a-zA-Z0-9,]+)",
+    "answer": "T",
+    "context": " ? ? ? ? ?     By recursion tree method = ?(nlogn)        14.   (b)    In the given scenario the list is divided into two  sublists with n/5 and 4n/5 elements and n is  common so the answer is T(n) ? T (n/5) + T (4n/5)  + n.        15.  (b)    30 sec ? 64 elements    6 minutes ? n = ?    Time for merge sort = n?logn    = 64?log64    64.6 units    30 sec ? 64.6 units    ? ",
+    "position": 733285
+  },
+  {
+    "pattern": "answer is ([a-zA-Z0-9,]+)",
+    "answer": "B",
+    "context": " W = 6       X[n, W] = Entry stating whether subset exists/Not     X [i, j] = True/False, whether there exist a subset  from first ?i? elements that sum to ?j?.      11.  (b)    The right answer is B X[i, j] = X[i ? 1, j] ? X[i ? 1,  j ? ai].    It is NP-complete (the subset-sum problem).    For instance, the technique checks to see if the sum  of the elements in the set S' is zero such tha",
+    "position": 775896
+  },
+  {
+    "pattern": "the correct answer is ([a-zA-Z0-9]+)",
+    "answer": "2",
+    "context": "  P5  9  16  4  (Lowest)  67  58  42      GATE Wallah CS& IT Topic wise PYQs   Process Management & CPU Scheduling  2.11    So, the value of Z could not be greater than 3, and  hence the correct answer is 2.    13.  (29)  P.No   Arrival  Time   Burst  Time  Priority  P1  0  11  2  P2  5  28  0  (Highest)  P3  12  2  3  P4  2  10  1  P5  9  16  4  (Lowest)    Gantt chart ",
+    "position": 172757
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": " y xy + + =        w x y + w x x z + w x y        wxy + wx ? ? ? ? y    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.8       ( ) xy w w +        xy       Hence correct answer is option (c)    (d) (w + y) (wxy + wyz) = wxy +wyz       wxy +wyz + wxy + wyz       wxy + wyz     Therefore, option d is correct.      3.  (b)    We can see that the given truth table is the outpu",
+    "position": 980986
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " # ?? = 1                We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,                                   x # y = xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence co",
+    "position": 985445
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "tion (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Option (a)    (x + y) ? z = x ? (y + z)    (x + y) ? z= (x + y)  z? + (?+ ????????)  z    (x + y) ? z= xz? + y z? + x? y? z    x  ? (y+z)=x(?+ ????????) +x? (y + z)    x ",
+    "position": 985671
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence,",
+    "position": 991732
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "   f (ABC) = AB B C+  + C A ABC ABC ABC ABC + + +           f (ABC) = ?m (0, 1, 2, 3, 5)    Now implementing on 2 ? 1 mux.           ? (X0 X1 X2 X3 X4 X5 X6 X7) = (11011100)    Hence correct answer is option (c).      3.  (a)    F = ( ) ( ) X X YZ X X YZ + XYZ XYZ + + + +       = XYZ XYZ XY XYZ + XYZ XYZ Z + + + +      =  ( ) m 0,1,3,4,5,6 ?             GATE Walla",
+    "position": 997582
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " 1  0  1  1  1  6  0  1  1  1  1  0  7  1  1  1  0  1  1    From above table states involved 011, 000, 100,  010, 101, 111, 110. The only state 001 can never  be achieved.    Hence correct answer is option (a).      11. (a)    According to question , the initial state of counter is  PQR = 000        From the truth table the next three states are    011?101?000      12.. (3)     Design the",
+    "position": 1011962
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "1  0  1  1  0  1  1  1  1  1  0  0    For T0     GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.32      1 0 0 T = Q + Q    For T1       1 1 0 T Q Q =     Hence correct answer is option (b).      15. (d)        0 0 0 0? 0    1 0 0 0? 8    1 1 0 0? 12    1 1 1 0? 14    1 1 1 1? 15    0 1 1 1? 7    0 0 1 1? 3    0 0 0 1? 1      16. (c)    Let 2 ? 4 Decoder as sho",
+    "position": 1013041
+  }
+]

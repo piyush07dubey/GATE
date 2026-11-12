@@ -52,8 +52,8 @@ const AuthPage = () => {
         </Link>
         
         <div style={{ textAlign: 'center', marginBottom: 'var(--space-xl)', marginTop: 'var(--space-md)' }}>
-          <div className="logo-icon" style={{ margin: '0 auto var(--space-sm)', width: '48px', height: '48px', fontSize: 'var(--text-xl)', background: 'var(--gradient-primary)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 'var(--radius-md)' }}>G</div>
-          <h1 className="auth-title">Welcome to GATE Platform</h1>
+          <img src="/gateforge-logo.png" alt="GATEForge" style={{ width: '52px', height: '52px', borderRadius: 'var(--radius-md)', margin: '0 auto var(--space-sm)', display: 'block', objectFit: 'cover' }} />
+          <h1 className="auth-title">Welcome to GATEForge</h1>
           <p className="auth-subtitle">
             {isLogin ? 'Sign in to continue your preparation' : 'Create an account to start learning'}
           </p>

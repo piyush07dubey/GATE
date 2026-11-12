@@ -1052,6 +1052,14 @@ canvas {
   flex-shrink: 0;
 }
 
+.logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .logo-text-gradient {
   background: var(--gradient-primary);
   -webkit-background-clip: text;

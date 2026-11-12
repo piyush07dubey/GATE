@@ -110,8 +110,8 @@ export const questions = [
       'Number of entries in the relation.',
       'Number of distinct domains of its relation schema. Key Concepts'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Arity (Degree): Number of Attributes/fields Cardinality: Number of Tuples/Records'
   },
   {
     id: 'q-dbms-2014-2',
@@ -123,8 +123,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Given an instance of the STUDENTS relation as shown below: Student ID Student Name Student Email Student Age CPI 2345 Shankar shankar@math X 9.4 1287 Swati swati@ee 19 9.5 7853 Shankar shankar@cse 19 9.4 9876 Swati swati@mech 18 9.3 8765 Ganesh ganesh@civil 19 8.7 For (Student Name, Student Age) to be a key for this instance, the value X should NOT be equal to ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 19,
+    explanation: 'In order for Student Name, Student Age to be the key, it must be unique, therefore the value of X  ≠ 19 satisfies the criteria of Student Name, Student Age being the key. Hence, 19 is the answer.'
   },
   {
     id: 'q-dbms-2014-3',
@@ -141,8 +141,8 @@ export const questions = [
       'in a foreign key of R.',
       'only in the primary key of R.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prime attribute is a attribute that is present in some candidate key of a relation. Example: Consider for relation R(ABCDE) if the candidate keys are AC, and BC, then the set of prime attributes are {A, B, C}.'
   },
   {
     id: 'q-dbms-2011-4',
@@ -159,8 +159,8 @@ export const questions = [
       'UID is a candidate key if all students are from the same country.',
       'If S is a super key such that S  UID is NULL then S  UID is also a super key. Foreign Key Concepts'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '(a) BankAccount_Num is a candidate key: Incorrect. Because a student can have multiple account and joint account. Example Assume 2 person Ramesh and Suresh have joint account they both have some account number in a primary account number. So, Bank account number can not uniquely determine and Bank account cannot be candidate key. (b) Registration number can be primary key: True. Because registration number is a unique for each registered student So, it can be uniquely determining each tuple of relation. (c) UID is a candidate if all student is from  same country: correct. Because UID is unique at National level Example Indian Aadhar card is unique for each person in India. (d) If S is a super key, then S  UID is also super key: correct Because any super set of super keys is also super key.'
   },
   {
     id: 'q-dbms-2021-5',
@@ -172,8 +172,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following statements S1 and S2 about the relational data model: S1: A relation scheme can have at most one foreign key. S2: A foreign key in a relation scheme R cannot be used to refer to tuples of R. Which one of the following choices is correct?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• A relation scheme can have zero or more foreign key. • A foreign key in a relation scheme R can be used to refer to tuples of R.'
   },
   {
     id: 'q-dbms-2017-6',
@@ -185,8 +185,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following tables T1 and T2. In table T1, P is the primary key and Q is the foreign key referencing R in table T2 with on delete cascade and on-update cascade. In table T2, R is the primary key and S is the foreign key referencing P in table T1 with on-delete set NULL and on-update cascade. In order to delete record ⟨3, 8⟩ from table T1, the number of additional records that need to be deleted from table T1 is',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'On delete cascade: Whenever primary key is deleted from referenced (parent) table then that related value (Tuple/Row) (that primary key value) from referencing (CHILD table) has to be deleted. On delete set NULL:  Whenever primary key is deleted from reference (parent) table then that related value (Tuple/Row) in referencing [CHILD table (which contain foreign key)] is set to NULL. By default foreign key references to the primary key of referenced relation.'
   },
   {
     id: 'q-dbms-2014-7',
@@ -201,10 +201,12 @@ export const questions = [
       ', FOREIGN KEY',
       'references (R) Which one of the following statements is CORRECT?',
       'S1 is TRUE and S2 is FALSE',
-      'Both S1 and S2 are TRUE'
+      'Both S1 and S2 are TRUE',
+      'S1 is FALSE and S2 is TRUE',
+      'Both S1 and S2 are FALSE ER Model Concept'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• Statement S1 is false as a foreign key declaration cannot be replaced by check assertion in SQL, because foreign key may have duplicate and Null values and having ON DELETE cascade operation then if any primary key deleted from referential relation then the referential integrity constraint may not be maintained. • Statement S2: R(a b c) Here ab is primary key S(a d e) Primary key : d,  foreign key a references R, foreign key reference to the primary key of referenced relation R. But in referenced relation ab is primary key, only a is not a p rimary key so here foreign key \'a\' not references key (ab) of referenced relation R. therefore S2 is false.'
   },
   {
     id: 'q-dbms-2020-8',
@@ -221,8 +223,8 @@ export const questions = [
       'Ovals that contain underlined identifiers',
       'Rectangles with double/bold border'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The relationship between strong entity set and weak entity set is represented by double/bold diamond.'
   },
   {
     id: 'q-dbms-2018-9',
@@ -239,8 +241,8 @@ export const questions = [
       'Every entity in E2 is associated with exactly one entity in E1.',
       'Every entity in E2 is associated with at most one entity in E1. ER Model Concept and Conversion of ER Model to RDBMS'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Cardinality of E1 > Cardinality of E2 (a) Correct. Every entity of E 1 is associated with exactly one entity in E2. ( its total participation and many to one from E1 to E2). (b) Incorrect. Because mention some entity in E 1 but here total participati on and mention more than one entity in E2 but here many to one (of E2 side). (c) Incorrect. Because there is a many to one from E1 to E2, not from E2 to E1. (d) Incorrect. Because there is a many to one from E1 to E2.'
   },
   {
     id: 'q-dbms-2017-10',
@@ -252,8 +254,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'An ER model of a database consists of entity types A and B. These are connected by a relationship R which does not have its own attribute. Under which one of the following conditions, can the relational table for R be merged with that of A?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Relationship R is many to one and participation of A in R is total.'
   },
   {
     id: 'q-cn-2015-11',
@@ -332,8 +334,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a relation R(A, B, C, D, E) with the following three functional dependencies. AB → C ; BC → D ; C → E; The number of super keys in the relation R is _________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Arity (Degree): Number of Attributes/fields Cardinality: Number of Tuples/Records'
   },
   {
     id: 'q-dbms-2016-2',
@@ -350,8 +352,8 @@ export const questions = [
       'V W X Y',
       'V W X Y Z'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 19,
+    explanation: 'In order for Student Name, Student Age to be the key, it must be unique, therefore the value of X  ≠ 19 satisfies the criteria of Student Name, Student Age being the key. Hence, 19 is the answer.'
   },
   {
     id: 'q-dbms-2014-4',
@@ -368,8 +370,8 @@ export const questions = [
       '{E, F, H, K, L}',
       '{E}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '(a) BankAccount_Num is a candidate key: Incorrect. Because a student can have multiple account and joint account. Example Assume 2 person Ramesh and Suresh have joint account they both have some account number in a primary account number. So, Bank account number can not uniquely determine and Bank account cannot be candidate key. (b) Registration number can be primary key: True. Because registration number is a unique for each registered student So, it can be uniquely determining each tuple of relation. (c) UID is a candidate if all student is from  same country: correct. Because UID is unique at National level Example Indian Aadhar card is unique for each person in India. (d) If S is a super key, then S  UID is also super key: correct Because any super set of super keys is also super key.'
   },
   {
     id: 'q-dbms-2013-5',
@@ -386,7 +388,7 @@ export const questions = [
       '5',
       '6 Membership Set and Equality between FD Sets'
     ],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -404,7 +406,7 @@ export const questions = [
       'P → R',
       'PS → Q'
     ],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -422,8 +424,8 @@ export const questions = [
       '{P, S} → {S}',
       '{P, S, U} → {Q}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• Statement S1 is false as a foreign key declaration cannot be replaced by check assertion in SQL, because foreign key may have duplicate and Null values and having ON DELETE cascade operation then if any primary key deleted from referential relation then the referential integrity constraint may not be maintained. • Statement S2: R(a b c) Here ab is primary key S(a d e) Primary key : d,  foreign key a references R, foreign key reference to the primary key of referenced relation R. But in referenced relation ab is primary key, only a is not a p rimary key so here foreign key \'a\' not references key (ab) of referenced relation R. therefore S2 is false.'
   },
   {
     id: 'q-dbms-2017-8',
@@ -440,8 +442,8 @@ export const questions = [
       'V W V X Y V Y X Y Z → → → → →',
       'V W W X Y V Y X Y Z → → → → → Properties of Decomposition'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The relationship between strong entity set and weak entity set is represented by double/bold diamond.'
   },
   {
     id: 'q-dbms-2021-9',
@@ -458,8 +460,8 @@ export const questions = [
       'Both D1 and D2 are lossless decompositions.',
       'Both D1 and D2 are lossy decompositions.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Cardinality of E1 > Cardinality of E2 (a) Correct. Every entity of E 1 is associated with exactly one entity in E2. ( its total participation and many to one from E1 to E2). (b) Incorrect. Because mention some entity in E 1 but here total participati on and mention more than one entity in E2 but here many to one (of E2 side). (c) Incorrect. Because there is a many to one from E1 to E2, not from E2 to E1. (d) Incorrect. Because there is a many to one from E1 to E2.'
   },
   {
     id: 'q-dbms-2019-10',
@@ -476,8 +478,8 @@ export const questions = [
       'II only',
       'Neither I nor II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Relationship R is many to one and participation of A in R is total.'
   },
   {
     id: 'q-dbms-2008-11',
@@ -494,8 +496,8 @@ export const questions = [
       'Does not give a lossless join, but is dependency preserving',
       'Does not give a lossless join and is not dependency preserving. Normal Form'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'R12 is many to many relationships between E1 and E2. So, separate table is created E1 (a11 a12)     E2 (a21 a22)  R12 (a11 a21) a11 → a12      a21 → a22 E3 R13(a31 a32 a11) a31 → a32a11 3NF (Third normal form): Let R be the relational schema and X → Y is non trivial FD is in 3NF If   X: super key or Y: prime attribute E1 (a11 a12) a11 → a12 E2 (a21 a22) a21 → a22'
   },
   {
     id: 'q-dbms-2022-12',
@@ -512,8 +514,8 @@ export const questions = [
       'Every relation has at least one non-prime attribute.',
       'BCNF decompositions preserve functional dependencies.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(a) Statement given is correct with respect to ER diagram. (b) Statement given is correct with respect to ER diagram. (c) In ER diagram multivalued attribute and composite attribute both are allowed , but i n RDBMS Multivalued attribute and composite attribute are not allowed. Each Tuple in RDBMS can have only one value or NULL for each field (Attribute exactly) So, option (c) is incorrect.'
   },
   {
     id: 'q-dbms-2020-13',
@@ -525,8 +527,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider a relational table R that is in 3 NF, but not in BCNF. Which one of the following statements is TRUE?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'MR1P   many to one and total participation at many side MR1(M1M2 M3 P1) , here P1 is a foreign key P(P1 P2) NR2(N1 N2 P1) , here P1 is a foreign key'
   },
   {
     id: 'q-dbms-2018-14',
@@ -543,8 +545,8 @@ export const questions = [
       'Schema III',
       'Schema IV'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'MR1(M1 M2 M3 P1), here P1 is a foreign key P(P1 P2), P1 is primary key NR2(N1N2P1), here P1 is a foreign key ❑❑❑'
   },
   {
     id: 'q-dbms-2014-15',
@@ -561,8 +563,8 @@ export const questions = [
       'S1 is FALSE and S2 TRUE.',
       'Both S1 and S2 are FALSE.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Consider the following examples: R (AB) [A→B] Candidate key = [A] A is super key So, R is in BCNF R(AB) [A→B, B → A] Candidate key = (A, B) A and B are super keys So, R is in BCNF R(AB) [B → A] Candidate key = [B] B is super key So, R is in BCNF A relation with two attributes is always in BCNF implies it is in 1NF, 2NF, 3NF and BCNF. S1 is correct. OR A set A is called the minimal cover of set B iff (a) A covers B and (b) B covers A and (c) A is irreducible Given FD set (B): {AB → C, D → E, AB → E, E → C} Given minimal cover(A): {AB → C, D → E, E → C} (1) Check if A covers B A cover B means all FD’s  of B will be reducible using FD’s of A or Every FD of B is A member of A (AB)+ = {A B C} (D)+ = {D E} (E)+ = {E C} (AB) + is not determining E  AB → E is not covered by the given minimal cover.  Statement S2 is FALSE.'
   },
   {
     id: 'q-dbms-2013-16',
@@ -579,8 +581,8 @@ export const questions = [
       'in 3 NF, but not in BCNF.',
       'in BCNF.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given FD set – F = {CH → G, A → BC, B → CFH, E →A, F → EG} Candidate keys – {AD, ED, FD, BD} Non-key/non-prime attribute = {C, G, H} Testing of normal forms BCN F 3NF CH→ G × × A→B C × – B→CF H × – E→ A × – F→E G × – A → C, B → C, B → H, F → G violates 2NF 2NF – proper subset of CK should not determine non-prime subset of CK – {A}+ = {A B C F H G} {B}+     non-prime {D}+ {E}+ {F}+  The relation is not in 2NF (a) It is in 1NF but not in 2NF.'
   },
   {
     id: 'q-dbms-2012-17',
@@ -598,7 +600,7 @@ export const questions = [
       'No relation can be in both BCNF and 3 NF'
     ],
     correctAnswer: null,
-    explanation: ''
+    explanation: 'Given FD set – F = {CH → G, A → BC, B → CFH, E →A, F → EG} Candidate keys – {AD, ED, FD, BD} Non-key/non-prime attribute = {C, G, H} Testing of normal forms BCN F 3NF CH→ G × × A→B C × – B→CF H × – E→ A × – F→E G × – A → C, B → C, B → H, F → G violates 2NF 2NF – proper subset of CK should not determine non-prime subset of CK – {A}+ = {A B C F H G} {B}+     non-prime {D}+ {E}+ {F}+  The relation is not in 2NF (a) It is in 1NF but not in 2NF.'
   },
   {
     id: 'q-dbms-2009-18',
@@ -615,8 +617,8 @@ export const questions = [
       'The schema is in 2NF but not in 3NF',
       'The schema is not in 2NF'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Supplier (Sid, Sname, City, Street) Each supplier, each street within a city has a unique name Sid Street City → Sname Sname City form a candidate key Sname City → Sid Street Sid is primary key. Sid → Sname City Street Keys (Sid, Sname City) Check 2NF, as there is no partial dependency so R is in 2NF Check 3NF in X → Y, either X is a super key or Y is the prime attribute I. Sid Street City → Sname II. Sname City → Sid Street III. Sid → Sname City Street ∴ R is 3NF Check for BCNF X is super key, therefore R is in BCNF.'
   },
   {
     id: 'q-dbms-2008-19',
@@ -633,8 +635,8 @@ export const questions = [
       'Book is in 2 NF and Collection is in 3 NF',
       'Both Book and Collection are in 2 NF only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Book (Title, Author, Catalog_no, Publisher, Year, price) Collection (Title, Author, Catalog_no) FD I.  TitleAuthor ⟶ Catalog_no FD II.  Catalog_no ⟶ Title Author Publisher Year FD III.  Publisher Title Year ⟶ Price Key = [Author Title] Collection (Title, Author, Catalog_no) FD I. TitleAuthor ⟶ Catalog_no The relation  Collection is in BCNF because Title Author is a super key Collection is in BCNF so its in also in 3NF, 2NF and 1NF. Key = [Author Title] Book (Title, Author, Catalog_no, Publisher, Year, price) FD I.  Title Author → Catalog_no FD II.  Catalog_no → Title Author Publisher Year FD III.  Publisher Title Year → Price In FD II Catalog_no → Title Author Publisher Year Catalog no is a key Candidate key = [Title author, catalog] In book schema FD I. Satisfy BCNF FD II. Satisfy BCNF'
   },
   {
     id: 'q-dbms-2008-20',
@@ -651,8 +653,8 @@ export const questions = [
       'in 2NF, but not in 3 NF',
       'not in 2NF Decomposition into Higher Normal Form'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Consider relation R(ABCDEPG) with FD set as [AB → CD, DE → P, C → E, P → C, B → G] [AB]+ = [ABCDEPG] [A]+ = [A] [B]+ = [BG] AB is candidate key ….(1) There aren’t multiple candidate keys. Prime/key attributes = [A, B] Non-prime/ non key attribute= [C, D, E, P, G] A relational design is not in 2NF if there exists B → G (partial dependency). B (Proper subset of candidate key) → G (non key attribute) Violation of 2NF.  R is not in 2 NF'
   },
   {
     id: 'q-dbms-2016-21',
@@ -669,8 +671,8 @@ export const questions = [
       '3 NF',
       'BCNF ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Journal (VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE) FD I:  (VOLUME, NUMBER, STARTPAGE, ENDPAGE) → TITLE FD II: (VOLUME, NUMBER) → YEAR FD III:  (VOLUME, NUMBER, STARTPAGE, ENDPAGE) → PRICE Keys: (VOLUME, NUMBER, STARTPAGE, ENDPAGE) FD I: is in BCNF or satisfy BCNF definition (Because in x → y, x is super key) FD III: is in BCNF or satisfy BCNF definition But FD II ( VOLUME, NUMBER) → YEAR not satisfy 2NF definition because the non-key attribute is not fully dependent on key or proper subset of candidate key → non-key attribute, violation of 2NF exists. FD II: Journal Not in 2 NF Redesign Schema SC I: Volume, Number, Start page, end page, Title price SC II: Volume Number year Schema I: Volume number start page end page Title price FD I: Volume Number start page end page → Title price. FD II: Volume Number start page end page → Price  Satisfy BCNF definition is schema I Schema II: Volume number year Volume Number → year  Satisfy BCNF definition New design is in BCNF but old design Only 1 NF but not satisfy 2NF ❑❑❑'
   },
   {
     id: 'q-dbms-2021-1',
@@ -687,8 +689,8 @@ export const questions = [
       'All the transactions that are already undone and redone will not be recovered again',
       'The database will become inconsistent'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Arity (Degree): Number of Attributes/fields Cardinality: Number of Tuples/Records'
   },
   {
     id: 'q-dbms-2016-3',
@@ -705,8 +707,8 @@ export const questions = [
       'Isolation',
       'Deadlock-freedom'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prime attribute is a attribute that is present in some candidate key of a relation. Example: Consider for relation R(ABCDE) if the candidate keys are AC, and BC, then the set of prime attributes are {A, B, C}.'
   },
   {
     id: 'q-dbms-2016-4',
@@ -718,8 +720,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following directed graph: The number of different topological ordering of the vertices of the graph is',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '(a) BankAccount_Num is a candidate key: Incorrect. Because a student can have multiple account and joint account. Example Assume 2 person Ramesh and Suresh have joint account they both have some account number in a primary account number. So, Bank account number can not uniquely determine and Bank account cannot be candidate key. (b) Registration number can be primary key: True. Because registration number is a unique for each registered student So, it can be uniquely determining each tuple of relation. (c) UID is a candidate if all student is from  same country: correct. Because UID is unique at National level Example Indian Aadhar card is unique for each person in India. (d) If S is a super key, then S  UID is also super key: correct Because any super set of super keys is also super key.'
   },
   {
     id: 'q-dbms-2015-5',
@@ -736,8 +738,8 @@ export const questions = [
       'Undo: none; Redo: T2, T4, T3, T1',
       'Undo: T3, T1, T4; Redo: T2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• A relation scheme can have zero or more foreign key. • A foreign key in a relation scheme R can be used to refer to tuples of R.'
   },
   {
     id: 'q-dbms-2015-6',
@@ -749,8 +751,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following transaction involving two bank accounts x and y [read (x) ; x: = x-50 ; write(x) ; read(y) ; y: = y + 50; write(y);]',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'On delete cascade: Whenever primary key is deleted from referenced (parent) table then that related value (Tuple/Row) (that primary key value) from referencing (CHILD table) has to be deleted. On delete set NULL:  Whenever primary key is deleted from reference (parent) table then that related value (Tuple/Row) in referencing [CHILD table (which contain foreign key)] is set to NULL. By default foreign key references to the primary key of referenced relation.'
   },
   {
     id: 'q-dbms-2022-7',
@@ -767,8 +769,8 @@ export const questions = [
       'T4 → T1 → T3 → T2',
       'T3 → T1 → T4 → T2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• Statement S1 is false as a foreign key declaration cannot be replaced by check assertion in SQL, because foreign key may have duplicate and Null values and having ON DELETE cascade operation then if any primary key deleted from referential relation then the referential integrity constraint may not be maintained. • Statement S2: R(a b c) Here ab is primary key S(a d e) Primary key : d,  foreign key a references R, foreign key reference to the primary key of referenced relation R. But in referenced relation ab is primary key, only a is not a p rimary key so here foreign key \'a\' not references key (ab) of referenced relation R. therefore S2 is false.'
   },
   {
     id: 'q-dbms-2021-8',
@@ -785,8 +787,8 @@ export const questions = [
       'P is false and Q is true.',
       'Both P and Q are false.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The relationship between strong entity set and weak entity set is represented by double/bold diamond.'
   },
   {
     id: 'q-dbms-2020-10',
@@ -803,8 +805,8 @@ export const questions = [
       'T1 RA RC WD WB Commit T2 RB WB RD WC Commit',
       'T1 RA RC WD WB Commit T2 RBWB RD WC Commit'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Relationship R is many to one and participation of A in R is total.'
   },
   {
     id: 'q-dbms-2014-11',
@@ -816,8 +818,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the transactions T1, T2 and T3 and the schedules S1 and S2 given below. T1: r1(X); r1(Z); w1(X); w1(Z) T2: r2(Y) ; r2(Z) ; w2(Z) T3: r3(Y); r3(X); w3(Y) S1: r1(X); r3(Y); r3(X); r2(Y); r2(Z); w3(Y); w2(Z); r1(Z); w1(X); w1(Z) S2: r1(X); r3(Y); r2(Y); r3(X); r1(Z); r2(Z); w3(Y); w1(X); w2(Z); w1(Z)',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'R12 is many to many relationships between E1 and E2. So, separate table is created E1 (a11 a12)     E2 (a21 a22)  R12 (a11 a21) a11 → a12      a21 → a22 E3 R13(a31 a32 a11) a31 → a32a11 3NF (Third normal form): Let R be the relational schema and X → Y is non trivial FD is in 3NF If   X: super key or Y: prime attribute E1 (a11 a12) a11 → a12 E2 (a21 a22) a21 → a22'
   },
   {
     id: 'q-dbms-2014-12',
@@ -834,8 +836,8 @@ export const questions = [
       'S is both conflict-serializable and recoverable',
       'S is neither conflict-serializable nor is it recoverable'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(a) Statement given is correct with respect to ER diagram. (b) Statement given is correct with respect to ER diagram. (c) In ER diagram multivalued attribute and composite attribute both are allowed , but i n RDBMS Multivalued attribute and composite attribute are not allowed. Each Tuple in RDBMS can have only one value or NULL for each field (Attribute exactly) So, option (c) is incorrect.'
   },
   {
     id: 'q-dbms-2014-13',
@@ -852,8 +854,8 @@ export const questions = [
       'r3(x) ; r2(x) ; r1(x) ; w2(x) ; w1(x)',
       'r2(x) ; w2(x) ; r3(x) ; r1(x) ; w1(x)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'MR1P   many to one and total participation at many side MR1(M1M2 M3 P1) , here P1 is a foreign key P(P1 P2) NR2(N1 N2 P1) , here P1 is a foreign key'
   },
   {
     id: 'q-dbms-2012-14',
@@ -870,8 +872,8 @@ export const questions = [
       'a conflict serializable schedule',
       'a schedule for which a precedence graph cannot be drawn'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'MR1(M1 M2 M3 P1), here P1 is a foreign key P(P1 P2), P1 is primary key NR2(N1N2P1), here P1 is a foreign key ❑❑❑'
   },
   {
     id: 'q-dbms-2010-15',
@@ -888,8 +890,8 @@ export const questions = [
       'T2 → T3 →T1',
       'T3 →T 1 →T 2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Consider the following examples: R (AB) [A→B] Candidate key = [A] A is super key So, R is in BCNF R(AB) [A→B, B → A] Candidate key = (A, B) A and B are super keys So, R is in BCNF R(AB) [B → A] Candidate key = [B] B is super key So, R is in BCNF A relation with two attributes is always in BCNF implies it is in 1NF, 2NF, 3NF and BCNF. S1 is correct. OR A set A is called the minimal cover of set B iff (a) A covers B and (b) B covers A and (c) A is irreducible Given FD set (B): {AB → C, D → E, AB → E, E → C} Given minimal cover(A): {AB → C, D → E, E → C} (1) Check if A covers B A cover B means all FD’s  of B will be reducible using FD’s of A or Every FD of B is A member of A (AB)+ = {A B C} (D)+ = {D E} (E)+ = {E C} (AB) + is not determining E  AB → E is not covered by the given minimal cover.  Statement S2 is FALSE.'
   },
   {
     id: 'q-dbms-2009-16',
@@ -901,8 +903,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider two transactions T1 and T2, and four schedules S1, S2, S3, S4 of T1 and T2 as given below: T1: R1 [x] W1 [x] W1 [y]; T2: R2 [x] R2 [y] W2 [y]; S1: R1 [x] R2 [x] R2 [y] W1 [x] W1 [y] W2 [y]; S2: R1 [x] R2 [x] R2 [y] W1 [x] W2 [y] W1 [y]; S3: R1 [x] W1 [x] R2 [x] W1 [y] R2 [y] W2 [y]; S4: R2 [x] R2 [y] R1 [x] W1 [x] W1 [y] W2 [y];',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given FD set – F = {CH → G, A → BC, B → CFH, E →A, F → EG} Candidate keys – {AD, ED, FD, BD} Non-key/non-prime attribute = {C, G, H} Testing of normal forms BCN F 3NF CH→ G × × A→B C × – B→CF H × – E→ A × – F→E G × – A → C, B → C, B → H, F → G violates 2NF 2NF – proper subset of CK should not determine non-prime subset of CK – {A}+ = {A B C F H G} {B}+     non-prime {D}+ {E}+ {F}+  The relation is not in 2NF (a) It is in 1NF but not in 2NF.'
   },
   {
     id: 'q-dbms-2008-17',
@@ -919,8 +921,8 @@ export const questions = [
       'S2 is conflict equivalent to S 3, but not to S1',
       'S1 is conflict equivalent to S2, but not to S3 Finding Number of Serializable Schedule'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '3NF definition Every non trivial FD X → Y is in 3 NF iff X: super key or Y: key/Prime attribute Every non trivial FD X → Y is in BCNF iff , X : Super key Option (a): False Let us assume- R (ABCD) with FD set as [AB → CD, D → A] Candidate key = [AB, DB] AB → CD D→A 3NF YES (as AB is a candidate key) YES (as A is a prime attribute) BCNF YES (as AB is a candidate key) NO (D is not a candidate key) (c) True. Let us assume, R (AB) with FD set [A → B] Candidate key = [A] Since, A is the key, R is in BCNF and also in 3NF.'
   },
   {
     id: 'q-dbms-2017-18',
@@ -932,8 +934,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Two transaction T1 and T2 are given as T1: r1(X) w1(X) r1(Y) w1(Y) T2: r2(Y) w2(Y) r2(Z) w2(Z) Where ri (V) denotes a read operation by transaction Ti on a variable V and wi (V) denotes a write operation by transaction Ti on a variable V. The total number of conflict serializable schedules than can be formed by T1 and T2 is _______ Recoverable Schedule',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Supplier (Sid, Sname, City, Street) Each supplier, each street within a city has a unique name Sid Street City → Sname Sname City form a candidate key Sname City → Sid Street Sid is primary key. Sid → Sname City Street Keys (Sid, Sname City) Check 2NF, as there is no partial dependency so R is in 2NF Check 3NF in X → Y, either X is a super key or Y is the prime attribute I. Sid Street City → Sname II. Sname City → Sid Street III. Sid → Sname City Street ∴ R is 3NF Check for BCNF X is super key, therefore R is in BCNF.'
   },
   {
     id: 'q-dbms-2016-19',
@@ -950,8 +952,8 @@ export const questions = [
       'S does not have a cascading abort',
       'S is strict'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Book (Title, Author, Catalog_no, Publisher, Year, price) Collection (Title, Author, Catalog_no) FD I.  TitleAuthor ⟶ Catalog_no FD II.  Catalog_no ⟶ Title Author Publisher Year FD III.  Publisher Title Year ⟶ Price Key = [Author Title] Collection (Title, Author, Catalog_no) FD I. TitleAuthor ⟶ Catalog_no The relation  Collection is in BCNF because Title Author is a super key Collection is in BCNF so its in also in 3NF, 2NF and 1NF. Key = [Author Title] Book (Title, Author, Catalog_no, Publisher, Year, price) FD I.  Title Author → Catalog_no FD II.  Catalog_no → Title Author Publisher Year FD III.  Publisher Title Year → Price In FD II Catalog_no → Title Author Publisher Year Catalog no is a key Candidate key = [Title author, catalog] In book schema FD I. Satisfy BCNF FD II. Satisfy BCNF'
   },
   {
     id: 'q-dbms-2015-20',
@@ -966,10 +968,17 @@ export const questions = [
       '2. write',
       '3. read',
       '4. write',
-      '5. read'
+      '5. read',
+      '6. write',
+      '7. read',
+      '8. commit 9. Suppose that the transaction T1 fails immediately after time instance 9. Which one of the following statements is correct?',
+      'T2 must be aborted and then both T1 and T2 must be restarted to ensure transaction atomicity.',
+      'Schedule S is non recoverable and cannot ensure transaction atomicity.',
+      'Only T2 must be aborted and then restarted to ensure transaction atomicity.',
+      'Schedule S is recoverable and can ensure atomicity and nothing else needs to be done.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Consider relation R(ABCDEPG) with FD set as [AB → CD, DE → P, C → E, P → C, B → G] [AB]+ = [ABCDEPG] [A]+ = [A] [B]+ = [BG] AB is candidate key ….(1) There aren’t multiple candidate keys. Prime/key attributes = [A, B] Non-prime/ non key attribute= [C, D, E, P, G] A relational design is not in 2NF if there exists B → G (partial dependency). B (Proper subset of candidate key) → G (non key attribute) Violation of 2NF.  R is not in 2 NF'
   },
   {
     id: 'q-dbms-2019-21',
@@ -986,8 +995,8 @@ export const questions = [
       'Both I and II',
       'Neither I nor II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Journal (VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE) FD I:  (VOLUME, NUMBER, STARTPAGE, ENDPAGE) → TITLE FD II: (VOLUME, NUMBER) → YEAR FD III:  (VOLUME, NUMBER, STARTPAGE, ENDPAGE) → PRICE Keys: (VOLUME, NUMBER, STARTPAGE, ENDPAGE) FD I: is in BCNF or satisfy BCNF definition (Because in x → y, x is super key) FD III: is in BCNF or satisfy BCNF definition But FD II ( VOLUME, NUMBER) → YEAR not satisfy 2NF definition because the non-key attribute is not fully dependent on key or proper subset of candidate key → non-key attribute, violation of 2NF exists. FD II: Journal Not in 2 NF Redesign Schema SC I: Volume, Number, Start page, end page, Title price SC II: Volume Number year Schema I: Volume number start page end page Title price FD I: Volume Number start page end page → Title price. FD II: Volume Number start page end page → Price  Satisfy BCNF definition is schema I Schema II: Volume number year Volume Number → year  Satisfy BCNF definition New design is in BCNF but old design Only 1 NF but not satisfy 2NF ❑❑❑'
   },
   {
     id: 'q-dbms-2017-22',
@@ -1004,8 +1013,8 @@ export const questions = [
       'The database system is starvation-free, but not deadlock-free.',
       'The database system is neither deadlock-free nor starvation-free.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Deadlock prevention algorithm (1) Wait – Die: Transaction T1 Request a Data item currently held by Tj, Ti is allowed to wait only Time stamp of Ti [TS (Ti)] is smaller than that of Tj. (2) Wound -wait: Transaction T i Request a data item currently held T j then Ti is allowed to wait only if time stamp of T i [TS(Ti)] is larger than that of Tj. Wound wait:  Older Transaction kills the younger Transaction. But restarted with same time stamp. TS(T1): 10 TS(T2): 20'
   },
   {
     id: 'q-dbms-2016-23',
@@ -1022,8 +1031,8 @@ export const questions = [
       'guarantee serializability but not deadlock- freedom',
       'guarantee deadlock-freedom but not serializability'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'STEP-1: T acquire x lock (Exclusive lock) O1 …. Ok in increasing order of the address i.e.  other transaction cannot take any lock on that data item. Tj Same Data Item S X Ti S Yes No X No No STEP-2: Required operation are performed. STEP-3: All lock are released. & Serializability order is determined by lock point.'
   },
   {
     id: 'q-dbms-2010-24',
@@ -1040,8 +1049,8 @@ export const questions = [
       'Both I and II',
       'Neither I nor II ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '2PL ensures conflict serializability but may not be free from deadlock. ❑❑❑'
   },
   {
     id: 'q-dbms-2021-2',
@@ -1053,8 +1062,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A relation r(A, B) in a relational database has 1200 tuples. The attribute A has integer values ranging from 6 to 20 , and the attribute B has integer values ranging from 1 to 20 . Assume that the attributes A and B are independently distributed. The estimated number of tuples in the output of σ (A>10) V (B = 18) (r) is',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 19,
+    explanation: 'In order for Student Name, Student Age to be the key, it must be unique, therefore the value of X  ≠ 19 satisfies the criteria of Student Name, Student Age being the key. Hence, 19 is the answer.'
   },
   {
     id: 'q-dbms-2020-3',
@@ -1071,8 +1080,8 @@ export const questions = [
       'Employee numbers of all employees whose age is not the minimum',
       'Employee numbers of all employees whose age is the minimum'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prime attribute is a attribute that is present in some candidate key of a relation. Example: Consider for relation R(ABCDE) if the candidate keys are AC, and BC, then the set of prime attributes are {A, B, C}.'
   },
   {
     id: 'q-dbms-2019-4',
@@ -1084,8 +1093,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following relations P(X, Y, Z), Q(X, Y, T) and R(Y, V) P Q R X Y Z X Y T Y V X1 Y1 Z1 X2 Y1 2 Y1 V1 X1 Y1 Z2 X1 Y2 5 Y3 V2 X2 Y2 Z2 X1 Y1 6 Y2 V3 X2 Y4 Z4 X3 Y3 1 Y2 V2 How many tuples will be returned by the following relational algebra query? [X ( (P.Y=R.Y  R.V=V2) (P×R)) −  X ( (Q.Y=R.Y Q.T > 2) (Q×R))];',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '(a) BankAccount_Num is a candidate key: Incorrect. Because a student can have multiple account and joint account. Example Assume 2 person Ramesh and Suresh have joint account they both have some account number in a primary account number. So, Bank account number can not uniquely determine and Bank account cannot be candidate key. (b) Registration number can be primary key: True. Because registration number is a unique for each registered student So, it can be uniquely determining each tuple of relation. (c) UID is a candidate if all student is from  same country: correct. Because UID is unique at National level Example Indian Aadhar card is unique for each person in India. (d) If S is a super key, then S  UID is also super key: correct Because any super set of super keys is also super key.'
   },
   {
     id: 'q-dbms-2018-5',
@@ -1097,8 +1106,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the relations r(A, B) and s(B, C), where s.B is a primary key and r.B is a foreign key referencing s.B. Consider the query. Q: r ⋈ (σ𝐵<5 (S)) Let LOJ denote the natural left outer-join operation. Assume that r and s contain no null values.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• A relation scheme can have zero or more foreign key. • A foreign key in a relation scheme R can be used to refer to tuples of R.'
   },
   {
     id: 'q-dbms-2014-8',
@@ -1115,8 +1124,8 @@ export const questions = [
       ' A2 ( F1  F2) (r))',
       ' A2 ( F1  F2) (r))'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The relationship between strong entity set and weak entity set is represented by double/bold diamond.'
   },
   {
     id: 'q-dbms-2014-9',
@@ -1133,8 +1142,8 @@ export const questions = [
       'some of his/her dependents.',
       'all of his/her dependents.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Cardinality of E1 > Cardinality of E2 (a) Correct. Every entity of E 1 is associated with exactly one entity in E2. ( its total participation and many to one from E1 to E2). (b) Incorrect. Because mention some entity in E 1 but here total participati on and mention more than one entity in E2 but here many to one (of E2 side). (c) Incorrect. Because there is a many to one from E1 to E2, not from E2 to E1. (d) Incorrect. Because there is a many to one from E1 to E2.'
   },
   {
     id: 'q-dbms-2014-10',
@@ -1146,8 +1155,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider a join (relation algebra) between relations r(R) and s(S) using the nested loop method. There are 3 buffers each of size equal to disk block size, out of which one buffer is reserved for intermediate results. Assuming size (r(R))<size(s(S)), the join will have fewer number of disk block accesses if',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Relationship R is many to one and participation of A in R is total.'
   },
   {
     id: 'q-dbms-2013-11',
@@ -1164,8 +1173,8 @@ export const questions = [
       'ΠB (r1) = ΠC (r2)',
       'ΠB (r1) – ΠC (r2) ≠ϕ'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'R12 is many to many relationships between E1 and E2. So, separate table is created E1 (a11 a12)     E2 (a21 a22)  R12 (a11 a21) a11 → a12      a21 → a22 E3 R13(a31 a32 a11) a31 → a32a11 3NF (Third normal form): Let R be the relational schema and X → Y is non trivial FD is in 3NF If   X: super key or Y: prime attribute E1 (a11 a12) a11 → a12 E2 (a21 a22) a21 → a22'
   },
   {
     id: 'q-dbms-2012-12',
@@ -1182,8 +1191,8 @@ export const questions = [
       '5',
       '9'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(a) Statement given is correct with respect to ER diagram. (b) Statement given is correct with respect to ER diagram. (c) In ER diagram multivalued attribute and composite attribute both are allowed , but i n RDBMS Multivalued attribute and composite attribute are not allowed. Each Tuple in RDBMS can have only one value or NULL for each field (Attribute exactly) So, option (c) is incorrect.'
   },
   {
     id: 'q-dbms-2011-13',
@@ -1200,8 +1209,8 @@ export const questions = [
       'Hashing will outperform ordered indexing on Q1, but not on Q2.',
       'Hashing will outperform ordered indexing on Q2, but not on Q1.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'MR1P   many to one and total participation at many side MR1(M1M2 M3 P1) , here P1 is a foreign key P(P1 P2) NR2(N1 N2 P1) , here P1 is a foreign key'
   },
   {
     id: 'q-dbms-2010-14',
@@ -1218,8 +1227,8 @@ export const questions = [
       '300',
       '2000'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'MR1(M1 M2 M3 P1), here P1 is a foreign key P(P1 P2), P1 is primary key NR2(N1N2P1), here P1 is a foreign key ❑❑❑'
   },
   {
     id: 'q-dbms-2008-15',
@@ -1236,8 +1245,8 @@ export const questions = [
       'Only I, II and III',
       'Only I, III and IV'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Consider the following examples: R (AB) [A→B] Candidate key = [A] A is super key So, R is in BCNF R(AB) [A→B, B → A] Candidate key = (A, B) A and B are super keys So, R is in BCNF R(AB) [B → A] Candidate key = [B] B is super key So, R is in BCNF A relation with two attributes is always in BCNF implies it is in 1NF, 2NF, 3NF and BCNF. S1 is correct. OR A set A is called the minimal cover of set B iff (a) A covers B and (b) B covers A and (c) A is irreducible Given FD set (B): {AB → C, D → E, AB → E, E → C} Given minimal cover(A): {AB → C, D → E, E → C} (1) Check if A covers B A cover B means all FD’s  of B will be reducible using FD’s of A or Every FD of B is A member of A (AB)+ = {A B C} (D)+ = {D E} (E)+ = {E C} (AB) + is not determining E  AB → E is not covered by the given minimal cover.  Statement S2 is FALSE.'
   },
   {
     id: 'q-dbms-2023-16',
@@ -1249,8 +1258,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following table named Student in a relational database. The primary key of this table is rollNum. Student Roll Num Name Gender Marks 1 Naman M 62 2 Aliya F 70 3 Aliya F 80 4 James M 82 5 Swati F 65 The SQL query below is executed on this database. SELECT * FROM Student WHERE gender = ‘F’ AND marks > 65; The number of rows returned by the query is',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given FD set – F = {CH → G, A → BC, B → CFH, E →A, F → EG} Candidate keys – {AD, ED, FD, BD} Non-key/non-prime attribute = {C, G, H} Testing of normal forms BCN F 3NF CH→ G × × A→B C × – B→CF H × – E→ A × – F→E G × – A → C, B → C, B → H, F → G violates 2NF 2NF – proper subset of CK should not determine non-prime subset of CK – {A}+ = {A B C F H G} {B}+     non-prime {D}+ {E}+ {F}+  The relation is not in 2NF (a) It is in 1NF but not in 2NF.'
   },
   {
     id: 'q-dbms-2022-17',
@@ -1262,8 +1271,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the relational database with the following four schemas and their respective instances. Student (sNo, sName, dNo) Dept (dNo, dName) Course (cNo, cName, dNo) Register (sNo, cNo) Student sNo. s Name dNo S01 James D01 S02 Rocky D01 S03 Jackson D02 S04 Jane D01 S05 Milli D02 Register sNo cNo S01 C 11 S01 C 12 S02 C 11 S03 C 21 S03 C 22 S03 C 23 S04 C 11 S04 C 12 S05 C 11 S 05 C 21 Course cNo cName dNo C11 DS D01 C12 SO D01 C21 DE D02 C22 PT D02 C23 CV D03 Dept DNo DName D01 CSE D02 EEE SQL Query: SELECT * From Student AS S WHERE NOT EXIST (SELECT cNo FROM Course WHERE dNo = "D01" EXCEPT SELECT cNo FROM Register WHERE sNo=S.sNo) The number of rows returned by the above SQL query is _____________ .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '3NF definition Every non trivial FD X → Y is in 3 NF iff X: super key or Y: key/Prime attribute Every non trivial FD X → Y is in BCNF iff , X : Super key Option (a): False Let us assume- R (ABCD) with FD set as [AB → CD, D → A] Candidate key = [AB, DB] AB → CD D→A 3NF YES (as AB is a candidate key) YES (as A is a prime attribute) BCNF YES (as AB is a candidate key) NO (D is not a candidate key) (c) True. Let us assume, R (AB) with FD set [A → B] Candidate key = [A] Since, A is the key, R is in BCNF and also in 3NF.'
   },
   {
     id: 'q-dbms-2021-18',
@@ -1280,8 +1289,8 @@ export const questions = [
       'female employees in the department.',
       'female employees in the company.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Supplier (Sid, Sname, City, Street) Each supplier, each street within a city has a unique name Sid Street City → Sname Sname City form a candidate key Sname City → Sid Street Sid is primary key. Sid → Sname City Street Keys (Sid, Sname City) Check 2NF, as there is no partial dependency so R is in 2NF Check 3NF in X → Y, either X is a super key or Y is the prime attribute I. Sid Street City → Sname II. Sname City → Sid Street III. Sid → Sname City Street ∴ R is 3NF Check for BCNF X is super key, therefore R is in BCNF.'
   },
   {
     id: 'q-dbms-2020-19',
@@ -1298,8 +1307,8 @@ export const questions = [
       '2',
       '0 20. [NAT] GATE-2019 : 2M] A relational database contains two tables Student and Performance as shown below: Student Roll_no. Student_name 1 Amit 2 Priya 3 Vinit 4 Rohan 5 Smita Performance Roll_no. Subject_code Marks 1 A 86 1 B 95 1 C 90 2 A 89 2 C 92 3 C 80 The primary key of the Student table is Roll_no. For the Performance table, the columns Roll_no. and Subject_code together form the primary key. Consider the SQL query given below: SELECT S.Student_name, sum(P.Marks) FROM Student S, Performace P WHERE P.Marks >84 GROUP BY S.Student_name; The number of rows returned by the above SQL query is ____________.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Book (Title, Author, Catalog_no, Publisher, Year, price) Collection (Title, Author, Catalog_no) FD I.  TitleAuthor ⟶ Catalog_no FD II.  Catalog_no ⟶ Title Author Publisher Year FD III.  Publisher Title Year ⟶ Price Key = [Author Title] Collection (Title, Author, Catalog_no) FD I. TitleAuthor ⟶ Catalog_no The relation  Collection is in BCNF because Title Author is a super key Collection is in BCNF so its in also in 3NF, 2NF and 1NF. Key = [Author Title] Book (Title, Author, Catalog_no, Publisher, Year, price) FD I.  Title Author → Catalog_no FD II.  Catalog_no → Title Author Publisher Year FD III.  Publisher Title Year → Price In FD II Catalog_no → Title Author Publisher Year Catalog no is a key Candidate key = [Title author, catalog] In book schema FD I. Satisfy BCNF FD II. Satisfy BCNF'
   },
   {
     id: 'q-dbms-2018-21',
@@ -1311,8 +1320,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following two tables and four queries in SQL. Book (isbn, bname), Stock (isbn, copies) Query 1: SELECT B.isbn, S.copies FROM Book B INNER JOIN Stock S ON B.isbn= =S.isbn; Query 2: SELECT B.isbn, S.copies FROM Book B LEFT OUTER JOIN Stock S ON B.isbn = S.isbn;',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Journal (VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE) FD I:  (VOLUME, NUMBER, STARTPAGE, ENDPAGE) → TITLE FD II: (VOLUME, NUMBER) → YEAR FD III:  (VOLUME, NUMBER, STARTPAGE, ENDPAGE) → PRICE Keys: (VOLUME, NUMBER, STARTPAGE, ENDPAGE) FD I: is in BCNF or satisfy BCNF definition (Because in x → y, x is super key) FD III: is in BCNF or satisfy BCNF definition But FD II ( VOLUME, NUMBER) → YEAR not satisfy 2NF definition because the non-key attribute is not fully dependent on key or proper subset of candidate key → non-key attribute, violation of 2NF exists. FD II: Journal Not in 2 NF Redesign Schema SC I: Volume, Number, Start page, end page, Title price SC II: Volume Number year Schema I: Volume number start page end page Title price FD I: Volume Number start page end page → Title price. FD II: Volume Number start page end page → Price  Satisfy BCNF definition is schema I Schema II: Volume number year Volume Number → year  Satisfy BCNF definition New design is in BCNF but old design Only 1 NF but not satisfy 2NF ❑❑❑'
   },
   {
     id: 'q-dbms-2017-23',
@@ -1324,8 +1333,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a database that has the relation schema EMP(EmpId, EmpName, DeptName). An instance of the schema EMP and a SQL query on it are given below: EMP EmpId EmpName DeptName 1 XYA AA 2 XYB AA 3 XYC AA 4 XYD AA 5 XYE AB 6 XYF AB 7 XYG AB 8 XYH AC 9 XYI AC 10 XYJ AC 11 XYK AD 12 XYL AD 13 XYM AE SELECT AVG(EC.Num) FROM EC WHERE (DeptName, Num) IN (SELECT DeptName, COUNT(EmpId) AS EC( DeptName, Num) FROM EMP GROUP BY DeptName) The output of executing the SQL query is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'STEP-1: T acquire x lock (Exclusive lock) O1 …. Ok in increasing order of the address i.e.  other transaction cannot take any lock on that data item. Tj Same Data Item S X Ti S Yes No X No No STEP-2: Required operation are performed. STEP-3: All lock are released. & Serializability order is determined by lock point.'
   },
   {
     id: 'q-dbms-2016-24',
@@ -1337,8 +1346,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following database table named water_schemes: water_schemes scheme_no district_name Capacity 1 Ajmer 20 1 Bikaner 10 2 Bikaner 10 3 Bikaner 20 1 Churu 10 2 Churu 20 1 Dungargarh 10',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '2PL ensures conflict serializability but may not be free from deadlock. ❑❑❑'
   },
   {
     id: 'q-dbms-2015-25',
@@ -1355,8 +1364,8 @@ export const questions = [
       'WHERE P1.capacity > All (select max (P2.capacity) from Cinema P2)',
       'WHERE P1.capacity > Any(select max (P2.capacity) from Cinema P2)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Consider the given relation Cinema along with the data: Cinema Theater Address Capacity T1 A 100 T2 B 200 T3 C 300 T4 D 400 When we execute the query with the condition mentioned in options on the above relation we get: (a) WHERE P 1. Capacity  ALL (100, 200, 300, 400) (x  100) AND (x  200) AND (x  300) AND (x  400) 400 is in output i.e theater with maximum Capacity. (b) WHERE P 1 Capacity  ANY (100, 200, 300, 400) (x  100) OR (x  200) OR (x  300) (OR) (x  400) 100, 200, 300, 400 is in output, i.e not getting theater with maximum Capacity (c) WHERE P 1. Capacity > ALL (400) returns 0 tuples. (d) WHERE P 1. Capacity > ANY (400) returns 0 tuples. Therefore, condition in option(a) will always find the addresses of theaters with maximum capacity.'
   },
   {
     id: 'q-dbms-2015-26',
@@ -1374,7 +1383,7 @@ export const questions = [
       'the projection operation in relational algebra, except that SELECT in SQL retains duplicates 27. [NAT] GATE-2015 : 2M] Consider the following relations: Student Roll_No Student_Name 1 Raj 2 Rohit 3 Raj Performance Roll_No Course Marks 1 Math 80 1 English 70 2 Math 75 3 English 80 2 Physics 65 3 Math 80 Consider the following SQL query. SELECT S.Student_Name, sum(P.Marks) FROM Student S, Performance P WHERE S.Roll_No=P.Roll_No GROUP BY S.Student_Name The number of rows that will be returned by the SQL query is ___________'
     ],
     correctAnswer: null,
-    explanation: ''
+    explanation: '2PL ensures conflict serializability but may not be free from deadlock. ❑❑❑'
   },
   {
     id: 'q-dbms-2014-28',
@@ -1389,8 +1398,8 @@ export const questions = [
       'Name of all the employees with at least one of their customers having a \'GOOD\' rating.',
       'Names of all the employees with at most one of their customers having a \'GOOD\' rating.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'The query is a co -related nested query. The inner query yields the customer Id whose rating is NOT GOOD. The Operator NOT EXISTS returns true if inner query result is empty. It works like a complement operation, so the outer query returns the names of all the employees with all their customers having a \'GOOD\' rating. All A.Id will be in output'
   },
   {
     id: 'q-dbms-2014-29',
@@ -1407,8 +1416,8 @@ export const questions = [
       'select R.* from R, (select distinct a from S) as S1 where R.a=S1.a',
       'select R.* from R, S where R.a=S.a and is unique R'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'R: A B C 1 4 8 1 4 8 5 6 10 5 6 10 S: A D E 1 4 8 4 5 11 5 8 9 5 8 9 The output of the given query: Select * from R where a in (select S.a from S) is as follows: A B C 1 4 8 1 4 8 5 6 10 5 6 10 In option (a): 4 × 4 = 16 tuple 3 + 3 = 6 attribute A B C 1 4 8 1 4 8 5 6 10 5 6 10 5 6 10 5 6 10 In option (b): A B C 1 4 8 5 6 10 In option (c): A B C 1 4 8 1 4 8 5 6 10 5 6 10'
   },
   {
     id: 'q-dbms-2014-30',
@@ -1425,8 +1434,8 @@ export const questions = [
       'It generates an error because of pairwise comparison.',
       'It generates an error because the GROUP BY clause cannot be used with table joins in a subquery.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Inner query gives dept id and max(Hire data) in each department where location id is 1700. Complete query gives last name and hire date Of maximum (latest hiring) in their respective dept at which location id = 1700'
   },
   {
     id: 'q-dbms-2012-31',
@@ -1443,8 +1452,8 @@ export const questions = [
       'Q and R',
       'Q and S'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '• Having even does not have group by clause. • Having clause applies condition on each group. • All Attribute used in the group by clause must be (Present) in select clause.'
   },
   {
     id: 'q-dbms-2012-32',
@@ -1461,8 +1470,8 @@ export const questions = [
       '0',
       '1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'ALL returns True if inner query returns no tuples or . So, Number of tuples returned will be number of tuples in relation A that is 3.'
   },
   {
     id: 'q-dbms-2011-33',
@@ -1479,8 +1488,8 @@ export const questions = [
       '5',
       '6'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'S:  T: Borrower  Bank_ Manager Bank_ Manager Loan_ Amount Ramesh Sunderaja n [SJ] ⋈ Sunderajan [SJ] 10000 Suresh  Ramgopal [RG] Ram Gopal [RG] 5000 Mahesh Sunderaja n [SJ] Sunderajan [SJ] 7000 3×3 = 9 Tuple 2+2 = 4 Attribute S. Borrower S. Bank_ Manager T. Bank_ Manager T.Loan_ Amount Ramesh [SJ] [SJ] 10,000 Ramesh [SJ] RG 5000 Ramesh [SJ] [SJ] 7000 Suresh RG [SJ] 10,000 Suresh RG RG 5000 Suresh RG [SJ] 7000 Mahesh [SJ] [SJ] 10000 Mahesh [SJ] RG 5000 Mahesh [SJ] [SJ] 7000 5 Tuples in the output.'
   },
   {
     id: 'q-dbms-2011-34',
@@ -1497,8 +1506,8 @@ export const questions = [
       '129',
       '257'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'X Y 1 1 [MX + 1] X Y 2 * MY + 1 1 1 X = 1 + 1 = 2 2 3 2 × 1 + 1 = 3 2 + 1 = 3 3 7 2 × 3 + 1 = 7 3 + 1 = 4 4 15 2 × 7 + 1 = 15 4 + 1 = 5 5 31 2 × 15 + 1 = 31 5 + 1 = 6 6 63 2 × 31 + 1 = 63 6 + 1 = 7 7 127 2 × 63 + 1 = 127 7 + 1 = 8 8 255 2 × 127+ 1 = 255 8 + 1 = 9 9 511 2 × 255 + 1 = 511 Therefore, the query: SELECT Y FROM T WHERE X = 7; will yield 127.'
   },
   {
     id: 'q-dbms-2010-35',
@@ -1515,8 +1524,8 @@ export const questions = [
       '1, 3',
       '1, 5 36. [MCQ] GATE-2009 : 2M] Consider the following relational schema: Suppliers(sid: integer, sname: string, city: string, street: string) Parts(pid: integer, pname:string, color:string) Catalog (sid:integer, pid:integer, cost:real) Consider the following relational query on the above database: SELECT S.sname FROM Suppliers S WHERE S.sid NOT IN (SELECT C.sid FROM Catalog C'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'EXIST returns true if inner query result is non-empty. It is a corelated nested query & inner query condition is Age > 65 & passenger Pid = reservation Pid. Corelated nested query: Top → Bottom → Top Outer → Inner → Outer query In outer query  condition class = ‘AC’ will return Pid 0, 1, 5, 3 and inner query Age > 65. returns Pid 1, 2, 3, final the output relation is as follows: Pid 1 3'
   },
   {
     id: 'q-dbms-2008-37',
@@ -1533,8 +1542,8 @@ export const questions = [
       'for each school with more than 200 students in it, the name of the school and the number of its students scoring 100 in at least one exam.',
       'nothing; the query has a syntax error. TRC'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If the select clause includes columns with and without aggregate data. The Select clause\'s non -aggregate columns must all exist in the Group By clause. Nevertheless, this query\'s Group by clause uses school-id rather than school -name. Hence, the query generates the syntax error.'
   },
   {
     id: 'q-dbms-2017-38',
@@ -1551,8 +1560,8 @@ export const questions = [
       '(ii) and (iii) only',
       '(i), (ii) and (iii)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'All three expressions are identical before  the operation, i.e.return true if for each tuple t we have finite number of tuple u in employee table for which they have same employee_name. (I) But in part two, for each tuple v in department there may exist infinite number of tuple t for which they ma y not be equal. i.e. true for finite number of tuples  true for infinite number of tuples, over all true for finite tuple. (II) There may exist infinite number of tuple for which at least one tuple v belongs to department table for which they may not be equal. i.e. true for finite number of tuples  true for infinite number of tuples, over all true for finite tuple. (III) This statement is true for a finite number of tuples because only a finite number of tuples that are identical to at least one tuple i n department. Due to the limited number of tuples in department tables, tuples that are identical may not exceed all tuples in department table in the event of equity. Specifically, true for a finite tuple, true for a finite tuple overall. Therefore, all TRC queries will yield finite tuples, indicating that all are safe.'
   },
   {
     id: 'q-dbms-2013-39',
@@ -1564,8 +1573,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following relational schema. Student (rollno: integer, sname: string) Courses (courseno:integer, cname:string) Registration (rollno: integer, courseno: integer, percent: real) Which of the following queries are equivalent to this query in English? Find the distinct names of all students who score more than 90 % in the course numbered 107 I. SELECT DISTINCT S.sname FROM Students as S, Registration as R WHERE R.rollno=S.roll.no AND R.courseno =107 and R.percent >90',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '(a) This is a SQL query expression. It first perform a cross product of Students and Registration, then WHERE clause only keeps those rows in the cross product set where the student is registered for course no 107, and percentage is > 90. Then select distinct statement gives the distinct names of those students as the result set. (b) This is a relational algebra expression. It first perform a NATURAL JOIN of Students and Registration (NATURAL JOIN implicitly joins on the basis of common attribute, which here is rollno), then the select operation(sigma) keep s only those rows where the student is registered for courseno 107, and percentage is > 90. And then the projection operation (pi) projects only distinct student names from the set. Note: Projection operation (pi) always gives the distinct result.'
   },
   {
     id: 'q-dbms-2008-41',
@@ -1582,8 +1591,8 @@ export const questions = [
       'schools with a pass percentage above 35% over all exams taken together',
       'schools with a pass percentage above 35% over each exam ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 't | E Enrolment t = E. school-id Returns school -ids from Enrolment table SUCH THAT • |{x; | x  Enrolment  x. school-id = t  (B  ExamResult B. erollno x. erollno  B.examname = x. examname  B.marks > 35)}÷ • the number of student enrolments from the school for exams with marks > 35 divides   |{x | x  Enrolment  x.school-id = t}|   total number of student enrolments from the school *100 > 35  percentage of student enrolments with mark > 35 is > 35 Selecting the school-ids where the pass percentage of students across all the examinations taken combined is > 35 is necessary because passing an exam requires a mark of > 35. ❑❑❑'
   },
   {
     id: 'q-dbms-2015-1',
@@ -1600,8 +1609,8 @@ export const questions = [
       'Clustered',
       'Unclustered'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Arity (Degree): Number of Attributes/fields Cardinality: Number of Tuples/Records'
   },
   {
     id: 'q-dbms-2013-2',
@@ -1618,8 +1627,8 @@ export const questions = [
       'the data record of the file are organized in the same order as the date entries of the index',
       'the data records of the file are organized not in the same order as the data entries of the index.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Arity (Degree): Number of Attributes/fields Cardinality: Number of Tuples/Records'
   },
   {
     id: 'q-dbms-2008-3',
@@ -1636,7 +1645,7 @@ export const questions = [
       'key and ordering',
       'key and non-ordering Multi Level Indexing'
     ],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -1649,8 +1658,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a database of fixed-length records, stored as an ordered file. The database has 25,000 records, with each record being 100 bytes, of which the primary key occupies 15 bytes. The data file is block-aligned in that each data record is fully contained within a block. The database is indexed by a primary index file, which is also stored as a block-aligned ordered file. The figure below depicts this indexing scheme. Suppose the block size of the file system is 1024 bytes, and a pointer to a block occupies 5 bytes. The system uses binary search on the index file to search for a record with a given key. You may assume that a binary search on an index file of b blocks takes [log2 b] block accesses in the worst case. Given a key, the number of block accesses required to identify the block in the data file that may contain a record with the key. in the worst case, is .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '(a) BankAccount_Num is a candidate key: Incorrect. Because a student can have multiple account and joint account. Example Assume 2 person Ramesh and Suresh have joint account they both have some account number in a primary account number. So, Bank account number can not uniquely determine and Bank account cannot be candidate key. (b) Registration number can be primary key: True. Because registration number is a unique for each registered student So, it can be uniquely determining each tuple of relation. (c) UID is a candidate if all student is from  same country: correct. Because UID is unique at National level Example Indian Aadhar card is unique for each person in India. (d) If S is a super key, then S  UID is also super key: correct Because any super set of super keys is also super key.'
   },
   {
     id: 'q-dbms-2008-6',
@@ -1667,8 +1676,8 @@ export const questions = [
       '256 and 4',
       '512 and 5 B Tree and B+ Tree'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'On delete cascade: Whenever primary key is deleted from referenced (parent) table then that related value (Tuple/Row) (that primary key value) from referencing (CHILD table) has to be deleted. On delete set NULL:  Whenever primary key is deleted from reference (parent) table then that related value (Tuple/Row) in referencing [CHILD table (which contain foreign key)] is set to NULL. By default foreign key references to the primary key of referenced relation.'
   },
   {
     id: 'q-dbms-2020-7',
@@ -1680,8 +1689,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a database implemented using B+ tree for file indexing and installed on a disk drive with block size of 4 KB. The size of search key is 12 bytes and the size of tree/disk pointer is 8 bytes. Assume that the database has one million records. Also assume that no node of the B+ tree and no records are present initially in main memory. Consider that each record fits into one disk block. The minimum number of disk accesses required to retrieve any record in the database is_______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '• Statement S1 is false as a foreign key declaration cannot be replaced by check assertion in SQL, because foreign key may have duplicate and Null values and having ON DELETE cascade operation then if any primary key deleted from referential relation then the referential integrity constraint may not be maintained. • Statement S2: R(a b c) Here ab is primary key S(a d e) Primary key : d,  foreign key a references R, foreign key reference to the primary key of referenced relation R. But in referenced relation ab is primary key, only a is not a p rimary key so here foreign key \'a\' not references key (ab) of referenced relation R. therefore S2 is false.'
   },
   {
     id: 'q-dbms-2016-9',
@@ -1711,8 +1720,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a B+ tree in which the search key is 12 bytes long, block size is 1024 bytes, record pointer is 10 bytes long and block pointer is 8 bytes long. The maximum number of keys that can be accommodated in each non-leaf node of the tree is _____________',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Relationship R is many to one and participation of A in R is total.'
   },
   {
     id: 'q-dbms-2015-11',
@@ -1724,8 +1733,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'With reference to the B+ tree index of order 1 shown below, the minimum number of nodes (including the Root node) that must be fetched in order to satisfy the following query: "Get all records with a search key greater than or equal to 7 and less than 15\'\' is?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'R12 is many to many relationships between E1 and E2. So, separate table is created E1 (a11 a12)     E2 (a21 a22)  R12 (a11 a21) a11 → a12      a21 → a22 E3 R13(a31 a32 a11) a31 → a32a11 3NF (Third normal form): Let R be the relational schema and X → Y is non trivial FD is in 3NF If   X: super key or Y: prime attribute E1 (a11 a12) a11 → a12 E2 (a21 a22) a21 → a22'
   },
   {
     id: 'q-dbms-2010-12',
@@ -1742,8 +1751,8 @@ export const questions = [
       '3',
       '4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(a) Statement given is correct with respect to ER diagram. (b) Statement given is correct with respect to ER diagram. (c) In ER diagram multivalued attribute and composite attribute both are allowed , but i n RDBMS Multivalued attribute and composite attribute are not allowed. Each Tuple in RDBMS can have only one value or NULL for each field (Attribute exactly) So, option (c) is incorrect.'
   },
   {
     id: 'q-dbms-2009-13',
@@ -1760,8 +1769,8 @@ export const questions = [
       '4',
       '5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'MR1P   many to one and total participation at many side MR1(M1M2 M3 P1) , here P1 is a foreign key P(P1 P2) NR2(N1 N2 P1) , here P1 is a foreign key'
   },
   {
     id: 'q-dbms-2008-14',
@@ -1778,8 +1787,8 @@ export const questions = [
       '5',
       '6 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'MR1(M1 M2 M3 P1), here P1 is a foreign key P(P1 P2), P1 is primary key NR2(N1N2P1), here P1 is a foreign key ❑❑❑'
   },
   {
     id: 'q-dld-2011-1',
@@ -1796,8 +1805,8 @@ export const questions = [
       'Interrupt from Keyboard',
       'Interrupt from CPU temperature sensor Process concept'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Interrupt from CPU temperature sensor should  be given highest priority. Delaying a CPU temprature sensor could result in major consequences, overheated CPU can damage internal circuits, and hence hampering entire computer system. The priority of above events is given as: CPU temprature sensor  > Hard disk  > Mouse  > Keyboard. Therefore, option d is the correct answer.'
   },
   {
     id: 'q-dld-2023-2',
@@ -1814,8 +1823,8 @@ export const questions = [
       'Program counter',
       'General purpose registers'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'The given code is of strict alternation. Both processes are strictly changing the value of turn to 1 and 0. Strict alternation guarantees mutual exclusion but fails to guarantee process. Therefore, This solution violates progress requirement. Hence, option (c) is correct.'
   },
   {
     id: 'q-dld-2020-3',
@@ -1832,8 +1841,8 @@ export const questions = [
       'I, II and IV only',
       'I, II and III only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'A process state diagram with pre -emptive scheduling is as follows: So, from the given diagram we can say I. A running process can move to ready state. II. A ready process can move to running state. IV. A blocked process can move to ready state. Therefore, option C is correct.'
   },
   {
     id: 'q-dld-2015-4',
@@ -1850,8 +1859,8 @@ export const questions = [
       '2n',
       'Independent of n'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The maximum number of processes present in the ready state is independent of number of CPU’s the system have. Number of processes in ready state depends upon the size of ready queue. Therefore, option D is the correct answer.'
   },
   {
     id: 'q-dld-2011-5',
@@ -1868,8 +1877,8 @@ export const questions = [
       'T1 < T2',
       'Nothing can be said about the relation between T1 and T2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, User Mode → Kernel Mode = T1 User process 1 → User process 2 = T 2 [Context Switching] Context switching includes mode shifting, first preempt the process, shift the mode from user to kernel, OS will save and load the PCB, again shift the mode from kernel to user. From this we can say context switching time is superset and mode shifting is a subset. Therefore, T2 is greater than T1. Hence, option C is the correct answer.'
   },
   {
     id: 'q-dld-2009-6',
@@ -1881,8 +1890,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'In the following process state transition diagram for a uniprocessor system, assume that there are always some process in the ready state:',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'If a process is completed it is not necessary that you should load a new process into memory. Therefore, statement I is false. A process P2 in blocked state can make transition E while another process P1 is in running state. TRUE. Process moving from blo ck to ready state and another process is in running state, this situation is possible and hence statement II is true. The OS uses preemptive scheduling.  TRUE. The given diagram makes a transition from running to ready state and hence this indicates that  processes can be preempted while running. So, statement III is also true and statement IV is false. Hence, option C is the correct answer.'
   },
   {
     id: 'q-cn-2023-7',
@@ -1899,8 +1908,8 @@ export const questions = [
       'Priority Scheduling',
       'Shortest Job First'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The question is asking for  the minimum value of x and the minimum value of y together for which execution of P can result in a deadlock are: So, checking for the minimum value x = 1, y = 1. Deadlock is possible in this scenario the condition is process should perform down/wait operation twice. If down operation on lock is performed twice, then deadlock is possible. Therefore, option D is correct.'
   },
   {
     id: 'q-cn-2022-8',
@@ -1917,8 +1926,8 @@ export const questions = [
       'P = 4, Q = 12, R = 5, S = 4',
       'P = 3, Q = 7, R = 7, S = 3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given, 1. Switching to ready  processes after termination of currently executing process also a context switch. 2. There is no context switch from S to P. (Therefore P should be completed within 1 TQ) 3. There are exactly two context switches from Q to R (Ther efore Q and R both should requires more than 1 TQ)'
   },
   {
     id: 'q-cn-2021-9',
@@ -1935,8 +1944,8 @@ export const questions = [
       'Round-robin policy can be used even when the CPU time required by each of the processes is not known apriori.',
       'Implementing preemptive scheduling needs hardware support.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, R = 4 To avoid deadlock, so each process can have maximum of k-1 resources. Required P1  K –1 P2  K –1 P3  K –1 R = 4 Condition for deadlock = (3K – 3) +1 ⇒ 3K –2 = 4 ⇒ 3K = 6 ∴ K=2 So, 2 is the correct answer.'
   },
   {
     id: 'q-cn-2021-10',
@@ -1948,8 +1957,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Three processes arrive at time zero with CPU bursts of 16, 20 and 10 milliseconds. If the scheduler has prior knowledge about the length of the CPU bursts, the minimum achievable average waiting time for these three processes in a non-preemptive scheduler (rounded to nearest integer) is _______ milliseconds.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 12,
+    explanation: 'It is given that we have to find out the minimum achievable average waiting time for these three processes in a non -preemptive scheduler. This is always possible with Shortest Job First CPU scheduling algorithm. Hence, we will be using SJF to solve this problem. Gantt chart using SJF: P3 P1 P2 0     10      26    46 10 26 0AV.W.T = 3 36= 123 ++ = Therefore, 12 is the correct answer.'
   },
   {
     id: 'q-cn-2020-11',
@@ -1961,8 +1970,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following set of processes, assumed to have arrived at time 0. Consider the CPU scheduling algorithms Shortest Job First (SJF) and Round Robin (RR). For RR, assume that the processes are scheduled in the order P1, P2, P3, P4. Processes P1 P2 P3 P4 Burst time (in ms) 8 7 2 4 If the time quantum for RR is 4 ms, then the absolute value of the difference between the average turnaround times (in ms) of SJF and RR (round off to 2 decimal places) is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, There are two semaphores a and b initialized to 1 and 0 respectively. Count is a shared variable it is initialized to 0. 1. CODE SECTION P 2. wait (a); 3. count = count + 1; 4. if (count == n) signal (b); 5. signal (a); 6. wait (b); 7. signal (b); 8. CODE SECTION Q Process will arrive, Complete the CODE SECTION P //line 1. and then only it can perform wait (a); //line 2 now, it will increase the value of count to 1; //line 3 check if (count==n), if yes then perform signal (b); else we will not execute signal(b); //line 4 It will perform signal (a); //line 5 wait (b) [b was initialized to 0, so it will be blocked]. //line 6'
   },
   {
     id: 'q-cn-2019-12',
@@ -1974,8 +1983,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following four processes with arrival times (in milliseconds) and their length of CPU bursts (in milliseconds) as shown below: Process P1 P2 P3 P4 Arrival time 0 1 3 4 CPU burst time 3 1 3 Z',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Suppose, the initial value of S = x Now, 20P means 20 down operations(-20) and 12 V means 12 up operations (+12). It is saying that at least one operation should remain blocked. So, this can be written as, x – 20 + 12 = –1 x – 8 = –1 x = 7 So, the largest initial value of S for which  at least one operation will remain blocked is 7.'
   },
   {
     id: 'q-cn-2017-13',
@@ -1987,8 +1996,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the set of processes with arrival time (in milliseconds), CPU burst time (in milliseconds), and priority (0 is the highest priority) shown below. None of the process have I/O burst time. Process Arrival Time Burst Time Priority P1 0 11 2 P2 5 28 0 P3 12 2 3 P4 2 10 1 P5 9 16 4 The average waiting time (in milliseconds) of all the processes using preemptive priority scheduling algorithm is ___.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 29,
+    explanation: 'P.No  Arrival Time Burst Time Priority P1 0 11 2 P2 5 28 0 (Highest) P3 12 2 3 P4 2 10 1 P5 9 16 4 (Lowest) Gantt chart using Pre -emptive priority scheduling algorithm: P1 P4 P2 P4  P1  P3 P5 0       2        5       33     40    49        51    67 Average Waiting Time  = 38 0 37 28 42 5 + + + + = 145 295 ='
   },
   {
     id: 'q-cn-2017-14',
@@ -2000,8 +2009,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following CPU processes with arrival times (in milliseconds) and length of CPU bursts (in milliseconds) as given below: Process Arrival Time Burst Time P1 0 7 P2 3 3 P3 5 5 P4 6 2 If the pre-emptive shortest remaining time first scheduling algorithm is used to schedule the processes, then the average waiting time across all processes is ___ milliseconds.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) With option A, deadlock happens. (b) Process ‘X’ may compute all values (iterations) and process would be able to make only one iteration and then gets blocked. So, option B is also incorrect. (c) Processes ‘X and ‘Y’ alternates and signal each other so that all iterations of both ‘X’ and ‘ Y’ completes successfully (d) Some of the signals issued by ‘X’ cannot be captured by  ‘Y’ Therfore, process ‘Y’ will not be able to complete all iterations. So, option D is also incorrect.'
   },
   {
     id: 'q-cn-2016-15',
@@ -2013,8 +2022,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following processes, with the arrival time and the length of the CPU burst given in milliseconds. The scheduling algorithm used is preemptive shortest remaining-time first. Process Arrival Time Burst Time P1 0 10 P2 3 6 P3 7 1 P4 8 3 The average turn around time of these processes is___ milliseconds.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The code can be written as: CSEM S = 2; Pri i = W, X, Y, Z { P(S); <update x> V(S); } W: Completes,  x =1 X: Load ; increment; Preempted,     x =2 Y: Completes Z: Completes X: Store, x = 2 is stored as the final value Therfore, 2 is the correct answer hence option D is true.'
   },
   {
     id: 'q-cn-2016-16',
@@ -2031,8 +2040,8 @@ export const questions = [
       'Uniform random',
       'Highest priority first with priority proportional to CPU burst length'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Shortest job first (SJF) minimizes the waiting time, SJF gives the minium average waiting time as comapred with other algorithms. Here it is given that arrival time of all processes is same, so SRTF acts same as SJF.'
   },
   {
     id: 'q-cn-2015-17',
@@ -2049,8 +2058,8 @@ export const questions = [
       'Shortest Remaining time.',
       'Round Robin with Quantum value two.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Shortest remaining time first or Shortest job first will always generate minimum average turnaround time and average waiting time. Here also preemptive SJF or SRTF will always give minimum average waiting time as comapred to non - preemptive SJF. Th erefore, option C is the correct answer.'
   },
   {
     id: 'q-cn-2015-18',
@@ -2062,8 +2071,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a uniprocessor system executing three tasks T1, T2 and T3, each of which is composed of an infinite sequence of jobs (or instances) which arrive periodically at intervals of 3, 7 and 20 milliseconds,',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 12,
+    explanation: 'Prio Period P.NO A.T B.T Insta 1/3 3 T1 1 1 1; 4; 7; 10; 13; 16… 1/7 7 T2 1 2  1; 8; 15; … 1/20 4 T3 1 4  1; 21; 41; … Pre-Prio: R.O 𝑇11 ; 𝑇21 ; 𝑇31 ;  𝑇12 ;  𝑇13;   𝑇22 ;  𝑇14 ; Gantt Chart: So, at the end of 12 millisecond and at the beginning of 13 millisecond the first instance of T3 completed its execution. Therefore, 12 is the correct answer.'
   },
   {
     id: 'q-co-2014-19',
@@ -2137,8 +2146,8 @@ export const questions = [
       'FCFS: P1, P2, P3, RR2: P1, P3, P2',
       'FCFS: P1, P3, P2, RR2: P1, P2, P3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'In FCFS all the process’s gets executed as per their time of arrival, so using FCFS processes will be completed as P1, P2, P3 Now, checking the completion sequence using round-robin scheduling: P.No      Arrival Time         Burst Time 1 0 5 2 1 7 3 3 4 Round robin Time Qunatum = 2 Ready Queue- 𝑃1 ; 𝑃2 ; 𝑃1 ;  𝑃3 ;  𝑃2;   𝑃1 ;  𝑃3 ; 𝑃2 Gantt Chart: P1 P2 P1 P3 P2 P1 P3 P2 0       2       4      6       8     10     11      13    16 Here, Process are completed as P1, P3, P2. So, option C is the correct answer.'
   },
   {
     id: 'q-dld-2011-24',
@@ -2155,8 +2164,8 @@ export const questions = [
       '6.33 ms',
       '7. 33 ms'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Gantt Chart Preemptive SJF: CPU P0 P1 P0 P2 0      1       5      13     22 P. No Arri val Tim e Bu rst Ti me Comple tion Time Turnar ound Time Wait ing Time P0 0 9 13 13 4 P1 1 4 5 4 0 P2 2 9 22 20 11 4 0 11 15AV.W.T = = 5 33 ++ = Hence, option A is the correct answer.'
   },
   {
     id: 'q-dld-2010-25',
@@ -2173,8 +2182,8 @@ export const questions = [
       'II and III only',
       'I, II and III'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'I.  Shortest remaining time first scheduling may cause starvation. TRUE. Processes with longer burst time may starve if processes with shorter burst time keeps on arriving. Process Name Arrival Time Burst Time Completion Time Turnarou nd Time A 0 6 8 8 B 3 2 5 2 C 5 4 12 7 D 7 6 21 14 E 10 3 15 5'
   },
   {
     id: 'q-dld-2008-26',
@@ -2191,8 +2200,8 @@ export const questions = [
       'degenerate to first come first serve',
       'None of the above System Call'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'If the time-slice used in the round-robin scheduling policy is more than the maximum time required to execute any process, then the policy will degenerate to first come first serve.'
   },
   {
     id: 'q-dld-2023-27',
@@ -2209,8 +2218,8 @@ export const questions = [
       'Page Fault',
       'System Call'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'FIFO page replacement algorithm can result in increasing page fault rate even when the number of allocated frames are decreasing.'
   },
   {
     id: 'q-dld-2021-28',
@@ -2227,8 +2236,8 @@ export const questions = [
       'sleep',
       'strlen'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Reference string: 3, 8, 2, 3, 9, 1, 6, 3, 8, 9, 3, 6, 2, 1, 3 Page fault using FIFO and LRU page replacement algorithm:'
   },
   {
     id: 'q-dld-2019-29',
@@ -2240,8 +2249,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The following C program is executed on a Unix/Linux system: #include<unistd.h> int main( ) { int i; for (i=0;i<10;i++) if (i%2==0) fork( ); return 0; } The total number of child processes created is ___________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 31,
+    explanation: 'We know that, n -forks creates (2 n –1) child processes n = 10; (n % 2 = 0)  5 times  No of child processes = 25 – 1 = 31'
   },
   {
     id: 'q-dld-2012-30',
@@ -2258,8 +2267,8 @@ export const questions = [
       '7',
       '8'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'For, n-fork system call  Total child processes = 2n – 1 Here, n = 3 So, 23 – 1 = 7 So, option C is the correct answer.'
   },
   {
     id: 'q-dld-2008-31',
@@ -2276,8 +2285,8 @@ export const questions = [
       '2n',
       '2n + 1 – 1 Threads'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For, n fork( ) system calls, total number of child processes created is  2n – 1.'
   },
   {
     id: 'q-dld-2017-32',
@@ -2294,8 +2303,8 @@ export const questions = [
       'IV only',
       'III and IV only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Thread is the light weight process and each thread comprises its own stack, program counter, register. Only the address space of the thread is shared among threads of a single process. So, option B is the correct answer.'
   },
   {
     id: 'q-dld-2017-33',
@@ -2312,8 +2321,8 @@ export const questions = [
       'neither global variables nor heap',
       'both heap and global variables'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'A thread of a process shares with other threads are: Data se ction, Code section, Address space, permissions, etc. So, option D is the correct answer. Threads of a process shares both heap and global variables.'
   },
   {
     id: 'q-dld-2014-34',
@@ -2348,8 +2357,8 @@ export const questions = [
       'On per-thread basis, the OS does not maintain virtual memory state.',
       'On per-thread basis, the OS maintains only scheduling and accounting information. ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'On per -thread basis, the OS maintains only CPU register. INCORRECT. As it also maintains thread state, thread ID, thread priority, etc. are also maintained. The OS maintains a seprate stack for each thread, so option B is also INCORRECT. On per -thread b asis, the OS does not maintain virtual memory state. CORRECT. Virtual memory state is actually address  space, and it is not unique for each thread, address space is shared among multiple threads. On per -thread basis, the OS maintains only scheduling and accounting information. INCORRECT. As thread mainatains other data also like thread priority, thread state, etc. ❑❑❑'
   },
   {
     id: 'q-toc-2016-1',
@@ -2464,7 +2473,7 @@ export const questions = [
       'x = 2, y = 2',
       'x = 1, y = 1'
     ],
-    correctAnswer: null,
+    correctAnswer: 1,
     explanation: ''
   },
   {
@@ -2480,9 +2489,13 @@ export const questions = [
       'Mutual exclusion but not progress',
       'Progress but not mutual exclusion',
       'Neither mutual exclusion nor progress',
-      'Both mutual exclusion and progress 9. [MSQ] [GATE-2021-CS: 2M] Consider a computer system with multiple shared resource types, with one instance per resource type. Each instance can be owned by only one process at a time. Owning and freeing of resources are done by holding a global lock (L). The following scheme is used to own a resource instance: function OWNRESOURCE(Resource R) Acquire lock L // a global lock if R is available then Acquire R Release lock L else if R is owned by another process P then Terminate P, after releasing all resources owned by P Acquire R Restart P Release lock L end if end if end function Which of the following choice(s) about the above scheme is/are correct?'
+      'Both mutual exclusion and progress 9. [MSQ] [GATE-2021-CS: 2M] Consider a computer system with multiple shared resource types, with one instance per resource type. Each instance can be owned by only one process at a time. Owning and freeing of resources are done by holding a global lock (L). The following scheme is used to own a resource instance: function OWNRESOURCE(Resource R) Acquire lock L // a global lock if R is available then Acquire R Release lock L else if R is owned by another process P then Terminate P, after releasing all resources owned by P Acquire R Restart P Release lock L end if end if end function Which of the following choice(s) about the above scheme is/are correct?',
+      'The scheme ensures that deadlocks will not occur.',
+      'The scheme may lead to live-lock.',
+      'The scheme may lead to starvation.',
+      'The scheme violates the mutual exclusion property. OS Based Solution'
     ],
-    correctAnswer: null,
+    correctAnswer: 1,
     explanation: ''
   },
   {
@@ -2498,10 +2511,15 @@ export const questions = [
       '; count = count + 1; if (count == n) signal',
       '; signal',
       '; wait',
-      '; signal'
+      '; signal',
+      '; CODE SECTION Q What does the code achieve?',
+      'It ensures that no process executes CODE SECTION Q before every process has finished CODE SECTION P.',
+      'It ensures that all processes execute CODE SECTION P mutually exclusively.',
+      'It ensures that two processes are in CODE SECTION Q at any time.',
+      'It ensures that at most n-1 process are in CODE SECTION P at any time.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, There are two semaphores a and b initialized to 1 and 0 respectively. Count is a shared variable it is initialized to 0. 1. CODE SECTION P 2. wait (a); 3. count = count + 1; 4. if (count == n) signal (b); 5. signal (a); 6. wait (b); 7. signal (b); 8. CODE SECTION Q Process will arrive, Complete the CODE SECTION P //line 1. and then only it can perform wait (a); //line 2 now, it will increase the value of count to 1; //line 3 check if (count==n), if yes then perform signal (b); else we will not execute signal(b); //line 4 It will perform signal (a); //line 5 wait (b) [b was initialized to 0, so it will be blocked]. //line 6'
   },
   {
     id: 'q-dld-2016-12',
@@ -2513,8 +2531,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a non-negative counting semaphore S. The operation P(S) decrements S, and V(S) increments S. During an execution, 20 P(S) operations and 12 V(S) operations are issued in some order. The largest initial value of S for which at least one P(S) operation will remain blocked is ____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Suppose, the initial value of S = x Now, 20P means 20 down operations(-20) and 12 V means 12 up operations (+12). It is saying that at least one operation should remain blocked. So, this can be written as, x – 20 + 12 = –1 x – 8 = –1 x = 7 So, the largest initial value of S for which  at least one operation will remain blocked is 7.'
   },
   {
     id: 'q-dld-2014-13',
@@ -2531,8 +2549,8 @@ export const questions = [
       'Deadlock occurs if the consumer succeeds in acquiring semaphore s when the buffer is empty.',
       'The starting value for the semaphore n must be 1 and not 0 for deadlock-free operation.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 29,
+    explanation: 'P.No  Arrival Time Burst Time Priority P1 0 11 2 P2 5 28 0 (Highest) P3 12 2 3 P4 2 10 1 P5 9 16 4 (Lowest) Gantt chart using Pre -emptive priority scheduling algorithm: P1 P4 P2 P4  P1  P3 P5 0       2        5       33     40    49        51    67 Average Waiting Time  = 38 0 37 28 42 5 + + + + = 145 295 ='
   },
   {
     id: 'q-dld-2013-14',
@@ -2544,8 +2562,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'A certain computation generates two arrays a and b such that a[i] = f(i) for 0 ≤ i < n and b [i] = g(a[i]) for 0 ≤ i < n . Suppose this computation is decomposed into two concurrent processes X and Y such that X computes the array a and Y computes the array b. The processes employ two binary semaphores R and S, both initialized to zero. The array a is shared by the two processes. The structure of the processes are shown below. Process X Process Y private i; private i; for (i = 0; i < n; i++) for(i = 0; i < n; i++) { {',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) With option A, deadlock happens. (b) Process ‘X’ may compute all values (iterations) and process would be able to make only one iteration and then gets blocked. So, option B is also incorrect. (c) Processes ‘X and ‘Y’ alternates and signal each other so that all iterations of both ‘X’ and ‘ Y’ completes successfully (d) Some of the signals issued by ‘X’ cannot be captured by  ‘Y’ Therfore, process ‘Y’ will not be able to complete all iterations. So, option D is also incorrect.'
   },
   {
     id: 'q-toc-2013-15',
@@ -2578,6 +2596,42 @@ export const questions = [
       'X: P',
       'P',
       'P',
+      '',
+      'X: P',
+      'P',
+      'P',
+      'Y: P',
+      'P',
+      'P',
+      'Y: P',
+      'P',
+      'P',
+      'Z: P',
+      'P',
+      'P',
+      'Z: P',
+      'P',
+      'P',
+      '',
+      'X: P',
+      'P',
+      'P',
+      '',
+      'X: P',
+      'P',
+      'P',
+      'Y: P',
+      'P',
+      'P',
+      'Y: P',
+      'P',
+      'P',
+      'Z: P',
+      'P',
+      'P',
+      'Z: P',
+      'P',
+      'P',
       ''
     ],
     correctAnswer: null,
@@ -2598,8 +2652,8 @@ export const questions = [
       'Exactly thrice',
       'Exactly once'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Shortest remaining time first or Shortest job first will always generate minimum average turnaround time and average waiting time. Here also preemptive SJF or SRTF will always give minimum average waiting time as comapred to non - preemptive SJF. Th erefore, option C is the correct answer.'
   },
   {
     id: 'q-dld-2008-18',
@@ -2614,10 +2668,18 @@ export const questions = [
       '0 and 0',
       '0 and 1',
       '1 and 0',
-      '1 and 1 19. [MCQ] [GATE-2008 : 2 The following is a code with two threads, producer and consumer, that can run in parallel. Further S and Q are binary semaphores equipped with the standard P and V operations. Semaphore S = 1, Q = 0; integer x; producer: consumer: while (true) do while (true) do P(S); P(Q); x = produce (); consume (x); V(Q); V(S); done done Which of the following is TRUE about the program above?'
+      '1 and 1 19. [MCQ] [GATE-2008 : 2 The following is a code with two threads, producer and consumer, that can run in parallel. Further S and Q are binary semaphores equipped with the standard P and V operations. Semaphore S = 1, Q = 0; integer x; producer: consumer: while (true) do while (true) do P(S); P(Q); x = produce (); consume (x); V(Q); V(S); done done Which of the following is TRUE about the program above?',
+      'The process can deadlock',
+      'One of the threads can starve',
+      'Some of the items produced by the producer may be lost',
+      'Values generated and stored in ‘x’ by the producer will always be consumed before the producer can generate a new value. 20. [MCQ] [GATE-2023-CS: 2M] Consider the two functions incr and decr shown below. There are 5 threads each invoking incr once, and 3 threads each invoking decr once, on the same shared variable X. The initial value of X is 10. Suppose there are two implementations of the semaphore s, as follows: incr(){ decr(){ wait(s); wait(s); X = X +1; X = X -1; Signal(s); Signal(s); } } I-1: s is a binary semaphore initialized to 1. I-2: s is a counting semaphore initialized to 2. Let V1, V2 be the values of X at the end of executiong of all the threads with implementations I-1, I-2, respectively. Which one of the following corresponds to the minimum possible values of V1, V2, respectively?',
+      '15, 7',
+      '7, 7',
+      '12, 7',
+      '12, 8'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 12,
+    explanation: 'Prio Period P.NO A.T B.T Insta 1/3 3 T1 1 1 1; 4; 7; 10; 13; 16… 1/7 7 T2 1 2  1; 8; 15; … 1/20 4 T3 1 4  1; 21; 41; … Pre-Prio: R.O 𝑇11 ; 𝑇21 ; 𝑇31 ;  𝑇12 ;  𝑇13;   𝑇22 ;  𝑇14 ; Gantt Chart: So, at the end of 12 millisecond and at the beginning of 13 millisecond the first instance of T3 completed its execution. Therefore, 12 is the correct answer.'
   },
   {
     id: 'q-cn-2015-22',
@@ -2634,8 +2696,8 @@ export const questions = [
       'P: full, Q: empty, R: empty, S: full',
       'P: empty, Q: full, R: full, S: empty Concurrency Mechanism'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'This algorithm will behave as preemptive FCFS and is equivalent to the round -robin algorithm. Therefore, option B is the correct answer.'
   },
   {
     id: 'q-cn-2019-23',
@@ -2647,8 +2709,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider three concurrent process P1, P2 and P3 as shown below, which access a shared variable D that has been initialized to 100. P1 P2 P3 : : : : : : D = D + 20 D = D – 50 D = D + 10 : : : : : : The processes are executed on a uniprocessor system running a time-shared operating system. If the minimum and maximum possible values of D after the three processes have completed execution are X and Y respectively, then the value of Y-X is ___________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'In FCFS all the process’s gets executed as per their time of arrival, so using FCFS processes will be completed as P1, P2, P3 Now, checking the completion sequence using round-robin scheduling: P.No      Arrival Time         Burst Time 1 0 5 2 1 7 3 3 4 Round robin Time Qunatum = 2 Ready Queue- 𝑃1 ; 𝑃2 ; 𝑃1 ;  𝑃3 ;  𝑃2;   𝑃1 ;  𝑃3 ; 𝑃2 Gantt Chart: P1 P2 P1 P3 P2 P1 P3 P2 0       2       4      6       8     10     11      13    16 Here, Process are completed as P1, P3, P2. So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2015-24',
@@ -2660,8 +2722,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The following two functions P1 and P2 that share a variable B with an initial value of 2 execute concurrently. P1() P2() { { C = B -1; D = 2 * B; B = 2 * C B = D – 1; } } The number of distinct values that B can possibly take after the execution is _______. ❑❑❑',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Gantt Chart Preemptive SJF: CPU P0 P1 P0 P2 0      1       5      13     22 P. No Arri val Tim e Bu rst Ti me Comple tion Time Turnar ound Time Wait ing Time P0 0 9 13 13 4 P1 1 4 5 4 0 P2 2 9 22 20 11 4 0 11 15AV.W.T = = 5 33 ++ = Hence, option A is the correct answer.'
   },
   {
     id: 'q-co-2019-1',
@@ -2810,8 +2872,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a system with 3 processes that share 4 instances of the same resource type. Each process can request a maximum of K instances. Resource instances can be requested and released only one at a time. The largest value of K that will always avoid deadlock is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, R = 4 To avoid deadlock, so each process can have maximum of k-1 resources. Required P1  K –1 P2  K –1 P3  K –1 R = 4 Condition for deadlock = (3K – 3) +1 ⇒ 3K –2 = 4 ⇒ 3K = 6 ∴ K=2 So, 2 is the correct answer.'
   },
   {
     id: 'q-dld-2015-10',
@@ -2828,8 +2890,8 @@ export const questions = [
       '3',
       '4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 12,
+    explanation: 'It is given that we have to find out the minimum achievable average waiting time for these three processes in a non -preemptive scheduler. This is always possible with Shortest Job First CPU scheduling algorithm. Hence, we will be using SJF to solve this problem. Gantt chart using SJF: P3 P1 P2 0     10      26    46 10 26 0AV.W.T = 3 36= 123 ++ = Therefore, 12 is the correct answer.'
   },
   {
     id: 'q-dld-2014-11',
@@ -2841,8 +2903,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A system contains three programs, and each requires three tape units for its operation. The minimum numbe of tape units which the system must have such that deadlocks never arise is .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, There are two semaphores a and b initialized to 1 and 0 respectively. Count is a shared variable it is initialized to 0. 1. CODE SECTION P 2. wait (a); 3. count = count + 1; 4. if (count == n) signal (b); 5. signal (a); 6. wait (b); 7. signal (b); 8. CODE SECTION Q Process will arrive, Complete the CODE SECTION P //line 1. and then only it can perform wait (a); //line 2 now, it will increase the value of count to 1; //line 3 check if (count==n), if yes then perform signal (b); else we will not execute signal(b); //line 4 It will perform signal (a); //line 5 wait (b) [b was initialized to 0, so it will be blocked]. //line 6'
   },
   {
     id: 'q-dld-2010-12',
@@ -2859,8 +2921,8 @@ export const questions = [
       'n = 20, k = 10',
       'n = 41, k = 19'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Suppose, the initial value of S = x Now, 20P means 20 down operations(-20) and 12 V means 12 up operations (+12). It is saying that at least one operation should remain blocked. So, this can be written as, x – 20 + 12 = –1 x – 8 = –1 x = 7 So, the largest initial value of S for which  at least one operation will remain blocked is 7.'
   },
   {
     id: 'q-dld-2009-13',
@@ -2877,8 +2939,8 @@ export const questions = [
       'Only P1 and P3 will be in deadlock.',
       'All three processes will be in deadlock'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 29,
+    explanation: 'P.No  Arrival Time Burst Time Priority P1 0 11 2 P2 5 28 0 (Highest) P3 12 2 3 P4 2 10 1 P5 9 16 4 (Lowest) Gantt chart using Pre -emptive priority scheduling algorithm: P1 P4 P2 P4  P1  P3 P5 0       2        5       33     40    49        51    67 Average Waiting Time  = 38 0 37 28 42 5 + + + + = 145 295 ='
   },
   {
     id: 'q-dld-2008-14',
@@ -2895,8 +2957,8 @@ export const questions = [
       'Starvation cannot occur but deadlock can occur.',
       'Neither starvation nor deadlock can occur. ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) With option A, deadlock happens. (b) Process ‘X’ may compute all values (iterations) and process would be able to make only one iteration and then gets blocked. So, option B is also incorrect. (c) Processes ‘X and ‘Y’ alternates and signal each other so that all iterations of both ‘X’ and ‘ Y’ completes successfully (d) Some of the signals issued by ‘X’ cannot be captured by  ‘Y’ Therfore, process ‘Y’ will not be able to complete all iterations. So, option D is also incorrect.'
   },
   {
     id: 'q-co-2020-1',
@@ -2993,8 +3055,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a three-level page table to translate a 39-bit virtual address to a physical address as shown below. The page size is 4KB (1KB =210 bytes) and page table entry size at every level is 8 bytes. A process P is currently using 2GB (1GB =230 bytes) virtual memory which is mapped to 2GB of physical memory. The minimum amount of memory required for the page table of P across all levels is _______KB. 7. [NAT] GATE-2016 : 2M] Consider a computer system with 40-bit virtual addressing and page size of sixteen kilobytes. If the computer system has a one-level page table per process and each page table entry requires 48 bits, then the size of the per-process page table is ___ megabytes.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'If a process is completed it is not necessary that you should load a new process into memory. Therefore, statement I is false. A process P2 in blocked state can make transition E while another process P1 is in running state. TRUE. Process moving from blo ck to ready state and another process is in running state, this situation is possible and hence statement II is true. The OS uses preemptive scheduling.  TRUE. The given diagram makes a transition from running to ready state and hence this indicates that  processes can be preempted while running. So, statement III is also true and statement IV is false. Hence, option C is the correct answer.'
   },
   {
     id: 'q-dld-2015-8',
@@ -3006,8 +3068,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A computer system implements 8 kilobyte pages and a 32-bit physical address space. Each page table entry contains a valid bit, a dirty bit, three permission bits, and the translation. If the maximum size of the page table of a process is 24 megabytes, the length of the virtual address supported by the system is _____ bits.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given, 1. Switching to ready  processes after termination of currently executing process also a context switch. 2. There is no context switch from S to P. (Therefore P should be completed within 1 TQ) 3. There are exactly two context switches from Q to R (Ther efore Q and R both should requires more than 1 TQ)'
   },
   {
     id: 'q-dld-2015-9',
@@ -3019,8 +3081,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A computer system implements a 40 bit virtual address, page size of 8 kilobytes, and a 128-entry translation look-aside buffer (TLB) organized into 32 sets each having four ways. Assume that the TLB tag does not store any process id. The minimum length of the TLB tag in bits is ___',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, R = 4 To avoid deadlock, so each process can have maximum of k-1 resources. Required P1  K –1 P2  K –1 P3  K –1 R = 4 Condition for deadlock = (3K – 3) +1 ⇒ 3K –2 = 4 ⇒ 3K = 6 ∴ K=2 So, 2 is the correct answer.'
   },
   {
     id: 'q-dld-2013-12',
@@ -3037,8 +3099,8 @@ export const questions = [
       '8',
       '16'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Suppose, the initial value of S = x Now, 20P means 20 down operations(-20) and 12 V means 12 up operations (+12). It is saying that at least one operation should remain blocked. So, this can be written as, x – 20 + 12 = –1 x – 8 = –1 x = 7 So, the largest initial value of S for which  at least one operation will remain blocked is 7.'
   },
   {
     id: 'q-dld-2009-14',
@@ -3050,8 +3112,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'A multilevel page table is preferred in comparison to a single level page table for translating virtual address to physical address because. Level 1 offset Level 2 offset Level 3 offset Page offset 9 bits 9 bits 9 bits 12 bits 39-bit virtual address',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) With option A, deadlock happens. (b) Process ‘X’ may compute all values (iterations) and process would be able to make only one iteration and then gets blocked. So, option B is also incorrect. (c) Processes ‘X and ‘Y’ alternates and signal each other so that all iterations of both ‘X’ and ‘ Y’ completes successfully (d) Some of the signals issued by ‘X’ cannot be captured by  ‘Y’ Therfore, process ‘Y’ will not be able to complete all iterations. So, option D is also incorrect.'
   },
   {
     id: 'q-cn-2008-15',
@@ -3068,8 +3130,8 @@ export const questions = [
       '24, 24 and 20',
       '25, 25 and 24'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The code can be written as: CSEM S = 2; Pri i = W, X, Y, Z { P(S); <update x> V(S); } W: Completes,  x =1 X: Load ; increment; Preempted,     x =2 Y: Completes Z: Completes X: Store, x = 2 is stored as the final value Therfore, 2 is the correct answer hence option D is true.'
   },
   {
     id: 'q-cn-2008-16',
@@ -3086,8 +3148,8 @@ export const questions = [
       '65',
       '75 Virtual Memory'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Shortest job first (SJF) minimizes the waiting time, SJF gives the minium average waiting time as comapred with other algorithms. Here it is given that arrival time of all processes is same, so SRTF acts same as SJF.'
   },
   {
     id: 'q-cn-2023-17',
@@ -3099,8 +3161,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following two-dimensional array D in the C programming language, which is stored in row-major order: int D[128][128]; Demand paging is used for allocating memory and each physical page frame holds 512 elements of the array D. The Least Recently Used (LRU) page- replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet: for (int i = 0; i < 128; i++) for (int j = 0; j < 128; j++) D[j][i] *= 10; The number of page faults generated during the execution of this code snippet is_______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Shortest remaining time first or Shortest job first will always generate minimum average turnaround time and average waiting time. Here also preemptive SJF or SRTF will always give minimum average waiting time as comapred to non - preemptive SJF. Th erefore, option C is the correct answer.'
   },
   {
     id: 'q-cn-2022-18',
@@ -3112,8 +3174,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a demand paging system with four page frames (initially empty) and LRU page replacement policy. For the following page reference string 7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7,1, 5, 6,1 the page fault rate, defined as the ratio of number of page faults to the number of memory accesses (rounded off to one decimal place) is_________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 12,
+    explanation: 'Prio Period P.NO A.T B.T Insta 1/3 3 T1 1 1 1; 4; 7; 10; 13; 16… 1/7 7 T2 1 2  1; 8; 15; … 1/20 4 T3 1 4  1; 21; 41; … Pre-Prio: R.O 𝑇11 ; 𝑇21 ; 𝑇31 ;  𝑇12 ;  𝑇13;   𝑇22 ;  𝑇14 ; Gantt Chart: So, at the end of 12 millisecond and at the beginning of 13 millisecond the first instance of T3 completed its execution. Therefore, 12 is the correct answer.'
   },
   {
     id: 'q-cn-2020-19',
@@ -3125,8 +3187,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a paging system that uses 1-level page table residing in main memory and a TLB for address translation. Each main memory access takes 100 ns and TLB lookup takes 20 ns. Each page transfer to/from the disk takes 5000 ns. Assume that the TLB hit ratio is 95%, page fault rate is 10%. Assume that for 20% of the total page faults, a dirty page has to be written back to disk before the required page is read from disk. TLB update time is negligible. The average memory access time in ns (round off to 1 decimal places) is _____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Only after the producer has made the thing may the consumer consume it, and only after the consumer has consumed the item can the producer manufacture it again (except for the first time). Let\'s go over how this code functions. The parallel execution of Producer and Consumer is mentioned. Producer: S value is 1 in st1, P(S) on S reduces it to 0, and st2 produces the x item. Q value for st3 is 0. V(Q) on Q results in 1. Since this is an endless while loop, it ought to loop endlessly. S is already 0 in the subsequent while loop iteration; further P(S) on 0 sends P to S\'s blocked list. Producer is thus obstructed. Consumer: P(Q) on Q causes Q to equal 0 and then eats the thing. Instead of setting S to 1 with V(S) on S, the consumer now reawakens the stalled process on Q\'s queue. Process P thus becomes active. Since P was blocked at statement 1, it continues from statement 2. P th en creates the subsequent item. Therefore, a product is consumed by a consumer before a producer creates a new one. The right answer is (d). Option for this query: Deadlock cannot occur because both the producer and the consumer are using distinct semaphores (there is no hold and wait). Likewise, there is no starvation since there is a change in the relationship between the producer and the consumer, which also results in bounded waiting. (C) The producer might lose some of the products it produces, but'
   },
   {
     id: 'q-cn-2019-20',
@@ -3138,8 +3200,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Assume that in a certain computer, the virtual addresses are 64 bits long and the physical addresses are 48 bits long. The memory is word addressable.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1000,
+    explanation: 'Given, Time Quantum= 50 P.No Arrival Time Burst Time IOBT A 0 100 500 B 5 350 500 C 10 200 500 Gantt Chart: C has completed its IO at time 1000 ms.'
   },
   {
     id: 'q-dld-2018-21',
@@ -3156,8 +3218,8 @@ export const questions = [
       '(D – X) / (D – M)',
       '(X – M) / (D – X)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'We need the output to be BCABCABCA, i.e. it should start with B, means T2 should be 1 and T1, T3 should be zero. This means S 1 should be 1; S 2 and S3 would be 0. So,  option C is the correct answer.'
   },
   {
     id: 'q-dld-2016-22',
@@ -3169,8 +3231,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a computer system with ten physical page frames. The system is provided with an access sequence (a1, a2, ….. a20, a1, a2, …., a20), where each ai is a distinct virtual page number. The difference in the number of page faults between the last-in- first-out page replacement policy and the optimal page replacement policy is _____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'This algorithm will behave as preemptive FCFS and is equivalent to the round -robin algorithm. Therefore, option B is the correct answer.'
   },
   {
     id: 'q-dld-2011-23',
@@ -3187,8 +3249,8 @@ export const questions = [
       '23 ns',
       '35 ns'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'In FCFS all the process’s gets executed as per their time of arrival, so using FCFS processes will be completed as P1, P2, P3 Now, checking the completion sequence using round-robin scheduling: P.No      Arrival Time         Burst Time 1 0 5 2 1 7 3 3 4 Round robin Time Qunatum = 2 Ready Queue- 𝑃1 ; 𝑃2 ; 𝑃1 ;  𝑃3 ;  𝑃2;   𝑃1 ;  𝑃3 ; 𝑃2 Gantt Chart: P1 P2 P1 P3 P2 P1 P3 P2 0       2       4      6       8     10     11      13    16 Here, Process are completed as P1, P3, P2. So, option C is the correct answer.'
   },
   {
     id: 'q-dld-2008-24',
@@ -3205,8 +3267,8 @@ export const questions = [
       'I-c, II-d, III-a, IV-b',
       'I-b, II-c, III-d, IV-a Page Replacement Techniques'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Gantt Chart Preemptive SJF: CPU P0 P1 P0 P2 0      1       5      13     22 P. No Arri val Tim e Bu rst Ti me Comple tion Time Turnar ound Time Wait ing Time P0 0 9 13 13 4 P1 1 4 5 4 0 P2 2 9 22 20 11 4 0 11 15AV.W.T = = 5 33 ++ = Hence, option A is the correct answer.'
   },
   {
     id: 'q-dld-2009-25',
@@ -3223,8 +3285,8 @@ export const questions = [
       'LRU',
       'MRU'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'I.  Shortest remaining time first scheduling may cause starvation. TRUE. Processes with longer burst time may starve if processes with shorter burst time keeps on arriving. Process Name Arrival Time Burst Time Completion Time Turnarou nd Time A 0 6 8 8 B 3 2 5 2 C 5 4 12 7 D 7 6 21 14 E 10 3 15 5'
   },
   {
     id: 'q-dld-2017-26',
@@ -3241,8 +3303,8 @@ export const questions = [
       'S1 is false, S2 is true',
       'S1 is false, S2 is false'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'If the time-slice used in the round-robin scheduling policy is more than the maximum time required to execute any process, then the policy will degenerate to first come first serve.'
   },
   {
     id: 'q-dld-2016-27',
@@ -3259,8 +3321,8 @@ export const questions = [
       'MRU (Most Recently Used)',
       'FIFO (First In First Out)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'FIFO page replacement algorithm can result in increasing page fault rate even when the number of allocated frames are decreasing.'
   },
   {
     id: 'q-cn-2015-28',
@@ -3277,8 +3339,8 @@ export const questions = [
       'LRU incurs 2 more-page faults than FIFO',
       'FIFO incurs 1 more page faults than LRU'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Reference string: 3, 8, 2, 3, 9, 1, 6, 3, 8, 9, 3, 6, 2, 1, 3 Page fault using FIFO and LRU page replacement algorithm:'
   },
   {
     id: 'q-cn-2014-29',
@@ -3290,8 +3352,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A system uses 3 pages frames for storing process pages in main memory. It uses the Least Recently Used (LRU) page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below? 4, 7, 6, 1, 7, 6, 1, 2, 7, 2',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 31,
+    explanation: 'We know that, n -forks creates (2 n –1) child processes n = 10; (n % 2 = 0)  5 times  No of child processes = 25 – 1 = 31'
   },
   {
     id: 'q-cn-2014-30',
@@ -3308,8 +3370,8 @@ export const questions = [
       'Last-in-first-out',
       'Most-recently-used'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'For, n-fork system call  Total child processes = 2n – 1 Here, n = 3 So, 23 – 1 = 7 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2014-31',
@@ -3321,8 +3383,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Assume that there are 3-page frames which are initially empty. If the page reference string is 1, 2, 3, 4, 2, 1, 5, 3, 2, 4, 6, the number of page faults using the optimal replacement policy is _____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For, n fork( ) system calls, total number of child processes created is  2n – 1.'
   },
   {
     id: 'q-cn-2012-32',
@@ -3339,8 +3401,8 @@ export const questions = [
       'OPTIMAL = LRU',
       'OPTIMAL = FIFO'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Thread is the light weight process and each thread comprises its own stack, program counter, register. Only the address space of the thread is shared among threads of a single process. So, option B is the correct answer.'
   },
   {
     id: 'q-cn-2010-33',
@@ -3357,8 +3419,8 @@ export const questions = [
       '197',
       '195'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'A thread of a process shares with other threads are: Data se ction, Code section, Address space, permissions, etc. So, option D is the correct answer. Threads of a process shares both heap and global variables.'
   },
   {
     id: 'q-cn-2008-34',
@@ -3375,8 +3437,8 @@ export const questions = [
       '8 and 1, 2, 4, 5',
       '9 and 1, 2, 3, 5 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'User level threads are scheduled by the thread library not by kernel. Kernel even don’t know about the existence of user level threads. So, A is correct. When a user level thread is blocked, all other thread of its process are blocked. Option B is also correct. Context switching between user level threads is faster than kernel level thread be cause user level threads have to store nothing, whereas kernel level thread save and restore registers, program counter, etc. Therefore, option C is also correct. Kernel level threads cannot share the code segment. Threads can share the code segment, threads have seprate address space but they can share same code segment. So, option D is incorrect.'
   },
   {
     id: 'q-cn-2022-1',
@@ -3388,8 +3450,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider two files systems A and B , that use contiguous allocation and linked allocation, respectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a new block in the middle of the file (between 50th and 51st block), whose data is already available in the memory. Assume that there are enough free blocks at the end of the file and that the file control blocks are already in memory. Let the number of disk accesses required to insert a block in the middle of the file in A and B are nA and nB, respectively, then the value of nA + nB is_________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Interrupt from CPU temperature sensor should  be given highest priority. Delaying a CPU temprature sensor could result in major consequences, overheated CPU can damage internal circuits, and hence hampering entire computer system. The priority of above events is given as: CPU temprature sensor  > Hard disk  > Mouse  > Keyboard. Therefore, option d is the correct answer.'
   },
   {
     id: 'q-cn-2021-2',
@@ -3406,8 +3468,8 @@ export const questions = [
       'Renaming of an existing file in foo',
       'Opening of an existing file in foo Disk Scheduling Algorithm'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'The given code is of strict alternation. Both processes are strictly changing the value of turn to 1 and 0. Strict alternation guarantees mutual exclusion but fails to guarantee process. Therefore, This solution violates progress requirement. Hence, option (c) is correct.'
   },
   {
     id: 'q-cn-2020-3',
@@ -3424,8 +3486,8 @@ export const questions = [
       'T is serviced before P.',
       'The head reverses its direction of movement between servicing of Q and P'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'A process state diagram with pre -emptive scheduling is as follows: So, from the given diagram we can say I. A running process can move to ready state. II. A ready process can move to running state. IV. A blocked process can move to ready state. Therefore, option C is correct.'
   },
   {
     id: 'q-cn-2018-4',
@@ -3437,8 +3499,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a storage disk with 4 platters (numbered as 0, 1, 2 and 3), 200 cylinders (numbered as 0, 1, …., 199) and 256 sectors per track (numbered as 0, 1, …., 255). The following 6 disk requests of the form [sector number, cylinder number, platter number] are received by the disk controller at the same time: [120, 72, 2], [180, 134, 1], [60, 20, 0], [212, 86, 3], [56, 116, 2], [118, 16, 1] Currently the head is positioned at sector number 100 of cylinder 80 and is moving towards higher cylinder numbers. The average power dissipation in moving the head over 100 cylinders is 20 milliwatts and for reversing the direction of the head movement once is 15 milliwatts. Power dissipation associated with rotational latency and switching of head between different platters is negligible. The total power consumption in milliwatts to satisfy all of the above disk requests using the Shortest Seek Time First disk scheduling algorithm is',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The maximum number of processes present in the ready state is independent of number of CPU’s the system have. Number of processes in ready state depends upon the size of ready queue. Therefore, option D is the correct answer.'
   },
   {
     id: 'q-cn-2016-5',
@@ -3450,8 +3512,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a disk queue with requests for I/O to blocks on cylinders 47, 38, 121, 191, 87, 11, 92, 10. The C- LOOK scheduling algorithm is used. The head is initially at cylinder number 63, moving towards larger cylinder numbers on its servicing pass. The cylinders are numbered from 0 to 199. The total head movement (in number of cylinders) incurred while servicing these requests is ____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, User Mode → Kernel Mode = T1 User process 1 → User process 2 = T 2 [Context Switching] Context switching includes mode shifting, first preempt the process, shift the mode from user to kernel, OS will save and load the PCB, again shift the mode from kernel to user. From this we can say context switching time is superset and mode shifting is a subset. Therefore, T2 is greater than T1. Hence, option C is the correct answer.'
   },
   {
     id: 'q-cn-2015-6',
@@ -3468,8 +3530,8 @@ export const questions = [
       '10',
       '11'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'If a process is completed it is not necessary that you should load a new process into memory. Therefore, statement I is false. A process P2 in blocked state can make transition E while another process P1 is in running state. TRUE. Process moving from blo ck to ready state and another process is in running state, this situation is possible and hence statement II is true. The OS uses preemptive scheduling.  TRUE. The given diagram makes a transition from running to ready state and hence this indicates that  processes can be preempted while running. So, statement III is also true and statement IV is false. Hence, option C is the correct answer.'
   },
   {
     id: 'q-cn-2014-7',
@@ -3481,8 +3543,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Suppose a disk has 201 cylinders, numbered from 0 to 200. At some time the disk arm is at cylinder 100, and there is a queue of disk access requests for cylinders 30, 85, 90, 100, 105, 110, 135 and 145. If Shortest-Seek Time First (SSTF) is being used for scheduling the disk access, the request for cylinder 90 is serviced after servicing ____ number of requests.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The question is asking for  the minimum value of x and the minimum value of y together for which execution of P can result in a deadlock are: So, checking for the minimum value x = 1, y = 1. Deadlock is possible in this scenario the condition is process should perform down/wait operation twice. If down operation on lock is performed twice, then deadlock is possible. Therefore, option D is correct.'
   },
   {
     id: 'q-cn-2009-8',
@@ -3499,8 +3561,8 @@ export const questions = [
       'it is required by the translation look a side buffer.',
       'it helps to reduce the number of page faults in page replacement algorithms.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given, 1. Switching to ready  processes after termination of currently executing process also a context switch. 2. There is no context switch from S to P. (Therefore P should be completed within 1 TQ) 3. There are exactly two context switches from Q to R (Ther efore Q and R both should requires more than 1 TQ)'
   },
   {
     id: 'q-cn-2009-9',
@@ -3517,8 +3579,8 @@ export const questions = [
       '233 ms',
       '276 ms File Allocation Methods'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, R = 4 To avoid deadlock, so each process can have maximum of k-1 resources. Required P1  K –1 P2  K –1 P3  K –1 R = 4 Condition for deadlock = (3K – 3) +1 ⇒ 3K –2 = 4 ⇒ 3K = 6 ∴ K=2 So, 2 is the correct answer.'
   },
   {
     id: 'q-cn-2019-10',
@@ -3530,8 +3592,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The index node (inode) of a Unix-like file system has 12 direct, one single-indirect and one double-indirect pointers. The disk block size is 4 kB, and the disk block address is 32-bits long. The maximum possible file size is (rounded off to 1 decimal place) ___________ GB.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 12,
+    explanation: 'It is given that we have to find out the minimum achievable average waiting time for these three processes in a non -preemptive scheduler. This is always possible with Shortest Job First CPU scheduling algorithm. Hence, we will be using SJF to solve this problem. Gantt chart using SJF: P3 P1 P2 0     10      26    46 10 26 0AV.W.T = 3 36= 123 ++ = Therefore, 12 is the correct answer.'
   },
   {
     id: 'q-cn-2017-11',
@@ -3548,8 +3610,8 @@ export const questions = [
       'III only',
       'II and III only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, There are two semaphores a and b initialized to 1 and 0 respectively. Count is a shared variable it is initialized to 0. 1. CODE SECTION P 2. wait (a); 3. count = count + 1; 4. if (count == n) signal (b); 5. signal (a); 6. wait (b); 7. signal (b); 8. CODE SECTION Q Process will arrive, Complete the CODE SECTION P //line 1. and then only it can perform wait (a); //line 2 now, it will increase the value of count to 1; //line 3 check if (count==n), if yes then perform signal (b); else we will not execute signal(b); //line 4 It will perform signal (a); //line 5 wait (b) [b was initialized to 0, so it will be blocked]. //line 6'
   },
   {
     id: 'q-cn-2014-12',
@@ -3561,8 +3623,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A FAT (file allocation table) based file system is being used and the total overhead of each entry in the FAT is 4 bytes in size. Given a 100 × 106 bytes disk on which the file system is stored and data block size is 103 bytes, the maximum size of a file that can be stored on this disk in units of 106 bytes is _____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Suppose, the initial value of S = x Now, 20P means 20 down operations(-20) and 12 V means 12 up operations (+12). It is saying that at least one operation should remain blocked. So, this can be written as, x – 20 + 12 = –1 x – 8 = –1 x = 7 So, the largest initial value of S for which  at least one operation will remain blocked is 7.'
   },
   {
     id: 'q-cn-2012-13',
@@ -3579,8 +3641,8 @@ export const questions = [
       '280 Kbytes',
       'dependent on the size of the disk.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 29,
+    explanation: 'P.No  Arrival Time Burst Time Priority P1 0 11 2 P2 5 28 0 (Highest) P3 12 2 3 P4 2 10 1 P5 9 16 4 (Lowest) Gantt chart using Pre -emptive priority scheduling algorithm: P1 P4 P2 P4  P1  P3 P5 0       2        5       33     40    49        51    67 Average Waiting Time  = 38 0 37 28 42 5 + + + + = 145 295 ='
   },
   {
     id: 'q-cn-2014-1',
@@ -3597,8 +3659,8 @@ export const questions = [
       'Transport layer and End-to-end process communication',
       'Medium Access Control sub-layer and Channel sharing. Classful Addressing'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Option b is incorrect because bit synchronization is the functionality of physical layer.'
   },
   {
     id: 'q-cn-2012-2',
@@ -3615,8 +3677,8 @@ export const questions = [
       '221',
       '224 Subnetting'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'NID HID 24   8 110 2| 1bit ↓ The number of networks in class C = 221 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2023-3',
@@ -3628,8 +3690,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The forwarding table of a router is shown below. Subnet Number Subnet Mask Interface ID 200.150.0.0 255.255.0.0 1 200.150.64.0 255.255.224.0 2 200.150.68.0 255.255.255.0 3 200.150.68.64 255.255.255. 224 4 default 0 A packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID_____ .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'First start with the longest subnet mask I    200.150.68.01110110 AND 255.255.255.11100000 NID = 200.150.68.96 Not matched with interface (4) II    200.150.68.118 AND 255.255.255.0 NID = 200.150.68.0 Matched with interface (3) No need to check further if it matches with more than one interfaces then we choose longest subnet mask.'
   },
   {
     id: 'q-cn-2019-4',
@@ -3646,8 +3708,8 @@ export const questions = [
       'Only N and P belong to the same subnet',
       'Only N and P belong to the same subnet'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'IP address AND SubnetMask Subnetid M: 100.10.5.00000010 AND 255.255.255.11111100 SID = 100.10.5.0 N : 100.10.5.00000101 AND 255.255.255.11111100 SID = 100.10.5.00000100 SID = 100.10.5.4 P : 100.10.5.00000110 AND 255.255.255.11111100 SID = 100.10.5.00000100 100.10.5.4'
   },
   {
     id: 'q-cn-2015-5',
@@ -3659,8 +3721,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following routing table at an IP router: Network No. Net Mask Next Hop 128.96.170.0 255.255.254.0 Interface 0 128.96.168.0 255.255.254.0 Interface 1 128.96.166.0 255.255.254.0 R2 128.96.164.0 255.255.252.0 R3 0.0.0.0 Default R4 For each IP address in Group-I identify the correct choice of the next hop from Group-II using the entries from the routing table above.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Note: First start with longest mask (a) 128.96.171.92 AND 255.255.254.0 NID = 128.96.170.0 Matched with interface (0) (b) 128.96.167.151 AND 255.255.254.0 NID = 128.96.166.0 Matched with R2. (c) 128.96.163.151 AND 255.255.254.0 NID = 128.96.162.0 Not matched 128.96.163.151 AND 255.255.252.0 NID = 128.96.160.0 Not matched Note:- Does not match with any given interface then 128.96.163.151 will forward to default interface R4. (d) 128.96.165.121 AND 255.255.254.0 128.96.164.0 128.96.165.121 AND 255.255.252.0 128.96.164.0 Matched with R3. So, option A is correct answer.'
   },
   {
     id: 'q-cn-2010-6',
@@ -3695,8 +3757,8 @@ export const questions = [
       '3',
       '6'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Netmask: 255.255.255.224 I  192.168.1.97 AND 255.255.255.224 SID = 192.168.1.96 II  192.168.1.135 AND 255.255.255.224 SID = 192.168.1.128 III  192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 IV  192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 V  192.168.1.155 AND 255.255.255.224 SID = 192.168.1.128 VI  192.168.1.80 AND 255.255.255.224 SID = 192.168.1.64 Different subnet id’s 192.168.1.96 192.168.1.128 192.168.1.64    3 different subnet id’s So, option C is the correct answer. Shortcut 255.255.255.111 00000 NID SID HID'
   },
   {
     id: 'q-cn-2008-8',
@@ -3713,8 +3775,8 @@ export const questions = [
       '92.168.1.135',
       '192.168.1.155'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'X :  192.168.1.97 AND 255.255.255.224 192.168.1.96 Note: Gateway must also have the same subnet id (a) 192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 So, option a is incorrect. (b) 192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 Therefore, option B is the correct answer.'
   },
   {
     id: 'q-cn-2008-9',
@@ -3731,8 +3793,8 @@ export const questions = [
       '2046',
       '2047 Classless Addressing'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, Subnet Mask: 255.255.248.0 SM : 11111111.11111111.11111000.00000000 HID = 11 bit Maximum number of Hosts/Subnet  = 211 – 2 = 2048 – 2 = 2046 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2020-10',
@@ -3749,8 +3811,8 @@ export const questions = [
       'III and IV only',
       'I and IV only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 1500 computers HID must be minimum 11 bits 202.61.0.0/17 NID = 17bit, HID = 32 – 17 = 15bit 202.61.0 - - - - - - - - . - - - - - - - - 8 + 8 + 1          HID NID 202.61.00000000 00000000 → 202.61.0.0 ⁞   ⁞ ⁞ 202.61.01111111.11111111 → 202.61.127.255 I 202.61.84.0/21 NID = 21, HID = 11 bit First IP address of the block must be divisible by size of the block means all host id bits should be zero. 202.61.01010100.00000000/211 HID It is incorrect II 202.61.01101000.00000000/211 HID It is correct III 202.61.01000000.00000000/211 HID It is correct So, option b is the correct answer.'
   },
   {
     id: 'q-cn-2022-14',
@@ -3767,8 +3829,8 @@ export const questions = [
       '12.20.164.0/21',
       '12.20.168.0/22 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'v = 3 ×108 m/sec.  = 1 4 , GB – 127 N = 127 d = 36,504 ×2 = 73008 km Pd = 5 d 73,008 km 3 10 kmv =  = 24336 ×10–5 sec. = 0.24336 sec. Useful timeEfficiency = Total time d d d d N× T (PKt)1 4 T (PKt) 2×P + Q = + rd+ P d + T (ACk) 0         0              0 d dd 127 T (Pkt)1 4 T (Pkt)+2×P = 127 × 4 ×Td (Pkt) = Td (Pkt) +2 × Pd 508 Td = Td + 2× Pd 507 Td = 2× Pd d d 2PT 507 = d 2 0.24336sec.T 507 = L 2 0.24336sec. B 507 = 2 0.24336 secL =  6. 10 bits/ sec. 507 L = 960 bits 960L = Byte8 L = 120 Byte.'
   },
   {
     id: 'q-cn-2023-1',
@@ -3785,8 +3847,8 @@ export const questions = [
       'Shorter link length and lower transmission rate',
       'Shorter link length and higher transmission rate'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Option b is incorrect because bit synchronization is the functionality of physical layer.'
   },
   {
     id: 'q-cn-2022-2',
@@ -3798,8 +3860,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a 100Mbps link between an earth station (sender) and a satellite(receiver) at an altitude of 2100Km. The signal propagates at a speed of 3×108 m/s. The time taken (in milliseconds, rounded off to two decimal places) for the receiver to completely receive a packet of 1000 bytes transmitted by the sender is __________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'NID HID 24   8 110 2| 1bit ↓ The number of networks in class C = 221 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2021-3',
@@ -3811,8 +3873,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the sliding window flow-control protocol operating between a sender and a receiver over a full- duplex error-free link. Assume the following: • The time taken for processing the data frame by the receiver is negligible. • The time taken for processing the acknowledgement frame by the sender is negligible. • The sender has infinite number of frames available for transmission. • The size of the data frame is 2000 bits and the size of the acknowledgement frame is 10 bits. • The link data rate in each direction is 1mbps (= 106 bits per second). • One way propagation delay of the link is 100 milliseconds. The minimum value of the sender’s window size in terms of the number of frames, (rounded to the nearest integer) needed to achieve a link utilization of 50% is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'First start with the longest subnet mask I    200.150.68.01110110 AND 255.255.255.11100000 NID = 200.150.68.96 Not matched with interface (4) II    200.150.68.118 AND 255.255.255.0 NID = 200.150.68.0 Matched with interface (3) No need to check further if it matches with more than one interfaces then we choose longest subnet mask.'
   },
   {
     id: 'q-cn-2017-4',
@@ -3824,7 +3886,7 @@ export const questions = [
     type: 'NAT',
     questionText: 'The values of parameters for the Stop-and-Wait ARQ protocol are as given below: • Bit rate of the transmission channel = 1 Mbps • Propagation delay from sender to receiver = 0.75 ms. • Time to process a frame = 0.25 ms. • Number of bytes in the information frame = 1980. • Number of bytes in the acknowledgement frame = 20. • Number of overhead bytes in the information frame = 20. Assume that there are no transmission errors. Then, the transmission efficiency (expressed in percentage) of the Stop-and-Wait ARQ protocol for the above parameters is _______ (correct to 2 decimal places).',
     options: [],
-    correctAnswer: null,
+    correctAnswer: 2,
     explanation: ''
   },
   {
@@ -3842,7 +3904,7 @@ export const questions = [
       'p = 100 and q = 50',
       'p = 400 and q = 50'
     ],
-    correctAnswer: null,
+    correctAnswer: 2,
     explanation: ''
   },
   {
@@ -3855,8 +3917,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A sender used the Stop-and-wait ARQ protocol for reliable transmission of frames. Frames are of size 1000 bytes and the transmission rate at the sender is 80 Kbps (1 Kbps = 1000 bits/second). Size of an acknowledgement is 100 bytes and the transmission rate at the receiver is 8 Kbps. The one-way propagation delay is 100 milliseconds. Assuming no frame is lost, the sender throughput is _______ bytes/second.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) 10.105.1.113 AND 255.255.255.0 NID = 10.105.1.0 10.105.1.91 AND 255.255.255.0 NID = 10.105.1.0 So, option a is incorrect. (b) 10.105.1.113 AND 255.255.255.128 NID = 10.105.1.0 10.105.1.91 AND 255.255.255.128 NID = 10.105.1.0 So, option b is incorrect (c) 10.105.1.113'
   },
   {
     id: 'q-cn-2015-7',
@@ -3868,8 +3930,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a 128 × 103 bits/second satellite communication link with one way propagation delay of 150 milliseconds. Selective retransmission (repeat) protocol is used on this link to send data with a frame size of 1 kilobyte. Neglect the transmission time of acknowledgement. The minimum number of bits required for the sequence number field to achieve 100% utilization is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Netmask: 255.255.255.224 I  192.168.1.97 AND 255.255.255.224 SID = 192.168.1.96 II  192.168.1.135 AND 255.255.255.224 SID = 192.168.1.128 III  192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 IV  192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 V  192.168.1.155 AND 255.255.255.224 SID = 192.168.1.128 VI  192.168.1.80 AND 255.255.255.224 SID = 192.168.1.64 Different subnet id’s 192.168.1.96 192.168.1.128 192.168.1.64    3 different subnet id’s So, option C is the correct answer. Shortcut 255.255.255.111 00000 NID SID HID'
   },
   {
     id: 'q-cn-2015-8',
@@ -3881,8 +3943,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a network connecting two systems located 8000 kilometers apart. The bandwidth of the network is 500×106 bits per second. The propagation speed of the media is 4×106 meters per second. It is needed to design a Go-Back-N sliding window protocol for this network. The average packet size is 107 bits. The network is to be used to its full capacity. Assume that processing delays at nodes are negligible. Then, the minimum size in bits of the sequence number field has to be_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'X :  192.168.1.97 AND 255.255.255.224 192.168.1.96 Note: Gateway must also have the same subnet id (a) 192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 So, option a is incorrect. (b) 192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 Therefore, option B is the correct answer.'
   },
   {
     id: 'q-cn-2015-9',
@@ -3894,8 +3956,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A link has a transmission speed of 106 bits/sec. It uses data packets of size 1000 bytes each. Assume that the acknowledgement has negligible transmission delay, and that its propagation delay is the same as the data propagation delay. Also assume that the processing delays at nodes are negligible. The efficiency of the stop-and-wait protocol in this setup is exactly 25%. The value of the one-way propagation delay (in milliseconds) is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, Subnet Mask: 255.255.248.0 SM : 11111111.11111111.11111000.00000000 HID = 11 bit Maximum number of Hosts/Subnet  = 211 – 2 = 2048 – 2 = 2046 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2015-10',
@@ -3907,8 +3969,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Suppose that the stop-and -wait protocol is used on a link with a bit rate of 64 kilobits per second and 20 milliseconds propagation delay. Assume that the transmission time for the acknowledgement and the processing time at nodes are negligible. Then the minimum frame size in bytes to achieve a link utilization of at least 50% is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 1500 computers HID must be minimum 11 bits 202.61.0.0/17 NID = 17bit, HID = 32 – 17 = 15bit 202.61.0 - - - - - - - - . - - - - - - - - 8 + 8 + 1          HID NID 202.61.00000000 00000000 → 202.61.0.0 ⁞   ⁞ ⁞ 202.61.01111111.11111111 → 202.61.127.255 I 202.61.84.0/21 NID = 21, HID = 11 bit First IP address of the block must be divisible by size of the block means all host id bits should be zero. 202.61.01010100.00000000/211 HID It is incorrect II 202.61.01101000.00000000/211 HID It is correct III 202.61.01000000.00000000/211 HID It is correct So, option b is the correct answer.'
   },
   {
     id: 'q-cn-2014-11',
@@ -3920,8 +3982,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a selective repeat sliding window protocol that uses a frame size of 1 KB to send data on a 1.5 Mbps link with a one-way latency of 50 msec. To achieve a link utilization of 60%, the minimum number of bits required to represent the sequence number field is _____________. Common Data for Next Two Questions',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 158,
+    explanation: '200.10.11.144/27 NID = 27 bit, HID = 5 bit 200.10.11.10010000 8 +  8 + 8 + 3  HID NID 200.10.11.100 - - - - -'
   },
   {
     id: 'q-cn-2009-12',
@@ -3938,8 +4000,8 @@ export const questions = [
       'I = 4',
       'I = 5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prefix Subnet mask Output Interface Identifier 131.16.0.0/12 255.240.0.0 3 131.28.0.0/14 255.252.0.0 5 131.19.0.0/16 255.255.0.0 2 131.22.0.0/15 255.254.0.0 1 First start with the longest subnet mask I. DIP  =   131.23.151.76 AND  AND SM            255.255.0.0 NID =    131.23.0.0 Not matched with interface (2) II. DIP  =  131.23.151.76 AND AND SM           255.254.0.0 NID =   131.22.0.0 Matched with interface (1) 23  :  00010111 AND     AND 254  11111110 (22)  00010110'
   },
   {
     id: 'q-cn-2009-13',
@@ -3954,8 +4016,8 @@ export const questions = [
       '16 ms',
       '18 ms'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, 245.248.128.0/20 NID = 20 bit, HID = 32 – 20 = 12 bit 245.248.1000 . . . . . . . . NID HID Number of IP Addresses = 212 Or So, option a is the correct answer.'
   },
   {
     id: 'q-dld-2021-15',
@@ -4062,8 +4124,8 @@ export const questions = [
       '3',
       '4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2–D parity scheme and column do and row r 4 of parity bits computed using even parity scheme. d7 d6 d5 d4 d3 d2 d1 d0 r0 0 1 0 1 0 0 1 1 r1 1 1 0 1  0 1 1 1 0 × (error) r2 0 0 0 1 0 1 0 0 r3 0 1 1 0 1 0 1 0 r4 1 1 0 0 0 1 0 1 0 1 🗸 🗸 × (error) 🗸 🗸 × (error) 🗸 × (error) Bits got corrupted are: (r1, d5), (r4, d2), (r4, d0) Total three bits got corrupted.'
   },
   {
     id: 'q-cn-2008-21',
@@ -4080,8 +4142,8 @@ export const questions = [
       '15,000 bytes',
       '27,000 bytes Framing'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Given Baud rate = 9600 Bps Mode: Asynchronous mode with odd parity and stop bits Note: In asynchronous mode data is transmitted in the form of byte or character. Star bit = 1 Odd parity bit =1 Stop bit = 2 Number of bits sent in 1 byte = 8 + 1 + 1 + 2 = 12 bits Baud rate = 9600 12  bytes /sec = 800 bytes/sec. In 1 sec.                800 bytes Then In 15 sec.                15 × 800 = 12000 bytes'
   },
   {
     id: 'q-cn-2014-22',
@@ -4098,8 +4160,8 @@ export const questions = [
       '0111111101',
       '0111111111 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '8-bit delimiter pattern (flag) = 01111110 Output bit string = 01111100101 In bit stuffing a bit in stuffed in the input data after every continuous 1’s, one less than in the flag or delimiter pattern. Output data: 01111100101  Bit is stuffed in the input data So, the input data will be: 0111110101 ❑❑❑'
   },
   {
     id: 'q-math-2021-1',
@@ -4186,8 +4248,8 @@ export const questions = [
       '2.5',
       '5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'X :  192.168.1.97 AND 255.255.255.224 192.168.1.96 Note: Gateway must also have the same subnet id (a) 192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 So, option a is incorrect. (b) 192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 Therefore, option B is the correct answer.'
   },
   {
     id: 'q-cn-2021-1',
@@ -4204,8 +4266,8 @@ export const questions = [
       'If the second fragment is lost, P is required to resend the whole TCP segment.',
       'TCP destination port can be determined by analyzing only the second fragment.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Option b is incorrect because bit synchronization is the functionality of physical layer.'
   },
   {
     id: 'q-cn-2020-2',
@@ -4222,8 +4284,8 @@ export const questions = [
       'II and III only',
       'II only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'NID HID 24   8 110 2| 1bit ↓ The number of networks in class C = 221 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2018-3',
@@ -4235,8 +4297,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider an IP packet with a length of4500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded to an IPv4 router that supports a Maximum Transmission Unit MTU) of 600 bytes. Assume that the length of the IP header in all the outgoing fragments of this packet is 20 bytes. Assume that the fragmentation offset value stored in the first fragment is 0. The fragmentation offset value stored in the third fragment is_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'First start with the longest subnet mask I    200.150.68.01110110 AND 255.255.255.11100000 NID = 200.150.68.96 Not matched with interface (4) II    200.150.68.118 AND 255.255.255.0 NID = 200.150.68.0 Matched with interface (3) No need to check further if it matches with more than one interfaces then we choose longest subnet mask.'
   },
   {
     id: 'q-cn-2014-8',
@@ -4248,8 +4310,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Every host in an IPv4 network has a 1-second resolution real-time clock with battery backup. Each host needs to generate up to 1000 unique identifiers per second. Assume that each host has a globally unique IPv4 address. Design a 50-bit globally unique ID for this purpose. After what period (in seconds) will the identifiers generated by a host wrap around?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'X :  192.168.1.97 AND 255.255.255.224 192.168.1.96 Note: Gateway must also have the same subnet id (a) 192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 So, option a is incorrect. (b) 192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 Therefore, option B is the correct answer.'
   },
   {
     id: 'q-cn-2014-9',
@@ -4266,8 +4328,8 @@ export const questions = [
       '(ii) and (iii) only',
       '(i), (ii) and (iii)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, Subnet Mask: 255.255.248.0 SM : 11111111.11111111.11111000.00000000 HID = 11 bit Maximum number of Hosts/Subnet  = 211 – 2 = 2048 – 2 = 2046 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2014-10',
@@ -4284,8 +4346,8 @@ export const questions = [
       'MF bit:1, Datagram Length:1500;Offset:370',
       'MF bit:0, Datagram Length:1424;Offset:2960'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 1500 computers HID must be minimum 11 bits 202.61.0.0/17 NID = 17bit, HID = 32 – 17 = 15bit 202.61.0 - - - - - - - - . - - - - - - - - 8 + 8 + 1          HID NID 202.61.00000000 00000000 → 202.61.0.0 ⁞   ⁞ ⁞ 202.61.01111111.11111111 → 202.61.127.255 I 202.61.84.0/21 NID = 21, HID = 11 bit First IP address of the block must be divisible by size of the block means all host id bits should be zero. 202.61.01010100.00000000/211 HID It is incorrect II 202.61.01101000.00000000/211 HID It is correct III 202.61.01000000.00000000/211 HID It is correct So, option b is the correct answer.'
   },
   {
     id: 'q-cn-2013-11',
@@ -4302,8 +4364,8 @@ export const questions = [
       'Last fragment, 2400 and 2759',
       'Middle fragment, 300 and 689'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 158,
+    explanation: '200.10.11.144/27 NID = 27 bit, HID = 5 bit 200.10.11.10010000 8 +  8 + 8 + 3  HID NID 200.10.11.100 - - - - -'
   },
   {
     id: 'q-cn-2010-12',
@@ -4320,8 +4382,8 @@ export const questions = [
       'It can be used to optimize throughput',
       'It can be used to prevent packet looping IPv4 Protocol'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prefix Subnet mask Output Interface Identifier 131.16.0.0/12 255.240.0.0 3 131.28.0.0/14 255.252.0.0 5 131.19.0.0/16 255.255.0.0 2 131.22.0.0/15 255.254.0.0 1 First start with the longest subnet mask I. DIP  =   131.23.151.76 AND  AND SM            255.255.0.0 NID =    131.23.0.0 Not matched with interface (2) II. DIP  =  131.23.151.76 AND AND SM           255.254.0.0 NID =   131.22.0.0 Matched with interface (1) 23  :  00010111 AND     AND 254  11111110 (22)  00010110'
   },
   {
     id: 'q-cn-2021-13',
@@ -4338,8 +4400,8 @@ export const questions = [
       'S1 is false and S2 is true',
       'Both 𝑆1 and 𝑆2 are false'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, 245.248.128.0/20 NID = 20 bit, HID = 32 – 20 = 12 bit 245.248.1000 . . . . . . . . NID HID Number of IP Addresses = 212 Or So, option a is the correct answer.'
   },
   {
     id: 'q-cn-2019-14',
@@ -4356,8 +4418,8 @@ export const questions = [
       'X sends an ARP request packet with broadcast IP address in its local subnet.',
       'X sends an ARP request packet to the local gateway’s IP address which then finds the MAC address of Y and sends to X.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'v = 3 ×108 m/sec.  = 1 4 , GB – 127 N = 127 d = 36,504 ×2 = 73008 km Pd = 5 d 73,008 km 3 10 kmv =  = 24336 ×10–5 sec. = 0.24336 sec. Useful timeEfficiency = Total time d d d d N× T (PKt)1 4 T (PKt) 2×P + Q = + rd+ P d + T (ACk) 0         0              0 d dd 127 T (Pkt)1 4 T (Pkt)+2×P = 127 × 4 ×Td (Pkt) = Td (Pkt) +2 × Pd 508 Td = Td + 2× Pd 507 Td = 2× Pd d d 2PT 507 = d 2 0.24336sec.T 507 = L 2 0.24336sec. B 507 = 2 0.24336 secL =  6. 10 bits/ sec. 507 L = 960 bits 960L = Byte8 L = 120 Byte.'
   },
   {
     id: 'q-cn-2013-15',
@@ -4374,8 +4436,8 @@ export const questions = [
       'Network layer – 4 times and Data link layer – 6 times',
       'Network layer – 2 times and Data link layer – 6 times Routing Algorithm'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'C1 C2 3 C4 5 6 7 C8 9 10 11 12 0 1 1 0 0 1 0 y x 0 1 1 C1 1 3 5 7 9 11 0 1 0 0 X 1 X = 0 (for even parity) C2 2 3 6 7 10 11 1 1 1 0 0 1 Number of 1’s→ even (even parity) C4 4 5 6 7 12 0 0 1 0 1 Number of 1’s → even (even parity) C8 8 9 10 11 12 y x 0 1 1 0 0 0 1 1 → even parity (y = 0)'
   },
   {
     id: 'q-cn-2023-16',
@@ -4392,8 +4454,8 @@ export const questions = [
       'OSPF is used as an inter-domain routing protocol.',
       'OSPF implements hierarchical routing.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Generator = X3+ X+ 1 = 1.X3 + 0.X2 + 1.X1 + 1.X0 = (1011)2'
   },
   {
     id: 'q-cn-2022-17',
@@ -4405,8 +4467,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a network with three routers P,Q,R shown in the figure below. All the links have cost of unity. ____ ____ P Q R The routers exchange distance vector routing information and have converged on the routing tables, after which the link Q-R fails. Assume that P and Q send out routing updates at random times, each at the same average rate. The probability of a routing loop formation (rounded off to one decimal place) between P and Q, leading to count-to-infinity problem, is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '0 0 0 0 0 (a) 0 1 0 1 1 (b) 1 0 1 0 1 (c) 1 1 1 1 0 (d) Hamming distance (a, b) = 3 Hamming distance (a, c) = 3 Hamming distance (a, d) = 4 Hamming distance (b, c) = 4 Hamming distance (b, d) = 3 Minimum Hamming distance = 3 Min Hamming distance required to correct ‘d’ bit error = 2d + 1 2d + 1 = 3 2d = 2 d = 1'
   },
   {
     id: 'q-cn-2021-18',
@@ -4418,8 +4480,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider a computer network using the distance vector routing algorithm in its network layer. The partial topology of the network is as shown below. The objective is to find the shortest-cost path from the router R to routers P and Q. Assume that R does not initially know the shortest routes to P and Q. Assume that R has three neighboring routers denoted as X, Y and Z. During one iteration, R measures its distance to its neighbors X, Y and Z as 3,2 and 5, respectively. Router R gets routing vectors from its neighbors that indicate that the distance to router P from routers X, Y and Z are 7, 6 and 5, respectively. The routing vector also indicates that the distance to router Q from routers X, Y and Z are 4,6 and 8, respectively. Which of the following statement(s) is/are correct',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, x3 +x + 1 = 1– x3 + 0.x2 + 1.x1 + 1xº = 1011 CRC = 101 Transmitted data: 01011011101'
   },
   {
     id: 'q-cn-2017-19',
@@ -4436,8 +4498,8 @@ export const questions = [
       'I, II and IV only',
       'II, III and IV only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'If G(x) has a factor of x+1 then it can detect odd number of bits error.'
   },
   {
     id: 'q-cn-2014-20',
@@ -4454,8 +4516,8 @@ export const questions = [
       'Both RIP and OSPF use link state routing',
       'Both RIP and OSPF use distance vector routing'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2–D parity scheme and column do and row r 4 of parity bits computed using even parity scheme. d7 d6 d5 d4 d3 d2 d1 d0 r0 0 1 0 1 0 0 1 1 r1 1 1 0 1  0 1 1 1 0 × (error) r2 0 0 0 1 0 1 0 0 r3 0 1 1 0 1 0 1 0 r4 1 1 0 0 0 1 0 1 0 1 🗸 🗸 × (error) 🗸 🗸 × (error) 🗸 × (error) Bits got corrupted are: (r1, d5), (r4, d2), (r4, d0) Total three bits got corrupted.'
   },
   {
     id: 'q-cn-2014-21',
@@ -4472,8 +4534,8 @@ export const questions = [
       'Sl and S2 are true, but S3 is false.',
       'Sl and S3 are true, but S2 is false. Combined data for Next Two Questions Consider a network with five nodes, N1 to N5, as shown below. The network uses a Distance Vector Routing protocol. Once the routes have stabilized, the distance vectors at different nodes are as following. Nl : (0, 1,7, 8, 4) N2 : (1, 0, 6, 7, 3) N3 : (7, 6, 0, 2, 6) N4 : (8, 7, 2, 0, 4) N5 : (4, 3, 6, 4, 0)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Given Baud rate = 9600 Bps Mode: Asynchronous mode with odd parity and stop bits Note: In asynchronous mode data is transmitted in the form of byte or character. Star bit = 1 Odd parity bit =1 Stop bit = 2 Number of bits sent in 1 byte = 8 + 1 + 1 + 2 = 12 bits Baud rate = 9600 12  bytes /sec = 800 bytes/sec. In 1 sec.                800 bytes Then In 15 sec.                15 × 800 = 12000 bytes'
   },
   {
     id: 'q-cn-2011-22',
@@ -4490,8 +4552,8 @@ export const questions = [
       '(7, 2, 0, 2, 5)',
       '(7, 2, 0, 2, 6)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '8-bit delimiter pattern (flag) = 01111110 Output bit string = 01111100101 In bit stuffing a bit in stuffed in the input data after every continuous 1’s, one less than in the flag or delimiter pattern. Output data: 01111100101  Bit is stuffed in the input data So, the input data will be: 0111110101 ❑❑❑'
   },
   {
     id: 'q-cn-2011-23',
@@ -4508,8 +4570,8 @@ export const questions = [
       '10',
       ' Combined Data for Next Two Questions Consider a network with 6 routers R1 to R6 connected with links having weights as shown in the following diagram'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'At N3 N3 receiver DV from N2, N4 Routing table at N3 Destination Distance NH N1 10 N4 N2 N3 0 - N4 N5'
   },
   {
     id: 'q-cn-2010-24',
@@ -4526,8 +4588,8 @@ export const questions = [
       '2',
       '1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Shortest distance from  R1 to R2  = 5 R1 to R3  = 3 R1 to R4  = 12 R1 to R5  = 12 R1 to R6  = 6 Shortest distance from  R2 to R3  = 2 R2 to R4  = 7 R2 to R5  = 8 R2 to R6  = 12 Shortest distance from  R4 to R5  = 1 R3 to R5  = 9 R3 to R6  = 13 Shortest distance from  R4 to R5  = 1 R4 to R6  = 5 Shortest distance from  R5 to R6  = 4 The links used for the shortest path. From every Routery to every other router are: R1 – R3, R2 – R3, R2 – R4, R4 – R5, R3 – R5, R5 – R6 Links Not used = R1 – R2, R4 – R6'
   },
   {
     id: 'q-cn-2010-25',
@@ -4544,8 +4606,8 @@ export const questions = [
       '2',
       '3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If we change the unused link value to 2 i.e. 2 12RR⎯⎯ → , 2 46RR⎯⎯ → . The n R5 – R6 will remains unused. (R5 – R6) Not used'
   },
   {
     id: 'q-cn-2008-26',
@@ -4562,8 +4624,8 @@ export const questions = [
       'S2 and S3 only',
       'S1 and S4 only Switch, Router and Gateway'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Count to infinity is a problem in distance vector routing. But there is no count to infinity problem in link state routing. In link state and distance vector routing the shortest path algorithm is run at every node. In link state LSDP (link state database packets) generated with latest into of the network. So, in link state a g reater number of network message are required.'
   },
   {
     id: 'q-cn-2015-27',
@@ -4575,8 +4637,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Two hosts are connected via a packet switch with 107 bits per second links. Each link has a propagation delay of 20 microseconds. The switch begins forwarding a packet 35 microseconds after it receives the same. If 10000 bits of data are to be',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1575,
+    explanation: 'B = 107 bits sec. Pkt size = 5000 byte Data size = 10,000 byte Number of Pkt = 10000B 25000B = d Pkt sizeT B=  = 7 0,000 Bits 10 Bits/sec.  = 500 × 10–6 sec. = 500 msec. X →HOP  N – Pkts TT = X [Td + Pd] + X–1(Qd + Prd] + N–1 (Td) = 2 [500 + 20] + 1 (35) + 1 × 500 = 1000 + 40 + 35 + 500 = 1575 msec.'
   },
   {
     id: 'q-cn-2012-28',
@@ -4591,10 +4653,11 @@ export const questions = [
       'over a network of two routers (R1 and R2) and three link (L1, L2 and L3). L1 connects S to R1; L2 connects R1 to R2; and L3 connects R2 to D. Let each link be of length 100 km. Assume signals travel over each link at a speed of 108 meters per second. Assume that the link bandwidth on each link is 1Mbps. Let the file be broken down into 1000 packets each of size 1000 bits. Find the total sum of transmission and propagation delays in transmitting the file from S to D?',
       '1005 ms',
       '1010 ms',
-      '3000 ms'
+      '3000 ms',
+      '3003 ms'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'v = 108 m/sec. = 105 km/sec B = 1 Mbps d Pkt sizeT B = 6 1000 bits 10  bits/sec. = 1m sec. X →HOP  N Pkts   ( ) ( )d d d rd dTT= X T P X–1 Q  + P N–1 T+ + + [Queuing delay & processing delay are not given so assume 0] = 3 [1+1] + 999 ×1 = 6 + 999 = 1005 msec.'
   },
   {
     id: 'q-cn-2022-30',
@@ -4611,8 +4674,8 @@ export const questions = [
       '6',
       '8 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Number of subnets are calculated are number of interfaces for a router. Hence in the question one router is having 3 interfaces (firewall web server and router) rest both the routers are having 2 interfaces each. So, total number of interfaces (subnets) = 3 + 2 ×2 = 7 But among these three routers 2 routers are having a common interface. So, total number of subnets = 7 –1 = 6 ❑❑❑'
   },
   {
     id: 'q-cn-2015-2',
@@ -4629,8 +4692,8 @@ export const questions = [
       'Only II and III are correct',
       'All of I, II and III are correct'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'NID HID 24   8 110 2| 1bit ↓ The number of networks in class C = 221 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2015-3',
@@ -4647,8 +4710,8 @@ export const questions = [
       '500 milliseconds 65535×214',
       '500 milliseconds 65535×216'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'First start with the longest subnet mask I    200.150.68.01110110 AND 255.255.255.11100000 NID = 200.150.68.96 Not matched with interface (4) II    200.150.68.118 AND 255.255.255.0 NID = 200.150.68.0 Matched with interface (3) No need to check further if it matches with more than one interfaces then we choose longest subnet mask.'
   },
   {
     id: 'q-cn-2013-4',
@@ -4665,8 +4728,8 @@ export const questions = [
       'UDP, TCP, UDP and TCP',
       'TCP, UDP, TCP and UDP UDP Header'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'IP address AND SubnetMask Subnetid M: 100.10.5.00000010 AND 255.255.255.11111100 SID = 100.10.5.0 N : 100.10.5.00000101 AND 255.255.255.11111100 SID = 100.10.5.00000100 SID = 100.10.5.4 P : 100.10.5.00000110 AND 255.255.255.11111100 SID = 100.10.5.00000100 100.10.5.4'
   },
   {
     id: 'q-cn-2018-6',
@@ -4683,8 +4746,8 @@ export const questions = [
       'P-IV, Q-I, R-II, S-III',
       'P-IV, Q-I, R-III, S-II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) 10.105.1.113 AND 255.255.255.0 NID = 10.105.1.0 10.105.1.91 AND 255.255.255.0 NID = 10.105.1.0 So, option a is incorrect. (b) 10.105.1.113 AND 255.255.255.128 NID = 10.105.1.0 10.105.1.91 AND 255.255.255.128 NID = 10.105.1.0 So, option b is incorrect (c) 10.105.1.113'
   },
   {
     id: 'q-cn-2021-7',
@@ -4701,8 +4764,8 @@ export const questions = [
       'If the client sends a packet after the server reboot, it will receive a RST segment',
       'If the client sends a packet after the server reboot, it will receive a FIN segment'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Netmask: 255.255.255.224 I  192.168.1.97 AND 255.255.255.224 SID = 192.168.1.96 II  192.168.1.135 AND 255.255.255.224 SID = 192.168.1.128 III  192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 IV  192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 V  192.168.1.155 AND 255.255.255.224 SID = 192.168.1.128 VI  192.168.1.80 AND 255.255.255.224 SID = 192.168.1.64 Different subnet id’s 192.168.1.96 192.168.1.128 192.168.1.64    3 different subnet id’s So, option C is the correct answer. Shortcut 255.255.255.111 00000 NID SID HID'
   },
   {
     id: 'q-cn-2017-8',
@@ -4719,8 +4782,8 @@ export const questions = [
       'FIN-WAIT-1',
       'FIN-WAIT-2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'X :  192.168.1.97 AND 255.255.255.224 192.168.1.96 Note: Gateway must also have the same subnet id (a) 192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 So, option a is incorrect. (b) 192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 Therefore, option B is the correct answer.'
   },
   {
     id: 'q-cn-2008-11',
@@ -4737,8 +4800,8 @@ export const questions = [
       'connect() system call returns an error',
       'connect() system call results in a core dump'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 158,
+    explanation: '200.10.11.144/27 NID = 27 bit, HID = 5 bit 200.10.11.10010000 8 +  8 + 8 + 3  HID NID 200.10.11.100 - - - - -'
   },
   {
     id: 'q-cn-2008-12',
@@ -4755,8 +4818,8 @@ export const questions = [
       'listen',
       'connect'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prefix Subnet mask Output Interface Identifier 131.16.0.0/12 255.240.0.0 3 131.28.0.0/14 255.252.0.0 5 131.19.0.0/16 255.255.0.0 2 131.22.0.0/15 255.254.0.0 1 First start with the longest subnet mask I. DIP  =   131.23.151.76 AND  AND SM            255.255.0.0 NID =    131.23.0.0 Not matched with interface (2) II. DIP  =  131.23.151.76 AND AND SM           255.254.0.0 NID =   131.22.0.0 Matched with interface (1) 23  :  00010111 AND     AND 254  11111110 (22)  00010110'
   },
   {
     id: 'q-cn-2021-15',
@@ -4773,8 +4836,8 @@ export const questions = [
       'SYN bit = 0, SEQ number = X + 1, ACK bit = 0, ACK number = Y, FIN bit = 1',
       'SYN bit = 1, SEQ number = X + 1, ACK bit = 0, ACK number = Y, FIN bit = 0'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'C1 C2 3 C4 5 6 7 C8 9 10 11 12 0 1 1 0 0 1 0 y x 0 1 1 C1 1 3 5 7 9 11 0 1 0 0 X 1 X = 0 (for even parity) C2 2 3 6 7 10 11 1 1 1 0 0 1 Number of 1’s→ even (even parity) C4 4 5 6 7 12 0 0 1 0 1 Number of 1’s → even (even parity) C8 8 9 10 11 12 y x 0 1 1 0 0 0 1 1 → even parity (y = 0)'
   },
   {
     id: 'q-cn-2020-16',
@@ -4786,8 +4849,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider a TCP connection between a client and a server with the following specifications: the round trip time is 6 ms, the size of the receiver advertised window is 50 KB, slow-start threshold at the client is 32 KB, and the maximum segment size is 2 KB. The connection is established at time t = 0. Assume that there are no timeouts and errors during transmission. Then the size of the congestion window (in KB) at time t+60 ms after all acknowledgments are processed is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Generator = X3+ X+ 1 = 1.X3 + 0.X2 + 1.X1 + 1.X0 = (1011)2'
   },
   {
     id: 'q-cn-2018-17',
@@ -4799,8 +4862,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a long-lived TCP session with an end-to- end bandwidth of 1 Gbps (= 109 bits-per-second). The session starts with a sequence number of 1234. The minimum time (in seconds, rounder to the closest integer) before this sequence number can be used again is _____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '0 0 0 0 0 (a) 0 1 0 1 1 (b) 1 0 1 0 1 (c) 1 1 1 1 0 (d) Hamming distance (a, b) = 3 Hamming distance (a, c) = 3 Hamming distance (a, d) = 4 Hamming distance (b, c) = 4 Hamming distance (b, d) = 3 Minimum Hamming distance = 3 Min Hamming distance required to correct ‘d’ bit error = 2d + 1 2d + 1 = 3 2d = 2 d = 1'
   },
   {
     id: 'q-cn-2018-18',
@@ -4817,8 +4880,8 @@ export const questions = [
       'Only (iv) is true',
       'Only (i) and (iv) are true 19 [NAT] [GATE-2016 : 2M] For a host machine that uses the token bucket algorithm for congestion control, the token bucket has a capacity of 1 megabyte and the maximum output rate is 20 megabytes per second. Tokens arrive at a rate to sustain output at a rate of 10 megabytes per second. The token bucket is currently full and the machine needs to send 12 megabytes of data. The minimum time required to transmit the data is _____ seconds.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, x3 +x + 1 = 1– x3 + 0.x2 + 1.x1 + 1xº = 1011 CRC = 101 Transmitted data: 01011011101'
   },
   {
     id: 'q-cn-2015-20',
@@ -4835,8 +4898,8 @@ export const questions = [
       '1 and 4 only',
       '2 and 4 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2–D parity scheme and column do and row r 4 of parity bits computed using even parity scheme. d7 d6 d5 d4 d3 d2 d1 d0 r0 0 1 0 1 0 0 1 1 r1 1 1 0 1  0 1 1 1 0 × (error) r2 0 0 0 1 0 1 0 0 r3 0 1 1 0 1 0 1 0 r4 1 1 0 0 0 1 0 1 0 1 🗸 🗸 × (error) 🗸 🗸 × (error) 🗸 × (error) Bits got corrupted are: (r1, d5), (r4, d2), (r4, d0) Total three bits got corrupted.'
   },
   {
     id: 'q-cn-2012-23',
@@ -4853,8 +4916,8 @@ export const questions = [
       '7 MSS',
       '12 MSS'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'At N3 N3 receiver DV from N2, N4 Routing table at N3 Destination Distance NH N1 10 N4 N2 N3 0 - N4 N5'
   },
   {
     id: 'q-cn-2008-24',
@@ -4871,8 +4934,8 @@ export const questions = [
       '5 seconds',
       '8 seconds'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Shortest distance from  R1 to R2  = 5 R1 to R3  = 3 R1 to R4  = 12 R1 to R5  = 12 R1 to R6  = 6 Shortest distance from  R2 to R3  = 2 R2 to R4  = 7 R2 to R5  = 8 R2 to R6  = 12 Shortest distance from  R4 to R5  = 1 R3 to R5  = 9 R3 to R6  = 13 Shortest distance from  R4 to R5  = 1 R4 to R6  = 5 Shortest distance from  R5 to R6  = 4 The links used for the shortest path. From every Routery to every other router are: R1 – R3, R2 – R3, R2 – R4, R4 – R5, R3 – R5, R5 – R6 Links Not used = R1 – R2, R4 – R6'
   },
   {
     id: 'q-cn-2008-25',
@@ -4889,8 +4952,8 @@ export const questions = [
       'S3 and S4 only',
       'S1, S3, and S4 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If we change the unused link value to 2 i.e. 2 12RR⎯⎯ → , 2 46RR⎯⎯ → . The n R5 – R6 will remains unused. (R5 – R6) Not used'
   },
   {
     id: 'q-cn-2012-3',
@@ -4907,8 +4970,8 @@ export const questions = [
       'Message',
       'Frame'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'First start with the longest subnet mask I    200.150.68.01110110 AND 255.255.255.11100000 NID = 200.150.68.96 Not matched with interface (4) II    200.150.68.118 AND 255.255.255.0 NID = 200.150.68.0 Matched with interface (3) No need to check further if it matches with more than one interfaces then we choose longest subnet mask.'
   },
   {
     id: 'q-cn-2010-4',
@@ -4925,8 +4988,8 @@ export const questions = [
       'E-mail',
       'Ping'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'IP address AND SubnetMask Subnetid M: 100.10.5.00000010 AND 255.255.255.11111100 SID = 100.10.5.0 N : 100.10.5.00000101 AND 255.255.255.11111100 SID = 100.10.5.00000100 SID = 100.10.5.4 P : 100.10.5.00000110 AND 255.255.255.11111100 SID = 100.10.5.00000100 100.10.5.4'
   },
   {
     id: 'q-cn-2008-5',
@@ -4943,8 +5006,8 @@ export const questions = [
       '216 bytes',
       '1500 bytes'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Note: First start with longest mask (a) 128.96.171.92 AND 255.255.254.0 NID = 128.96.170.0 Matched with interface (0) (b) 128.96.167.151 AND 255.255.254.0 NID = 128.96.166.0 Matched with R2. (c) 128.96.163.151 AND 255.255.254.0 NID = 128.96.162.0 Not matched 128.96.163.151 AND 255.255.252.0 NID = 128.96.160.0 Not matched Note:- Does not match with any given interface then 128.96.163.151 will forward to default interface R4. (d) 128.96.165.121 AND 255.255.254.0 128.96.164.0 128.96.165.121 AND 255.255.252.0 128.96.164.0 Matched with R3. So, option A is correct answer.'
   },
   {
     id: 'q-cn-2019-7',
@@ -4959,10 +5022,14 @@ export const questions = [
       'IMAP, SMTP',
       'SMTP, MIME',
       'IMAP, POP3',
-      'SMTP, POP3 8. [MCQ] [GATE-2016(set-1) : 1M] Which of the following is/are example(s) of stateful application layer protocols? (i) HTTP (ii) FTP (iii) TCP (iv) POP3'
+      'SMTP, POP3 8. [MCQ] [GATE-2016(set-1) : 1M] Which of the following is/are example(s) of stateful application layer protocols? (i) HTTP (ii) FTP (iii) TCP (iv) POP3',
+      '(i) and (ii) only',
+      '(ii) and (iii) only',
+      '(ii) and (iv) only',
+      '(iv) only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Netmask: 255.255.255.224 I  192.168.1.97 AND 255.255.255.224 SID = 192.168.1.96 II  192.168.1.135 AND 255.255.255.224 SID = 192.168.1.128 III  192.168.1.110 AND 255.255.255.224 SID = 192.168.1.96 IV  192.168.1.67 AND 255.255.255.224 SID = 192.168.1.64 V  192.168.1.155 AND 255.255.255.224 SID = 192.168.1.128 VI  192.168.1.80 AND 255.255.255.224 SID = 192.168.1.64 Different subnet id’s 192.168.1.96 192.168.1.128 192.168.1.64    3 different subnet id’s So, option C is the correct answer. Shortcut 255.255.255.111 00000 NID SID HID'
   },
   {
     id: 'q-cn-2012-9',
@@ -4979,8 +5046,8 @@ export const questions = [
       'TCP',
       'UDP'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, Subnet Mask: 255.255.248.0 SM : 11111111.11111111.11111000.00000000 HID = 11 bit Maximum number of Hosts/Subnet  = 211 – 2 = 2048 – 2 = 2046 So, option C is the correct answer.'
   },
   {
     id: 'q-cn-2011-10',
@@ -4997,8 +5064,8 @@ export const questions = [
       'm1 : SMTP m2 : POP m3 : HTTP',
       'm1 : POP m2 : SMTP m3 : IMAP Domain Name Space Protocol'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 1500 computers HID must be minimum 11 bits 202.61.0.0/17 NID = 17bit, HID = 32 – 17 = 15bit 202.61.0 - - - - - - - - . - - - - - - - - 8 + 8 + 1          HID NID 202.61.00000000 00000000 → 202.61.0.0 ⁞   ⁞ ⁞ 202.61.01111111.11111111 → 202.61.127.255 I 202.61.84.0/21 NID = 21, HID = 11 bit First IP address of the block must be divisible by size of the block means all host id bits should be zero. 202.61.01010100.00000000/211 HID It is incorrect II 202.61.01101000.00000000/211 HID It is correct III 202.61.01000000.00000000/211 HID It is correct So, option b is the correct answer.'
   },
   {
     id: 'q-cn-2016-11',
@@ -5015,8 +5082,8 @@ export const questions = [
       'DHCP',
       'RARP'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 158,
+    explanation: '200.10.11.144/27 NID = 27 bit, HID = 5 bit 200.10.11.10010000 8 +  8 + 8 + 3  HID NID 200.10.11.100 - - - - -'
   },
   {
     id: 'q-cn-2022-12',
@@ -5028,8 +5095,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the resolution of the domain name www.gate.org.in by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query- response pairs involved in completely resolving the domain name is.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Prefix Subnet mask Output Interface Identifier 131.16.0.0/12 255.240.0.0 3 131.28.0.0/14 255.252.0.0 5 131.19.0.0/16 255.255.0.0 2 131.22.0.0/15 255.254.0.0 1 First start with the longest subnet mask I. DIP  =   131.23.151.76 AND  AND SM            255.255.0.0 NID =    131.23.0.0 Not matched with interface (2) II. DIP  =  131.23.151.76 AND AND SM           255.254.0.0 NID =   131.22.0.0 Matched with interface (1) 23  :  00010111 AND     AND 254  11111110 (22)  00010110'
   },
   {
     id: 'q-cn-2016-13',
@@ -5046,8 +5113,8 @@ export const questions = [
       'DNS query, TCP SYN, HTTP GET request',
       'TCP SYN, DNS query, HTTP GET request ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given, 245.248.128.0/20 NID = 20 bit, HID = 32 – 20 = 12 bit 245.248.1000 . . . . . . . . NID HID Number of IP Addresses = 212 Or So, option a is the correct answer.'
   },
   {
     id: 'q-dld-2023-1',
@@ -5100,8 +5167,8 @@ export const questions = [
       '1Kbits',
       '2 Kbits Registers and its Types'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'First write the given number in binary representation Write each digit 3 bits (1217)8 = (001010001111)2'
   },
   {
     id: 'q-dld-2010-4',
@@ -5170,7 +5237,11 @@ export const questions = [
       'C800 to CFFF',
       'CA00 to CAFF',
       'C800 to C8FF',
-      'DA00 to DFFF Instruction Set Architecture 8. [MCQ [GATE-2023 : 2M] Consider the given C-code and its corresponding assembly code, with a few operands U1–U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte- addressable. //C-code ;assembly-code (; indicates comments) ;r1-r5 are 32-bit integer registers ;initialize r1=0, r2=10 ;initialize r3, r4 with base address of a, b int a[10], b[10], i; // int is 32-bit for (i=0; i<10;i++) a[i] = b[i] * 8; L01: jeq r1, r2, end ;if(r1==r2) goto end L02: lw r5, 0(r4) ;r5 <- Memory[r4+0] L03: shl r5, r5, U1 ;r5 <- r5 << U1 L04: sw r5, 0(r3) ;Memory[r3+0] <- r5 L05: add r3, r3, U2 ;r3 <- r3+U2 L06: add r4, r4, U3 L07: add r1, r1, 1 L08: jmp U4 ;goto U4 L09: end Whicho of the following options is a correct replacement for operands in the position (U1, U2, U3, U4) in the above assembly code?'
+      'DA00 to DFFF Instruction Set Architecture 8. [MCQ [GATE-2023 : 2M] Consider the given C-code and its corresponding assembly code, with a few operands U1–U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte- addressable. //C-code ;assembly-code (; indicates comments) ;r1-r5 are 32-bit integer registers ;initialize r1=0, r2=10 ;initialize r3, r4 with base address of a, b int a[10], b[10], i; // int is 32-bit for (i=0; i<10;i++) a[i] = b[i] * 8; L01: jeq r1, r2, end ;if(r1==r2) goto end L02: lw r5, 0(r4) ;r5 <- Memory[r4+0] L03: shl r5, r5, U1 ;r5 <- r5 << U1 L04: sw r5, 0(r3) ;Memory[r3+0] <- r5 L05: add r3, r3, U2 ;r3 <- r3+U2 L06: add r4, r4, U3 L07: add r1, r1, 1 L08: jmp U4 ;goto U4 L09: end Whicho of the following options is a correct replacement for operands in the position (U1, U2, U3, U4) in the above assembly code?',
+      '(8, 4, 1, L02)',
+      '(3, 4, 4, L01)',
+      '(8, 1, 1, L02)',
+      '(3, 1, 1, L01)'
     ],
     correctAnswer: null,
     explanation: ''
@@ -5211,8 +5282,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A processor has 16 integer registers (R0, R1, …., R15) and 64 floating point registers (F0, F1, …., F63). It uses a 2-byte instruction format. There are four categories of instructions: Type-1, Type-2, Type-3 and Type-4. Type-1 category consists of four instructions, each with 3 integer register operands (3Rs). Type-2 category consists of eight instructions, each with 2 floating point register operands (2Fs). Type-3 category consists of fourteen instructions, each with one integer register operand and one floating point register operand (1R+1F). Type-4 category consists of N instructions, each with a floating-point register operand (1F). The maximum value of N is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 32,
+    explanation: '16 Integer Register (R0, R1 R2….. R15) IR = 4 bit 64 floating point Register (F0, F1 ….. F63) FR = 6 bit TYPE-1: OP CODE IR IR IR 4 Instruction'
   },
   {
     id: 'q-co-2018-12',
@@ -5229,8 +5300,8 @@ export const questions = [
       'TRPQS',
       'QTPRS'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'When Interrupt occur, after completion of current Instruction. Interrupt will be serviced, It push the program current [PC] value into stack & control transfer to ISR. Q: Process finish the current instruction execution P: PUSH the PC value into stack T: Interrupt → PC R: Service the Interrupt S: Pop the PC value'
   },
   {
     id: 'q-co-2016-13',
@@ -5242,8 +5313,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a Processor with 64 registers and an instruction set of size twelve. Each instruction has five distinct fields, namely, opcode, two source register identifiers, one destination register identifier, and a twelve-bit immediate value. Each instruction must be stored in memory in a byte- aligned fashion. If a program has 100 instructions, the amount of memory (in bytes) consumed by the program text is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 500,
+    explanation: '64 Register, Instruction set size = 12 5 Fields = Opcode, Source Reg1, S Reg2, D Reg2, 12 bit Immediate field 64 Register  Reg. AF = 6bit'
   },
   {
     id: 'q-co-2016-14',
@@ -5255,8 +5326,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A Processor has 40 distinct instructions and 24 general purpose registers. A 32-bit instruction word has an opcode, two register operands and an immediate operand. The number of bits available for the immediate operand field is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 16,
+    explanation: '40 Distinct Instruction/operation  OP code = 2log 40 = 6 bit OP code = 6 bit 24 Register  Reg.AF= 5bit 32 bits Instruction Immediate field = 32 – (5 + 5 + 6) = 32 – 16 Immediate field = 16bit'
   },
   {
     id: 'q-co-2015-15',
@@ -5273,8 +5344,8 @@ export const questions = [
       'Only S2 and S3',
       'All of S1, S2 and S3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Memory operand Or Register operand But Accumulator is a special purpose Register'
   },
   {
     id: 'q-co-2015-16',
@@ -5291,8 +5362,8 @@ export const questions = [
       '(0170)16',
       '(0172)16'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given Current SP value is = (016E)16 PC = 2 Byte, PSW = 2 byte (1) Store the current value of PC into the stack. Here PC is 2 byte so stack pointer to increased by 2 bytes (016E)2 + 2 = [0170]16 01 0110 1110 016E + 1 01 0110 1111 016F 01 0111 0000 016F +1 017016 (2) Store the value of PSW in the stack Here PSW is also 2 byte long. So SP increased by 2 byte (0170)16 + 2  = (0172)16 SP = (0172)16 (3) Load the starting address of the subroutine in the PC. PC  ISR ( )16SP = 0172'
   },
   {
     id: 'q-co-2014-17',
@@ -5304,8 +5375,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A machine has a 32-bit architecture, with 1-word long instructions. It has 64 registers, each of which is 32 bits long. It needs to support 45 instructions,',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 16383,
+    explanation: 'Instruction size = 1 word = 32 bit 45 Operation   OP code = 6 bit 64 Register  Register = 6 bit Immediate field   = 32 – (6 + 6 + 6) = 32 – 18 = 14 bit n bit unsigned Range = 0 to 2n –1 Immediate field Range = 0 to 214 –1 = 16,383'
   },
   {
     id: 'q-co-2011-18',
@@ -5322,8 +5393,8 @@ export const questions = [
       '5',
       '3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'LOAD R1 c; LOAD R2 d; ADD R1 R1 R2; R1  R1 + R2  R1 = c + d LOAD R2 e; SUB R2, R2, R1; R2  R2 – R1 R2 = e – (c + d) LOAD R1 a; LOAD R3 b; SUB R1, R1, R3; R1  R1 – R3 ; R1 = (a – b) ADD R3, R1, R2; R3 = (a – b) + [e – (c + d)] OR ADD R1 R1 R2; R1  R1 + R2 OR ADD R2 R1 R2; R2  R1 + R2 Minimum 3 Registers required'
   },
   {
     id: 'q-co-2009-19',
@@ -5340,8 +5411,8 @@ export const questions = [
       'By checking the interrupt register after finishing the execution of the current instruction.',
       'By checking the interrupt register at fixed time intervals.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'CPU will check the interrupt after finishing of current instant execution. If interupts is present Push PC value'
   },
   {
     id: 'q-co-2008-20',
@@ -5358,8 +5429,8 @@ export const questions = [
       '1 and 2 only',
       '1, 2 and 3 only Addressing Modes'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The RFE (Return from Exception) instruction must be a trap instruction, a privilege instruction and an exception cannot be allowed to occur during execution of an RFE instruction.'
   },
   {
     id: 'q-co-2017-21',
@@ -5376,8 +5447,8 @@ export const questions = [
       'Register direct addressing mode, R1',
       'Index addressing mode, X(R1). Where X is an offset represented in 2’s complement 16-bit representation.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'X(R1)  M [X + R1]'
   },
   {
     id: 'q-co-2011-22',
@@ -5394,8 +5465,8 @@ export const questions = [
       'Register Indirect Scaled Addressing',
       'Base Indexed Addressing'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'LW  R1, 20(R2) R1  M[20 + R2] Read 32 bit word from memory and store into 32 bit Register R. EA = M [20 +R2] 20: Index'
   },
   {
     id: 'q-co-2008-23',
@@ -5410,7 +5481,11 @@ export const questions = [
       '1 only',
       '2 only',
       '3 only',
-      '2 and 3 only 24. [MCQ [GATE-2008 : 1M] Assume that EA = (X)+ is the effective address equal to the contents of location X, with X Incremented by one word length after the effective address is calculated; EA =-(X) is the effective address equal to the contents of location X, with X decremented by one word length before the effective address is calculated; EA = (X)- is the effective address equal to the contents of location X, with X decremented by one word length after the effective address is calculated. The format of the instruction is (opcode, source, destination), which means (destination ← source op destination). Using X as a stack pointer, which of the following instructions can pop the top two elements from the stack, perform the addition operation and push the result back to the stack.'
+      '2 and 3 only 24. [MCQ [GATE-2008 : 1M] Assume that EA = (X)+ is the effective address equal to the contents of location X, with X Incremented by one word length after the effective address is calculated; EA =-(X) is the effective address equal to the contents of location X, with X decremented by one word length before the effective address is calculated; EA = (X)- is the effective address equal to the contents of location X, with X decremented by one word length after the effective address is calculated. The format of the instruction is (opcode, source, destination), which means (destination ← source op destination). Using X as a stack pointer, which of the following instructions can pop the top two elements from the stack, perform the addition operation and push the result back to the stack.',
+      'ADD (X)–,(X)',
+      'ADD (X), (X)–',
+      'ADD –(X), (X)+',
+      'ADD –(X), (X) ❑❑❑'
     ],
     correctAnswer: null,
     explanation: ''
@@ -5430,8 +5505,8 @@ export const questions = [
       'Conditional branch',
       'Initiation of interrupt service ALU Data Path'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'P = Ox C1800000   Q = Ox 3F5C2EF4 1bit 8bit 23bit S E  M Bias = 8121− −  bias = 127 P = Ox C1800000 1 100 0001 1 000 0000 0000 0000 0000 0000 Sign 1bit E(8bit) Mantissa (23bit) S = 1(–ve) E = 10000011 = 131 BE or E = 131 M = 00000000 (–1)S 1.M × 2e (–1)1 1.00000000 × 2131 – 127 P = –(1.00000000) × 2 + 4 BE = AE + bias Or E = e + bias e = E – bias E = 131 Bias = 127 Q = 3F5C2EF4 0 011 1111 0 101 1100 0010 1110 1111 0100 Sign 1bit E(8bit) Mantissa (23bit) Sign = 0 (+ve)                          E = 126 bias = 127 E = 01111110  E = 126  e = E – bias BE or E = 126  126 – 127 M = 101 1100 0010 1110 1111 0100. Bias = 127 E = e + bias e = E – bias (–1)s 1.M × 2e (–1)0 1.101 1100 0010 1110 1111 0100 ×2126 – 127 Q = (1.101 1100 0010 1110 1111 0100) × 2–1 Sign = –ve. P × Q = exponent = (+4) + (–1) = +3. Mantissa = (1.0000) *(1.101 1100 0010 1110 1111 0100) – (1.101 1100 0010 1110 1111 0100) × 2 + 3 Sign = 1(–ve) e = +3 bias = 127 E = e + bias = 3 + 127 E = 130 E = 10000010'
   },
   {
     id: 'q-co-2020-2',
@@ -5443,8 +5518,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A multiplexer is placed between a group of 32 registers and an accumulator to regulate data movement such that at any given point in time the content of only one register will move to the accumulator, the minimum number of select lines needed for the multiplexer is _____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '– 14.25  1110.01  –1110.01  – 1.11001×2+3 sign = 1 [–ve] Mantissa [m] = 11001 [AE]e = +3 [BE] E  e  bias=+ BE  AE  bias=+ E = 3+bias = 3 +127 E  130 = BE  130= IEE E 754 Single Precision bias = 28–1 –1 = 127'
   },
   {
     id: 'q-co-2020-3',
@@ -5461,8 +5536,8 @@ export const questions = [
       '3, 5, 2, 1, 4',
       '1, 2, 4, 3, 5 Microprogrammed Control'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'When we multiply two 4 bit number then each result is 8 bit 4 bit  4 bit ↓               ↓ Combination 24 24 Total ROM size = 24 × 24 × 8 bit ⇒ 28 × 8 bit ⇒ 28 × 23 bit ⇒ 211 bit ⇒ 2 × 210 bit = 2k bits'
   },
   {
     id: 'q-co-2008-4',
@@ -5479,8 +5554,8 @@ export const questions = [
       '135, 9',
       '135, 10'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'R1 = 1(a) R2 = 10(b) R3 = 20(c) I R1  R1 + R2 [R1[d] = a + b] II R1  R3 + R1 [R1[e] = c + d] III R2  R3 + R1 [R2[f] = c + e] IV R2  R3 + R1 [R2[b] = c + e] V R1  R2 + R2 [R1[e] = b + f] VI R3  R1 + 5 R3[d] = 5 + e VII return R2 + R3 Minimum 3 register required OR a = 1, b = 10, c = 20 R1  R1 + R2 I. d = a + b R1  R3 + R1 II. e = c + d R2  R3 + R1 III. f = c + e R3  R3 + R1 IV b = c + e R1  R2 + R3 V e = b + f R3  R1 + 5 VI d = 5 + e return R2 + R3 VIII return d + f'
   },
   {
     id: 'q-co-2018-5',
@@ -5497,8 +5572,8 @@ export const questions = [
       'I and III only',
       'I, II and III ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Cin out inC         C 0 1 0 0 1 1 0 1 + 1 1 1 0 1 0 0 1 0 0 1 1 0 1 1 0 Overflow C in + cout = 1 1 + 1 = 0 Carry = 1, Sign = 0 Overflow flag = 0'
   },
   {
     id: 'q-co-2014-1',
@@ -5510,8 +5585,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider two processors P1 and P2 executing the same instructions set. Assume that under identical conditions, for the same input, a program running on P2 takes 25% less time but incurs 20% more CPI (clock cycles per instruction) as compared to the program running on P1. If the clock frequency of P1 is 1GHZ, then the clock frequency of P2 (in GHZ) is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'P = Ox C1800000   Q = Ox 3F5C2EF4 1bit 8bit 23bit S E  M Bias = 8121− −  bias = 127 P = Ox C1800000 1 100 0001 1 000 0000 0000 0000 0000 0000 Sign 1bit E(8bit) Mantissa (23bit) S = 1(–ve) E = 10000011 = 131 BE or E = 131 M = 00000000 (–1)S 1.M × 2e (–1)1 1.00000000 × 2131 – 127 P = –(1.00000000) × 2 + 4 BE = AE + bias Or E = e + bias e = E – bias E = 131 Bias = 127 Q = 3F5C2EF4 0 011 1111 0 101 1100 0010 1110 1111 0100 Sign 1bit E(8bit) Mantissa (23bit) Sign = 0 (+ve)                          E = 126 bias = 127 E = 01111110  E = 126  e = E – bias BE or E = 126  126 – 127 M = 101 1100 0010 1110 1111 0100. Bias = 127 E = e + bias e = E – bias (–1)s 1.M × 2e (–1)0 1.101 1100 0010 1110 1111 0100 ×2126 – 127 Q = (1.101 1100 0010 1110 1111 0100) × 2–1 Sign = –ve. P × Q = exponent = (+4) + (–1) = +3. Mantissa = (1.0000) *(1.101 1100 0010 1110 1111 0100) – (1.101 1100 0010 1110 1111 0100) × 2 + 3 Sign = 1(–ve) e = +3 bias = 127 E = e + bias = 3 + 127 E = 130 E = 10000010'
   },
   {
     id: 'q-co-2008-2',
@@ -5528,8 +5603,8 @@ export const questions = [
       'After effective address calculation has completed',
       'After data cache lookup has completed Performance Evaluation of Pipeline'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '– 14.25  1110.01  –1110.01  – 1.11001×2+3 sign = 1 [–ve] Mantissa [m] = 11001 [AE]e = +3 [BE] E  e  bias=+ BE  AE  bias=+ E = 3+bias = 3 +127 E  130 = BE  130= IEE E 754 Single Precision bias = 28–1 –1 = 127'
   },
   {
     id: 'q-co-2020-4',
@@ -5541,8 +5616,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a non-pipelined processor operating at 2.5 GHz. It takes 5 clock cycles to complete an instruction. You are going to make a 5-stage pipeline out of this processor. Overheads associated with pipelining force you to operate the pipelined processor at 2 GHz. In a given program, assume that 30% are memory instructions, 60% are ALU instructions and the rest are branch instructions. 5% of the memory instructions cause stalls of 50 clock cycles each due to cache misses and 50% of the branch instructions cause stalls of 2 cycles each. Assume that there are no stalls associated with the execution of ALU instructions. For this program, the speedup achieved by the pipelined processor over the non-pipelined processor (round off to 2 decimal places) is _________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'R1 = 1(a) R2 = 10(b) R3 = 20(c) I R1  R1 + R2 [R1[d] = a + b] II R1  R3 + R1 [R1[e] = c + d] III R2  R3 + R1 [R2[f] = c + e] IV R2  R3 + R1 [R2[b] = c + e] V R1  R2 + R2 [R1[e] = b + f] VI R3  R1 + 5 R3[d] = 5 + e VII return R2 + R3 Minimum 3 register required OR a = 1, b = 10, c = 20 R1  R1 + R2 I. d = a + b R1  R3 + R1 II. e = c + d R2  R3 + R1 III. f = c + e R3  R3 + R1 IV b = c + e R1  R2 + R3 V e = b + f R3  R1 + 5 VI d = 5 + e return R2 + R3 VIII return d + f'
   },
   {
     id: 'q-co-2017-6',
@@ -5554,8 +5629,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Instruction execution in a processor is divided into 5 stages. Instruction Fetch (IF), Instruction Decode (ID), Operand Fetch (OF), Execute (EX) and Write Back (WB). These stages take 5, 4, 20, 10 and 3 nanoseconds (ns) respectively. A pipelined implementation of the processor requires buffering',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. Function, Local parameter, memory Access '
   },
   {
     id: 'q-cn-2016-8',
@@ -5691,8 +5766,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a pipelines processor with 5 stages. Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Write Back (WB). Each stage of the pipeline, except the EX stage, takes one cycle. Assume that the ID stage merely decodes the instruction and the register read is performed in the EX stage. The EX stage takes one cycle for ADD instruction and two cycles for MUL instructions. Ignore pipeline register latencies. Consider the following sequence of 8 instructions: ADD, MUL, ADD, MUL, ADD, MUL, ADD, MUL Assume that every MUL instruction is data- dependent on the ADD instruction just before it and every ADD instruction (except the first ADD) is data-dependent on the MUL instruction just before it. The Speedup is defined as follows: Execution time without operand forwarding Speedup = Execution time with operand forwarding The Speedup achieved in executing the given instruction sequence on the pipelined processor (rounded to 2 decimal places) is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'CPU will check the interrupt after finishing of current instant execution. If interupts is present Push PC value'
   },
   {
     id: 'q-co-2017-20',
@@ -5704,8 +5779,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a RISC machine where each instruction is exactly 4 bytes long. Conditional and unconditional branch instructions use PC-relative addressing mode with Offset specified in bytes to the target location of the branch instruction. Further the Offset is always with respect to the address of the next instruction in the program sequence. Consider the following instruction sequence Instr. No Instruction i add R2, R3, R4 i + 1 sub R5, R6, R7 i + 2 cmp R1, R9, R10 i + 3 beq R1, Offset If the target of the branch instruction is i, then the decimal value of the Offset is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The RFE (Return from Exception) instruction must be a trap instruction, a privilege instruction and an exception cannot be allowed to occur during execution of an RFE instruction.'
   },
   {
     id: 'q-co-2015-21',
@@ -5722,8 +5797,8 @@ export const questions = [
       'Only S1 and S3 are true',
       'Only S2 and S3 are true'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'X(R1)  M [X + R1]'
   },
   {
     id: 'q-co-2015-22',
@@ -5735,8 +5810,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the sequence of machine instructions given below: MUL R5, R0, R1 DIV R6, R2, R3 ADD R7, R5, R6 SUB R8, R7, R4 In the above sequence, R0 to R8 are general purpose registers. In the instructions shown, the first register stores the result of the operation performed on the second and the third registers. This sequence of instructions is to executed in a pipelined instruction processor with the following 4 stages: (1) Instruction Fetch and Decode (1F), (2) Operand Fetch (OF), (3) Perform Operation (PO) and (4) Write back the Result (WB). The IF, OF and WB stages take 1 clock cycle each for any instruction. The PO stage takes 1 clock cycle for ADD or SUB instruction, 3 clock cycles for MUL instruction and 5 clock cycles for DIV instruction. The pipelined processor uses operand forwarding from the PO stage to the OF stage. The number of clock cycles taken for the execution of the above sequence of instructions is ____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'LW  R1, 20(R2) R1  M[20 + R2] Read 32 bit word from memory and store into 32 bit Register R. EA = M [20 +R2] 20: Index'
   },
   {
     id: 'q-cn-2008-27',
@@ -6037,8 +6112,8 @@ export const questions = [
       '1 A',
       'k n'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'OPCODE source destination. Destination  ( )1S Source  OPERATION ( )2 destination S 1. (X)+: Post increment First Fetch the operand (Content) from the location X then Increment. 2. (X)– Post Decrement First Fetch the operand (Content) from the location X. then Decrement in X. 3. +(X) Pre Increment First Increment in the X, then Updated Location [After Increment X content (Operand) is Fetch 4. –(X): Pre decrement First Decrement in the X, then Updated Location (After Decrement) X content (operand) is Fetch. Assume start from 1000 (a) ADD (X)–, X (X) – : Fetch then Decrement operand X = 999 M[1000] then X– X = 999  M [999] = 100 200 + 100 = 300. ADD POP (Top Of Stack) POP (Top Of Stack) ALU operation (ADD) push into POP. 200 + 100 STACK: LIFO (b) ADD X, (X)– M [1000] = 200 M [1000] =200 (c) ADD – (X), (X) + X= First Decrement X = 999 M [999] = 100 X + Post Increment M [999] = 100 (d) ADD –(X), X –X: M [999] = 100 M [999] = 100 ❑❑❑'
   },
   {
     id: 'q-co-2009-25',
@@ -6055,8 +6130,8 @@ export const questions = [
       '129',
       '216 Cache Updation Policy'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Branch to level if R1 = = 0 (a) I1 : R2  R7  + R8 Used in I3 result of I1 (R2) used as operand. (b) I2 : ? R4  R5 – R6 I4 is used as memory [R 4] for memory store purpose (c) I3 : R1  R2  + R3 Used in Branch to total if R1 = 0 Not proper working (d) I4: memory [R4] store'
   },
   {
     id: 'q-co-2022-26',
@@ -6073,7 +6148,7 @@ export const questions = [
       'Eviction of a block from WT will not lead to data transfer from cache to main memory.',
       'A read miss in WB will never lead to eviction of a dirty block from WB.'
     ],
-    correctAnswer: null,
+    correctAnswer: 0,
     explanation: ''
   },
   {
@@ -6086,8 +6161,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is _____________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '1. By passing (operand forwarding): Handle All Raw Hazards: (False) If I1 Load Instn & I2 Next Instn using the results of I1 as a operand 2. WAR (ANTI Dep.)  Register Remaining  True 3. Control Hazards: eliminate by Branch Predication: (False) ❑❑❑'
   },
   {
     id: 'q-co-2021-28',
@@ -6104,8 +6179,8 @@ export const questions = [
       'S1 is false and S2 is true.',
       'S1 is false and S2 is false.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'S1: Write through → simultaneous update in L 1 and NO role of dir ty bit because here, its simultaneous update. If miss occur directly replace the block'
   },
   {
     id: 'q-co-2020-29',
@@ -6130,8 +6205,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A certain processor deploys a single-level cache. The cache block size is 8 words and the word size is 4 bytes. The memory system uses a 60-MHz clock. To service a cache miss, the memory controller first takes 1 cycle to accept the starting address of the block, it then takes 3 cycles to fetch all the eight words of the block, and finally transmits the words of the requested block at the rate of 1 word per cycle. The maximum bandwidth for the memory requested',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 160,
+    explanation: 'Clock frequency = 60 MHz Cycle time = 6 11 secclock frequency 60 l0 =  Cache block size = 8 Words 1 word size = 4 Bytes Block size = 4 Bytes Block size = 8 × 4 byte = 32 Byte Total time taken to Transfer cache block = ( ) ( ) 813 12 cycleTransmit 1 wordAccept Fetch per cycle + + =   Band width = 6 Total data 32Byte 112 cycle 12 60 10 =    ⇒ 32Byte 12 560 610 sec = 160 × 106 bytes/sec'
   },
   {
     id: 'q-co-2017-31',
@@ -6156,8 +6231,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A file system uses an in-memory cache to cache disk blocks. The miss rate of the cache is shown in the figure. The latency to read a block from the cache is 1 ms and to read a block from the disk is 10 ms. Assume that the cost of checking whether a block exists in the cache is negligible. Available cache sizes are in multiples of 10 MB. The smallest cache size required to ensure an average read latency of less than 6 ms is ______MB.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 30,
+    explanation: 'Cache access time [tc] = 1msec Disk access time [td] = 10 msec Case I: When cache size is 10 MB that time miss rate 10.8. Tavg = h × tc + *(1 – h) (tD + tC) ⇒ 0.2 ×1 + (0.8) (10 +1) ⇒ 0.2 + 0.8 (11) Tavg = 9 msec at 10 MB cache size Case II: When size is 20 MB that time miss rate = 0.6 Tavg = 0.4 × 1 + 0.6 [10 + 1] ⇒ 0.4 + 0.6 [11] ⇒ 0.4 + 6.6 avgT 7msec=  at 20 MB Case III: When cache size is 30 MB, that time miss rate = 0.4 Hit rate (h) = 1– 0.4 = 0.6 Tavg = h × tc + (1 – h) (tD + tc) ⇒ 0.6 × 1 + (0.4) (10 + 1) ⇒ 0.6 + 0.4(11) ⇒ 0.6 + 4.4 avgT 5msec=  at 30 MB cache size Case IV: When size 40 MB, that time miss rate 0.35 Tavg = h × tc + (1 – h) (tD + tC) ⇒ 0.65 (1) + (0.35) (10 + 1) ⇒ 0.65 + 0.35 (11) ⇒ 0.65 + 3.85 avgT 4.5msec=  at cache size 40 MB Case V: when cache size is 50 MB that time miss rate = 0.3 Tavg = h × tC + (1 – h) (tD + tC) ⇒ 0.7 × 1 + (0.3) (10 + 1) avgT 4msec= Hence, the smallest cache size required to ensure an average read latency of less than 6 ms will be 30 MB.'
   },
   {
     id: 'q-co-2015-33',
@@ -6169,8 +6244,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor’s read requests result in a cache hit. The average read access time in nanoseconds is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 14,
+    explanation: 'Hit ratio = 80% Cache read hit takes = 5 nsec Read miss = 50 nsec Tavg = 0.80 × 5 + (1 – 0.80) × 50 ⇒ 4 + (0.20) 50 ⇒ = 4 + 10 avgT 14 n sec='
   },
   {
     id: 'q-co-2014-34',
@@ -6200,8 +6275,8 @@ export const questions = [
       '16',
       '27'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Tag 16 bit= Physical address = 32 bit Cache size = 256 k byte Block size = 32 byte 4 way set associative [22] Word offset = [ log2 blog size] ⇒ [log2 32] Word offset = 5 bit Number lines = CM size 256kB Block size 32B= 18 T 2B 2B = 132 Lines= Number  set = 13 11 2 Number Lines 2 2 setN.way 2 == S. O = 11 bit TAG 16bits='
   },
   {
     id: 'q-co-2012-36',
@@ -6218,8 +6293,8 @@ export const questions = [
       '40 Kbits',
       '32 Kbits'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Tag directory size = Number of of lines × tag entry in bits = 213 × [16 + 2 + 1+1] bits = 23 × 20 × 210 bits = 160 k bits'
   },
   {
     id: 'q-co-2011-37',
@@ -6236,8 +6311,8 @@ export const questions = [
       '6656 bits',
       '5376 bits Common Data for next two questions: A Computer system has an L1 and L2 cache, an L2 cache, and a main memory unit connected as shown below. The block size in L1 cache is 4 words. The block size in L2 cache is 16 words. The memory access times are 2 nanoseconds, 20 nanoseconds and 200 nanoseconds for L1 cache, L2 cache and main memory unit respectively.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Physical address = 32 bit   1 valid bit Cache size = 8 kB   1 modified bit Block size = 32 byte Word offset = [log2 Block size] ⇒ [log232] Word offset 5 bit= # lines = 13 8 5 CM size 8kB 2 2 linesBlock size 32byte 2 = = = #LINES 256= Line offset [L.0] =[log2256] L.O 8 bit= (direct mapped cache) TAG ⇒ 32 – (8 + 5) TAG 19 bit= Write back cache = Tag entry = 19 + 1 + 1 = 21 bits Tag memory size = number of lines × Tag entry size ⇒ 256 × 21 bit TAG memory size 5376 bit='
   },
   {
     id: 'q-co-2010-38',
@@ -6254,7 +6329,7 @@ export const questions = [
       '22 nanosecond',
       '88 nanoseconds'
     ],
-    correctAnswer: null,
+    correctAnswer: 2,
     explanation: ''
   },
   {
@@ -6272,8 +6347,8 @@ export const questions = [
       '902 nanoseconds',
       '968 nanoseconds'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Time taken to transfer data from mm to L2 = Time to read word from mm +  time to store or update write in L2. 4[200 + 20] ⇒ 4 × 220 = 880 nsec Time taken to transfer data from L2 to L1 = time to read word form L2 + time to store or update / write word in L1 = 20 + 2 = 22 nsec. Total time to transfer data = 880 (mm to L2) + 22 (L2 to L1) From mm to L2 and L2 to L1 = 902 nsec.'
   },
   {
     id: 'q-co-2008-40',
@@ -6290,8 +6365,8 @@ export const questions = [
       '1,2 and 4 only',
       '1,2,3 and 4 Main Memory'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. L1 must be write through cache: not correct always (we can use write back cache) 2. L2: not correct 3. Not correct 4. Correct : its necessary 2lLL'
   },
   {
     id: 'q-co-2023-41',
@@ -6308,8 +6383,8 @@ export const questions = [
       '(0, 8, 16, 24)',
       '(0, 0, 0, 0)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'IA4 IA3 Connect to decodes. IA4 IA3 0 0 : x1 enabled 0 1 :  x2 enabled 1 0 :  x3 enabled 1 1 :  x4 enabled 16 8 4 2 1 24 23 22 21 20 IA6 IA5 IA4 IA3 IA2 IA1 IA0 0 0→ x1 enabled (0) 0 1→ x2 enabled (8) 1 0→ x3 enabled (16) 1 1→ x4 enabled (24)'
   },
   {
     id: 'q-dld-2018-42',
@@ -6399,10 +6474,24 @@ export const questions = [
       '8',
       '32',
       '64',
-      '128 ❑❑❑ 1. (0.05 to 0.05) 2.'
+      '128 ❑❑❑ 1. (0.05 to 0.05) 2.',
+      '3.',
+      '4. (19 to 19) 5. (17 to 17) 6. (2 to 2) 7.',
+      '8.',
+      '9.',
+      '10.',
+      '11. (14 to 14) 12.',
+      '13.',
+      '14. (20 to 20) 15.',
+      '16.',
+      '17.',
+      '18.',
+      '19.',
+      '20.',
+      ''
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 2’s Complement form The range will be given by – (2n–1) to + (2n–1 –1) For n = 8 (Given 8 bit number) The minimum will be  – (28–1)  – (27)  –128 The maximum number will be given as (2n–1) = 127 Hence, correct answer is option (b).'
   },
   {
     id: 'q-co-2022-1',
@@ -6419,8 +6508,8 @@ export const questions = [
       'Polling based I/O transfer',
       'Programmed I/O transfer'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'P = Ox C1800000   Q = Ox 3F5C2EF4 1bit 8bit 23bit S E  M Bias = 8121− −  bias = 127 P = Ox C1800000 1 100 0001 1 000 0000 0000 0000 0000 0000 Sign 1bit E(8bit) Mantissa (23bit) S = 1(–ve) E = 10000011 = 131 BE or E = 131 M = 00000000 (–1)S 1.M × 2e (–1)1 1.00000000 × 2131 – 127 P = –(1.00000000) × 2 + 4 BE = AE + bias Or E = e + bias e = E – bias E = 131 Bias = 127 Q = 3F5C2EF4 0 011 1111 0 101 1100 0010 1110 1111 0100 Sign 1bit E(8bit) Mantissa (23bit) Sign = 0 (+ve)                          E = 126 bias = 127 E = 01111110  E = 126  e = E – bias BE or E = 126  126 – 127 M = 101 1100 0010 1110 1111 0100. Bias = 127 E = e + bias e = E – bias (–1)s 1.M × 2e (–1)0 1.101 1100 0010 1110 1111 0100 ×2126 – 127 Q = (1.101 1100 0010 1110 1111 0100) × 2–1 Sign = –ve. P × Q = exponent = (+4) + (–1) = +3. Mantissa = (1.0000) *(1.101 1100 0010 1110 1111 0100) – (1.101 1100 0010 1110 1111 0100) × 2 + 3 Sign = 1(–ve) e = +3 bias = 127 E = e + bias = 3 + 127 E = 130 E = 10000010'
   },
   {
     id: 'q-co-2021-2',
@@ -6432,8 +6521,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a computer system with DMA support. The DMA module is transferring one 8-bit character in one CPU cycle from a device to memory through cycle stealing at regular intervals. Consider a 2 MHZ processor. If 0.5% processor cycles are used for DMA, the data transfer rate of the device is _____ bit per second.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '– 14.25  1110.01  –1110.01  – 1.11001×2+3 sign = 1 [–ve] Mantissa [m] = 11001 [AE]e = +3 [BE] E  e  bias=+ BE  AE  bias=+ E = 3+bias = 3 +127 E  130 = BE  130= IEE E 754 Single Precision bias = 28–1 –1 = 127'
   },
   {
     id: 'q-co-2016-4',
@@ -6445,8 +6534,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The size of the data count register of a DMA controller is 16 bits. The processor needs to transfer a file of 29, 154 kilobytes from disk to main memory. The memory is byte addressable. The minimum number of times the DMA Controller needs to get the control of the system bus from the processor to transfer the file from the disk to main memory is_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'R1 = 1(a) R2 = 10(b) R3 = 20(c) I R1  R1 + R2 [R1[d] = a + b] II R1  R3 + R1 [R1[e] = c + d] III R2  R3 + R1 [R2[f] = c + e] IV R2  R3 + R1 [R2[b] = c + e] V R1  R2 + R2 [R1[e] = b + f] VI R3  R1 + 5 R3[d] = 5 + e VII return R2 + R3 Minimum 3 register required OR a = 1, b = 10, c = 20 R1  R1 + R2 I. d = a + b R1  R3 + R1 II. e = c + d R2  R3 + R1 III. f = c + e R3  R3 + R1 IV b = c + e R1  R2 + R3 V e = b + f R3  R1 + 5 VI d = 5 + e return R2 + R3 VIII return d + f'
   },
   {
     id: 'q-co-2011-5',
@@ -6463,8 +6552,8 @@ export const questions = [
       '5.1',
       '6.7'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Cin out inC         C 0 1 0 0 1 1 0 1 + 1 1 1 0 1 0 0 1 0 0 1 1 0 1 1 0 Overflow C in + cout = 1 1 + 1 = 0 Carry = 1, Sign = 0 Overflow flag = 0'
   },
   {
     id: 'q-cn-2023-6',
@@ -6574,7 +6663,7 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following C program: # include<stdio.h> int main (){ float sum = 0.0, j = 1.0, i = 2.0; while (i / j > 0.0625){ j = j + j; sum = sum + i/j; printf(“%f \n”, sum); } return 0; } The number of times the variable sum will be printed, when the above program is executed, is _________.',
     options: [],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -6592,7 +6681,7 @@ export const questions = [
       '(q==0) &&(r==x) &&(y>0)',
       '(q==0) &&(y>0)'
     ],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -6610,7 +6699,7 @@ export const questions = [
       'b>(a+1)',
       'b !=a'
     ],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -6623,7 +6712,7 @@ export const questions = [
     type: 'MCQ',
     questionText: 'The following program is to be tested for statement coverage: begin if (a==b){S1 ; exit; } else if (c==d){S2 ;} else {S3 ; exit; } S4; end The test cases T1, T2, T3 and T4 given below are expressed in terms of the properties satisfied by the values of variables a, b, c and d. The exact values are not given. T1: a, b, c and d are all equal T2: a, b, c and d are all distinct',
     options: [],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -6739,8 +6828,8 @@ export const questions = [
       'The function returns 0 when j = 50.',
       'The function will exhaust the runtime stack or run into an infinite loop when j = 50. Recursion'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Rewriting the code for better understanding begin q: = 0// q is representing Quotient r: = x // r is representing Remainder while r > y do begin r: = r – y q: = q + 1 end end The abvoe code is representing, How to divide x by y using repeated subtraction. Let x = 13, y = 5 and intially q = 0 r = 23 (everyting is remaining) (i) Can we subtract y(5) from r ? Yes, r = 13 – 5 = 18 q = q + 1 = 0 +1 =1 r = 8; q = 1 (one time 5 is subtrated from 13) (ii) r = 8, q = 1 y = 5 can we subtract 5 from r ? yes, r  = 8 – 5 = 3 q = q + 1 = 1 + 1 = 2 r = 3; q = 2 (2 times 5 is subtracted from 13) (iii) r = 3, q = 2 can we subtract 5 from r  ? No, because xy which is Post condition After code execution r = 3, q = 2, x = 13 y = 5 q y r we can write, 13 = 2 5 3    + qy + rx = where, r  < y  on option verification, option (b) is correct.'
   },
   {
     id: 'q-ds-2023-6',
@@ -6752,8 +6841,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The integer value printed by the ANSI-C program given below is _______________ . #include<stdio.h> int funcp(){ static int x = 1; x++; return x; } int main(){ int x,y; x = funcp(); y = funcp()+x; printf("%d\n", (x+y)); return 0;',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 7,
+    explanation: 'After execution of funcp 2 times, printf function prints the output (7) and gets deleted from activation record. Similarly, control is returned to the main function, main function also gets deleted from activation record and control is returned to operating system. Hence 7 is printed.'
   },
   {
     id: 'q-ds-2023-7',
@@ -6770,8 +6859,8 @@ export const questions = [
       '',
       ''
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(1) option A and option B can be eliminated, because they are not printing anything (No putchar()). (2) In option (c), there is No getchar() to read input Hence c is wrong. (3)  correct option is option (d).'
   },
   {
     id: 'q-ds-2021-8',
@@ -6783,8 +6872,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following ANSI C function: int SomeFunction(int x, int y ) { if ((x==1) || (y==1)) return 1; if (x==y) return x; if (x >y) return SomeFunction (x-y, y); if (y >x) return SomeFunction (x, y-x); } The value returned by SomeFunction(15, 255) is____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 10,
+    explanation: 'firstly, solving j=2*3/4+2.0/5+8/5 we know that, *, /  having same priority So, before loop started 1 j 2*3 / 4 2.0 / 5 8 / 5= + + 2 j 6 / 4 2.0 / 5 8 / 5= + + 3 j 1 2.0 / 5 8 / 5= + + 2.0 is of double type 5  5.0 (double, promoted implicitly) Results is also of type double type i.e. 0.4 j = 1 + 0.4 + 4 8 / 5 j = 5  double int 1 0.4 1++ j = 1.4 +1 j = 2.4 j is of int type. j = 2, 2 is assigned to j Now, k = --j; --j is performed  j becomes 1 k – = j; k = 0 –1 = –1 So, before the loop started, k –1 and j 1== Now evaluating loop for (i = 0; i<5; i + +) { switch (i + k) { case 1: case 2: printf (“\n%d”, i +k); case 3: printf (“\n%d”, i +k); default: printf (“\n%d”, i +k); } Number of times printf executed = 1 + 1 + 3 + 3 + 2 = 10 times'
   },
   {
     id: 'q-dld-2019-10',
@@ -6850,8 +6939,8 @@ export const questions = [
       'Abnormal termination and infinite loop respectively',
       'Both terminating abnormally.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '= 1 + 1 + 1 + ….………..+1 (How many times ?) k = j + 1               ………..k = n = last – first + 1 = n– (j + 1)  + 1 = n – j –1 + 1 =  n –j'
   },
   {
     id: 'q-ds-2016-14',
@@ -6868,8 +6957,8 @@ export const questions = [
       '3122134',
       '3121112'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'On tracing the tree from top to bottom and left to right we get 3,1,2,2,1,3,4,4,4  Option a is correct answer.'
   },
   {
     id: 'q-ds-2016-15',
@@ -6886,8 +6975,8 @@ export const questions = [
       '5',
       '2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Answer is option (d)'
   },
   {
     id: 'q-ds-2015-16',
@@ -6904,8 +6993,8 @@ export const questions = [
       '35',
       '45'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'void get (int n) { if (n < 1) return; get (n – 1);  Recursion call with 1 less argument get (n – 3);  Recursion call with 3 less argument printf(“%d”, n); Need not to focus on printf statement'
   },
   {
     id: 'q-ds-2015-17',
@@ -6922,8 +7011,8 @@ export const questions = [
       'HGFE DCBA',
       'DCBA'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '&&!   = Priority of && is less than != if ((*a)) && (*a! = ‘ ’)) if will become false, Either (1)  *a = 0 (ASCI to or \0) (2)  *a become ‘ ’ Now, Recursion ‘A’ →‘B’→‘C’→‘D’→ Recursion ends and then it  starts printing. Printing is done because putchar (*a); is written after recursive call. Hence, DCBA is printed, i.e. option D is correct.'
   },
   {
     id: 'q-cn-2014-19',
@@ -7051,8 +7140,8 @@ export const questions = [
       '10, 14, 11',
       '10, 10, 14'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'We know that ( )( ) 3 12 3! C n n nn −−= Let n = 50 int size = 2 byte (ranges from 0 to 65535) Option (A): 4850 49 6  Out of range because of cyclic property. No error, but the results is incorrect. Hence, Option (a) is wrong Option (D): Same as above reason option (d) is wrong. Option (C): ( )n n 1 3 −  × ( )n2 2 − n * (n – 1) is not always divisible by 3. n = 20 n – 1= 19 20 19 3  will produce incorrect result. Hence, (c) is wrong. Option (B): ( )n n 1 2 − Product of any 2 successive number is always even (because out of these 2 numbers 1 must be even.) Product of 3 consecutive number is always divisible by 3 (3!), Because out of these 3 numbers1 must be multiple of 3.'
   },
   {
     id: 'q-ds-2022-2',
@@ -7069,8 +7158,8 @@ export const questions = [
       '1 2 3',
       '1 2 3 4 5 6 13 14 15 7 8 9'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '* + – 42 43 45  ASCII code of P is 80 ASCII code of x is 120 char c = (a & b) + ‘*’ ( ) is having more priority a –  0  1  0  1  0  0  0  0    –  80 & b – 0  1  1  1  1  0  0  0    –  120 a & b        0  1  0 1  0  0  0  0     =   80 char c = (a & b) + ‘*’; 80 + ‘*’ 80 + 42 On option elimination we get option (a) as correct option. char = (a/b) – ‘–’;'
   },
   {
     id: 'q-ds-2021-3',
@@ -7082,8 +7171,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following ANSI C function: int SimpleFunction (int Y[ ], int n, int x) { int total =Y[0], loopIndex; for ( loopIndex =1 ; loopIndex <=n-l; loopIndex ++) total = x * total +Y[ loopIndex ] ; return total; } Let Z be an array of 10 elements with Z[i]=1, for all i such that 0 ≤ i ≤ 9. The value returned by SimpleFunction (Z, 10,2) is____',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Taking the snippet of code from program. ( ) ( ) ( ) ( ) i   m m +1 will make m as 11n + + m; ii  n m This will assign 11 to n ==→  = n1 m;  Assign  11 to n1n1 m+ +  m = m +1; increment the m by 11 ==→  n-- → n will decrease by 1 i.e. n becomes 10 n1→ n1 will decrease by 1 (10) n – = n1  n = n –n1 (this will make n as 0,0 is printed)   0 is printed ❑❑❑'
   },
   {
     id: 'q-ds-2021-4',
@@ -7095,8 +7184,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following ANSI C program. #include <stdio.h > int main( ){ int arr[4][5]; int i, j; for (i=0 ; i<4 ; i++){ for (j=0 ; j<5 ; j++){ arr [i][j]=10 * i + j;',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'T1 : S1  T1, T2, T4(covers all) T2 : S3  T2, T3, T4(covers all) T3 : S1 T4 : S2, S4 Hence option (d) is correct answer.'
   },
   {
     id: 'q-cn-2020-5',
@@ -7165,7 +7254,7 @@ export const questions = [
       'compiles successfully but execution may result in dangling pointer',
       'compiles successfully but execution may result in memory leak.'
     ],
-    correctAnswer: null,
+    correctAnswer: 2,
     explanation: ''
   },
   {
@@ -7178,7 +7267,7 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following C program. #include<stdio.h> #include<string.h> int main( ) { char* c= "GATECSIT2017"; char* p=c ; printf(“%d ", (int)strlen(c+2[p]–6[p]–1)) ; return 0 ; } The output of the program is______.',
     options: [],
-    correctAnswer: null,
+    correctAnswer: 2,
     explanation: ''
   },
   {
@@ -7256,7 +7345,10 @@ export const questions = [
       '; print',
       '; } void main () { m',
       '; }',
-      '6, 2'
+      '6, 2',
+      '6, 6',
+      '4, 2',
+      '4, 4'
     ],
     correctAnswer: null,
     explanation: ''
@@ -7289,8 +7381,8 @@ export const questions = [
       'f (i,* s)',
       'f(i, * p)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 9,
+    explanation: 'num>>1 (divided by 2) → num = 0 Hence, 9 is the correct answer.'
   },
   {
     id: 'q-ds-2015-20',
@@ -7302,8 +7394,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following C program. # include < stdio.h > int main () { static int a[ ] = {10, 20, 30, 40, 50}; static int *p[ ] = {a,a + 3, a+4, a + 1, a + 2); int **ptr = p; ptr++; printf (“%d % d”, prt-p, **ptr); } The output of the program is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Part-A a = 0,   b = 0,     c = 0 • 4, 2 is printed and it is deleted from activation record. • Again prtfun () is called • 6,2 is printed and it is deleted from activation Record, now control is retunred to main and 2,0 is printed. 4 2 6 2  is pointed, Hence (c) is correct op tion 2 0   '
   },
   {
     id: 'q-ds-2015-21',
@@ -7320,8 +7412,8 @@ export const questions = [
       '1204',
       '1034'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Part -B a = 0, b = 0 c = 0'
   },
   {
     id: 'q-ds-2014-22',
@@ -7338,8 +7430,8 @@ export const questions = [
       'On execution, the value printed is 5 more than the address of variable i.',
       'On execution, the value printed is 5 more than the integer value entered.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Hence (b) is correct option'
   },
   {
     id: 'q-ds-2010-23',
@@ -7356,8 +7448,8 @@ export const questions = [
       '15',
       '19'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Correct answer is 8 i.e. option (b).'
   },
   {
     id: 'q-ds-2010-24',
@@ -7392,8 +7484,8 @@ export const questions = [
       'Y is [2 2 2 2 2 2 2 2 2 2] and x > 2',
       'Y is [2 4 6 8 10 12 14 16 18 20] and 2 < x < 20 and x is even'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 230,
+    explanation: 'xmain = xmain + f1( ) + f2() + f3() + f2(); f1() is called: 26 is retuned by f1() xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 f2() is called: There is local static variable which resides in memory throughout the program. 51 is returned but x being static, still remains in memory. xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 + 51 f3() is called: xglobal * = 10 xglobal = 10 * 10 xglobal = 100 100 is returned xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 + 51 + 100 f2 () is called again Variable x is already residing in memory already. xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 + 51 + 100 + 52= 230  230 is printed ❑❑❑'
   },
   {
     id: 'q-ds-2008-26',
@@ -7410,8 +7502,8 @@ export const questions = [
       'change line 6 to: if (Y[k] < x) i = k; else j = k;',
       'change line 7 to: while ((Y[k] = = x) && (i < j)); Strings'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '• i = k has to be replaced by i = k + 1 if elements is larger than Mid (k is Mid). • j =k has to be replaced by j = k – 1 if elements is smaller than Mid. Hence, option A is correct answer.'
   },
   {
     id: 'q-ds-2018-27',
@@ -7428,8 +7520,8 @@ export const questions = [
       'Bye Hi Hi Bye',
       'Bye Hi Bye Hi'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'fun1 () is called, fun1 (100, 200) temp = s1 s1 = s2 s2 = temp No change in str1 and str2, so HiBye.. is printed from the first printf statement. Now fun2 () is called, fun2(206, 496) temp = *s1 (value of at memory location 206) temp = 100 *  s1 = *s2 (value at memory location 496) *  s1 = 200 *  s2 = temp *  s2 = 100 • contents of str1 and str2 are swapped • Now str1 is pointing to ‘Bye’ and str2 is pointing to “Hi”'
   },
   {
     id: 'q-ds-2017-28',
@@ -7441,8 +7533,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following C program. #include<stdio.h> #include<string.h> void printlength(char *s, char *t) { unsigned int c=0; int len = ((strlen(s) – strlen(t)) > c) ? strlen(s) : strlen(t); printf("%d\n", len); } void main() { char *x = "abc"; char *y = "defgh"; printlength(x, y); } Recall that strlen is defined in string.h as returning a value of type size_t, which is an unsigned int. The output of the program is_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'char*x = “abc”;→ Read only area printlength (x, y); → printlength(100,200) strlen(s) – strlen(t) 3 – 5 = –2 Unsigned int – unsigned int Will also be an unsigned int  – 2 is treated as max integer value – 2 = large +ve value Hence 3 is printed.'
   },
   {
     id: 'q-ds-2011-29',
@@ -7459,8 +7551,8 @@ export const questions = [
       '2011',
       '011 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'char c [ ] = “GATE 2011”; char *p= c; printf (“%s”, p + p [3] – p[1]) p+ 1  Address of ‘A’ * (p +1)  ‘A’  p 1 \'A\'= p + 3  Address of ‘E’ * (p +3)  ‘E’  p 3 \'E\'= 2011 is printed till \0, therefore option c is correct. ❑❑❑'
   },
   {
     id: 'q-cn-2015-1',
@@ -7526,8 +7618,8 @@ export const questions = [
       'Only S1 and S2 are correct',
       'Only S1 and S3 are correct Linked List'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'T1 : S1  T1, T2, T4(covers all) T2 : S3  T2, T3, T4(covers all) T3 : S1 T4 : S2, S4 Hence option (d) is correct answer.'
   },
   {
     id: 'q-algo-2023-5',
@@ -7544,8 +7636,8 @@ export const questions = [
       'Both SLLdel and DLLdel are O(1)',
       'SLLdel is O(n) and DLLdel is O(1)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Rewriting the code for better understanding begin q: = 0// q is representing Quotient r: = x // r is representing Remainder while r > y do begin r: = r – y q: = q + 1 end end The abvoe code is representing, How to divide x by y using repeated subtraction. Let x = 13, y = 5 and intially q = 0 r = 23 (everyting is remaining) (i) Can we subtract y(5) from r ? Yes, r = 13 – 5 = 18 q = q + 1 = 0 +1 =1 r = 8; q = 1 (one time 5 is subtrated from 13) (ii) r = 8, q = 1 y = 5 can we subtract 5 from r ? yes, r  = 8 – 5 = 3 q = q + 1 = 1 + 1 = 2 r = 3; q = 2 (2 times 5 is subtracted from 13) (iii) r = 3, q = 2 can we subtract 5 from r  ? No, because xy which is Post condition After code execution r = 3, q = 2, x = 13 y = 5 q y r we can write, 13 = 2 5 3    + qy + rx = where, r  < y  on option verification, option (b) is correct.'
   },
   {
     id: 'q-algo-2022-6',
@@ -7562,8 +7654,8 @@ export const questions = [
       'The best algorithm for the problem takes (n2) time in the worst case.',
       'It is not possible to reverse a singly linked list in O(1) space.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 7,
+    explanation: 'After execution of funcp 2 times, printf function prints the output (7) and gets deleted from activation record. Similarly, control is returned to the main function, main function also gets deleted from activation record and control is returned to operating system. Hence 7 is printed.'
   },
   {
     id: 'q-algo-2021-7',
@@ -7575,8 +7667,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following ANSI C program: #include <stdio.h> #include <stdlib.h> struct Node{ int value; struct Node *next;}; int main( ){',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(1) option A and option B can be eliminated, because they are not printing anything (No putchar()). (2) In option (c), there is No getchar() to read input Hence c is wrong. (3)  correct option is option (d).'
   },
   {
     id: 'q-ds-2017-8',
@@ -7593,8 +7685,8 @@ export const questions = [
       'cause a null pointer dereference for all inputs',
       'append list n to the end of list m for all inputs'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 10,
+    explanation: 'firstly, solving j=2*3/4+2.0/5+8/5 we know that, *, /  having same priority So, before loop started 1 j 2*3 / 4 2.0 / 5 8 / 5= + + 2 j 6 / 4 2.0 / 5 8 / 5= + + 3 j 1 2.0 / 5 8 / 5= + + 2.0 is of double type 5  5.0 (double, promoted implicitly) Results is also of type double type i.e. 0.4 j = 1 + 0.4 + 4 8 / 5 j = 5  double int 1 0.4 1++ j = 1.4 +1 j = 2.4 j is of int type. j = 2, 2 is assigned to j Now, k = --j; --j is performed  j becomes 1 k – = j; k = 0 –1 = –1 So, before the loop started, k –1 and j 1== Now evaluating loop for (i = 0; i<5; i + +) { switch (i + k) { case 1: case 2: printf (“\n%d”, i +k); case 3: printf (“\n%d”, i +k); default: printf (“\n%d”, i +k); } Number of times printf executed = 1 + 1 + 3 + 3 + 2 = 10 times'
   },
   {
     id: 'q-ds-2014-9',
@@ -7611,8 +7703,8 @@ export const questions = [
       '(n2)',
       '(1)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Initially variable count and i are initialized to zero. for(j=-3;j<=3;j++) statement states that, for loop will run from -3 to +3(-3,-2-1,0,1,2,and 3). Evaluating if condition inside for loop j = –3'
   },
   {
     id: 'q-ds-2010-10',
@@ -7624,8 +7716,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'The following C function takes a singly-linked list as input argument. It modified the list by moving the last element to the front of the list and returns the modified list. Some part of the code is left blank. typedef struct node{ int value; struct node * next; }Node; Node * move_ to _ front (Node * head){ Node * p, *q; if ((head = = NULL)|| (head→next = =NULL)) return head; q = NULL; p = head; while (p →next ! = NULL){ q = p; p = p → next; } ____________________________ return head; }',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'for (i = n; i > 1, i = 1/2) { j + 1; } Initially j = 0 Let us reduce the input size n = 26 i i>1 26 26 > 1 → True → j ++, j = 1 25 25 > 1  → True → j ++, j = 2 24 24 > 1  → True → j ++, j = 3 23 23 > 1 → True → j ++, j = 4 22 22 > 1 → True → j ++, j = 5 21 21 > 1 → True → j ++, j = 6 i i>1 20 20 > 1 → Flase for n = 26, the first loop will make j as 6 for n = 240, the loop will make j as 40 Before second loop j= 40, sum = 0 After second loop Sum is 5 for (  ; j > 1; j = j/2) { sum ++; } j j > 1 40 40 > 1 → True → sum ++ j = j/2  20 20 > 1 → True → sum ++ j = j /2  10 10 > 1 → True → sum ++ j = j/2   5  5 > 1 → True → sum ++ j = j/2   2  2 > 1 → True → sum ++ j = j/2   1 1 > 1 → True → loop ends After second loop sum is 5.'
   },
   {
     id: 'q-ds-2008-11',
@@ -7642,8 +7734,8 @@ export const questions = [
       '1, 3, 2, 5, 4, 7, 6',
       '2, 3, 4, 5, 6, 7, 1 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 23,
+    explanation: '(i) v & 1: is checking if the rightmost bit of v is 1. (If it is 1, then count value is increment by 1). (ii) v>> =1: Ensuring that every bit is checked. Because count is a static variable, total(v) is increasing the value of count by the number of'
   },
   {
     id: 'q-dld-2015-2',
@@ -7699,8 +7791,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the queues Q1 containing four elements and Q2 containing none (shown as the Initial State in the figure). The only operations allowed on these two queues are Enqueue(Q, element) and Dequeue(Q). The minimum number of Enqueue operations on Q1 required to place the elements of Q1 in Q2 in reverse order (shown as the Final State in the figure) without using any additional storage is___________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Rewriting the code for better understanding begin q: = 0// q is representing Quotient r: = x // r is representing Remainder while r > y do begin r: = r – y q: = q + 1 end end The abvoe code is representing, How to divide x by y using repeated subtraction. Let x = 13, y = 5 and intially q = 0 r = 23 (everyting is remaining) (i) Can we subtract y(5) from r ? Yes, r = 13 – 5 = 18 q = q + 1 = 0 +1 =1 r = 8; q = 1 (one time 5 is subtrated from 13) (ii) r = 8, q = 1 y = 5 can we subtract 5 from r ? yes, r  = 8 – 5 = 3 q = q + 1 = 1 + 1 = 2 r = 3; q = 2 (2 times 5 is subtracted from 13) (iii) r = 3, q = 2 can we subtract 5 from r  ? No, because xy which is Post condition After code execution r = 3, q = 2, x = 13 y = 5 q y r we can write, 13 = 2 5 3    + qy + rx = where, r  < y  on option verification, option (b) is correct.'
   },
   {
     id: 'q-ds-2021-6',
@@ -7712,8 +7804,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following sequence of operations on an empty stack. push(54); push(52); pop(); push(55); push(62); s = pop(); Consider the following sequence of operations on an empty queue. enqueue(21); enqueue(24); dequeue(); enqueue(28); enqueue(32); q = dequeue(); The value of s + q is ________',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 7,
+    explanation: 'After execution of funcp 2 times, printf function prints the output (7) and gets deleted from activation record. Similarly, control is returned to the main function, main function also gets deleted from activation record and control is returned to operating system. Hence 7 is printed.'
   },
   {
     id: 'q-ds-2018-7',
@@ -7730,8 +7822,8 @@ export const questions = [
       '( ), (1) n  ',
       '( ), ( ) n n  '
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(1) option A and option B can be eliminated, because they are not printing anything (No putchar()). (2) In option (c), there is No getchar() to read input Hence c is wrong. (3)  correct option is option (d).'
   },
   {
     id: 'q-ds-2016-9',
@@ -7743,8 +7835,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'A queue is implemented using an array such that ENQUEUE and DEQUEUE operations are performed efficiently. Which one of the following statements is CORRECT (n refers to the number of items in the queue)?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Initially variable count and i are initialized to zero. for(j=-3;j<=3;j++) statement states that, for loop will run from -3 to +3(-3,-2-1,0,1,2,and 3). Evaluating if condition inside for loop j = –3'
   },
   {
     id: 'q-ds-2013-10',
@@ -7761,8 +7853,8 @@ export const questions = [
       'Θ(nk)',
       '2 Θ(n )'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'for (i = n; i > 1, i = 1/2) { j + 1; } Initially j = 0 Let us reduce the input size n = 26 i i>1 26 26 > 1 → True → j ++, j = 1 25 25 > 1  → True → j ++, j = 2 24 24 > 1  → True → j ++, j = 3 23 23 > 1 → True → j ++, j = 4 22 22 > 1 → True → j ++, j = 5 21 21 > 1 → True → j ++, j = 6 i i>1 20 20 > 1 → Flase for n = 26, the first loop will make j as 6 for n = 240, the loop will make j as 40 Before second loop j= 40, sum = 0 After second loop Sum is 5 for (  ; j > 1; j = j/2) { sum ++; } j j > 1 40 40 > 1 → True → sum ++ j = j/2  20 20 > 1 → True → sum ++ j = j /2  10 10 > 1 → True → sum ++ j = j/2   5  5 > 1 → True → sum ++ j = j/2   2  2 > 1 → True → sum ++ j = j/2   1 1 > 1 → True → loop ends After second loop sum is 5.'
   },
   {
     id: 'q-ds-2012-11',
@@ -7779,8 +7871,8 @@ export const questions = [
       'Full: REAR = = FRONT Empty:(REAR + 1) mod n = = FRONT',
       'Full:(FRONT + 1) mod n = = REAR Empty: REAR = = FRONT Applications of Queues'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 23,
+    explanation: '(i) v & 1: is checking if the rightmost bit of v is 1. (If it is 1, then count value is increment by 1). (ii) v>> =1: Ensuring that every bit is checked. Because count is a static variable, total(v) is increasing the value of count by the number of'
   },
   {
     id: 'q-ds-2016-12',
@@ -7792,8 +7884,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Let Q denote a queue containing sixteen numbers and S be an empty stack. Head(Q) returns the element at the head of the queue Q without removing it from Q. Similarly Top(S) returns the element at the top of S without removing it from S. Consider the algorithm given below. While Q is not Empty do If S is Empty OR Top (S) ≤ Head (Q) then X: = Dequeue (Q); Push (S, x): else X: = Pop (S); Enqueue (Q, x); end end The maximum possible number of iterations of the while loop in the algorithm is _____. ❑❑❑',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'if (b % 2 = = 0) { a = a*a; b= b/2; }// when b is even else { res = res *a;// executes when b is odd b = b –1;} Let X = 3, Y = 5 This code will compute = 35 Initially, res = 1, a = 3, b = 5 1st iteration As b is odd, res = 1*3 = 3 b = 5 – 1 = 4 After 1st iteration a = 3, b = 4, res = 3, X = 3, Y = 5 Let us check all option after 1st iteration (before 2nd iteration) (a) XY = ab 35 = 34(false) (b) (res*a)Y = (res*X)b (3*3)5 = (3*3)4(false) (c) XY = res*ab 35 = 3*34(true) (d)  XY = (res*a)b 35 = (3*3)4(false) Hence option C is correct option (this is option elimination method).'
   },
   {
     id: 'q-ds-2023-2',
@@ -7810,8 +7902,8 @@ export const questions = [
       '23, 17, 14, 6, 13, 10, 1, 5, 7, 15',
       '23, 14, 17, 1, 10, 13, 16, 12, 7, 5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '* + – 42 43 45  ASCII code of P is 80 ASCII code of x is 120 char c = (a & b) + ‘*’ ( ) is having more priority a –  0  1  0  1  0  0  0  0    –  80 & b – 0  1  1  1  1  0  0  0    –  120 a & b        0  1  0 1  0  0  0  0     =   80 char c = (a & b) + ‘*’; 80 + ‘*’ 80 + 42 On option elimination we get option (a) as correct option. char = (a/b) – ‘–’;'
   },
   {
     id: 'q-ds-2020-3',
@@ -7823,8 +7915,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the array representation of a binary min- heap containing 1023 elements. The minimum number of comparisons required to find the maximum in the heap is_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Taking the snippet of code from program. ( ) ( ) ( ) ( ) i   m m +1 will make m as 11n + + m; ii  n m This will assign 11 to n ==→  = n1 m;  Assign  11 to n1n1 m+ +  m = m +1; increment the m by 11 ==→  n-- → n will decrease by 1 i.e. n becomes 10 n1→ n1 will decrease by 1 (10) n – = n1  n = n –n1 (this will make n as 0,0 is printed)   0 is printed ❑❑❑'
   },
   {
     id: 'q-ds-2019-4',
@@ -7841,8 +7933,8 @@ export const questions = [
       'I, III and IV',
       'II, III and IV'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'T1 : S1  T1, T2, T4(covers all) T2 : S3  T2, T3, T4(covers all) T3 : S1 T4 : S2, S4 Hence option (d) is correct answer.'
   },
   {
     id: 'q-ds-2021-5',
@@ -7859,8 +7951,8 @@ export const questions = [
       '(n)',
       '(n log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Rewriting the code for better understanding begin q: = 0// q is representing Quotient r: = x // r is representing Remainder while r > y do begin r: = r – y q: = q + 1 end end The abvoe code is representing, How to divide x by y using repeated subtraction. Let x = 13, y = 5 and intially q = 0 r = 23 (everyting is remaining) (i) Can we subtract y(5) from r ? Yes, r = 13 – 5 = 18 q = q + 1 = 0 +1 =1 r = 8; q = 1 (one time 5 is subtrated from 13) (ii) r = 8, q = 1 y = 5 can we subtract 5 from r ? yes, r  = 8 – 5 = 3 q = q + 1 = 1 + 1 = 2 r = 3; q = 2 (2 times 5 is subtracted from 13) (iii) r = 3, q = 2 can we subtract 5 from r  ? No, because xy which is Post condition After code execution r = 3, q = 2, x = 13 y = 5 q y r we can write, 13 = 2 5 3    + qy + rx = where, r  < y  on option verification, option (b) is correct.'
   },
   {
     id: 'q-ds-2017-6',
@@ -7877,8 +7969,8 @@ export const questions = [
       '2',
       '3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 7,
+    explanation: 'After execution of funcp 2 times, printf function prints the output (7) and gets deleted from activation record. Similarly, control is returned to the main function, main function also gets deleted from activation record and control is returned to operating system. Hence 7 is printed.'
   },
   {
     id: 'q-ds-2016-7',
@@ -7890,8 +7982,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A complete binary min-heap is made by including each integer in [1,1023] exactly once. The depth of a node in the heap is the length of the path from the root of the heap to that node. Thus, the root is at depth 0. The maximum depth at which integer 9 can appear is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(1) option A and option B can be eliminated, because they are not printing anything (No putchar()). (2) In option (c), there is No getchar() to read input Hence c is wrong. (3)  correct option is option (d).'
   },
   {
     id: 'q-ds-2016-8',
@@ -7906,10 +7998,12 @@ export const questions = [
       'O(1)',
       'O',
       'but not O(1)',
-      'O(2d) but not O'
+      'O(2d) but not O',
+      '',
+      'O(d2d) but not O(2d)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 10,
+    explanation: 'firstly, solving j=2*3/4+2.0/5+8/5 we know that, *, /  having same priority So, before loop started 1 j 2*3 / 4 2.0 / 5 8 / 5= + + 2 j 6 / 4 2.0 / 5 8 / 5= + + 3 j 1 2.0 / 5 8 / 5= + + 2.0 is of double type 5  5.0 (double, promoted implicitly) Results is also of type double type i.e. 0.4 j = 1 + 0.4 + 4 8 / 5 j = 5  double int 1 0.4 1++ j = 1.4 +1 j = 2.4 j is of int type. j = 2, 2 is assigned to j Now, k = --j; --j is performed  j becomes 1 k – = j; k = 0 –1 = –1 So, before the loop started, k –1 and j 1== Now evaluating loop for (i = 0; i<5; i + +) { switch (i + k) { case 1: case 2: printf (“\n%d”, i +k); case 3: printf (“\n%d”, i +k); default: printf (“\n%d”, i +k); } Number of times printf executed = 1 + 1 + 3 + 3 + 2 = 10 times'
   },
   {
     id: 'q-ds-2014-10',
@@ -7926,8 +8020,8 @@ export const questions = [
       'number of nodes without a right sibling in the tree.',
       'number of leaf nodes in the tree.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'for (i = n; i > 1, i = 1/2) { j + 1; } Initially j = 0 Let us reduce the input size n = 26 i i>1 26 26 > 1 → True → j ++, j = 1 25 25 > 1  → True → j ++, j = 2 24 24 > 1  → True → j ++, j = 3 23 23 > 1 → True → j ++, j = 4 22 22 > 1 → True → j ++, j = 5 21 21 > 1 → True → j ++, j = 6 i i>1 20 20 > 1 → Flase for n = 26, the first loop will make j as 6 for n = 240, the loop will make j as 40 Before second loop j= 40, sum = 0 After second loop Sum is 5 for (  ; j > 1; j = j/2) { sum ++; } j j > 1 40 40 > 1 → True → sum ++ j = j/2  20 20 > 1 → True → sum ++ j = j /2  10 10 > 1 → True → sum ++ j = j/2   5  5 > 1 → True → sum ++ j = j/2   2  2 > 1 → True → sum ++ j = j/2   1 1 > 1 → True → loop ends After second loop sum is 5.'
   },
   {
     id: 'q-ds-2014-11',
@@ -7944,8 +8038,8 @@ export const questions = [
       '10, 8, 7, 1, 2, 3, 5',
       '10, 8, 7, 5, 3, 2, 1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 23,
+    explanation: '(i) v & 1: is checking if the rightmost bit of v is 1. (If it is 1, then count value is increment by 1). (ii) v>> =1: Ensuring that every bit is checked. Because count is a static variable, total(v) is increasing the value of count by the number of'
   },
   {
     id: 'q-ds-2011-12',
@@ -7962,8 +8056,8 @@ export const questions = [
       '',
       'Statements for linked answer for next two question(13 & 14)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'The max heap property is only satisfied by option (b), as in option (a) the heap is not a complete binary tree or an almost complete binary tree. In option (c) max heap property is not satisfied as node value 8 is the leaf node and a child of a value that is smaller than itself, that is 5. In option (d) max heap property is violated as node value 10 is in leaf node and a child of a value that is smaller than itself. However, in option (b) the max heap property is satisfied. ❑❑❑'
   },
   {
     id: 'q-ds-2009-13',
@@ -7980,8 +8074,8 @@ export const questions = [
       '{25, 14, 16, 13, 10, 8, 12}',
       '{25, 14, 12, 13, 10, 8, 16}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '= 1 + 1 + 1 + ….………..+1 (How many times ?) k = j + 1               ………..k = n = last – first + 1 = n– (j + 1)  + 1 = n – j –1 + 1 =  n –j'
   },
   {
     id: 'q-ds-2009-14',
@@ -7998,8 +8092,8 @@ export const questions = [
       '{ 14, 13, 8, 12, 10 }',
       '{ 14, 13, 12, 8, 10 }'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'On tracing the tree from top to bottom and left to right we get 3,1,2,2,1,3,4,4,4  Option a is correct answer.'
   },
   {
     id: 'q-ds-2008-15',
@@ -8016,8 +8110,8 @@ export const questions = [
       '( ) n log n ',
       '2 ( ) n  Tree Traversal'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Answer is option (d)'
   },
   {
     id: 'q-ds-2023-16',
@@ -8034,8 +8128,8 @@ export const questions = [
       '3 8 16 13 24 50',
       '3 16 8 50 24 13'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'void get (int n) { if (n < 1) return; get (n – 1);  Recursion call with 1 less argument get (n – 3);  Recursion call with 3 less argument printf(“%d”, n); Need not to focus on printf statement'
   },
   {
     id: 'q-ds-2021-17',
@@ -8052,8 +8146,8 @@ export const questions = [
       'S1 is true and S2 is true',
       'S1 is false and S2 is false 10 8 6 4 5 2 1 10 8 6 1 2 4 5 10 5 6 2 1 4 8 5 2 8 6 10 1 4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '&&!   = Priority of && is less than != if ((*a)) && (*a! = ‘ ’)) if will become false, Either (1)  *a = 0 (ASCI to or \0) (2)  *a become ‘ ’ Now, Recursion ‘A’ →‘B’→‘C’→‘D’→ Recursion ends and then it  starts printing. Printing is done because putchar (*a); is written after recursive call. Hence, DCBA is printed, i.e. option D is correct.'
   },
   {
     id: 'q-ds-2020-18',
@@ -8070,8 +8164,8 @@ export const questions = [
       '19, 16, 18, 20, 11, 12, 10, 15',
       '10, 11, 12, 15, 16, 18, 19, 20'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 51,
+    explanation: 'x is a local variable so in every call x 1→ fun(1) =1 fun(2)  = 1 x = x + fun(1)*fun (2 –1)'
   },
   {
     id: 'q-ds-2018-19',
@@ -8083,8 +8177,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The postorder traversal of a binary tree is 8,9,6,7,4,5,2,3,1. The inorder traversal of the same tree is 8,6,9,4,7,2,5,1,3. The height of a tree is the length of the longest path from the root to any leaf. The height of the binary tree above is ______',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 9,
+    explanation: 'num>>1 (divided by 2) → num = 0 Hence, 9 is the correct answer.'
   },
   {
     id: 'q-ds-2017-20',
@@ -8101,8 +8195,8 @@ export const questions = [
       '7,2,6,8,9,10,20,17,19,15,16,12',
       '7,6,2,10,9,8,15,16,17,20,19,12'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Part-A a = 0,   b = 0,     c = 0 • 4, 2 is printed and it is deleted from activation record. • Again prtfun () is called • 6,2 is printed and it is deleted from activation Record, now control is retunred to main and 2,0 is printed. 4 2 6 2  is pointed, Hence (c) is correct op tion 2 0   '
   },
   {
     id: 'q-ds-2013-22',
@@ -8119,8 +8213,8 @@ export const questions = [
       '15, 20, 10, 23, 25, 42, 35, 39, 30',
       '15, 10, 23, 25, 20, 35, 42, 39, 30'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Hence (b) is correct option'
   },
   {
     id: 'q-ds-2008-23',
@@ -8137,8 +8231,8 @@ export const questions = [
       'II is the inorder sequence, but nothing more can be said about the other two sequences',
       'II and III are the preorder and inorder sequences, respectively Binary Search Trees'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Correct answer is 8 i.e. option (b).'
   },
   {
     id: 'q-ds-2022-24',
@@ -8150,8 +8244,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3rd largest element of the tree is stored at index_____________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 55,
+    explanation: 'Let us try to understand the working of function fun1 Let fun1(3) is called first i is an static variable Before fun1(3) the value of i was 0 and after fun1(3) the value of i becomes 3. Let us assume fun1() is called again i.e. for the 2 nd time.'
   },
   {
     id: 'q-ds-2021-25',
@@ -8168,8 +8262,8 @@ export const questions = [
       ' (log n)',
       ' (1)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 230,
+    explanation: 'xmain = xmain + f1( ) + f2() + f3() + f2(); f1() is called: 26 is retuned by f1() xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 f2() is called: There is local static variable which resides in memory throughout the program. 51 is returned but x being static, still remains in memory. xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 + 51 f3() is called: xglobal * = 10 xglobal = 10 * 10 xglobal = 100 100 is returned xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 + 51 + 100 f2 () is called again Variable x is already residing in memory already. xmain = xmain + f1( ) + f2() + f3() + f2(); = 1 + 26 + 51 + 100 + 52= 230  230 is printed ❑❑❑'
   },
   {
     id: 'q-ds-2017-26',
@@ -8186,8 +8280,8 @@ export const questions = [
       '4 and 14 respectively',
       '3 and 15 respectively'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '• i = k has to be replaced by i = k + 1 if elements is larger than Mid (k is Mid). • j =k has to be replaced by j = k – 1 if elements is smaller than Mid. Hence, option A is correct answer.'
   },
   {
     id: 'q-ds-2016-27',
@@ -8199,8 +8293,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The number of ways in which the numbers 1,2,3,4,5,6,7 can be inserted in an empty binary search tree, such that the resulting tree has height 6, is _______. Note: The height of a tree with a single node is 0.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'fun1 () is called, fun1 (100, 200) temp = s1 s1 = s2 s2 = temp No change in str1 and str2, so HiBye.. is printed from the first printf statement. Now fun2 () is called, fun2(206, 496) temp = *s1 (value of at memory location 206) temp = 100 *  s1 = *s2 (value at memory location 496) *  s1 = 200 *  s2 = temp *  s2 = 100 • contents of str1 and str2 are swapped • Now str1 is pointing to ‘Bye’ and str2 is pointing to “Hi”'
   },
   {
     id: 'q-ds-2015-28',
@@ -8217,8 +8311,8 @@ export const questions = [
       '69',
       '83'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'char*x = “abc”;→ Read only area printlength (x, y); → printlength(100,200) strlen(s) – strlen(t) 3 – 5 = –2 Unsigned int – unsigned int Will also be an unsigned int  – 2 is treated as max integer value – 2 = large +ve value Hence 3 is printed.'
   },
   {
     id: 'q-ds-2015-29',
@@ -8230,8 +8324,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A binary tree T has 20 leaves. The number of nodes in T having two children is ______',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'char c [ ] = “GATE 2011”; char *p= c; printf (“%s”, p + p [3] – p[1]) p+ 1  Address of ‘A’ * (p +1)  ‘A’  p 1 \'A\'= p + 3  Address of ‘E’ * (p +3)  ‘E’  p 3 \'E\'= 2011 is printed till \0, therefore option c is correct. ❑❑❑'
   },
   {
     id: 'q-ds-2015-30',
@@ -8248,8 +8342,8 @@ export const questions = [
       '40, 30, 20, 10, 35, 16, 17, 8, 4, 15',
       '40, 35, 20, 10, 15, 16, 17, 8, 4, 30'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Given, 40, 30, 20, 10, 15, 16, 17, 8, 4 Corresponding heap: So, 40, 35, 20, 10, 30, 16, 17, 8, 4, 15. Option b is the correct answer.'
   },
   {
     id: 'q-ds-2015-31',
@@ -8266,8 +8360,8 @@ export const questions = [
       '32 and 6, respectively',
       '31 and 5, respectively'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'So, option a is the correct answer.'
   },
   {
     id: 'q-ds-2014-32',
@@ -8279,8 +8373,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a rooted n node binary tree represented using pointers. The best upper bound on the time required to determine the number of subtrees having exactly 4 nodes is 𝑂(𝑛𝑎 log𝑏 𝑛). Then the value of a + 10b is____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'we need to use bottom up approach Count = 0; // global int f (struct node * Root) { if (Root = = NULL) return 0 ; int l = f (Root → left); 40 2030 16 1710 15 8 4 Insert 35'
   },
   {
     id: 'q-ds-2012-33',
@@ -8297,8 +8391,8 @@ export const questions = [
       'B1: height (n → right)) B2: max (h1, h2)',
       'B1: (1 + height (n → right)) B2: max (h1, h2))'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Height (h) = 3 • If LT = empty and RT = empty If RT = = NULL h = 1 + h (LT) If LT = = NULL h = 1 + h(RT) • RT, LT   non - empty 1 + max (h (LT), h (RT)) B1: h = 1 + h(RT) B1: 1 + height (n → Right) B2: B2 = 1 + max (h1, h2)'
   },
   {
     id: 'q-ds-2011-34',
@@ -8315,8 +8409,8 @@ export const questions = [
       'n!',
       '2n n 1 C (n 1) +'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '•  Given a binary tree structure with n nodes and also given n distinct elements. •  Let n = 5 10, 13, 18, 19, 35 Because it is BST,'
   },
   {
     id: 'q-ds-2008-35',
@@ -8333,8 +8427,8 @@ export const questions = [
       '( ) nlog n ',
       'none of the above, as the tree cannot be uniquely determined.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'BST: The in-order traversal is increasing order of keys. In-order: 1, 2, 3, 4, ……..n Post-order -----------------------Root (i) from Post-order → lost node is the root node O(1) time. Finding this root node in in -order traversal (sorted array) BS→ O(logn) In-order:  1, 2, 3, 4………n Post order:                           Root (1) From Post-order →last node is the root node O(1) Finding this root node in inorder traversal (if sorted array then, BS→ O(logn)) If k element in left subtree then in right subtree element must be n – k – 1. (n–k –1) T(n) = O(logn) + T(k) + T(n – k – 1) Recursively follow. T(n) = T(k) + T (n–k–1) + O (logn) T(n) = O(n logn) But In-order [ ] 1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10 let 1,2,3,....n root we can find any element in O(1) time Left (1…. 5) 6 (7….10) T(n)  = O(1) + T(k) + T(n – k –1) Hence, option (b) is correct.'
   },
   {
     id: 'q-ds-2008-36',
@@ -8351,8 +8445,8 @@ export const questions = [
       '𝑛3 − 𝑛2',
       '𝑛2 + 𝑛1 – 2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '31 –2nn=  Already know In 1 such removal  1 edge remove Repeat this process until all nodes of degree 2 removed  n2 times we need to repeat  n2 ×1 edge will be removed in over all process Number of edges initially = n – 1 = n1 + n2 + n3 – 1 After complete process edges, remaining = (n1+ n2+ n3 –1) – 1×n2 = n1+ n3 –1 = n1+ n1 –2–1  = 2* n1–3'
   },
   {
     id: 'q-ds-2008-37',
@@ -8369,8 +8463,8 @@ export const questions = [
       '[((𝑛1+𝑛2)/2)]',
       '𝑛2−1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Basics: n1 = 4   n2 = 2 n3 = 2 4 + 1 – 1 = 4  (False) n3 most be 2 (b) 4 – 2 =2  (True) (c) [5/2] = [2.5] = Either 2 or 3 (d) 0 n1= 3, n2= 1,      n3= 1, (a) 1 (b) (3 +1) /2 = 2 cannot be our answer. Method 2: Total number of nodes n = n1 + n2 + n3 Sum of degree of all the nodes = 2|E| = 2 (n–1) = 2 (n1 + n2 + n3 –1) = n1 × 1 + n2 × 2 + n3 × 3 n1 + 2n2 + 3n3 = 2n1 + 2n2 + 2n3 –2 n3 = 2n1 – n1 – 2 n3 = n1 – 2 So, option (b) is correct. a cb d e f g d e b a c f g d e b c f g   1 edge added degree 2 node deleted or 2 edge removed'
   },
   {
     id: 'q-ds-2008-38',
@@ -8387,7 +8481,7 @@ export const questions = [
       'III and IV only',
       'III only AVL Trees'
     ],
-    correctAnswer: null,
+    correctAnswer: 3,
     explanation: ''
   },
   {
@@ -8405,8 +8499,8 @@ export const questions = [
       '(n2 log n)',
       '(n3)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'AVL tree is height balanced tree and the height of an AVL tree with n element is O(log2n) 1st insertion time = O(logn) 2nd insertion time = O(log(n + 1)) As AVL tree contain (n + 1) elements after 1st insertion 3rd insertion = O(log(n + 2)) . . n2 insert  = O(log (n + n2 – 1))'
   },
   {
     id: 'q-ds-2009-40',
@@ -8423,8 +8517,8 @@ export const questions = [
       '4',
       '5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'n(h) = 1+ n (h–1) + n(h –2) minimum nodes with height h. n (0)  =1 n (1)  = 2 n (2)  = 1+ n(1) +n(0) = 1+2 +1 = 4 n(3)  = 1 + n(2) + n(1) = 1 + 4 + 2 = 7 n(3) = 7'
   },
   {
     id: 'q-ds-2008-41',
@@ -8441,8 +8535,8 @@ export const questions = [
       'The cost of searching a binary search tree is O (log n) but that of an AVL tree is Θ(𝑛)',
       'The cost of searching an AVL tree is Θ(𝑛log 𝑛) but that of a binary search tree is O(n) ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n n log n 2 2 2 2 n n n.log 2 n log n (log n) n n log n (log n) Therefore: h f g'
   },
   {
     id: 'q-ds-2021-2',
@@ -8459,8 +8553,8 @@ export const questions = [
       '10, 9, 6, 7, 5, 13',
       '9, 5, 13, 6, 10, 14'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '* + – 42 43 45  ASCII code of P is 80 ASCII code of x is 120 char c = (a & b) + ‘*’ ( ) is having more priority a –  0  1  0  1  0  0  0  0    –  80 & b – 0  1  1  1  1  0  0  0    –  120 a & b        0  1  0 1  0  0  0  0     =   80 char c = (a & b) + ‘*’; 80 + ‘*’ 80 + 42 On option elimination we get option (a) as correct option. char = (a/b) – ‘–’;'
   },
   {
     id: 'q-ds-2015-4',
@@ -8472,8 +8566,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Given a hash table T with 25 slots that stores 2000 elements, the load factor 𝛼 for T is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'T1 : S1  T1, T2, T4(covers all) T2 : S3  T2, T3, T4(covers all) T3 : S1 T4 : S2, S4 Hence option (d) is correct answer.'
   },
   {
     id: 'q-ds-2015-5',
@@ -8490,8 +8584,8 @@ export const questions = [
       'h(i) = (11 * 𝑖2) mod 10',
       'h(i) = (12 * i) mod 10'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Rewriting the code for better understanding begin q: = 0// q is representing Quotient r: = x // r is representing Remainder while r > y do begin r: = r – y q: = q + 1 end end The abvoe code is representing, How to divide x by y using repeated subtraction. Let x = 13, y = 5 and intially q = 0 r = 23 (everyting is remaining) (i) Can we subtract y(5) from r ? Yes, r = 13 – 5 = 18 q = q + 1 = 0 +1 =1 r = 8; q = 1 (one time 5 is subtrated from 13) (ii) r = 8, q = 1 y = 5 can we subtract 5 from r ? yes, r  = 8 – 5 = 3 q = q + 1 = 1 + 1 = 2 r = 3; q = 2 (2 times 5 is subtracted from 13) (iii) r = 3, q = 2 can we subtract 5 from r  ? No, because xy which is Post condition After code execution r = 3, q = 2, x = 13 y = 5 q y r we can write, 13 = 2 5 3    + qy + rx = where, r  < y  on option verification, option (b) is correct.'
   },
   {
     id: 'q-math-2023-6',
@@ -8721,8 +8815,8 @@ export const questions = [
       'Both I and II',
       'Neither I nor II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'f(n) = n; g(n) = n1+ sin n sin value ranges from –1 to +1 (using trichotomy property)'
   },
   {
     id: 'q-algo-2015-8',
@@ -8739,8 +8833,8 @@ export const questions = [
       'I or III or IV but not II',
       'II or III or IV but not I'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2 3 i n(n 1) 2  +=   = O(n4) = (n4) = (n4)'
   },
   {
     id: 'q-algo-2015-9',
@@ -8757,8 +8851,8 @@ export const questions = [
       'Sorted array',
       'Sorted doubly linked list'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. Find: log n; 2. Insert: N 3. Delete: log n 4. Decrement key: log n Data Structur e FIND INSERT DELETE DEC – KEY Total time Unsorted Array N. log n N log n log n N. log n Min- Heap N. log n N.log N (log n)3/2 (log n)3/2 N.log N Sorted Array (log n)3/2 N2 N. log n N. log n  N2 Sorted D.L.L N. log n N2 log n N. log n  N2'
   },
   {
     id: 'q-algo-2012-10',
@@ -8775,8 +8869,8 @@ export const questions = [
       'A(n) = O(W(n))',
       'A(n) = o(W(n))"'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'B(n)  A(n)  W(n)  A(n) = O(W(n))'
   },
   {
     id: 'q-algo-2008-11',
@@ -8793,8 +8887,8 @@ export const questions = [
       'g(n) = O(f(n)); h(n) = O(f(n))',
       'h(n) = O(f(n)); g(n) = Ω (f(n))'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n n log n 2 2 2 2 n n n.log 2 n log n (log n) n n log n (log n) Therefore: h f g'
   },
   {
     id: 'q-algo-2008-12',
@@ -8811,8 +8905,8 @@ export const questions = [
       'A, C, D, E, B',
       'A, C, D, B, E Finding Time Complexity'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'For the given scenario we can observe that: • n1/3  < n7/4 and n1/3 <   nlog9n • 1.0000001n  <  en  and 1.0000001n  <  n7/4 • nlog9n <   1.0000001n •  n7/4 is asymptotically larger than nlog 9n. (If we take n common from both the functions then n3/4 is larger than log9n). • Thus, n1/3 < nlog9n < n7/4 < 1.0000001n < en.'
   },
   {
     id: 'q-algo-2020-13',
@@ -8829,8 +8923,8 @@ export const questions = [
       '(1)',
       '(n)2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Total comparision’s: (1 + 2 + 3 + … + n – 1) : n(n 1) 2 − : O(n2) : (n2) :  (n2)'
   },
   {
     id: 'q-algo-2017-14',
@@ -8842,8 +8936,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following C function. int fun (int n) { int i, j; for (i = 1; i < = n; i ++){ for (j = 1; j < n; j + = i) { printf{“%d %d”, i, j); } } }',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'i = 1, n, +1 j =1, n, +i i = 1, i = 2, i = 3 nnj 1, n, j = , j23== n n nn 2 3 n+ + + + n 1 1n = x x T(n) = n.logn = (n.logn)'
   },
   {
     id: 'q-algo-2016-15',
@@ -8855,8 +8949,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The given diagram shows the flowchart for a recursive function A(n). Assume that all statements, except for the recursive calls, have O(1) time complexity. If the worst-case time complexity of this function is O(n), then the least possible value (accurate up to two decimal positions) of  is _____. Flow chart for Recursive Function A(n)',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '30 sec → 64 elements 6 minutes → n = ? Time for merge sort = n∙logn = 64∙log64 64.6 units 30 sec – 64.6 units ? – 1 unit 301 unit s 64 6=  301 unit s 64 6=  (n) ? – 360 s 12360 64 6 unit ___\'n \'elements30  212 6 64____ n log n   4608 = n∙logn n 512 512 9 4608= =  = ∴ n = 512'
   },
   {
     id: 'q-algo-2015-16',
@@ -8873,8 +8967,8 @@ export const questions = [
       'n log n',
       'n log (log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '[log logn + log logn + … +]n return(q) = n.log logn for (i = 1; i < n; ++i): n for (j = n; j > 1; j = j /2): log n for (k =1; k < p; k = k*2): log p(log log n)'
   },
   {
     id: 'q-algo-2013-17',
@@ -8891,8 +8985,8 @@ export const questions = [
       '(n)3',
       '(n3 log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '• for (i = n/2; i < = n; i++) : n 2 • for(j = 2; j < = n; j = j*2) k = k + n/2;                        : n 2 log n Overall Complexity: nn .log n22  .'
   },
   {
     id: 'q-algo-2010-18',
@@ -8909,8 +9003,8 @@ export const questions = [
       '6',
       '5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '10.n.log10n < 0.0001n2 k10.10 42.k<10 .10− k k 5 10k 10    k = 6  6 5 106 10 10   k = 6'
   },
   {
     id: 'q-algo-2009-19',
@@ -8927,8 +9021,8 @@ export const questions = [
       '(n)2',
       '(n2 log n) Solving Recurrence Relation'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'T(n) = T(n/3) + cn a = 1; b = 3; f(n) = cn Master method: I. cn is O(n0 – ), dissatified II. cn is (n0·logkn), dissatified III. cn is it (n0 + ) fn  = 1 a. f(n/b)  .f(n) satisfied 1 ⋅ cn 3   ≤  .cn; 𝛿  = 1 3 < 1  T(n) is (f(n)) (n)'
   },
   {
     id: 'q-algo-2021-20',
@@ -8940,8 +9034,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following recurrence relation: n 2n T T 7n if n 0 T(n) 2 5 1 if n 0           + +           =       =  Which one of the following options is correct? Start A n ( /2) Return Return Return Return A n ( /2) A n ( /2) A n ( /2) A n ( /2) A n ( /2)',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'T(n) = T(n/2) + T(2n/5) + 7n, n > 1 T(n/2) = T(n/4) + T(2n/10) + 7n/2 T(2n/5) = T(2n/10) + T(4n/25) + 7.2n/5 Recursive Tree Total time = an + b = O(n)  = (n) = (n).'
   },
   {
     id: 'q-co-2020-21',
@@ -8956,7 +9050,8 @@ export const questions = [
       '= 1. Then T(n) is',
       'Θ(log2 log2 n)',
       'Θ(loga logb n)',
-      'Θ(logb logan)'
+      'Θ(logb logan)',
+      'Θ(logab n)'
     ],
     correctAnswer: null,
     explanation: ''
@@ -9074,8 +9169,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The minimum number of comparisons required to find the minimum and the maximum of 100 numbers is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'f(n) = n; g(n) = n1+ sin n sin value ranges from –1 to +1 (using trichotomy property)'
   },
   {
     id: 'q-algo-2010-8',
@@ -9092,8 +9187,8 @@ export const questions = [
       'max(Y, a0 + 2Y)',
       'a0 + Y/2 Quick Sort'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2 3 i n(n 1) 2  +=   = O(n4) = (n4) = (n4)'
   },
   {
     id: 'q-algo-2019-9',
@@ -9105,8 +9200,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'An array of 25 distinct elements is to be sorted using quicksort. Assume that the pivot element is chosen uniformly at random. The probability that the pivot element gets placed in the worst possible location in the first round of partitioning (rounded off to 2 decimal places) is_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. Find: log n; 2. Insert: N 3. Delete: log n 4. Decrement key: log n Data Structur e FIND INSERT DELETE DEC – KEY Total time Unsorted Array N. log n N log n log n N. log n Min- Heap N. log n N.log N (log n)3/2 (log n)3/2 N.log N Sorted Array (log n)3/2 N2 N. log n N. log n  N2 Sorted D.L.L N. log n N2 log n N. log n  N2'
   },
   {
     id: 'q-algo-2015-10',
@@ -9123,8 +9218,8 @@ export const questions = [
       'T(n) = 2T(n – 1) + cn',
       'T(n) = T(n/2) + cn'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'B(n)  A(n)  W(n)  A(n) = O(W(n))'
   },
   {
     id: 'q-algo-2014-11',
@@ -9141,8 +9236,8 @@ export const questions = [
       '(nlogn)',
       'O(n3)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n n log n 2 2 2 2 n n n.log 2 n log n (log n) n n log n (log n) Therefore: h f g'
   },
   {
     id: 'q-algo-2014-12',
@@ -9159,8 +9254,8 @@ export const questions = [
       't1 > t2',
       't1 = t2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'For the given scenario we can observe that: • n1/3  < n7/4 and n1/3 <   nlog9n • 1.0000001n  <  en  and 1.0000001n  <  n7/4 • nlog9n <   1.0000001n •  n7/4 is asymptotically larger than nlog 9n. (If we take n common from both the functions then n3/4 is larger than log9n). • Thus, n1/3 < nlog9n < n7/4 < 1.0000001n < en.'
   },
   {
     id: 'q-algo-2009-13',
@@ -9177,8 +9272,8 @@ export const questions = [
       'θ(n2 )',
       'θ(n2 log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Total comparision’s: (1 + 2 + 3 + … + n – 1) : n(n 1) 2 − : O(n2) : (n2) :  (n2)'
   },
   {
     id: 'q-algo-2008-14',
@@ -9195,8 +9290,8 @@ export const questions = [
       'T(n) ≤ 2T (4n/5) + n',
       'T(n) ≤ 2T (n/2) + n Merge Sort'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'i = 1, n, +1 j =1, n, +i i = 1, i = 2, i = 3 nnj 1, n, j = , j23== n n nn 2 3 n+ + + + n 1 1n = x x T(n) = n.logn = (n.logn)'
   },
   {
     id: 'q-algo-2015-15',
@@ -9213,8 +9308,8 @@ export const questions = [
       '1024',
       '2048'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '30 sec → 64 elements 6 minutes → n = ? Time for merge sort = n∙logn = 64∙log64 64.6 units 30 sec – 64.6 units ? – 1 unit 301 unit s 64 6=  301 unit s 64 6=  (n) ? – 360 s 12360 64 6 unit ___\'n \'elements30  212 6 64____ n log n   4608 = n∙logn n 512 512 9 4608= =  = ∴ n = 512'
   },
   {
     id: 'q-ds-2012-16',
@@ -9231,8 +9326,8 @@ export const questions = [
       'O(n2 + log n)',
       'O(n2) Insertion Sort'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '[log logn + log logn + … +]n return(q) = n.log logn for (i = 1; i < n; ++i): n for (j = n; j > 1; j = j /2): log n for (k =1; k < p; k = k*2): log p(log log n)'
   },
   {
     id: 'q-ds-2016-18',
@@ -9249,8 +9344,8 @@ export const questions = [
       '(n2), (n log n), and (n log n)',
       ' (n2), (n log n), and (n2) Bubble Sort'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '10.n.log10n < 0.0001n2 k10.10 42.k<10 .10− k k 5 10k 10    k = 6  6 5 106 10 10   k = 6'
   },
   {
     id: 'q-ds-2013-20',
@@ -9267,8 +9362,8 @@ export const questions = [
       'O(n log n)',
       'O(n2)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'T(n) = T(n/2) + T(2n/5) + 7n, n > 1 T(n/2) = T(n/4) + T(2n/10) + 7n/2 T(2n/5) = T(2n/10) + T(4n/25) + 7.2n/5 Recursive Tree Total time = an + b = O(n)  = (n) = (n).'
   },
   {
     id: 'q-ds-2009-21',
@@ -9285,8 +9380,8 @@ export const questions = [
       '(n)2',
       '(n2 log n) Heap Sort'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'T(n) = T(n1/a) + 1; T(b) = 1 T(n) = T(n1/a) + 1     …(1) ( ) ( ) 21/a 1/aT n T n 1=+      …(2) ( ) 21/aT(n) T n 2=+      …(3) ( ) 31/aT n 3=+      …(4) ( ) K1/aT n K=+      …(5) = T(b) + loga (logbn) = 1 + loga . logbn K1/anb = 22K 1 .log n log b a = KK2 b 2 log n a a log nlog b =  =  K = loga logbn T(n) = (loga . logbn)'
   },
   {
     id: 'q-ds-2021-22',
@@ -9303,8 +9398,8 @@ export const questions = [
       'Θ(n log n)',
       'Θ(n2)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '( )T(n) 2.T n 1=+ T(n) = 2.T(n1/2) + 1       …(1) T(n1/2) = 2.T(n1/4) + 1       …(2) T(n) = 2[2.T(n1/4) + 1] +1 = 4.T(n1/4) + 3       …(3) ( ) ( ) 22 1/2 2  2 .T n 2 –  1=+       …(3) ( ) ( ) K/2 KK 1  2 .T n 2 –  1=+    …(4) K1/2n 2= 2K 1 .logn log 2 2 = 2K = log n T(n) = logn.T(2) + log n – 1 T(n) = 2.logn + log n – 1'
   },
   {
     id: 'q-ds-2021-23',
@@ -9321,8 +9416,8 @@ export const questions = [
       'Θ(n)',
       'Θ(n log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'a = 2; b = 2; f(n) = log n log n is it O(n1 – ) , yes, here  = 0.5  T(n) is (n)'
   },
   {
     id: 'q-ds-2020-24',
@@ -9334,8 +9429,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the array representation of a binary min- heap containing 1023 elements. The minimum number of comparisons required to find the maximum in the heap is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'n = 22k; k ≥ 0 T(n) = n2 T n 2 +  ; T(1) = 1 ( ) 1122 nT n 2 T n 2 =  +     ….(1) 1212n n nT 2 T2 4 2           =  +                 …..(2) 1212n n nT 2 T4 8 4           =  +                ( ) 121 1 12 2 2 12 nnT n 2 2 T n 4 2  =  + +   = 11 n2 .T 2 n 2 n4  ++  …..(3) = 1212 nn2 2 T 2 n 82    + +  = 32 n2 T 3 n 8 +      …..(4) ( ) 2 nT n 2 .T 4 n 16 =+       …..(5) = 2 2.2 n2 T 2.2 n 2 +  = k 2.k n2 T 2.k n 2 +    ……(6) 2k n 1 2 = ⇒ n = 22k 2k = logn ⇒ k = log n 2 = ( ) 122log n2 .T(1) 2 + log n. 2 .n n 1 n logn +  ( ) ( )T n n 1 logn=+ ❑❑❑'
   },
   {
     id: 'q-ds-2018-25',
@@ -9347,8 +9442,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The number of possible min-heaps containing each value from {1, 2, 3, 4, 5, 6 7} exactly once is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 80,
+    explanation: '• Left subtree heap: 6C3 • Left and Right Nodes Can be arranged in 2! way  Total so far: (6C3 * 2!) Total number of possibilities = (6C 3) * (2!) * (2!) 6= 54 32   22 = 20 * 2 * 2 = 80.'
   },
   {
     id: 'q-dld-2016-26',
@@ -9445,8 +9540,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Suppose P, Q, R, S, T are sorted sequences having lengths 20, 24, 30, 35, 50 respectively. They are to be merged into a single sequence by merging together two sequences at a time. The number of comparisons that will be needed in the worst case by the optimal algorithm for doing this is______. Huffman Code Problem',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '( ) nT n 2T 2,    n > 22 =1,  n = 2 =+  ( ) 3nT n – 2 2='
   },
   {
     id: 'q-algo-2021-2',
@@ -9463,8 +9558,8 @@ export const questions = [
       '21',
       '30'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'According to standard case of master’s theorem option (b) is correct. Master Theorem Let a  1 and b > 1 be constants, let f(n) be a function, and let T(n) be defined on the non - negative integers by the recurrence T(n) = aT(n/b) + f(n), where we interpret n/b to mean either n/b or n/b. Then T(n) has the following asymptotic bounds: 1. If ( )blog af (n) n −= for some constant  > 0, then ( )blog aT(n) = n . 2. If ( )blog af(n) = n ,  then ( )blog a log nT(n) n .= 3. If ( )blog a + cf(n) = n  for some constant  > 0, and if f(n/b)  cf(n) for some constant c < 1 and all sufficiently large n, then T(n) = (f(n)).'
   },
   {
     id: 'q-algo-2017-3',
@@ -9476,8 +9571,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A message is made up entirely of characters from the set X = {P, Q, R, S, T}. The table of probabilities for each of the characters is shown below: Character Probability P 0.22 Q 0.34 R 0.17 S 0.19 T 0.08 Total 1.00 If a message of 100 characters over X is encoded using Huffman coding, then the expected length of the encoded message in bits is _____. Kruskal\'s Algorithm',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'f(n2) = ((f(n)2) f(n) = n f(n2) = n2 (f(n))2 = n2 f(n) = 2n, (f(n))2 = (2n)2 = 22n f(n2) = ( ) 22 n 2nf n 2 ;2= n2;  2n.log2 n2 > 2n.'
   },
   {
     id: 'q-algo-2009-5',
@@ -9494,8 +9589,8 @@ export const questions = [
       '(b, e) (a, c) (e, f) (b, c) (f, g) (c, d)',
       '(b, e) (e, f) (b, c) (a, c) (f, g) (c, d) Prim\'s Algorithm'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n log n n10 ; n ; n 2 10n.log ;(logn) ; n.logn f2 < f3 < f1'
   },
   {
     id: 'q-algo-2021-6',
@@ -9512,8 +9607,8 @@ export const questions = [
       'Both I and II',
       'Neither I nor II 7. [NAT] [GATE-2020 2M] Consider a graph G = (V, E), where V = {v1, v2 …v100}, E = {vi, vj} |1  i  j  100}, and weight of the edge (vi, vj) is |i – j|. The weight of minimum spanning tree of G is ____.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'n  grows faster than log and slower than linear whereas n grows linearly and 100 n  decreases with n.'
   },
   {
     id: 'q-algo-2018-8',
@@ -9525,8 +9620,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following undirected graph G: Choose a value of x that will maximize the number of minimum weight spanning trees (MWSTs) of G. The number of MWSTs of G for this value of x is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2 3 i n(n 1) 2  +=   = O(n4) = (n4) = (n4)'
   },
   {
     id: 'q-algo-2016-9',
@@ -9543,8 +9638,8 @@ export const questions = [
       'Neither P nor Q',
       'Both P and Q'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. Find: log n; 2. Insert: N 3. Delete: log n 4. Decrement key: log n Data Structur e FIND INSERT DELETE DEC – KEY Total time Unsorted Array N. log n N log n log n N. log n Min- Heap N. log n N.log N (log n)3/2 (log n)3/2 N.log N Sorted Array (log n)3/2 N2 N. log n N. log n  N2 Sorted D.L.L N. log n N2 log n N. log n  N2'
   },
   {
     id: 'q-algo-2016-10',
@@ -9556,8 +9651,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Let G be a complete undirected graph on 4 vertices, having 6 edges with weights being 1, 2, 3, 4, 5 and 6. The maximum possible weight that a minimum weight spanning tree of G can have is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'B(n)  A(n)  W(n)  A(n) = O(W(n))'
   },
   {
     id: 'q-algo-2016-11',
@@ -9574,8 +9669,8 @@ export const questions = [
       'Both I and II',
       'Neither I nor II b e c f g a d 5 3 4 6 6 5 6 6 2 3 5 4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n n log n 2 2 2 2 n n n.log 2 n log n (log n) n n log n (log n) Therefore: h f g'
   },
   {
     id: 'q-algo-2011-12',
@@ -9592,8 +9687,8 @@ export const questions = [
       '(|E| log |V|)',
       '(|V|)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'For the given scenario we can observe that: • n1/3  < n7/4 and n1/3 <   nlog9n • 1.0000001n  <  en  and 1.0000001n  <  n7/4 • nlog9n <   1.0000001n •  n7/4 is asymptotically larger than nlog 9n. (If we take n common from both the functions then n3/4 is larger than log9n). • Thus, n1/3 < nlog9n < n7/4 < 1.0000001n < en.'
   },
   {
     id: 'q-algo-2008-13',
@@ -9610,8 +9705,8 @@ export const questions = [
       'Only vertices a, b, c, d',
       'All the vertices ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Total comparision’s: (1 + 2 + 3 + … + n – 1) : n(n 1) 2 − : O(n2) : (n2) :  (n2)'
   },
   {
     id: 'q-cn-2012-1',
@@ -9646,8 +9741,8 @@ export const questions = [
       '6n – 11',
       '2n + 1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'n. log < n3/2 < nlogn < 2n 3 2 4 1f f f < f'
   },
   {
     id: 'q-algo-2011-5',
@@ -9664,8 +9759,8 @@ export const questions = [
       '31',
       '41'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n log n n10 ; n ; n 2 10n.log ;(logn) ; n.logn f2 < f3 < f1'
   },
   {
     id: 'q-algo-2011-6',
@@ -9682,8 +9777,8 @@ export const questions = [
       'T’≠T but total weight t’ = t2',
       'None of the above Common data for next two question Consider a complete undirected graph with vertex set {0, 1, 2, 3, 4}. Entry Wij in the matrix W below is the weight of the edge {i, j}. 0 1 8 1 4 1 0 12 4 9 W = 8 12 0 7 3 1 4 7 0 2 4 9 3 2 0                          '
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'n  grows faster than log and slower than linear whereas n grows linearly and 100 n  decreases with n.'
   },
   {
     id: 'q-algo-2010-7',
@@ -9700,8 +9795,8 @@ export const questions = [
       '9',
       '10'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'f(n) = n; g(n) = n1+ sin n sin value ranges from –1 to +1 (using trichotomy property)'
   },
   {
     id: 'q-algo-2023-9',
@@ -9713,8 +9808,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Let U = {1, 2, 3}. Let 2U denote the powerset of U. Consider an undirected graph G whose vertex set is 2U. For any A, B  2U, (A, B) is an edge in G if and only if (i) A  B, and (ii) either A ⊊ B or B ⊊ A. For any vertex A in G, the set of all possible orderings in which the vertices of G can be visited in a Breadth First Search (BFS) starting from A is denoted by B(A). If  denotes the empty set, then the cardinality of B() is__________ .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. Find: log n; 2. Insert: N 3. Delete: log n 4. Decrement key: log n Data Structur e FIND INSERT DELETE DEC – KEY Total time Unsorted Array N. log n N log n log n N. log n Min- Heap N. log n N.log N (log n)3/2 (log n)3/2 N.log N Sorted Array (log n)3/2 N2 N. log n N. log n  N2 Sorted D.L.L N. log n N2 log n N. log n  N2'
   },
   {
     id: 'q-algo-2021-10',
@@ -9731,8 +9826,8 @@ export const questions = [
       'A leaf of T can be an articulation point in G.',
       'If u is an articulation point in G such that x is an ancestor of u in T and y is a descendent of u in T, then all paths from x to y in G must pass through u.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'B(n)  A(n)  W(n)  A(n) = O(W(n))'
   },
   {
     id: 'q-algo-2021-11',
@@ -9744,8 +9839,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a complete binary tree with 7 nodes. Let A denote the set of first 3 elements obtained by performing Breadth–first search (BFS) starting from the root. Let B denote the set of first 3 elements obtained by performing Depth – First Search (DFS) starting from the root. The value of |A – B | is _________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n n log n 2 2 2 2 n n n.log 2 n log n (log n) n n log n (log n) Therefore: h f g'
   },
   {
     id: 'q-toc-2018-12',
@@ -9891,8 +9986,8 @@ export const questions = [
       'Both PSRQ and SPRQ are topological orderings.',
       'PSRQ is the only topological ordering.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'T(n) = T(n/2) + T(2n/5) + 7n, n > 1 T(n/2) = T(n/4) + T(2n/10) + 7n/2 T(2n/5) = T(2n/10) + T(4n/25) + 7.2n/5 Recursive Tree Total time = an + b = O(n)  = (n) = (n).'
   },
   {
     id: 'q-algo-2008-21',
@@ -9909,8 +10004,8 @@ export const questions = [
       '2, 3 and 4 only',
       '1, 2 and 3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'T(n) = T(n1/a) + 1; T(b) = 1 T(n) = T(n1/a) + 1     …(1) ( ) ( ) 21/a 1/aT n T n 1=+      …(2) ( ) 21/aT(n) T n 2=+      …(3) ( ) 31/aT n 3=+      …(4) ( ) K1/aT n K=+      …(5) = T(b) + loga (logbn) = 1 + loga . logbn K1/anb = 22K 1 .log n log b a = KK2 b 2 log n a a log nlog b =  =  K = loga logbn T(n) = (loga . logbn)'
   },
   {
     id: 'q-algo-2008-22',
@@ -9927,8 +10022,8 @@ export const questions = [
       'QMNPRO',
       'QMNPOR ❑❑❑ c g e f a d b'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '( )T(n) 2.T n 1=+ T(n) = 2.T(n1/2) + 1       …(1) T(n1/2) = 2.T(n1/4) + 1       …(2) T(n) = 2[2.T(n1/4) + 1] +1 = 4.T(n1/4) + 3       …(3) ( ) ( ) 22 1/2 2  2 .T n 2 –  1=+       …(3) ( ) ( ) K/2 KK 1  2 .T n 2 –  1=+    …(4) K1/2n 2= 2K 1 .logn log 2 2 = 2K = log n T(n) = logn.T(2) + log n – 1 T(n) = 2.logn + log n – 1'
   },
   {
     id: 'q-algo-2013-2',
@@ -9945,8 +10040,8 @@ export const questions = [
       'Θ(n3)',
       'Θ(n3 log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'According to standard case of master’s theorem option (b) is correct. Master Theorem Let a  1 and b > 1 be constants, let f(n) be a function, and let T(n) be defined on the non - negative integers by the recurrence T(n) = aT(n/b) + f(n), where we interpret n/b to mean either n/b or n/b. Then T(n) has the following asymptotic bounds: 1. If ( )blog af (n) n −= for some constant  > 0, then ( )blog aT(n) = n . 2. If ( )blog af(n) = n ,  then ( )blog a log nT(n) n .= 3. If ( )blog a + cf(n) = n  for some constant  > 0, and if f(n/b)  cf(n) for some constant c < 1 and all sufficiently large n, then T(n) = (f(n)).'
   },
   {
     id: 'q-algo-2012-3',
@@ -9963,8 +10058,8 @@ export const questions = [
       'T(n) = 2T(n/2) + 1',
       'T(n) = 2T(n – 1) + 1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'f(n2) = ((f(n)2) f(n) = n f(n2) = n2 (f(n))2 = n2 f(n) = 2n, (f(n))2 = (2n)2 = 22n f(n2) = ( ) 22 n 2nf n 2 ;2= n2;  2n.log2 n2 > 2n.'
   },
   {
     id: 'q-algo-2009-6',
@@ -9981,8 +10076,8 @@ export const questions = [
       'both P and Q',
       'Neither P nor Q'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'n  grows faster than log and slower than linear whereas n grows linearly and 100 n  decreases with n.'
   },
   {
     id: 'q-algo-2009-7',
@@ -9999,8 +10094,8 @@ export const questions = [
       'expr2 = max (l(i − 1, j), l(i, j − 1))',
       'expr2 = max(l(i − 1, j − 1), l(i, j))'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'f(n) = n; g(n) = n1+ sin n sin value ranges from –1 to +1 (using trichotomy property)'
   },
   {
     id: 'q-algo-2009-8',
@@ -10017,8 +10112,8 @@ export const questions = [
       'The values of l(i, j) cannot be computed in either row major order or column major order of L [M, N].',
       'L [p, q] needs to be computed before L [r, s] if either p < r or q < s.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '2 3 i n(n 1) 2  +=   = O(n4) = (n4) = (n4)'
   },
   {
     id: 'q-algo-2008-9',
@@ -10053,8 +10148,8 @@ export const questions = [
       'X [n, W]',
       'X [n – 1, n]'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'B(n)  A(n)  W(n)  A(n) = O(W(n))'
   },
   {
     id: 'q-algo-2017-13',
@@ -10071,8 +10166,8 @@ export const questions = [
       'P-ii, Q-i, R-iii',
       'P-i, Q-ii, R-iii'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Total comparision’s: (1 + 2 + 3 + … + n – 1) : n(n 1) 2 − : O(n2) : (n2) :  (n2)'
   },
   {
     id: 'q-algo-2016-14',
@@ -10089,8 +10184,8 @@ export const questions = [
       'Dynamic programming paradigm',
       'Neither Greedy nor Divide-and-conquer nor Dynamic Programming paradigm 0/1 Knapsack Problem'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'i = 1, n, +1 j =1, n, +i i = 1, i = 2, i = 3 nnj 1, n, j = , j23== n n nn 2 3 n+ + + + n 1 1n = x x T(n) = n.logn = (n.logn)'
   },
   {
     id: 'q-algo-2018-15',
@@ -10102,8 +10197,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the weights and values of items listed below. Note that there is only one unit of each item. Item Number Weight in (Kgs) Value in (Rupees) 1 10 60 2 7 28 3 4 20 4 2 24 The task is to pick a subset of these items such that their total weight is not more than 11 kgs and their total value is maximized. Moreover, no item may be split. The total value of items picked by an optimal algorithm is denoted by Vopt. A greedy algorithm sorts the items by their value-to-weight ratios in descending order and packs them greedily, starting from the first item in the ordered list. The total value of items picked by the greedy algorithm is denoted by Vgreedy. The value of Vopt – Vgreedy is _______. Matrix Chain Multiplication',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '30 sec → 64 elements 6 minutes → n = ? Time for merge sort = n∙logn = 64∙log64 64.6 units 30 sec – 64.6 units ? – 1 unit 301 unit s 64 6=  301 unit s 64 6=  (n) ? – 360 s 12360 64 6 unit ___\'n \'elements30  212 6 64____ n log n   4608 = n∙logn n 512 512 9 4608= =  = ∴ n = 512'
   },
   {
     id: 'q-algo-2018-16',
@@ -10115,8 +10210,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Assume that multiplying a matrix G1 of dimension P × Q with another matrix G2 of dimension q × r requires pqr scalar multiplications. Computing the product of n matrices G1 G2 G3 …. Gn can be done by parenthesizing in different ways. Define GiGi + l., as an explicitly computed pair for a given parenthesizing if they arc directly multiplied. For example, in the matrix multiplication chain G1G2G3G4G5G6 using parenthesization (G1(G2G3))(G4(G5G6)), G2G3 and G5G6 are the only explicitly computed pairs. Consider a matrix multiplication chain F1F2F3F4F5, where matrices F1, F2, F3, F4 and F5 are of dimensions 2 × 25, 25 × 3, 3 × 16, 16 × 1 and 1 × 1000, respectively. In the parenthesization of F1F2F3F4F5 that minimizes the total number of scalar multiplications, the explicitly computed pairs is/are',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '[log logn + log logn + … +]n return(q) = n.log logn for (i = 1; i < n; ++i): n for (j = n; j > 1; j = j /2): log n for (k =1; k < p; k = k*2): log p(log log n)'
   },
   {
     id: 'q-cn-2016-17',
@@ -10141,8 +10236,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'In a directed acryclic graph with a source vertex s, the qauility-score of a directed path is defined to be the product of the weights of the edges on the path. Further, for a vertex v other than s, the quality-score of v is defined to be the maximum among the quality-scores of all the paths from s to v. the quality score of s is assumed to be 1. The sum of the quality -scores of all the vertieces in the graph shown above is___.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n log n n10 ; n ; n 2 10n.log ;(logn) ; n.logn f2 < f3 < f1'
   },
   {
     id: 'q-algo-2020-6',
@@ -10154,8 +10249,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following undirected graph with edge weights as shown: The number of minimum-weight spanning trees of the graph is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'n  grows faster than log and slower than linear whereas n grows linearly and 100 n  decreases with n.'
   },
   {
     id: 'q-algo-2014-9',
@@ -10167,8 +10262,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'In an adjacency list representation of an undirected simple graph G = (V, E), each edge (u, 𝜐) has two adjacency list entries: [𝜐] in the adjacency list of u, and [u] in the adjacency list of 𝜐. These are called twins of each other. A twin pointer is a pointer from an adjacency list entry to its twin. If |E| = m and |V| = n, and the memory size is not a constraint, what 1 9 9 1 1 1 9 1 1 9 9 1 f g t c d e s a b',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: '1. Find: log n; 2. Insert: N 3. Delete: log n 4. Decrement key: log n Data Structur e FIND INSERT DELETE DEC – KEY Total time Unsorted Array N. log n N log n log n N. log n Min- Heap N. log n N.log N (log n)3/2 (log n)3/2 N.log N Sorted Array (log n)3/2 N2 N. log n N. log n  N2 Sorted D.L.L N. log n N2 log n N. log n  N2'
   },
   {
     id: 'q-ds-2008-10',
@@ -10185,8 +10280,8 @@ export const questions = [
       'Θ(m + n)',
       'Θ(mn) Tree'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'B(n)  A(n)  W(n)  A(n) = O(W(n))'
   },
   {
     id: 'q-ds-2020-11',
@@ -10203,8 +10298,8 @@ export const questions = [
       '(n3)',
       '(n2)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'n n log n 2 2 2 2 n n n.log 2 n log n (log n) n n log n (log n) Therefore: h f g'
   },
   {
     id: 'q-ds-2020-12',
@@ -10221,8 +10316,8 @@ export const questions = [
       '(log n + k)',
       '(k log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'For the given scenario we can observe that: • n1/3  < n7/4 and n1/3 <   nlog9n • 1.0000001n  <  en  and 1.0000001n  <  n7/4 • nlog9n <   1.0000001n •  n7/4 is asymptotically larger than nlog 9n. (If we take n common from both the functions then n3/4 is larger than log9n). • Thus, n1/3 < nlog9n < n7/4 < 1.0000001n < en.'
   },
   {
     id: 'q-ds-2015-13',
@@ -10239,8 +10334,8 @@ export const questions = [
       '(n) for insertion and (logn) for deletion',
       '(logn) for insertion and (n) for deletion'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Total comparision’s: (1 + 2 + 3 + … + n – 1) : n(n 1) 2 − : O(n2) : (n2) :  (n2)'
   },
   {
     id: 'q-ds-2015-14',
@@ -10252,8 +10347,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Let G be a connected undirected graph of 100 vertices and 300 edges. The weight of a minimum spanning tree of G is 500. When the weight of each edge of G is increased by five, the weight of a minimum spanning tree becomes______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'i = 1, n, +1 j =1, n, +i i = 1, i = 2, i = 3 nnj 1, n, j = , j23== n n nn 2 3 n+ + + + n 1 1n = x x T(n) = n.logn = (n.logn)'
   },
   {
     id: 'q-ds-2015-15',
@@ -10270,8 +10365,8 @@ export const questions = [
       '(n log n)',
       '(n2)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '30 sec → 64 elements 6 minutes → n = ? Time for merge sort = n∙logn = 64∙log64 64.6 units 30 sec – 64.6 units ? – 1 unit 301 unit s 64 6=  301 unit s 64 6=  (n) ? – 360 s 12360 64 6 unit ___\'n \'elements30  212 6 64____ n log n   4608 = n∙logn n 512 512 9 4608= =  = ∴ n = 512'
   },
   {
     id: 'q-ds-2014-16',
@@ -10283,8 +10378,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Suppose we have a balanced binary search tree T holding n-numbers. We are given two numbers L and H and wish to sum up all the numbers in T that lie between L and H. Suppose there are m such numbers in T. If the tightest upper bound on the time to compute the sum is O(na logb n + mc logd n), the value of a + 10b + 100c + 1000d is ____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '[log logn + log logn + … +]n return(q) = n.log logn for (i = 1; i < n; ++i): n for (j = n; j > 1; j = j /2): log n for (k =1; k < p; k = k*2): log p(log log n)'
   },
   {
     id: 'q-ds-2013-17',
@@ -10301,8 +10396,8 @@ export const questions = [
       'O(n)',
       'O(n log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: '• for (i = n/2; i < = n; i++) : n 2 • for(j = 2; j < = n; j = j*2) k = k + n/2;                        : n 2 log n Overall Complexity: nn .log n22  .'
   },
   {
     id: 'q-ds-2012-18',
@@ -10319,8 +10414,8 @@ export const questions = [
       '(n)',
       '(log n)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '10.n.log10n < 0.0001n2 k10.10 42.k<10 .10− k k 5 10k 10    k = 6  6 5 106 10 10   k = 6'
   },
   {
     id: 'q-algo-2017-19',
@@ -10337,8 +10432,8 @@ export const questions = [
       'P – (iii), Q – (iv), R – (ii), S – (i)',
       'P – (iv), Q – (iii), R – (ii), S – (i)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'T(n) = T(n/3) + cn a = 1; b = 3; f(n) = cn Master method: I. cn is O(n0 – ), dissatified II. cn is (n0·logkn), dissatified III. cn is it (n0 + ) fn  = 1 a. f(n/b)  .f(n) satisfied 1 ⋅ cn 3   ≤  .cn; 𝛿  = 1 3 < 1  T(n) is (f(n)) (n)'
   },
   {
     id: 'q-algo-2008-20',
@@ -10355,8 +10450,8 @@ export const questions = [
       'Θ(n log n)',
       'Θ(n2) ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'T(n) = T(n/2) + T(2n/5) + 7n, n > 1 T(n/2) = T(n/4) + T(2n/10) + 7n/2 T(2n/5) = T(2n/10) + T(4n/25) + 7.2n/5 Recursive Tree Total time = an + b = O(n)  = (n) = (n).'
   },
   {
     id: 'q-cd-2023-1',
@@ -10373,8 +10468,8 @@ export const questions = [
       'S1, S2, and S3 are all TRUE',
       'Only S1 and S3 are TRUE'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Phases of compiler: LA, SyA, SeA ICG, CO,        CG, CO M/C independent       M/C Dependent (Frontend)                      (Backend) S1:  The front -end includes phases that are independent of the target hardware.True S2:   The back-end includes phases that are specific to the target hardware. True S3:   The back-end includes phases that are specific to the programming language used in the source code. False Therefore, option b is the correct asnwer.'
   },
   {
     id: 'q-cd-2021-2',
@@ -10391,8 +10486,8 @@ export const questions = [
       'Semantic analyzer',
       'Machine dependent optimizer'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'int main() { Integer x; return (); } Total 13 tokens There is no lexical error. In syntax analysis, the Integer x; is valid, and this will be checked in semantic analysis that whether Integer  is a keyword or not. So, there is no syntax error. In semantic analysis, Here, x has no type definition.  typedef  int Integer; is missing before Integer x ; in given ANSI C program. Therfore, the given program is semantically incorrect. Hence, option C is correct.'
   },
   {
     id: 'q-cd-2017-3',
@@ -10409,8 +10504,8 @@ export const questions = [
       'P → (iii), Q → (iv), R → (i), S → (ii)',
       'P → (i), Q → (iv), R → (ii), S → (iii)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'List I representing the input to the phase and List-II has corresponding phases. Syntax/Parse tree is an input to semantic analyser. Character stream is source code and it is input to lexical analyser. Intermediate representation is the intermediate code and it is input to code generator. Token stream is output of lexical analyser and input to syntax analyser. Hence, option c is correct.'
   },
   {
     id: 'q-cd-2016-4',
@@ -10427,8 +10522,8 @@ export const questions = [
       'P → (ii), Q → (iii), R → (i), S → (iv)',
       'P → (iv), Q → (i), R → (ii), S → (iii) ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Lexical analyser can be designed/implemented with the help of regular expressions, Top down parser follows leftmost derivation. Semantic analysis does the type checking. Runtime enviornment maintains the activation records. Hence, option b is correct. ❑❑❑'
   },
   {
     id: 'q-cd-2021-1',
@@ -10445,8 +10540,8 @@ export const questions = [
       'the lexical analysis of the program',
       'dataflow analysis'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Phases of compiler: LA, SyA, SeA ICG, CO,        CG, CO M/C independent       M/C Dependent (Frontend)                      (Backend) S1:  The front -end includes phases that are independent of the target hardware.True S2:   The back-end includes phases that are specific to the target hardware. True S3:   The back-end includes phases that are specific to the programming language used in the source code. False Therefore, option b is the correct asnwer.'
   },
   {
     id: 'q-cd-2011-3',
@@ -10463,8 +10558,8 @@ export const questions = [
       'Non-deterministic pushdown automata',
       'Turing Machine Finding the Tokens'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'List I representing the input to the phase and List-II has corresponding phases. Syntax/Parse tree is an input to semantic analyser. Character stream is source code and it is input to lexical analyser. Intermediate representation is the intermediate code and it is input to code generator. Token stream is output of lexical analyser and input to syntax analyser. Hence, option c is correct.'
   },
   {
     id: 'q-cd-2018-4',
@@ -10481,8 +10576,8 @@ export const questions = [
       'T2 T1 T3',
       'T3 T3 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Lexical analyser can be designed/implemented with the help of regular expressions, Top down parser follows leftmost derivation. Semantic analysis does the type checking. Runtime enviornment maintains the activation records. Hence, option b is correct. ❑❑❑'
   },
   {
     id: 'q-toc-2017-1',
@@ -10517,7 +10612,7 @@ export const questions = [
       '(1) S → R f',
       '(1) blank (2) blank (2) S → R f (3) blank (3) blank (4) T → ε (4) blank'
     ],
-    correctAnswer: null,
+    correctAnswer: 0,
     explanation: ''
   },
   {
@@ -10530,7 +10625,7 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the grammar given below: S → Aa A → BD B → b | ε D → d | ε Let a, b, d, and $ be index as follows: A b d $ 3 2 1 0 Compute the FOLLOW set of the non-terminal B and write the index values for the symbols in the FOLLOW set in the descending order. (For example, if the FOLLOW set is {a, b, d, $}, then the answer should be 3210)',
     options: [],
-    correctAnswer: null,
+    correctAnswer: 0,
     explanation: ''
   },
   {
@@ -10564,10 +10659,26 @@ export const questions = [
       'FIRST',
       '={a, b, ε}=FIRST',
       'FOLLOW',
-      '={a, b} FOLLOW'
+      '={a, b} FOLLOW',
+      '={a, b, $}',
+      'FIRST',
+      '={a, b, $} FIRST',
+      '={a, b, ε} FOLLOW',
+      '={a,b} FOLLOW',
+      '={$}',
+      'FIRST',
+      '={a, b, ε}=FIRST',
+      ', FOLLOW',
+      '={a,b} FOLLOW',
+      '=$',
+      'FIRST',
+      '={a,b}=FIRST',
+      'FOLLOW',
+      '={a, b} FOLLOW',
+      '={a, b}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'First (S) = {a, b, e} Follow(S) = {$, a, b} First(A) = {a, b, ε} First (B) = {a, b, ε} Follow (A) = {a, b} Follow (B) = {$, a, b} So, option A is the correct answer.'
   },
   {
     id: 'q-cd-2012-6',
@@ -10615,8 +10726,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the augmented grammar with {+, ∗ , (,), id} as the set of terminals. S′→ S S → S + R | R R → 𝑅 ∗ P | P P → (S) | id If I0 is the set of two 𝐿𝑅(0) items {[S→S.], [S →S. + R]}, then 𝑔𝑜𝑡𝑜(𝑐𝑙𝑜𝑠𝑢𝑟𝑒(𝐼0 ), + ) contains exactly ______ items.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 5,
+    explanation: 'So, there are total 5 items in the goto(closure(I0), +).'
   },
   {
     id: 'q-cd-2021-9',
@@ -10628,8 +10739,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following statements S1: Every SLR (1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1). S2: For any context-free grammar, there is a parser that takes at most O(n3) time to parse a string of length n.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'S1: Every SLR (1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1). TRUE. For example, LALR(1), CLR(1) are certain unambiguous grammars which are not SLR(1). S2:  For any context-free grammar, there is a parser that takes at most O(n3) time to parse a string of length n. TRUE. For example, CYK algorithm takes O(n3) time to parse a string of length n. So, option c is the correct answer.'
   },
   {
     id: 'q-cd-2021-10',
@@ -10641,8 +10752,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following augmented grammar with {#, @,<, >,a, b, c} as the set of terminals S′→S S → S # cS S → SS S → S@ S → <S> S → a S → b S → c Let I0 = CLOSURE({S′→"." S}). The number of items in the set GOTO(GOTO(I0,<),<) is _______',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'There are 8 items in the set GOTO(GOTO(I0,<),<).'
   },
   {
     id: 'q-cd-2021-11',
@@ -10654,8 +10765,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following grammar: S → aSB | d B → b The number of reduction steps taken by a bottom-up parser while accepting the string aaadbbb is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 7,
+    explanation: 'Bottom-up parser follows reverse of RMD  (Right most derivation). And, Number of reduction steps in reverse of RMD = Number of substitutions in RMD RMD for given grammar. So, total 7 number of reduction steps taken by bottom-up parser while verifying the string aaadbbb.'
   },
   {
     id: 'q-cd-2019-12',
@@ -10672,8 +10783,8 @@ export const questions = [
       'Rightmost',
       'Rightmost in reverse'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'LR parser also known as bottom-up parser and bottom-up parser uses rightmost derivation in reverse. Hence, option d is the correct answer.'
   },
   {
     id: 'q-cd-2017-13',
@@ -10690,8 +10801,8 @@ export const questions = [
       'III only',
       'II and III only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'SLR is less powerful than LALR and LALR is less powerful than CLR. SLR < LALR < CLR.'
   },
   {
     id: 'q-cd-2015-14',
@@ -10708,8 +10819,8 @@ export const questions = [
       'Both S1 and S2',
       'Neither S1 and S2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If we want to drive the string “c”, it can be done in two ways S → F→c or S → H → c So, we can say the given grammar is ambiguous. With the ambiguous grammar, parser cannot parse the string. So, in case of LL(1) or LR(1) parser is going to have a problem, that’s why both the statements are incorrect. Hence, option D is the right answer.'
   },
   {
     id: 'q-cd-2015-15',
@@ -10726,8 +10837,8 @@ export const questions = [
       'SLR, canonical LR',
       'LALR, canonical LR'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Easy to implement, Most powerful. SLR is easy to implement and CLR is most powerful. So SLR, CLR, is the correct answer.'
   },
   {
     id: 'q-cd-2015-16',
@@ -10744,8 +10855,8 @@ export const questions = [
       'The stack contains only a set of viable prefixes',
       'The stack never contains viable prefixes'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(a) INCORRECT. Viable prefixes can be present anywhere in the stack. (b) INCORRECT. Viable prefixes can be present anywhere in the stack. (c) CORRECT. The stack contains only a set of viable prefixes. (d)  INCORRECT. The stack contains viable prefixes.'
   },
   {
     id: 'q-cd-2014-17',
@@ -10762,8 +10873,8 @@ export const questions = [
       'a reduce-reduce conflict but not a shift-reduce conflict.',
       'neither a shift-reduce nor a reduce-reduce conflict.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'This state does not have any conflict; therefore, option D is the correct answer.'
   },
   {
     id: 'q-cd-2015-18',
@@ -10780,8 +10891,8 @@ export const questions = [
       '1 and 4 only',
       '1, 2, 3 and 4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'There is no conflicts in the given sets and there are no reduced items. So, 1. “Cannot be merged since look aheads are different” is  FALSE. Because they can be merged when lookaheads are different. 2. “Can be merged but will result in S -R conflict” is FALSE. Because no conflict present. 3. “Can be merged but will result in R-R conflict” is FALSE. Because no conflict when merged. X → C.X, C/d/$ X → .CX, C/d/$ X → .d, C/d/$ 4. “Cannot be merged since goto on c will lead to two different sets ” FALSE. While merging we do not look at goto. So, option D is the correct answer.'
   },
   {
     id: 'q-cd-2013-19',
@@ -10798,7 +10909,7 @@ export const questions = [
       '2n – 1',
       '2n'
     ],
-    correctAnswer: null,
+    correctAnswer: 1,
     explanation: ''
   },
   {
@@ -10816,8 +10927,8 @@ export const questions = [
       'Both LL(1) and LR(1)',
       'Neither LL(1) nor LR(1)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given, S → aSa | bS | c First check for LL(1) because Every LL(1) is LR(1) The given grammar is LL(1). So, option C is the correct answer.'
   },
   {
     id: 'q-cd-2008-21',
@@ -10834,8 +10945,8 @@ export const questions = [
       'The LR(0) parser for G has S-R conflicts',
       'The LALR(1) parser for G has reduce-reduce conflicts.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'LALR parser uses the LR(1) items of CLR parser . LALR will contain SR conflicts if and only if LR parser has SR conflicts. LALR can have RR conflicts even though LR parser do not have RR conflicts. So, option B is correct answer'
   },
   {
     id: 'q-cd-2008-22',
@@ -10865,8 +10976,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the augmented grammar given below: S → S S → L | id L → L, S | S Let I0 = CLOSURE ({[S’ → S]}). The number of items in the set GOTO (I0,  ) is: __________. X → c.X, $ X → .cX, $ X → .d, $ X → c.X, c/d X → .cX, c/d X → .d, c/d',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 5,
+    explanation: 'There are total 5 items in in the set GOTO (I 0 ,  ).'
   },
   {
     id: 'q-cd-2014-24',
@@ -10883,8 +10994,8 @@ export const questions = [
       'Both + and * are right associative',
       'Both + and * are left associative'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Operator < Operator Operator > Operator Right associate Left associate + is right associative * is left associative So, option B is correct.'
   },
   {
     id: 'q-cd-2016-25',
@@ -10896,8 +11007,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The attributes of three arithmetic operators in some programming language are given below. Operator Precedence Associativity Arity + High Left Binary – Medium Right Binary * Low Left Binary The value of the expression 2 – 5 + 1 – 7 * 3 in this language is ________. ❑❑❑',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 9,
+    explanation: 'Given, + has highest prcedence and left associative. – has medium precedence and right associative. * has lowest precedence and left associative. Expression = 2 – 5 + 1 – 7 * 3 = 2- [5+1] – 7 * 3 = 2 – 6 – 7 * 3 = [2- [6 - 7]]*3 = [2-(-1)] * 3 = 3 * 3 = 9 So, 9 is the correct answer. ❑❑❑'
   },
   {
     id: 'q-cd-2016-2',
@@ -10914,8 +11025,8 @@ export const questions = [
       'Only G2',
       'Neither G1 nor G2 Evaluation of Syntax Directed Translation'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'int main() { Integer x; return (); } Total 13 tokens There is no lexical error. In syntax analysis, the Integer x; is valid, and this will be checked in semantic analysis that whether Integer  is a keyword or not. So, there is no syntax error. In semantic analysis, Here, x has no type definition.  typedef  int Integer; is missing before Integer x ; in given ANSI C program. Therfore, the given program is semantically incorrect. Hence, option C is correct.'
   },
   {
     id: 'q-cd-2023-3',
@@ -10927,8 +11038,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the syntax directed translation given by the following grammar and semantic rules. Here N, I, F and B are non-terminals. N is the starting non- terminal, and #, 0 and 1 are lexical tokens corresponding to input letters “#”, “0” and “1”, respectively. X.val denotes the synthesized attribute (a numeric value) associated with a non-terminal X. I1 and F1 denote occurrences of I and F on the right hand side of a production, respectively. For the tokens 0 and 1, 0.val = 0 and 1.val = 1. N → I#F N. val = I.val + F.val I → I1 B I. val = (2 I1.val) + B. val I → B I. val = B.val F → B F1 F. val = ½ (B. val + F1. val) F → B F. val = ½ B. val B → 0 B. val = 0. val B → 1 B. val = 1. val',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'List I representing the input to the phase and List-II has corresponding phases. Syntax/Parse tree is an input to semantic analyser. Character stream is source code and it is input to lexical analyser. Intermediate representation is the intermediate code and it is input to code generator. Token stream is output of lexical analyser and input to syntax analyser. Hence, option c is correct.'
   },
   {
     id: 'q-cn-2022-4',
@@ -10994,8 +11105,8 @@ export const questions = [
       '231',
       'Syntex error'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 5,
+    explanation: 'So, there are total 5 items in the goto(closure(I0), +).'
   },
   {
     id: 'q-cd-2016-9',
@@ -11007,8 +11118,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The attribute of three arithmetic operators in some programming language are given below. The value of the expression 2 – 5 + 1 – 7 * 3 in this language is __________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'S1: Every SLR (1) grammar is unambiguous but there are certain unambiguous grammars that are not SLR(1). TRUE. For example, LALR(1), CLR(1) are certain unambiguous grammars which are not SLR(1). S2:  For any context-free grammar, there is a parser that takes at most O(n3) time to parse a string of length n. TRUE. For example, CYK algorithm takes O(n3) time to parse a string of length n. So, option c is the correct answer.'
   },
   {
     id: 'q-cd-2014-10',
@@ -11025,8 +11136,8 @@ export const questions = [
       'increase the chances of reusing the machine- independent code optimizer in other compilers',
       'improve the register allocation.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'There are 8 items in the set GOTO(GOTO(I0,<),<).'
   },
   {
     id: 'q-cd-2014-11',
@@ -11038,8 +11149,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the expression tree shown. Each leaf represents a numerical value, which can either be 0 or 1. Over all possible choices of the values at the leaves, the maximum possible value of the expression represented by the tree is ________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 7,
+    explanation: 'Bottom-up parser follows reverse of RMD  (Right most derivation). And, Number of reduction steps in reverse of RMD = Number of substitutions in RMD RMD for given grammar. So, total 7 number of reduction steps taken by bottom-up parser while verifying the string aaadbbb.'
   },
   {
     id: 'q-cd-2021-12',
@@ -11056,8 +11167,8 @@ export const questions = [
       '',
       '❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'LR parser also known as bottom-up parser and bottom-up parser uses rightmost derivation in reverse. Hence, option d is the correct answer.'
   },
   {
     id: 'q-cd-2017-2',
@@ -11069,8 +11180,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the expression (a-1)*(((b+c)/3)+d). Let X be the minimum number of registers required by an optimal code generation (without any register spill) algorithm for a load/store architecture, in which (i) only load and store instructions can have memory operands and (ii) arithmetic instructions can have only register or immediate operands. The value of X is______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'int main() { Integer x; return (); } Total 13 tokens There is no lexical error. In syntax analysis, the Integer x; is valid, and this will be checked in semantic analysis that whether Integer  is a keyword or not. So, there is no syntax error. In semantic analysis, Here, x has no type definition.  typedef  int Integer; is missing before Integer x ; in given ANSI C program. Therfore, the given program is semantically incorrect. Hence, option C is correct.'
   },
   {
     id: 'q-cd-2014-5',
@@ -11082,8 +11193,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'For a C program accessing 𝑋[𝑖][𝑗][𝑘], the following intermediate code is generated by a compiler. Assume that the size of an integer is 32 bits and the size of a character is 8 bits.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'First (S) = {a, b, e} Follow(S) = {$, a, b} First(A) = {a, b, ε} First (B) = {a, b, ε} Follow (A) = {a, b} Follow (B) = {$, a, b} So, option A is the correct answer.'
   },
   {
     id: 'q-cn-2021-6',
@@ -11113,8 +11224,8 @@ export const questions = [
       'OUT (S1 ) = IN(S2 )∪OUT(S2 )',
       'OUT (S1 ) = USE(S1 )∪IN(S2 )'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Phases of compiler: LA, SyA, SeA ICG, CO,        CG, CO M/C independent       M/C Dependent (Frontend)                      (Backend) S1:  The front -end includes phases that are independent of the target hardware.True S2:   The back-end includes phases that are specific to the target hardware. True S3:   The back-end includes phases that are specific to the programming language used in the source code. False Therefore, option b is the correct asnwer.'
   },
   {
     id: 'q-cd-2009-3',
@@ -11131,8 +11242,8 @@ export const questions = [
       'III and IV',
       'I, III and IV'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'List I representing the input to the phase and List-II has corresponding phases. Syntax/Parse tree is an input to semantic analyser. Character stream is source code and it is input to lexical analyser. Intermediate representation is the intermediate code and it is input to code generator. Token stream is output of lexical analyser and input to syntax analyser. Hence, option c is correct.'
   },
   {
     id: 'q-cd-2015-4',
@@ -11144,8 +11255,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'A variable x is said to be live at a statement Si in a program if the following 1. three conditions hold simultaneously: 2. There exists a statement 𝑆𝑗 that uses 𝑥 3. There is a path from Si to Sj in the flow graph corresponding to the program The path has no intervening assignment to 𝑥 including at 𝑆𝑖 and 𝑆𝑗',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Lexical analyser can be designed/implemented with the help of regular expressions, Top down parser follows leftmost derivation. Semantic analysis does the type checking. Runtime enviornment maintains the activation records. Hence, option b is correct. ❑❑❑'
   },
   {
     id: 'q-dld-2014-5',
@@ -11160,7 +11271,11 @@ export const questions = [
       '6 and 6',
       '8 and 10',
       '9 and 12',
-      '4 and 4 6. [MCQ] GATE-2014 : 1M] Which one of the following is FALSE?'
+      '4 and 4 6. [MCQ] GATE-2014 : 1M] Which one of the following is FALSE?',
+      'A basic block is a sequence of instructions where control enters the sequence at the beginning and exits at the end.',
+      'Available expression analysis can be used for common subexpression elimination.',
+      'Live variable analysis can be used for dead code elimination.',
+      'x = 4 × 5 ⇒ x = 20 is an example of common subexpression elimination.'
     ],
     correctAnswer: null,
     explanation: ''
@@ -11260,8 +11375,8 @@ export const questions = [
       'B1: { a, i, j }, B2: {a, i , j}, B3: {a, i}, B4: {a}',
       'B1: { a, i , j }, B2: {a, j}, B3: {a, j}, B4: {a, i, j}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'LR parser also known as bottom-up parser and bottom-up parser uses rightmost derivation in reverse. Hence, option d is the correct answer.'
   },
   {
     id: 'q-cd-2021-13',
@@ -11273,8 +11388,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following C code segment: a = b + c; e = a + 1; d = b + c; f = d + 1; g = e + f; In a compiler, this code segment is represented internally as a directed acyclic graph (DAG). The number of nodes in the DAG is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'SLR is less powerful than LALR and LALR is less powerful than CLR. SLR < LALR < CLR.'
   },
   {
     id: 'q-cd-2017-14',
@@ -11286,8 +11401,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following grammar: Stmt → if expr then expr else expr; stmt |ε expr → term relop term | term term → id | number id → a | b | c number→[0-9] where relop is a relation operator (e.g., <,>,…), 0 refers to the empty statement, and if, then, else are terminals. Consider a program P following the above grammar containing ten if terminals. The number of control flow paths in P is ______. if 𝑒1 then 𝑒2 else 𝑒3 has 2 control flow paths, e1→e2 and e1→e3.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If we want to drive the string “c”, it can be done in two ways S → F→c or S → H → c So, we can say the given grammar is ambiguous. With the ambiguous grammar, parser cannot parse the string. So, in case of LL(1) or LR(1) parser is going to have a problem, that’s why both the statements are incorrect. Hence, option D is the right answer.'
   },
   {
     id: 'q-cd-2009-17',
@@ -11304,8 +11419,8 @@ export const questions = [
       'P-3, Q-4, R-1, S-2',
       'P-2, Q-1, R-4, S-3 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'This state does not have any conflict; therefore, option D is the correct answer.'
   },
   {
     id: 'q-cd-2020-1',
@@ -11322,8 +11437,8 @@ export const questions = [
       'II only',
       'None of I, II and III'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Phases of compiler: LA, SyA, SeA ICG, CO,        CG, CO M/C independent       M/C Dependent (Frontend)                      (Backend) S1:  The front -end includes phases that are independent of the target hardware.True S2:   The back-end includes phases that are specific to the target hardware. True S3:   The back-end includes phases that are specific to the programming language used in the source code. False Therefore, option b is the correct asnwer.'
   },
   {
     id: 'q-cd-2018-2',
@@ -11358,8 +11473,8 @@ export const questions = [
       '2 4 1 3',
       '2 3 4 1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'List I representing the input to the phase and List-II has corresponding phases. Syntax/Parse tree is an input to semantic analyser. Character stream is source code and it is input to lexical analyser. Intermediate representation is the intermediate code and it is input to code generator. Token stream is output of lexical analyser and input to syntax analyser. Hence, option c is correct.'
   },
   {
     id: 'q-cd-2008-4',
@@ -11376,8 +11491,8 @@ export const questions = [
       'I, II and V only',
       'I, III and V only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Lexical analyser can be designed/implemented with the help of regular expressions, Top down parser follows leftmost derivation. Semantic analysis does the type checking. Runtime enviornment maintains the activation records. Hence, option b is correct. ❑❑❑'
   },
   {
     id: 'q-ds-2014-6',
@@ -11448,8 +11563,8 @@ export const questions = [
       '',
       ''
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'DFA for ending with 011: Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2021-3',
@@ -11461,8 +11576,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following deterministic finite automaton (DFA) The number of strings of length 8 accepted by the above automaton is ___.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 256,
+    explanation: 'Every symbol is having two choices 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 22222222 Total strings with length 8 = 28 Total strings with length 8 = 256'
   },
   {
     id: 'q-toc-2013-4',
@@ -11477,10 +11592,12 @@ export const questions = [
       'is context-free. 2. L',
       '= L((11*0 + 0) (0 + 1)*0*1*) 3. For the language accepted by A, A is the minimal DFA 4. A accepts all strings over {0, 1} of length at least 2.',
       '1 and 3 only',
-      '2 and 4 only'
+      '2 and 4 only',
+      '2 and 3 only',
+      '3 and 4 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '1. L(A) = Regular Complement of L(A) = Regular Regular= Every Regular language is CFL 2. L(A) = 11*0(0 + 1)* + 0(0 + 1)* = (11*0 + 0) (0 + 1)* = (1+ 0 + 0) ( 0 + 1)* = (1+ + ) 0 (0 + 1)* = 1*0 (0 + 1)*'
   },
   {
     id: 'q-toc-2012-5',
@@ -11497,8 +11614,8 @@ export const questions = [
       '00 01 10 11 q 00 1 0 01 1 10 0 11 0',
       '00 01 10 11 q 00 1 0 01 1 10 0 11 0'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'From state 00 to read input 0  q(dead state) From state 00 to read input 1  01 From state 01 to read input 1  11 Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2011-6',
@@ -11515,8 +11632,8 @@ export const questions = [
       '',
       'b p q r b a,b a a s t a,b a,b b b p q r a,b s a,b a a a,b a p q r a,b s b a,b a,b p q a,b r a,b b b p q s a,b b a a'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Partition algorithm: (i) {p, q, r}  {s, t} Non-final  Final (ii) {p, q}, {r}, {s, t} (iii) {p}, {q}, {r}, {s, t} Number of states = 4. Here s and t are equivalent.'
   },
   {
     id: 'q-toc-2009-7',
@@ -11533,8 +11650,8 @@ export const questions = [
       'End with 00.',
       'Contain the substring 00. Non-Deterministic Finite Automata'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Minimal accepted string = 00 It will accept all the strings end with 00.'
   },
   {
     id: 'q-toc-2017-8',
@@ -11551,8 +11668,8 @@ export const questions = [
       '{q0, q1, q2}',
       '{q0, q2, q3}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '-NFA: Transition with (q2, aba): b bp q r a,b s a,b a a'
   },
   {
     id: 'q-toc-2014-9',
@@ -11569,8 +11686,8 @@ export const questions = [
       '{q0, q1, q2, q3}',
       '{q3}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Reachable states for the input string 0011: ( )0 0 1 2ˆ q ,0011 {q , q , q }= Hence, option (a) is correct.'
   },
   {
     id: 'q-toc-2012-10',
@@ -11587,8 +11704,8 @@ export const questions = [
       'a*',
       '{a, ε}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: ' L = a+ *LL=  − = a* – a+ = {} 11. (Marks to All) Z × Y: → Z1Y1 Z2Y1 Z2Y2 Z1Y2 Z2Y2 Z2Y1 Z2Y1 Z1Y1 Z1Y2 Z2Y2 Z1Y2 Z1Y1 a b → P S R Q R S S P Q R Q P We don’t have correct option'
   },
   {
     id: 'q-toc-2008-11',
@@ -11605,8 +11722,8 @@ export const questions = [
       '',
       ''
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'DFA: k22  = 2  = 4 where k is the position of the symbol.'
   },
   {
     id: 'q-toc-2008-12',
@@ -11618,8 +11735,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following two finite automata. M1 accepts L1 and M2 accepts L2.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(0 + 1)* (0 + 1) (0 + 1)* = (0 + 1)+ Here number of states are two for L = (0 + 1)+'
   },
   {
     id: 'q-toc-2023-14',
@@ -11631,8 +11748,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the language L over the alphabet {0, 1}, given below: L = {w ∈ {0, 1}* | w does not contain three or more consecutive 1’s}. The minimum number of states in a Deterministic Finite-state Automaton (DFA) for L is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'DFA for L: DFA for L Number of states will be same in both L and L . Number of states = 4'
   },
   {
     id: 'q-toc-2020-15',
@@ -11644,8 +11761,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the following language: L = {x {a, b} *| number of a\'s in x is divisible by 2 but not divisible by 3} The minimum number of states in a DFA that accepts L is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 6,
+    explanation: 'Divisible by 2 strings = , aa, aaaa, aaaaaa, ….. Divisible by 3 strings = , aaa, aaaaaa, aaaaaaaaa, ….. Divisible by 2 but not 3 strings = a2, a4, a8, a10, a12, ….. DFA design for number of a’s divisible by 2 but not 3: Number of states = 6'
   },
   {
     id: 'q-toc-2019-16',
@@ -11657,8 +11774,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Let  be the set of all bijections from {1, …, 5} to {1, …, 5}, where id denotes the identity function, i.e. id(j) = j, j. Let  denote composition on functions. For a string x = x1x2 … xn  n, n  0, let (x) = x1 x2 …  xn. Consider the language L = {x  * | (x) = id}. The minimum number of states in any DFA accepting L is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 120,
+    explanation: 'If  is set of all bijections from {1, 2} to {1, 2} Number of bijective functions = 2! = 2 Here, Language L = {, f1, f1f2, f2f2 ….} Number of states =2 If set has 2 elements, then 2! bijective functions and hence 2! States. Each bijective function requires one state to represent as result of some composition. If set has  5 elements, then number of bijective functions = 5! and number of states = 5! Number of states = 5 × 4 × 3 × 2 × 1 = 120'
   },
   {
     id: 'q-toc-2018-17',
@@ -11675,8 +11792,8 @@ export const questions = [
       'k ≤ n2',
       'k ≤ 2n'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If NFA (N) having ‘n’ states and DFA having ‘k’ states. Then, relation between k and n is using subset construction algorithm is: k2 n'
   },
   {
     id: 'q-toc-2017-18',
@@ -11688,8 +11805,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The minimum possible number of states of a deterministic finite automaton that accepts the regular language L = {w1 a w2| w1, w2 ∈{a, b}*, |w1|=2,|w2| ≥ 3} is___________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'L = {w1aw2 | w1, w2  {a, b}*, |w1| = 2, |w2| > 3} = (a + b)2 a (a + b)3 (a + b)* DFA for L:'
   },
   {
     id: 'q-toc-2015-19',
@@ -11701,8 +11818,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the DFAs M and N given above. The number of states in a minimal DFA that accepts the language L(M)  L(N) is _______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'M accepts all strings ending in a. L(M) = (a + b)* a N accepts all strings ending in b. L (N) = (a + b)* b L(M)  L(N) =  To represent empty language, only one state present in minimal DFA. DFA: To design DFA for  minimum 1 state is needed.'
   },
   {
     id: 'q-toc-2011-20',
@@ -11719,8 +11836,8 @@ export const questions = [
       '2n + 1',
       '2k + 1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'L = {ank | k > 0, and n is a positive integer constant}. • If n = 1  L = {ak | k > 0} L = a+ FA: 2 states are needed. • If n = 2  L = {a2k | k > 0} L = (aa)+ 3 states are needed. • If n = 3  L = {a3k | k > 0} L = (aaa)+ 4 states are needed. For L = {ank | k > 0, n is constant}, n + 1 states are needed.'
   },
   {
     id: 'q-toc-2010-21',
@@ -11737,8 +11854,8 @@ export const questions = [
       'n + 1',
       '2n – 1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'w = abb(n = 3)  L = {, a, b ab, bb, abb} DFA for abb: Accept w = abb DFA for L: For 3 length 4 states are needed. So, for n length n + 1 states are needed.'
   },
   {
     id: 'q-toc-2008-22',
@@ -11755,8 +11872,8 @@ export const questions = [
       'M has one accept state',
       'm = 2n Mealy Machine'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'NFA(N)  n states Min DFA(M)  m States Relation between m & n: DFA having  2n states nm 2'
   },
   {
     id: 'q-toc-2021-23',
@@ -11773,8 +11890,8 @@ export const questions = [
       't = b y = sb',
       't = s + b y = sb'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Input = 001011110 Output = 000001110 Mealy Machine: Transition Table: s b 0 1 0 0, 0 t, y 1, 0 t, y 1 0, 0 t, y 1, 1 t, y t = b y = sb Hence, option (b) is correct.'
   },
   {
     id: 'q-toc-2009-24',
@@ -11791,8 +11908,8 @@ export const questions = [
       '5',
       '6 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'A = 0, B = 1 and output = 1 Input = 101 From state 00, by reading 3 length minimum input it takes to 01. ❑❑❑'
   },
   {
     id: 'q-ds-2021-1',
@@ -12046,8 +12163,8 @@ export const questions = [
       'II and III only',
       'I, II and III'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 120,
+    explanation: 'If  is set of all bijections from {1, 2} to {1, 2} Number of bijective functions = 2! = 2 Here, Language L = {, f1, f1f2, f2f2 ….} Number of states =2 If set has 2 elements, then 2! bijective functions and hence 2! States. Each bijective function requires one state to represent as result of some composition. If set has  5 elements, then number of bijective functions = 5! and number of states = 5! Number of states = 5 × 4 × 3 × 2 × 1 = 120'
   },
   {
     id: 'q-toc-2008-17',
@@ -12064,8 +12181,8 @@ export const questions = [
       '1 2 3 4',
       '3 2 1 4 ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If NFA (N) having ‘n’ states and DFA having ‘k’ states. Then, relation between k and n is using subset construction algorithm is: k2 n'
   },
   {
     id: 'q-toc-2023-1',
@@ -12082,8 +12199,8 @@ export const questions = [
       'The language generated by G is a*b*(a + b)',
       'The language generated by G is not a regualar language.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'DFA for ending with 011: Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2019-2',
@@ -12100,8 +12217,8 @@ export const questions = [
       '9',
       '24'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'L = *– L = {0, 1}* – L If L is a DFA with K states than in L  DFA also having K states because number of states in L and L are same.'
   },
   {
     id: 'q-toc-2018-3',
@@ -12113,8 +12230,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Given a language L, define Li as follows: L0 = {} L1 = Li – 1. L for all i > 0 The order of a language L is defined as the smallest k such that Lk = Lk + 1. Consider the language L1 (over alphabet 0) accepted by the following automaton. The order of L1 is _____________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 256,
+    explanation: 'Every symbol is having two choices 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 22222222 Total strings with length 8 = 28 Total strings with length 8 = 256'
   },
   {
     id: 'q-toc-2016-4',
@@ -12131,8 +12248,8 @@ export const questions = [
       'P is false and Q is true.',
       'Both P and Q are false.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '1. L(A) = Regular Complement of L(A) = Regular Regular= Every Regular language is CFL 2. L(A) = 11*0(0 + 1)* + 0(0 + 1)* = (11*0 + 0) (0 + 1)* = (1+ 0 + 0) ( 0 + 1)* = (1+ + ) 0 (0 + 1)* = 1*0 (0 + 1)*'
   },
   {
     id: 'q-toc-2016-5',
@@ -12149,8 +12266,8 @@ export const questions = [
       '{an| n ≥ 0}  {bn| n ≥ 0}  {an bn| n ≥ 0}',
       '{a, b}*'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'From state 00 to read input 0  q(dead state) From state 00 to read input 1  01 From state 01 to read input 1  11 Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2015-6',
@@ -12162,8 +12279,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider alphabet Σ = {0,1}, the null/empty string λ and the sets of strings X0, X1, and X2 generated by the corresponding non-terminals of a regular grammar. X0, X1 and X2 are related as follows: X0 = 1 X1',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Partition algorithm: (i) {p, q, r}  {s, t} Non-final  Final (ii) {p, q}, {r}, {s, t} (iii) {p}, {q}, {r}, {s, t} Number of states = 4. Here s and t are equivalent.'
   },
   {
     id: 'q-toc-2019-7',
@@ -12180,8 +12297,8 @@ export const questions = [
       'Prefix (L) = {x  * | ∃y* such that xyL}',
       'Suffix (L) ={y  * | ∃x* such that xyL}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Minimal accepted string = 00 It will accept all the strings end with 00.'
   },
   {
     id: 'q-toc-2015-8',
@@ -12198,8 +12315,8 @@ export const questions = [
       'L2 and L3 only',
       'L3 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '-NFA: Transition with (q2, aba): b bp q r a,b s a,b a a'
   },
   {
     id: 'q-toc-2014-10',
@@ -12216,8 +12333,8 @@ export const questions = [
       'Both I and II',
       'Neither I nor II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: ' L = a+ *LL=  − = a* – a+ = {} 11. (Marks to All) Z × Y: → Z1Y1 Z2Y1 Z2Y2 Z1Y2 Z2Y2 Z2Y1 Z2Y1 Z1Y1 Z1Y2 Z2Y2 Z1Y2 Z1Y1 a b → P S R Q R S S P Q R Q P We don’t have correct option'
   },
   {
     id: 'q-toc-2020-12',
@@ -12234,8 +12351,8 @@ export const questions = [
       'I only',
       'Neither I not II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(0 + 1)* (0 + 1) (0 + 1)* = (0 + 1)+ Here number of states are two for L = (0 + 1)+'
   },
   {
     id: 'q-toc-2016-13',
@@ -12252,8 +12369,8 @@ export const questions = [
       'Both I and II are true',
       'Both I and II are false ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Complement of given machine: It will accept set of all strings that do not end with ab.'
   },
   {
     id: 'q-toc-2016-3',
@@ -12265,8 +12382,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the transition diagram of a PDA given below with input alphabet  = {a, b}and stack alphabet  = {X, Z}. Z is the initial stack symbol. Let L denote the language accepted by the PDA Which one of the following is TRUE?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 256,
+    explanation: 'Every symbol is having two choices 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 22222222 Total strings with length 8 = 28 Total strings with length 8 = 256'
   },
   {
     id: 'q-toc-2015-4',
@@ -12283,8 +12400,8 @@ export const questions = [
       '01010',
       '01001 Context Free Grammar'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '1. L(A) = Regular Complement of L(A) = Regular Regular= Every Regular language is CFL 2. L(A) = 11*0(0 + 1)* + 0(0 + 1)* = (11*0 + 0) (0 + 1)* = (1+ 0 + 0) ( 0 + 1)* = (1+ + ) 0 (0 + 1)* = 1*0 (0 + 1)*'
   },
   {
     id: 'q-toc-2017-5',
@@ -12301,8 +12418,8 @@ export const questions = [
       'abbaa',
       'babba'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'From state 00 to read input 0  q(dead state) From state 00 to read input 1  01 From state 01 to read input 1  11 Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2017-6',
@@ -12319,8 +12436,8 @@ export const questions = [
       '{ambn | m  n, n  0}',
       '{ambn | m  n, n > 0}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Partition algorithm: (i) {p, q, r}  {s, t} Non-final  Final (ii) {p, q}, {r}, {s, t} (iii) {p}, {q}, {r}, {s, t} Number of states = 4. Here s and t are equivalent.'
   },
   {
     id: 'q-toc-2017-7',
@@ -12337,8 +12454,8 @@ export const questions = [
       '{(ab)n(cbm)n | m, n ≥ 1}',
       '{(ab)n(cbn)m | m, n ≥ 1}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Minimal accepted string = 00 It will accept all the strings end with 00.'
   },
   {
     id: 'q-toc-2016-9',
@@ -12355,8 +12472,8 @@ export const questions = [
       'S → Aa | B',
       'S → Aa | Bb | c A → Bb |Sc |  A → Bd |  B → d B → Ae | '
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Reachable states for the input string 0011: ( )0 0 1 2ˆ q ,0011 {q , q , q }= Hence, option (a) is correct.'
   },
   {
     id: 'q-toc-2016-10',
@@ -12373,8 +12490,8 @@ export const questions = [
       '{am bn│m ≥ 0 or n > 0}and {am bn |m > 0 and n > 0}',
       '{am bn│m ≥ 0 and n > 0} and {am bn |m > 0 or n > 0}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: ' L = a+ *LL=  − = a* – a+ = {} 11. (Marks to All) Z × Y: → Z1Y1 Z2Y1 Z2Y2 Z1Y2 Z2Y2 Z2Y1 Z2Y1 Z1Y1 Z1Y2 Z2Y2 Z1Y2 Z1Y1 a b → P S R Q R S S P Q R Q P We don’t have correct option'
   },
   {
     id: 'q-toc-2009-11',
@@ -12409,8 +12526,8 @@ export const questions = [
       '{0i10j│i, j ≥ 0} ∪ {0n102n |n ≥ 0}',
       'The set of all strings over {0, 1} containing at least two 0’s'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'DFA for L: DFA for L Number of states will be same in both L and L . Number of states = 4'
   },
   {
     id: 'q-toc-2008-15',
@@ -12427,8 +12544,8 @@ export const questions = [
       '1, 3 and 4 only',
       '1, 2 and 4 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 6,
+    explanation: 'Divisible by 2 strings = , aa, aaaa, aaaaaa, ….. Divisible by 3 strings = , aaa, aaaaaa, aaaaaaaaa, ….. Divisible by 2 but not 3 strings = a2, a4, a8, a10, a12, ….. DFA design for number of a’s divisible by 2 but not 3: Number of states = 6'
   },
   {
     id: 'q-toc-2022-16',
@@ -12445,8 +12562,8 @@ export const questions = [
       'L1 is regular and L2 is context – free',
       'L1 and L2 are context – free but not regular'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 120,
+    explanation: 'If  is set of all bijections from {1, 2} to {1, 2} Number of bijective functions = 2! = 2 Here, Language L = {, f1, f1f2, f2f2 ….} Number of states =2 If set has 2 elements, then 2! bijective functions and hence 2! States. Each bijective function requires one state to represent as result of some composition. If set has  5 elements, then number of bijective functions = 5! and number of states = 5! Number of states = 5 × 4 × 3 × 2 × 1 = 120'
   },
   {
     id: 'q-toc-2022-17',
@@ -12463,8 +12580,8 @@ export const questions = [
       'L2, L3 and L2  L3 all are context – free.',
       'Neither L1 nor its complement is context – free.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If NFA (N) having ‘n’ states and DFA having ‘k’ states. Then, relation between k and n is using subset construction algorithm is: k2 n'
   },
   {
     id: 'q-toc-2021-18',
@@ -12481,8 +12598,8 @@ export const questions = [
       '{w x wR | w, x {0, 1}*}',
       '{w x xRwR | w, x{0, 1}*]'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'L = {w1aw2 | w1, w2  {a, b}*, |w1| = 2, |w2| > 3} = (a + b)2 a (a + b)3 (a + b)* DFA for L:'
   },
   {
     id: 'q-toc-2020-19',
@@ -12499,8 +12616,8 @@ export const questions = [
       'I and III only',
       'III only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'M accepts all strings ending in a. L(M) = (a + b)* a N accepts all strings ending in b. L (N) = (a + b)* b L(M)  L(N) =  To represent empty language, only one state present in minimal DFA. DFA: To design DFA for  minimum 1 state is needed.'
   },
   {
     id: 'q-toc-2020-20',
@@ -12517,8 +12634,8 @@ export const questions = [
       'Neither L1 nor L2 is context-free.',
       'L1 is context-free but not regular and L2 is context-free.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'L = {ank | k > 0, and n is a positive integer constant}. • If n = 1  L = {ak | k > 0} L = a+ FA: 2 states are needed. • If n = 2  L = {a2k | k > 0} L = (aa)+ 3 states are needed. • If n = 3  L = {a3k | k > 0} L = (aaa)+ 4 states are needed. For L = {ank | k > 0, n is constant}, n + 1 states are needed.'
   },
   {
     id: 'q-toc-2019-21',
@@ -12535,8 +12652,8 @@ export const questions = [
       '{wan wR bn | w  {a, b}*, n ≥ 0}',
       '{an bi│i  {n, 3n, 5n}, n ≥ 0}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'w = abb(n = 3)  L = {, a, b ab, bb, abb} DFA for abb: Accept w = abb DFA for L: For 3 length 4 states are needed. So, for n length n + 1 states are needed.'
   },
   {
     id: 'q-toc-2018-22',
@@ -12553,8 +12670,8 @@ export const questions = [
       'II and III only',
       'II and IV only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'NFA(N)  n states Min DFA(M)  m States Relation between m & n: DFA having  2n states nm 2'
   },
   {
     id: 'q-toc-2016-23',
@@ -12566,8 +12683,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following languages: L1 = {an bm cn + m : m, n ≥ 1} L2 = {an bn c2n : n ≥ 1} Which one of the following is TRUE?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Input = 001011110 Output = 000001110 Mealy Machine: Transition Table: s b 0 1 0 0, 0 t, y 1, 0 t, y 1 0, 0 t, y 1, 1 t, y t = b y = sb Hence, option (b) is correct.'
   },
   {
     id: 'q-toc-2015-24',
@@ -12584,8 +12701,8 @@ export const questions = [
       'L2 and L3 only',
       'L3 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'A = 0, B = 1 and output = 1 Input = 101 From state 00, by reading 3 length minimum input it takes to 01. ❑❑❑'
   },
   {
     id: 'q-toc-2014-25',
@@ -12620,8 +12737,8 @@ export const questions = [
       'Only L1 and L2',
       'All the three languages'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Σ = {0, 1, c} L1 = {0n1n | n ≥ 0}  DCFL L2 = {wcwr│w  {0, 1}* }  DCFL L3 = {wwr | w{0, 1}*} CFL but not DCFL'
   },
   {
     id: 'q-toc-2010-27',
@@ -12638,8 +12755,8 @@ export const questions = [
       'Only L1 and L2 are context free',
       'All are context free'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'L1={0i1j│i ≠ j} = DCFL L2 = {0i 1j│i = j} = DCFL L3 = {0i 1j│i = 2j + 1}= DCFL L4 = {0i1j |i ≠ 2j}= DCFL All are DCFLs and every DCFL is CFL.'
   },
   {
     id: 'q-toc-2008-28',
@@ -12656,8 +12773,8 @@ export const questions = [
       'L1  L2 is not a CFL but L2 is',
       'There is a 4 state PDA that accepts L1 but there is no DPDA that accepts L2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'L1={ai bj ck |i = j, k ≥ 1}  an bn c+ = DCFL L2 = {ai bj |j = 2i, i ≥ 0} ak b2k = DCFL Every DCFL is CFL. • L1  L2 =  • L1  L2 = CFL • L2 is a DCFL. So, DPDA possible. Hence, option (b) is correct.'
   },
   {
     id: 'q-toc-2008-29',
@@ -12674,8 +12791,8 @@ export const questions = [
       'L3 only',
       'L2 only Closure Properties of Context Free Language'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'L1 =   mn0 1 | 0 m n 10000   Finite L2 = {reads the same forward and backward} Set of all palindrome (CFL) L3 = {contains an even number of 0’s and an even number of 1’s} Regular L2 is not a regular. Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2021-30',
@@ -12710,8 +12827,8 @@ export const questions = [
       'L1 – L2',
       'L1  L2'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'L1  Regular L2  CFL (i)  L1   L2  Reg  CFL  CFL (ii)  L1 . L2  Reg  CFL  CFL (iii)  L1 – L2  Reg – CFL  Reg  CFL   CSL (iv)  L1  L2  Reg  CFL  CFL'
   },
   {
     id: 'q-toc-2017-32',
@@ -12728,8 +12845,8 @@ export const questions = [
       'II and IV only',
       'I only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'L1 = CFL, L2 = CFL and R = Regular language I. CFL1  CFL2  CFL II. CFL CSL III. CFL – Regular = CFL  Regular = CFL  Regular = CFL IV. CFL1  CFL2  CSL • CFL is not closed under compliment and intersection.'
   },
   {
     id: 'q-toc-2017-33',
@@ -12746,8 +12863,8 @@ export const questions = [
       'I and II',
       'Neither I nor II'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'L1 = {an bn cm | m, n ≥ 0} = CFL L2 ={am bn cn  | m, n ≥ 0} = CFL I. L1  L2  CFL  CFL = CFL II. L1  L2 = {an bn c*   a* bn cn} = {an bn cn | n  0}  CSL'
   },
   {
     id: 'q-toc-2011-34',
@@ -12764,8 +12881,8 @@ export const questions = [
       'Σ* – P',
       'Σ* – Q'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'A. Regular  CFL  CFL B. Regular – CFL Regular  CFL  need not be regular C. * – Regular  Regular D. * – CFL  need not be regular Hence, option (c) is correct.'
   },
   {
     id: 'q-toc-2009-35',
@@ -12800,8 +12917,8 @@ export const questions = [
       'S2 and S3',
       'S1 and S4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'DFA for ending with 011: Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2017-2',
@@ -12818,8 +12935,8 @@ export const questions = [
       'If f is computable then Lf is recursive, but not conversely.',
       'If f is computable then Lf is recursively enumerable, but not conversely.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'L = *– L = {0, 1}* – L If L is a DFA with K states than in L  DFA also having K states because number of states in L and L are same.'
   },
   {
     id: 'q-toc-2014-3',
@@ -12836,8 +12953,8 @@ export const questions = [
       '2* is uncountable and * is countable',
       'Both 2* and * are uncountable'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 256,
+    explanation: 'Every symbol is having two choices 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 22222222 Total strings with length 8 = 28 Total strings with length 8 = 256'
   },
   {
     id: 'q-toc-2011-4',
@@ -12872,8 +12989,8 @@ export const questions = [
       'All the three languages are context free',
       'Turing machines can be used to recognize all the languages'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'From state 00 to read input 0  q(dead state) From state 00 to read input 1  01 From state 01 to read input 1  11 Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2008-6',
@@ -12890,8 +13007,8 @@ export const questions = [
       'It is context-free but not regular',
       'It is neither regular nor context-free, but accepted by a Turing machine'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Partition algorithm: (i) {p, q, r}  {s, t} Non-final  Final (ii) {p, q}, {r}, {s, t} (iii) {p}, {q}, {r}, {s, t} Number of states = 4. Here s and t are equivalent.'
   },
   {
     id: 'q-toc-2023-7',
@@ -12926,8 +13043,8 @@ export const questions = [
       'Complement of L2 is recursive',
       'Complement of L1 is context-free but not regular'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Reachable states for the input string 0011: ( )0 0 1 2ˆ q ,0011 {q , q , q }= Hence, option (a) is correct.'
   },
   {
     id: 'q-toc-2008-10',
@@ -12944,8 +13061,8 @@ export const questions = [
       '3 1 2 4',
       '1 3 4 2 Closure Properties of Recursive and Rels'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: ' L = a+ *LL=  − = a* – a+ = {} 11. (Marks to All) Z × Y: → Z1Y1 Z2Y1 Z2Y2 Z1Y2 Z2Y2 Z2Y1 Z2Y1 Z1Y1 Z1Y2 Z2Y2 Z1Y2 Z1Y1 a b → P S R Q R S S P Q R Q P We don’t have correct option'
   },
   {
     id: 'q-toc-2022-11',
@@ -12980,8 +13097,8 @@ export const questions = [
       'L = {<M> | M is a PDA such that L(M) = ∅}',
       'L = {<M> | M is a PDA such that L(M) = Σ*}'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(0 + 1)* (0 + 1) (0 + 1)* = (0 + 1)+ Here number of states are two for L = (0 + 1)+'
   },
   {
     id: 'q-toc-2018-13',
@@ -12998,8 +13115,8 @@ export const questions = [
       'A subset of the set of all recursive language.',
       'An uncountable set.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Complement of given machine: It will accept set of all strings that do not end with ab.'
   },
   {
     id: 'q-toc-2015-15',
@@ -13016,8 +13133,8 @@ export const questions = [
       '3 and 4 only',
       '1 and 4 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 6,
+    explanation: 'Divisible by 2 strings = , aa, aaaa, aaaaaa, ….. Divisible by 3 strings = , aaa, aaaaaa, aaaaaaaaa, ….. Divisible by 2 but not 3 strings = a2, a4, a8, a10, a12, ….. DFA design for number of a’s divisible by 2 but not 3: Number of states = 6'
   },
   {
     id: 'q-toc-2010-17',
@@ -13034,8 +13151,8 @@ export const questions = [
       'L2  L3 is recursively enumerable',
       'L2  L3 is recursively enumerable'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'If NFA (N) having ‘n’ states and DFA having ‘k’ states. Then, relation between k and n is using subset construction algorithm is: k2 n'
   },
   {
     id: 'q-toc-2009-18',
@@ -13052,8 +13169,8 @@ export const questions = [
       'Context-free but not regular',
       'Recursively enumerable but not context-free'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'L = {w1aw2 | w1, w2  {a, b}*, |w1| = 2, |w2| > 3} = (a + b)2 a (a + b)3 (a + b)* DFA for L:'
   },
   {
     id: 'q-toc-2008-19',
@@ -13070,8 +13187,8 @@ export const questions = [
       'Every regular language is also a context-free language.',
       'Every subset of a recursively enumerable set is recursive.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(0 + 1)* (0 + 1) (0 + 1)* = (0 + 1)+ Here number of states are two for L = (0 + 1)+'
   },
   {
     id: 'q-toc-2008-20',
@@ -13088,8 +13205,8 @@ export const questions = [
       'context-sensitive',
       'recursive ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'L = {ank | k > 0, and n is a positive integer constant}. • If n = 1  L = {ak | k > 0} L = a+ FA: 2 states are needed. • If n = 2  L = {a2k | k > 0} L = (aa)+ 3 states are needed. • If n = 3  L = {a3k | k > 0} L = (aaa)+ 4 states are needed. For L = {ank | k > 0, n is constant}, n + 1 states are needed.'
   },
   {
     id: 'q-toc-2022-1',
@@ -13124,8 +13241,8 @@ export const questions = [
       'L1 and L3 only',
       'L2 and L3 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '1. L(A) = Regular Complement of L(A) = Regular Regular= Every Regular language is CFL 2. L(A) = 11*0(0 + 1)* + 0(0 + 1)* = (11*0 + 0) (0 + 1)* = (1+ 0 + 0) ( 0 + 1)* = (1+ + ) 0 (0 + 1)* = 1*0 (0 + 1)*'
   },
   {
     id: 'q-toc-2018-5',
@@ -13137,8 +13254,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'Consider the following problems. L(G) denotes the language generated by a grammar G. L(M) denotes the language accepted by a machine M. I. For an unrestricted grammar G and a string w, whether wL(G). II. Given a Turing Machine M, whether L(M) is regular. III. Given two grammars G1 and G2, whether L(G1) = L(G2). IV. Given an NFA N, whether there is a deterministic PDA P such that N and P accept the same language. Which one of the following statements is correct?',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'From state 00 to read input 0  q(dead state) From state 00 to read input 1  01 From state 01 to read input 1  11 Hence, option (d) is correct.'
   },
   {
     id: 'q-toc-2016-7',
@@ -13155,8 +13272,8 @@ export const questions = [
       'III and IV only',
       'II and IV only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Minimal accepted string = 00 It will accept all the strings end with 00.'
   },
   {
     id: 'q-toc-2016-8',
@@ -13173,8 +13290,8 @@ export const questions = [
       'L1, L2 are recursive and L3 is not recursive.',
       'L1, L2, L3 are recursive .'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '-NFA: Transition with (q2, aba): b bp q r a,b s a,b a a'
   },
   {
     id: 'q-toc-2015-9',
@@ -13191,8 +13308,8 @@ export const questions = [
       'Only 1 and 2',
       'Only 1 and 3'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Reachable states for the input string 0011: ( )0 0 1 2ˆ q ,0011 {q , q , q }= Hence, option (a) is correct.'
   },
   {
     id: 'q-toc-2014-11',
@@ -13209,8 +13326,8 @@ export const questions = [
       'undecidable and not recursively enumerable',
       'decidable but not recursively enumerable'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'DFA: k22  = 2  = 4 where k is the position of the symbol.'
   },
   {
     id: 'q-toc-2013-12',
@@ -13225,10 +13342,11 @@ export const questions = [
       '= L(N)?',
       '3 Only',
       '3 and 4 only',
-      '1, 2 and 3 only'
+      '1, 2 and 3 only',
+      '2 and 3 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: '(0 + 1)* (0 + 1) (0 + 1)* = (0 + 1)+ Here number of states are two for L = (0 + 1)+'
   },
   {
     id: 'q-toc-2013-13',
@@ -13245,8 +13363,8 @@ export const questions = [
       '2 only',
       '3 only'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Complement of given machine: It will accept set of all strings that do not end with ab.'
   },
   {
     id: 'q-toc-2012-14',
@@ -13263,8 +13381,8 @@ export const questions = [
       '2, 3, 4',
       '3, 4'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 4,
+    explanation: 'DFA for L: DFA for L Number of states will be same in both L and L . Number of states = 4'
   },
   {
     id: 'q-toc-2016-16',
@@ -13281,8 +13399,8 @@ export const questions = [
       'W is not recursively enumerable and Z is recursive.',
       'W is not recursively enumerable and Z is not recursive.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 120,
+    explanation: 'If  is set of all bijections from {1, 2} to {1, 2} Number of bijective functions = 2! = 2 Here, Language L = {, f1, f1f2, f2f2 ….} Number of states =2 If set has 2 elements, then 2! bijective functions and hence 2! States. Each bijective function requires one state to represent as result of some composition. If set has  5 elements, then number of bijective functions = 5! and number of states = 5! Number of states = 5 × 4 × 3 × 2 × 1 = 120'
   },
   {
     id: 'q-dld-2021-1',
@@ -13294,8 +13412,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'If x and y are two decimal digits and (0.1101)2 = (0.8xy5)10, the decimal value of x + y is .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '0.5   0.25   0.125   0.0625 (0.1 1 0 1)2 = ( )10 =  1 × 2–1 + 1× 2–2 + 1× 2–3 + 1× 2–4 =  (0.5 + 0.25 +0+ 0.625) = (0.8125)10 (0.8125)10= (0.8xy5)10 x = 1    4 = 2, x + 4 = 1 + 2 = 3'
   },
   {
     id: 'q-dld-2017-2',
@@ -13312,8 +13430,8 @@ export const questions = [
       '571247',
       '571244'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Given X = BCA9 in Hexadecimal format we know in Binary system B = 1011, C = 1100, A = 1010, 9 = 1001 (B C A 9)16 → ( ? )2 →( ? )8 Therefore, convert hexadecimal number system first in binary then octal system. (BCA 9)16 = (136251)8 Hence correct option is (a).'
   },
   {
     id: 'q-dld-2017-3',
@@ -13325,8 +13443,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider a quadratic equation x2 - 13x + 36 = 0 with coefficients in a base b. The solutions of this equation in the same base b are x = 5 and x = 6. Then b =_____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'Given the base of quadratic equation is b. (1)b x2 – (13)b x + (36)b = (0)b x2 – (b + 3)x + 3b + 6 = 0 Let x = 5 25 – (b + 3)5 + 3b + 6 = 0 25 – 5b – 15 + 3b + 6 = 0 16 – 2b = 0 b = 8 Let x = 6 36 – (b + 3)6 + 3b + 6 = 0 36 – 6b – 18 + 3b + 6 = 0 24 – 3b = 0 b = 8 Hence correct answer is (8).'
   },
   {
     id: 'q-dld-2014-6',
@@ -13338,8 +13456,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the equation (123)5 = (x8)y with x and y as unknown. The number of possible solutions is ____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given equation (123)5 = (x 8)y By Converting the above equation into decimal form (1×52 + 2×51+ 3×50) = xy + 8 38 = xy + 8 xy = 30 and (x < y) (y > 8) The possible solutions are x = 1         y = 30    (✔) x = 2         y = 15   (✔) x = 3         y = 10   (✔) x = 5         y = 6     (X) From the above solution only 3 satisfies the given condition.'
   },
   {
     id: 'q-dld-2009-7',
@@ -13356,8 +13474,8 @@ export const questions = [
       '(2297)10',
       '(0B17)16'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'First write the given number in binary representation Write each digit 3 bits (1217)8 = (001010001111)2'
   },
   {
     id: 'q-dld-2008-8',
@@ -13374,8 +13492,8 @@ export const questions = [
       'decimal 10 and 11',
       'any value > 2 Signed Binary Numbers'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The given equation is ( ) ( )121 11rr = Let r be any base 2 1 01 2 1r r r +  +  = 1011 rr +  2 21rr ++ = r +1 ( ) 2 1r + = r +1  (r + 1) = r + 1 Take negative sign – (r + 1) = r + 1 2r + 2 = 0 r = –1 (radix cannot be negative) Take positive sign r + 1 = r + 1 for all value which is greater than 2. Hence, correct answer is option (d).'
   },
   {
     id: 'q-dld-2019-9',
@@ -13392,8 +13510,8 @@ export const questions = [
       '1111 1111 1110 0100',
       '1000 0000 1110 0100'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'To find 2’s complement of -28 first we convert +28 in binary system and then take 2’s  complement (28)10 =(0000 0000 0001 1100)2 Now  taking 2’s complement of (0000 0000 0001 1100)2=1111 1111 111 0100 Hence –28 → 1111 1111 1110 0100 Therofre correct answer is option (C)'
   },
   {
     id: 'q-cn-2019-11',
@@ -13495,8 +13613,8 @@ export const questions = [
       '22𝑛',
       '22𝑛−1'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '0.5   0.25   0.125   0.0625 (0.1 1 0 1)2 = ( )10 =  1 × 2–1 + 1× 2–2 + 1× 2–3 + 1× 2–4 =  (0.5 + 0.25 +0+ 0.625) = (0.8125)10 (0.8125)10= (0.8xy5)10 x = 1    4 = 2, x + 4 = 1 + 2 = 3'
   },
   {
     id: 'q-dld-2015-5',
@@ -13513,8 +13631,8 @@ export const questions = [
       '(S1) – False, (S2) – False, (S3) – True, (S4) -True',
       '(S1) – True, (S2) – True, (S3) – False, (S4) -False'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 5,
+    explanation: 'Let x be the base of the given number ( ) ( ) ( ) 312 13.120 x x x = The above number in Decimal will be given as 2 1 0 10 3 × x +1 × x + 2 × x 2 × x + 0 × x = 1× x1 + 3 × x0 + 1 × x–1 23x x 2 2x ++ = 1x3 x++ 223x x 2 x 3x 1   2x x + + + += 22  3x x 2 2x 6x 2 + + = + + 2  x – 5x 0= ( )  x – 5 x 0= x = 0    x = 5 Therefore, x = 5 Hence, the base of the given number will be 5.'
   },
   {
     id: 'q-dld-2012-6',
@@ -13531,8 +13649,8 @@ export const questions = [
       'x y ',
       'y'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given equation (123)5 = (x 8)y By Converting the above equation into decimal form (1×52 + 2×51+ 3×50) = xy + 8 38 = xy + 8 xy = 30 and (x < y) (y > 8) The possible solutions are x = 1         y = 30    (✔) x = 2         y = 15   (✔) x = 3         y = 10   (✔) x = 5         y = 6     (X) From the above solution only 3 satisfies the given condition.'
   },
   {
     id: 'q-dld-2012-7',
@@ -13549,8 +13667,8 @@ export const questions = [
       '1 Kbits',
       '2 Kbits'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'First write the given number in binary representation Write each digit 3 bits (1217)8 = (001010001111)2'
   },
   {
     id: 'q-dld-2011-8',
@@ -13567,8 +13685,8 @@ export const questions = [
       '( ) \'.Q P R +',
       '( ) P. Q R +'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The given equation is ( ) ( )121 11rr = Let r be any base 2 1 01 2 1r r r +  +  = 1011 rr +  2 21rr ++ = r +1 ( ) 2 1r + = r +1  (r + 1) = r + 1 Take negative sign – (r + 1) = r + 1 2r + 2 = 0 r = –1 (radix cannot be negative) Take positive sign r + 1 = r + 1 for all value which is greater than 2. Hence, correct answer is option (d).'
   },
   {
     id: 'q-dld-2011-9',
@@ -13585,8 +13703,8 @@ export const questions = [
       'm0 + m1 + m6 + m7',
       'm2 + m3 + m4 + m5'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'To find 2’s complement of -28 first we convert +28 in binary system and then take 2’s  complement (28)10 =(0000 0000 0001 1100)2 Now  taking 2’s complement of (0000 0000 0001 1100)2=1111 1111 111 0100 Hence –28 → 1111 1111 1110 0100 Therofre correct answer is option (C)'
   },
   {
     id: 'q-dld-2008-10',
@@ -13603,8 +13721,8 @@ export const questions = [
       'P. Q R +',
       'P.R Q + Logic Gates'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The given expression is (P + Q) (P.Q + P.R) (P.R + Q)  ( ) ( )PQ PR PQ PQ PR Q+ + +  + R  ( ) ( )PQ PR PR Q+  + = ( ) ( )PQ +  +Q R PR = ( )( )++Q R PPR PQ ( )( )=+Q R PQ =+PQ PQR ( )1=+PQ R = PQ Hence, correct answer is option (a).'
   },
   {
     id: 'q-dld-2022-11',
@@ -13621,8 +13739,8 @@ export const questions = [
       '𝑥1̅̅̅ ⨁ 𝑥3̅̅̅ = 𝑥2̅̅̅ ⨁ 𝑥4̅̅̅',
       'x 1 +x 2 + x 3 + x 4 = 0'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Overflow occurs when two same sign number are add/sub And result we get in different sign Example 3 bit sign number'
   },
   {
     id: 'q-dld-2022-12',
@@ -13639,8 +13757,8 @@ export const questions = [
       '𝑥̅y + xy',
       'xy + 𝑥̅𝑦̅'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given b7  b6  b5  b4  b3 ⋅ b2  b1  b0 before  . 5 bit that means we can represent at max 3110 after . 3 bit that means total 8 comibanations are Binary Decimal 000 0.000 001 0.125 010 0.250 011 0.375 100 0.500 101 0.625 110 0.750 111 0.875 From above analysis we can\'t represent (0.100)10 and (0.001)10 From above analysis only (iii) and (iv) cannot be exactly same represented.'
   },
   {
     id: 'q-dld-2020-13',
@@ -13657,8 +13775,8 @@ export const questions = [
       'Z = Σ (1, 4, 5, 6, 7)',
       'Z = Σ (2, 3, 5)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Overflow: When two same sign number are added and result we will get in different sign. To avoid overflow bit extension required 14. (–1) Given: A = 1 in decimal form binary form of A = 0000 0001 For longest latency, we must have C in = 1 at every stage of ripple carry adder. Maximum delay will be given when we, take B = –1 in decimal and (1111 1111) in binary B = 1  1   1   1   1   1   1  1      –1 A = 0  0   0   0   0   0   0  1     → +1 Carry out =  1   0  0   0   0   0   0   0  0'
   },
   {
     id: 'q-dld-2019-14',
@@ -13675,8 +13793,8 @@ export const questions = [
       'x ⊕ y = x + y, if xy = 0',
       'x ⊕ y = (xy + x\'y\')\''
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Option (a) (x + y) ⊕ z = x ⊕ (y + z) (x + y) ⊕ z= (x + y)  z̅  + (𝑥 + 𝑦̅ ̅ ̅ ̅ ̅ ̅ ̅ )  z (x + y) ⊕ z= xz̅  + y z̅  + x̅  y̅  z x  ⊕ (y+z)=x(𝑦 + 𝑧̅ ̅ ̅ ̅ ̅ ̅ ̅ ) +x̅ (y + z) x  ⊕ (y+z)=x y̅  z̅  + x̅  y + x̅  z (x + y) ⊕ z ≠ x⊕(y + z) Option (b) (x ⊕ y) ⊕ z = x ⊕ (y ⊕ z) X-OR gate follows associative law Option (c) x ⊕ y = x + y, if x.y = 0 x ⊕ y = x̅ y + xy̅ = (x + y) (x̅  + y̅ ) = (x + y) = 1 = x+y 𝑥𝑦̅ ̅ ̅  = 1 x̅  + y̅  = 1 Option (d) x ⊕ y = (xy + x̅  y̅ ) x ⊕ y = 𝑥 ⊙ y̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ x ⊕ y =xy +  x̅ y̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ Hence option (a) is correct answer.'
   },
   {
     id: 'q-dld-2019-15',
@@ -13688,8 +13806,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'What is the minimum number of 2-input NOR gates required to implement a 4-variable function expressed in sum-of-minterms form as f = Σ(0, 2, 5, 7, 8, 10, 13, 15)? Assume that all the inputs and their complements are available._______',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'If x is in 2’s then range of x will be –2n–1 to 2n–1 –1 Here x is 16 bits number, n = 16 –216–1 to 216–1 –1 x = 65536 If y is in sign magnitude representation, then range of y will be – (2n–1–1) to + (2n–1 –1) n = 16 – (216–1–1) to + (216–1 –1) y = 65535 Hence, x – y = 1'
   },
   {
     id: 'q-dld-2019-16',
@@ -13706,8 +13824,8 @@ export const questions = [
       'Σ (2, 7, 8, 11, 14)',
       'Σ (0, 2, 3, 5, 6, 7, 8, 11, 14, 15)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Given f1 = (0, 2, 5, 8, 14) f2 = (2, 3, 6, 8, 14, 15) f3 =  (2, 7, 11, 14) P = f1  f2 P = (0, 2, 5, 8, 14)  (2, 3, 6, 8, 14, 15) P = (2, 8, 14) f  =  P  f3 f = 33P f P f+ 3Pf  = (2, 8, 14)  (0, 1, 3, 5, 6, 8, 9, 10, 12, 13, 15) 3Pf  = (8) 3Pf  = (0, 1, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15)  (2, 7, 11, 14) 3Pf  = (7, 11) f = (8)  (7, 11) f = (7, 8, 11) f =  (7, 8, 11)'
   },
   {
     id: 'q-dld-2018-17',
@@ -13724,8 +13842,8 @@ export const questions = [
       'P Q P Q  = ',
       '( ) ( ) P P Q P P Q   ='
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 2’s Complement form The range will be given by – (2n–1) to + (2n–1 –1) For n = 8 (Given 8 bit number) The minimum will be  – (28–1)  – (27)  –128 The maximum number will be given as (2n–1) = 127 Hence, correct answer is option (b).'
   },
   {
     id: 'q-dld-2014-18',
@@ -13742,8 +13860,8 @@ export const questions = [
       'P ⨁ Q',
       '(P ⨁ Q) Q)’'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Method 1: The given number is P = (F87B)16 P = 1111100001111011 = (–1925) 2’s complement of the above number will be given as = 0000011110000101 Its decimal representation will be  1 × 210 + 1 × 29 + 1×28 + 1 × 2 7 + 4 + 2  1024 + 512 + 256 + 128 + 4+1 = 1925 Now, 8 × P = 8 × (–1925) = –15400 Its binary representation will be 0011110000101000 Now, 2’s complement of the above number will be given as 1100001111011000 8P →(C3D8)16 Hence, correct answer is option (a) Method 2: P = (F87B)16 = 1111100001111011 By multiplying 21 , number will be shifted to left by one position, and by multiplying 23 , number will be shifted by 3 position to the left.  11 00 00 1111011000 8P  (C3D8)16 Hence, correct answer is option (a) ❑❑❑'
   },
   {
     id: 'q-dld-2013-19',
@@ -13760,8 +13878,8 @@ export const questions = [
       'x\' y ',
       'x\' y\' '
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'We know that Exclusive NOR of x and y = ( )xy = ( ) ( )x y xy\' + x\'y \'= = ( )( )( )x \' y x y\'++ = x\'y\' + xy → xy + x\'y\' = x y  [Exclusive OR] → x  y\' = x y  [Exclusive OR] → x\'  y = x y  [Exclusive OR] → x\'  y\' = x  y  [Exclusive NOR] Hence, correct answer is option (d).'
   },
   {
     id: 'q-dld-2011-20',
@@ -13778,8 +13896,8 @@ export const questions = [
       '',
       ''
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Let us see the output of all the given options we get (a) (b) (c) (d) Hence, correct answer is option (d).'
   },
   {
     id: 'q-dld-2010-21',
@@ -13796,8 +13914,8 @@ export const questions = [
       'P R +',
       'P Q + R +'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Let us see the output of the given logic circuit at each stage, we get The output of the above logic circuit will be given by ( )( )f PQ QR PR QR= + + f PQR PQR PQR QR= + + + f PQR QR=+ ( )f QR P+1= f Q +R= Hence, correct answer is option (a).'
   },
   {
     id: 'q-dld-2009-22',
@@ -13814,8 +13932,8 @@ export const questions = [
       '4',
       '5 P f Q P Q P Q P Q'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'The given expression is f = (AB + C) By using distribution theorem,  we can write above expression as f = (A + C)   (B + C) Note: Whenever in the problem, NOR gates are asked, write the function in POS. Now, the above expression is in POS form. Hence, three NOR gates will be required to implement f as shown below Hence, correct answer is option (b).'
   },
   {
     id: 'q-dld-2008-23',
@@ -13832,8 +13950,8 @@ export const questions = [
       'OR, negation',
       'NAND'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'We now, that NAND/NOR is functionally complete. And from the above options only EX-NOR is not functionally complete Hence, correct answer is option (a).'
   },
   {
     id: 'q-dld-2022-25',
@@ -13845,8 +13963,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'The total number of prime implicants of the function f(w,x,y,z) = Σ(0, 2, 4, 5, 6, 10) is ______.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'The given function is f(w,x,y,z) = Σ(0, 2, 4, 5, 6, 10) The k -map of the above function  will be given as below From the above k-map F = WZ WXY  XYZ++  Total prime implicants = 3'
   },
   {
     id: 'q-dld-2018-26',
@@ -13858,8 +13976,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the minterm list form of a Boolean function F given below. F(P, Q, R, S) = Σm(0, 2, 5, 7, 9, 11) + d(3, 8, 10, 12, 14) Here, m denotes a minterm and d denotes a don’t care term. The number of essential prime implicants of the function F is _______ .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'K-Map  of given boolean function F From above K -Map number of Essential prime implicats is  3.'
   },
   {
     id: 'q-dld-2017-27',
@@ -13871,8 +13989,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the Karnaugh map given below, where X represents “don’t care” and blank represents 0. Assume for all inputs(a, b, c, d) , the respective complements (𝑎̅, 𝑏̅, 𝑐̅, 𝑑̅) are also available. The above logic is implemented using 2-input NOR gates only. The minimum number of gates required is _________.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'The given k-map is shown below here only one quad group is possible then therefore,representation of given k map is F =  ac = a +  = a cc Hence only one 2-input NOR gate required.'
   },
   {
     id: 'q-dld-2017-28',
@@ -13889,8 +14007,8 @@ export const questions = [
       '𝑓= (𝑤+ 𝑧)(𝑥̅ + 𝑧)',
       '𝑓= (𝑤+ 𝑧̅)(𝑥̅ + 𝑧)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'f(w, x, y, z) = Σm(0, 1, 2, 3, 7, 8, 10) + Σd(5, 6, 11, 15) from above K-Map 2 quad is possible Therefore f(w,x,y,z) = ( x  + z) ( w + z ) Hence option answer is option (a).'
   },
   {
     id: 'q-dld-2014-29',
@@ -13907,8 +14025,8 @@ export const questions = [
       'P̅ + Q̅ + R̅ + S̅',
       'P̅R + P̅R̅S + P'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The given function is F (P, Q, R, S) = PQ + P Q R S Its standard canonical form will be F (P, Q, R, S) = PQ (R̅  + R) (S̅  + S) + P̅ QR (S̅  + S) + P̅  Q R̅  S F(P, Q, R, S) = ( )( )PQ R R S S++ + ( )R Q R S S+ + P Q R S = PQRS  + PQ RS  + PQR S + PQRS + PQRS  + PQRS + PQRS m = (12, 13, 14, 15, 6, 7, 5) Now, the k-map of the above function will be given as below = PQ + QS + QR Hence, correct answer is option (a).'
   },
   {
     id: 'q-dld-2014-30',
@@ -13925,8 +14043,8 @@ export const questions = [
       'QRS QRS QRS + QRS + +',
       'PQS PQS PQS + PQS + +'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'The given function is F (P,Q,R,S) = ∑ 0, 2, 5, 7, 8,10,13,15 The k-map of the above functions is given below From the above k-map F = Q S QS+ Hence, correct answer is option (b).'
   },
   {
     id: 'q-dld-2012-31',
@@ -13943,7 +14061,7 @@ export const questions = [
       '+ bd abcd',
       '+ + bd bc cd'
     ],
-    correctAnswer: null,
+    correctAnswer: 1,
     explanation: ''
   },
   {
@@ -13961,7 +14079,7 @@ export const questions = [
       '. . . + b d ab d',
       '. . . + + a b b d a d'
     ],
-    correctAnswer: null,
+    correctAnswer: 0,
     explanation: ''
   },
   {
@@ -13979,8 +14097,8 @@ export const questions = [
       'independent of three variable',
       'dependent on all the variables ❑❑❑ 10 00 01 11 ab cd 00 01 11 10 × 1 1 1 × × 1 × 10 00 01 11 ab cd 00 01 11 10 × × 1 1 1 1 1 ×'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The given expression is f (A, B, C, D) = m(2, 3, 6, 7, 8, 9, 10, 11, 12 13) k-map of the above expression will be given as AC + AC ABf =+ AC + AC B Cf =+ We can see from the above expression that f is independent of D. Hence, correct answer is option (a). ❑❑❑'
   },
   {
     id: 'q-dld-2016-1',
@@ -13992,8 +14110,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider an eight-bit ripple-carry adder for computing the sum of A and B where A and B are integers represented in 2’s complement from. If the decimal value of A is one, the decimal value of B that leads to the longest latency for the sum to stabilize is . Multiplexer',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '0.5   0.25   0.125   0.0625 (0.1 1 0 1)2 = ( )10 =  1 × 2–1 + 1× 2–2 + 1× 2–3 + 1× 2–4 =  (0.5 + 0.25 +0+ 0.625) = (0.8125)10 (0.8125)10= (0.8xy5)10 x = 1    4 = 2, x + 4 = 1 + 2 = 3'
   },
   {
     id: 'q-dld-2021-3',
@@ -14008,8 +14126,8 @@ export const questions = [
       '',
       '0 1 2 3 1 1 x x\' 4 1 × MUX S1 S0 y z f 0 1 2 3 x 1 x\' 1 4×1 MUX S1 S0 y z f'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 8,
+    explanation: 'Given the base of quadratic equation is b. (1)b x2 – (13)b x + (36)b = (0)b x2 – (b + 3)x + 3b + 6 = 0 Let x = 5 25 – (b + 3)5 + 3b + 6 = 0 25 – 5b – 15 + 3b + 6 = 0 16 – 2b = 0 b = 8 Let x = 6 36 – (b + 3)6 + 3b + 6 = 0 36 – 6b – 18 + 3b + 6 = 0 24 – 3b = 0 b = 8 Hence correct answer is (8).'
   },
   {
     id: 'q-dld-2020-4',
@@ -14021,8 +14139,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'A multiplexer is placed between a group of 32 registers and an accumulator to regulate data movement such that at any given point in time the content of only one register will move to the accumulator. The number of select lines needed for the multiplexer is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 5,
+    explanation: '(43)x = (y3)8  (43)x = (y3)8 4x + 3 = 8y + 3 x > 4 y < 8'
   },
   {
     id: 'q-dld-2016-6',
@@ -14039,8 +14157,8 @@ export const questions = [
       'PQ+ 𝑃̅𝑄̅R',
       '𝑄̅𝑅̅ +PQR'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given equation (123)5 = (x 8)y By Converting the above equation into decimal form (1×52 + 2×51+ 3×50) = xy + 8 38 = xy + 8 xy = 30 and (x < y) (y > 8) The possible solutions are x = 1         y = 30    (✔) x = 2         y = 15   (✔) x = 3         y = 10   (✔) x = 5         y = 6     (X) From the above solution only 3 satisfies the given condition.'
   },
   {
     id: 'q-dld-2010-8',
@@ -14057,8 +14175,8 @@ export const questions = [
       'P Q R + +',
       'P Q R + + 0 1 2 3 1 1 x\' x 4×1 MUX S1 S0 y z f 0 1 2 3 x\' 1 x 1 4×1 MUX S1 S0 y z f 2–to–1 MUX S 0 R 0 1 0 1 R– 2–to–1 MUX S X P Q'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Let us see the output of the given logic circuit at each stage, we get The output of the above logic circuit will be given by ( )( )f PQ QR PR QR= + + f PQR PQR PQR QR= + + + f PQR QR=+ ( )f QR P+1= f Q +R= Hence, correct answer is option (a).'
   },
   {
     id: 'q-dld-2020-9',
@@ -14070,8 +14188,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'If there are m input lines and n output lines for a decoder that is used to uniquely address a byte addressable 1 KB RAM, then the minimum value of m + n is ____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'To find 2’s complement of -28 first we convert +28 in binary system and then take 2’s  complement (28)10 =(0000 0000 0001 1100)2 Now  taking 2’s complement of (0000 0000 0001 1100)2=1111 1111 111 0100 Hence –28 → 1111 1111 1110 0100 Therofre correct answer is option (C)'
   },
   {
     id: 'q-dld-2013-11',
@@ -14088,8 +14206,8 @@ export const questions = [
       'Multiplexer',
       'Demultiplexer ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Overflow occurs when two same sign number are add/sub And result we get in different sign Example 3 bit sign number'
   },
   {
     id: 'q-dld-2011-6',
@@ -14106,8 +14224,8 @@ export const questions = [
       '5',
       '6'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: 'Given equation (123)5 = (x 8)y By Converting the above equation into decimal form (1×52 + 2×51+ 3×50) = xy + 8 38 = xy + 8 xy = 30 and (x < y) (y > 8) The possible solutions are x = 1         y = 30    (✔) x = 2         y = 15   (✔) x = 3         y = 10   (✔) x = 5         y = 6     (X) From the above solution only 3 satisfies the given condition.'
   },
   {
     id: 'q-dld-2011-7',
@@ -14124,8 +14242,8 @@ export const questions = [
       '010',
       '011'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'First write the given number in binary representation Write each digit 3 bits (1217)8 = (001010001111)2'
   },
   {
     id: 'q-dld-2010-9',
@@ -14160,8 +14278,8 @@ export const questions = [
       '(1, 0, 1)',
       '(1, 1, 1)'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'The given expression is (P + Q) (P.Q + P.R) (P.R + Q)  ( ) ( )PQ PR PQ PQ PR Q+ + +  + R  ( ) ( )PQ PR PR Q+  + = ( ) ( )PQ +  +Q R PR = ( )( )++Q R PPR PQ ( )( )=+Q R PQ =+PQ PQR ( )1=+PQ R = PQ Hence, correct answer is option (a).'
   },
   {
     id: 'q-dld-2021-11',
@@ -14178,8 +14296,8 @@ export const questions = [
       '011,101,111',
       '001,010,000'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Overflow occurs when two same sign number are add/sub And result we get in different sign Example 3 bit sign number'
   },
   {
     id: 'q-dld-2021-12',
@@ -14191,8 +14309,8 @@ export const questions = [
     type: 'MCQ',
     questionText: 'The minimum number of JK flip-flops requried to construct a synchronous counter with the count sequence (0,0,1,1,2,2,3,3,0,0….)is .',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Given b7  b6  b5  b4  b3 ⋅ b2  b1  b0 before  . 5 bit that means we can represent at max 3110 after . 3 bit that means total 8 comibanations are Binary Decimal 000 0.000 001 0.125 010 0.250 011 0.375 100 0.500 101 0.625 110 0.750 111 0.875 From above analysis we can\'t represent (0.100)10 and (0.001)10 From above analysis only (iii) and (iv) cannot be exactly same represented.'
   },
   {
     id: 'q-dld-2018-13',
@@ -14204,8 +14322,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'Consider the sequential circuit shown in the figure, where both flip-flops used are positive edge-triggered D flip-flops. The number of states in the state transition diagram of this circuit that have a transition back to the same state on some value of "in" is ______',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 2,
+    explanation: 'Overflow: When two same sign number are added and result we will get in different sign. To avoid overflow bit extension required 14. (–1) Given: A = 1 in decimal form binary form of A = 0000 0001 For longest latency, we must have C in = 1 at every stage of ripple carry adder. Maximum delay will be given when we, take B = –1 in decimal and (1111 1111) in binary B = 1  1   1   1   1   1   1  1      –1 A = 0  0   0   0   0   0   0  1     → +1 Carry out =  1   0  0   0   0   0   0   0  0'
   },
   {
     id: 'q-dld-2015-15',
@@ -14222,8 +14340,8 @@ export const questions = [
       '0,2,4,6,8,10,12,14,0',
       '0,8,12,14,15,7,3,1,0'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'If x is in 2’s then range of x will be –2n–1 to 2n–1 –1 Here x is 16 bits number, n = 16 –216–1 to 216–1 –1 x = 65536 If y is in sign magnitude representation, then range of y will be – (2n–1–1) to + (2n–1 –1) n = 16 – (216–1–1) to + (216–1 –1) y = 65535 Hence, x – y = 1'
   },
   {
     id: 'q-dld-2014-16',
@@ -14240,8 +14358,8 @@ export const questions = [
       'k-bit ring counter.',
       'k-bit Johnson counter.'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Given f1 = (0, 2, 5, 8, 14) f2 = (2, 3, 6, 8, 14, 15) f3 =  (2, 7, 11, 14) P = f1  f2 P = (0, 2, 5, 8, 14)  (2, 3, 6, 8, 14, 15) P = (2, 8, 14) f  =  P  f3 f = 33P f P f+ 3Pf  = (2, 8, 14)  (0, 1, 3, 5, 6, 8, 9, 10, 12, 13, 15) 3Pf  = (8) 3Pf  = (0, 1, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15)  (2, 7, 11, 14) 3Pf  = (7, 11) f = (8)  (7, 11) f = (7, 8, 11) f =  (7, 8, 11)'
   },
   {
     id: 'q-dld-2009-17',
@@ -14258,8 +14376,8 @@ export const questions = [
       '64',
       '128 Memoery'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'For 2’s Complement form The range will be given by – (2n–1) to + (2n–1 –1) For n = 8 (Given 8 bit number) The minimum will be  – (28–1)  – (27)  –128 The maximum number will be given as (2n–1) = 127 Hence, correct answer is option (b).'
   },
   {
     id: 'q-dld-2012-18',
@@ -14276,8 +14394,8 @@ export const questions = [
       '1 Kbits',
       '2 Kbits ❑❑❑'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'First write the given number in binary representation Write each digit 3 bits (1217)8 = (001010001111)2'
   },
   {
     id: 'q-dld-2015-7',
@@ -14449,7 +14567,15 @@ export const questions = [
       'd (Rainy',
       ' ~ Cold',
       ')',
-      'd (∼Rainy'
+      'd (∼Rainy',
+      '→ Cold',
+      ')',
+      'd (∼Rainy',
+      '→ Cold',
+      ')',
+      'd (Rainy',
+      ' ~ Cold',
+      ')'
     ],
     correctAnswer: null,
     explanation: ''
@@ -15039,8 +15165,8 @@ export const questions = [
     type: 'NAT',
     questionText: 'G is an undirected graph with n vertices and 25 edges such that each vertex of G has degree at least 3. Then the maximum possible value of n is _____.',
     options: [],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 1,
+    explanation: 'Option b is incorrect because bit synchronization is the functionality of physical layer.'
   },
   {
     id: 'q-cn-2010-5',
@@ -15057,8 +15183,8 @@ export const questions = [
       '|S| = |T|',
       '|S| = |T| +1 Types of Graphs'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 0,
+    explanation: 'Note: First start with longest mask (a) 128.96.171.92 AND 255.255.254.0 NID = 128.96.170.0 Matched with interface (0) (b) 128.96.167.151 AND 255.255.254.0 NID = 128.96.166.0 Matched with R2. (c) 128.96.163.151 AND 255.255.254.0 NID = 128.96.162.0 Not matched 128.96.163.151 AND 255.255.252.0 NID = 128.96.160.0 Not matched Note:- Does not match with any given interface then 128.96.163.151 will forward to default interface R4. (d) 128.96.165.121 AND 255.255.254.0 128.96.164.0 128.96.165.121 AND 255.255.252.0 128.96.164.0 Matched with R3. So, option A is correct answer.'
   },
   {
     id: 'q-cn-2022-6',
@@ -15075,8 +15201,8 @@ export const questions = [
       '7',
       '8'
     ],
-    correctAnswer: null,
-    explanation: ''
+    correctAnswer: 3,
+    explanation: '(a) 10.105.1.113 AND 255.255.255.0 NID = 10.105.1.0 10.105.1.91 AND 255.255.255.0 NID = 10.105.1.0 So, option a is incorrect. (b) 10.105.1.113 AND 255.255.255.128 NID = 10.105.1.0 10.105.1.91 AND 255.255.255.128 NID = 10.105.1.0 So, option b is incorrect (c) 10.105.1.113'
   },
   {
     id: 'q-dm-2014-10',
@@ -15665,8 +15791,6 @@ export const resources = [
 ];
 
 export const keywordIndex = {
-  'normalization': { subjectIds: ['dbms'], topicIds: ['Normalization', 'Functional Dependency'], questionIds: ['q-dbms-2023-1'] },
-  'functional dependency': { subjectIds: ['dbms'], topicIds: ['Functional Dependency', 'Keys'], questionIds: ['q-dbms-2023-1'] },
-  'candidate key': { subjectIds: ['dbms'], topicIds: ['Keys', 'Normalization'], questionIds: ['q-dbms-2023-1'] },
-  'super key': { subjectIds: ['dbms'], topicIds: ['Keys'], questionIds: ['q-dbms-2023-1'] },
+  'normalization': { subjectIds: ['dbms'], topicIds: ['Normalization'], questionIds: ['q-dbms-2023-1'] },
+  'candidate key': { subjectIds: ['dbms'], topicIds: ['Keys'], questionIds: ['q-dbms-2023-1'] },
 };

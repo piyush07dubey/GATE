@@ -1,0 +1,947 @@
+[
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 574642,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 963872,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 964370,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "C",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 964711,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 967796,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 968373,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 968674,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 980350,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 981000,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 981438,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 981965,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 982365,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 982794,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 983255,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 983720,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 984115,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 985115,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 985459,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 985685,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 988058,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 988463,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 988628,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 989080,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 989507,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 989704,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 990724,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 991315,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 991554,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 991746,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 991975,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 992317,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 997596,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 998683,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 999253,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 999620,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1000052,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1000308,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1009028,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1009339,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1009701,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1010055,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1010336,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1011000,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1011318,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1011976,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1013055,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1013669,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "[Aa]nswer *is *option *[(]([a-zA-Z])[)]",
+    "position": 1014090,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 980986,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 985445,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 985671,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 991732,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 997582,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1011962,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1013041,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 963864,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 964362,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "C",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 964703,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 967788,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 968365,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 968666,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 980342,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 980992,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 981430,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 981957,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 982357,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 982786,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 983247,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 983712,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 984107,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 985107,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 985451,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 985677,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 988050,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 988455,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 988620,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 989072,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 989499,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 989696,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 991307,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 991546,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 991738,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 991967,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 992309,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 997588,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 998675,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 999245,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 999612,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1000044,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1000300,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1009020,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1009331,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1009693,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1010047,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1010328,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1010992,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1011310,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1011968,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1013047,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1013661,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "c",
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "position": 1014082,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "d",
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "position": 636556,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "position": 637248,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "a",
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "position": 650977,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  },
+  {
+    "answer": "b",
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "position": 675571,
+    "question_number": null,
+    "question_type": null,
+    "question_year": null,
+    "question_pos": null
+  }
+]

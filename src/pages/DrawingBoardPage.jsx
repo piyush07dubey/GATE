@@ -7,8 +7,8 @@ import {
 import toast from 'react-hot-toast';
 import { useAuth } from '../context/AuthContext';
 
-const DRAWINGS_KEY = 'codex_drawings';
-const BRAND = 'CODEX';
+const DRAWINGS_KEY = 'gateforge_drawings';
+const BRAND = 'GATEForge';
 
 const COLORS = [
   '#ccff00', '#ffffff', '#ff3333', '#00e5ff', '#ffea00',
@@ -496,7 +496,8 @@ const DrawingBoardPage = () => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
               <FiEdit3 style={{ color: 'var(--color-accent)' }} />
-              <h2 style={{ fontSize: 'var(--text-lg)', margin: 0, fontFamily: 'var(--font-mono)' }}>{BRAND}</h2>
+              <h2 style={{ fontSize: 'var(--text-lg)', margin: 0, fontFamily: 'var(--font-mono)' }}>Drawing Board</h2>
+              <span style={{ fontSize: '0.7rem', color: 'var(--color-text-tertiary)', fontFamily: 'var(--font-mono)', borderLeft: '1px solid var(--color-border)', paddingLeft: '0.5rem' }}>{BRAND}</span>
             </div>
             <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-secondary)', margin: 0 }}>
               {isEditing ? 'Editing...' : (user ? 'Auto-saved to browser' : 'Sign in to save to profile')}

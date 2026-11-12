@@ -1,41 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { questions, subjects } from '../data/seedData';
 import QuestionCard from '../components/QuestionCard';
 import FilterBar from '../components/FilterBar';
 
+const ITEMS_PER_PAGE = 10;
+
 const PYQPage = () => {
   const { subjectId } = useParams();
-  
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSubject, setSelectedSubject] = useState(subjectId === 'all' ? '' : subjectId);
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
-  
-  // Update state if URL parameter changes
+  const [currentPage, setCurrentPage] = useState(1);
+
   useEffect(() => {
     if (subjectId !== 'all') {
       setSelectedSubject(subjectId);
     }
+    setCurrentPage(1);
   }, [subjectId]);
 
   const currentSubject = subjects.find(s => s.id === selectedSubject);
 
-  // Filter questions
-  const filteredQuestions = questions.filter(q => {
-    const matchesSearch = q.questionText.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          q.topic.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesSubject = selectedSubject ? q.subjectId === selectedSubject : true;
-    const matchesYear = selectedYear ? q.year.toString() === selectedYear : true;
-    const matchesDifficulty = selectedDifficulty ? q.difficulty.toLowerCase() === selectedDifficulty.toLowerCase() : true;
-    
-    return matchesSearch && matchesSubject && matchesYear && matchesDifficulty;
-  });
+  const filteredQuestions = useMemo(() => {
+    return questions.filter(q => {
+      const matchesSearch = q.questionText.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            q.topic.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSubject = selectedSubject ? q.subjectId === selectedSubject : true;
+      const matchesYear = selectedYear ? q.year.toString() === selectedYear : true;
+      const matchesDifficulty = selectedDifficulty ? q.difficulty.toLowerCase() === selectedDifficulty.toLowerCase() : true;
 
-  const getSubjectInfo = (sId) => {
-    const sub = subjects.find(s => s.id === sId);
-    return sub ? { name: sub.name, color: sub.color } : { name: 'Unknown', color: '#8b5cf6' };
-  };
+      return matchesSearch && matchesSubject && matchesYear && matchesDifficulty;
+    });
+  // questions is a module-level constant — intentionally omitted from deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchTerm, selectedSubject, selectedYear, selectedDifficulty]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / ITEMS_PER_PAGE));
+  const safeCurrentPage = Math.min(currentPage, totalPages);
+  const startIndex = (safeCurrentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedQuestions = filteredQuestions.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedSubject, selectedYear, selectedDifficulty]);
 
   const allKeywords = [
     ...subjects.map(s => s.name),
@@ -72,6 +82,26 @@ const PYQPage = () => {
     if (key === 'difficulty') setSelectedDifficulty(value);
   };
 
+  const goToPage = (page) => {
+    const target = Math.max(1, Math.min(page, totalPages));
+    setCurrentPage(target);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisible = 5;
+    let start = Math.max(1, safeCurrentPage - Math.floor(maxVisible / 2));
+    let end = Math.min(totalPages, start + maxVisible - 1);
+    if (end - start < maxVisible - 1) {
+      start = Math.max(1, end - maxVisible + 1);
+    }
+    for (let i = start; i <= end; i++) {
+      pages.push(i);
+    }
+    return pages;
+  };
+
   return (
     <div className="container section">
       <div style={{ marginBottom: 'var(--space-2xl)' }}>
@@ -94,7 +124,6 @@ const PYQPage = () => {
         suggestions={allKeywords}
       />
 
-      {/* Subject Syllabus Highlights (if subject is selected) */}
       {currentSubject && (
         <div className="glass-card" style={{ padding: 'var(--space-lg)', marginBottom: 'var(--space-2xl)', display: 'flex', gap: 'var(--space-xl)', alignItems: 'center', flexWrap: 'wrap' }}>
           <div>
@@ -118,14 +147,14 @@ const PYQPage = () => {
       )}
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
-        {filteredQuestions.map((q) => {
-          const { name, color } = getSubjectInfo(q.subjectId);
+        {paginatedQuestions.map((q) => {
+          const { name, color } = subjects.find(s => s.id === q.subjectId) || { name: 'Unknown', color: '#8b5cf6' };
           return (
-            <QuestionCard 
-              key={q.id} 
-              question={q} 
-              subjectName={name} 
-              subjectColor={color} 
+            <QuestionCard
+              key={q.id}
+              question={q}
+              subjectName={name}
+              subjectColor={color}
             />
           );
         })}
@@ -138,8 +167,8 @@ const PYQPage = () => {
           <p className="empty-state-text">
             Try adjusting your filters or search term to find more questions.
           </p>
-          <button 
-            className="btn btn-secondary" 
+          <button
+            className="btn btn-secondary"
             style={{ marginTop: 'var(--space-lg)' }}
             onClick={() => {
               setSearchTerm('');
@@ -152,14 +181,54 @@ const PYQPage = () => {
           </button>
         </div>
       )}
-      
-      {filteredQuestions.length > 0 && (
+
+      {totalPages > 1 && (
         <div className="pagination">
-          <button className="page-btn" disabled>←</button>
-          <button className="page-btn active">1</button>
-          <button className="page-btn">2</button>
-          <button className="page-btn">3</button>
-          <button className="page-btn">→</button>
+          <button
+            className="page-btn"
+            disabled={safeCurrentPage === 1}
+            onClick={() => goToPage(safeCurrentPage - 1)}
+          >
+            ←
+          </button>
+
+          {safeCurrentPage > 2 && (
+            <>
+              <button className="page-btn" onClick={() => goToPage(1)}>1</button>
+              {safeCurrentPage > 3 && <span className="page-btn" style={{ cursor: 'default', border: 'none' }}>…</span>}
+            </>
+          )}
+
+          {getPageNumbers().map(page => (
+            <button
+              key={page}
+              className={`page-btn ${page === safeCurrentPage ? 'active' : ''}`}
+              onClick={() => goToPage(page)}
+            >
+              {page}
+            </button>
+          ))}
+
+          {safeCurrentPage < totalPages - 1 && (
+            <>
+              {safeCurrentPage < totalPages - 2 && <span className="page-btn" style={{ cursor: 'default', border: 'none' }}>…</span>}
+              <button className="page-btn" onClick={() => goToPage(totalPages)}>{totalPages}</button>
+            </>
+          )}
+
+          <button
+            className="page-btn"
+            disabled={safeCurrentPage === totalPages}
+            onClick={() => goToPage(safeCurrentPage + 1)}
+          >
+            →
+          </button>
+        </div>
+      )}
+
+      {totalPages > 1 && (
+        <div style={{ textAlign: 'center', marginTop: 'var(--space-md)', fontSize: 'var(--text-sm)', color: 'var(--color-text-tertiary)' }}>
+          Page {safeCurrentPage} of {totalPages} • {filteredQuestions.length} question{filteredQuestions.length !== 1 ? 's' : ''}
         </div>
       )}
     </div>

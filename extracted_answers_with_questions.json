@@ -1,0 +1,1052 @@
+[
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": ")        On tracing the tree from top to bottom and left to right  we get    3,1,2,2,1,3,4,4,4    ? Option a is correct answer.          GATE Wallah CS & IT Topic wise PYQs   Functions and Storage Classes  5.29  15. (d)         Answer is option (d)         16. (b)    void get (int n) {    if (n < 1) return;      get (n ? 1); ? Recursion call with 1 less argument    get (n ? 3); ? Recursion call with 3 less argument    printf(?%d?, n);    Need not to focus on printf statement  ",
+    "position": 574642,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "217)8 = (001010001111)2     GATE Wallah CS & IT Topic wise PYQ  Number System and binary Codes  9.5    Now, to represent the above number in hexadecimal  form, make the group of 4 bits.    (0010 1000 1111)2 = (028F)16     Hence, correct answer is option (b).      8.  (d)    The given equation is     ( ) ( ) 121 11 r r =     Let r be any base    2 1 0 1 2 1 r r r ? + ? + ? =  1 0 1 1 r r ? + ?     2 2 1 r r + + = r +1    ( ) 2 1 r + = r +1    ? ",
+    "position": 963872,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "1 r + = r +1    ? (r + 1) = r + 1    Take negative sign     ? (r + 1) = r + 1     2r + 2 = 0    r = ?1 (radix cannot be negative)    Take positive sign     r + 1 = r + 1    for all value which is greater than 2.    Hence, correct answer is option (d).      9. (c)    To find 2?s complement of -28 first we convert +28  in binary system and then take 2?s  complement       (28)10 =(0000 0000 0001 1100)2    Now  taking 2?s complement of (0000 0000 0001  1100)2=1111 1111 111 0100    Hence",
+    "position": 964370,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "C",
+    "context": "8  in binary system and then take 2?s  complement       (28)10 =(0000 0000 0001 1100)2    Now  taking 2?s complement of (0000 0000 0001  1100)2=1111 1111 111 0100    Hence                     ?28 ? 1111 1111 1110 0100    Therofre correct answer is option (C)  10. (0.502)  Decimal  Unsigned representation  1  0001  2  0010  3  0011  4  0100  5  0101  6  0110  4  0111  7  0111  8  1000  9  1001  10  1010  11  1011  12  1100  13  1101    From above table 7 number with MSB ?",
+    "position": 964711,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "   The range will be given by      ? (2n?1) to + (2n?1 ?1)    For n = 8 (Given 8 bit number)    The minimum will be     ? ? (28?1)     ? ? (27)     ? ?128     The maximum number will be given as     (2n?1) = 127    Hence, correct answer is option (b).        18. (a)    Method 1:    The given number is     P = (F87B)16    P = 1111100001111011 = (?1925)    2?s complement of the above number will be given  as    = 0000011110000101    Its decimal representation will be    ? 1 ? ",
+    "position": 967796,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "+ 256 + 128 + 4+1 = 1925    Now,     8 ? P = 8 ? (?1925) = ?15400    Its binary representation will be 0011110000101000    Now, 2?s complement of the above number will be  given as    1100001111011000    8P ?(C3D8)16    Hence, correct answer is option (a)    Method 2:     P = (F87B)16      = 1111100001111011    By multiplying 21 , number will be shifted to left by  one position, and by multiplying 23 , number will be  shifted by 3 position to the left.    ? 11 00 00 1111011000      8P ",
+    "position": 968373,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": ")16      = 1111100001111011    By multiplying 21 , number will be shifted to left by  one position, and by multiplying 23 , number will be  shifted by 3 position to the left.    ? 11 00 00 1111011000      8P ? (C3D8)16    Hence, correct answer is option (a)  ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  9.8    C H A P T E R    2    Boolean Algebra  1. [MCQ]  [GATE-2022: 1M]    The dual of a Boolean function F(x1, x2, ..., x, +, ?, ? ),  written as FD, is the sa",
+    "position": 968674,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "-dual functions   =  n?1 2 2     Self -Dual:    F = FD    F = AB    FD = A+B    Dual A A ??? ?     Dual A A ??? ?     Ex-    F = AB + BC + AC    FD = (A + B) ?(B + C) (A + C)    FD= AB + BC + AC    Hence, correct answer is option (d)      2. (c)    (a) wx + w (x +y) + x(x +y) = x +wy       wx + wx +wy + x + xy        x [w +w + 1+ y] + wy       = x + wy    Therefore, option a is correct    (b)  ( ) wx y z wx = w + x + yz + +        wx y+z wx  + + ",
+    "position": 980350,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "    (c)  ( ) ( )  wx y xz wx y xy + + =        w x y + w x x z + w x y        wxy + wx ? ? ? ? y    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.8       ( ) xy w w +        xy       Hence correct answer is option (c)    (d) (w + y) (wxy + wyz) = wxy +wyz       wxy +wyz + wxy + wyz       wxy + wyz     Therefore, option d is correct.      3.  (b)    We can see that the given truth table is the output of  X ? OR gate and we know that X-OR logic fol",
+    "position": 981000,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "e given truth table is the output of  X ? OR gate and we know that X-OR logic follows  both commutative and associative operation.     A ?B = B ?A ? follow commutative law    (A ?B) ?C = A ? (B ?C) Follow associative  law.    Hence, correct answer is option (a).      4.  (a)    The given Boolean expression is    = D AB AC + ACD +ACD + +     =  ( ) D AB AC + CD A+A + +     = D AB AC + CD  + +           =   D CD AB + AC  + +     =   ( )( ) C+D D+D AB AC + +    ",
+    "position": 981438,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": ") ( ) C+D AB AC + +     ?  C D AB AC + ? ?     ? CD A  + B A + C  ? ?? ? ? ? ?? ?     ? CD A A + AC AB + BC ? ? ? + ? ?    ? CD AC+AB + BC ? ? ? ?    = AC CD + ABCD + BCCD ?     ? ABCD    Hence, correct answer is option (a).      5.  (a)    Standard mininmal from    F = P + QR    ( )( ) ( ) F = P Q + Q R + Q P + P QR +        = PQR PQR+PQR PQR+PQR+PQR+PQR + +         = ?m(0,1,2,3,7)        = ?M (4,5,6)      6. (a)    The equation of th",
+    "position": 981965,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " PQR+PQR PQR+PQR+PQR+PQR + +         = ?m(0,1,2,3,7)        = ?M (4,5,6)      6. (a)    The equation of the given truth table will be given as     ( ) ( ) F x,y = xy xy             = x y y x + + =         Hence, correct answer is option (a)      7. (d)    Let us see the 4-bit number multiplication.      GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.9          Input = 24 ? 24      output = 8    The amount of ROM needed to implement a ",
+    "position": 982365,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "          Input = 24 ? 24      output = 8    The amount of ROM needed to implement a 4 bit  multiplier is      ROM   = 24 ? 24 ? 8               = 28 ?23         = 211         = 2 ? 210         = 2k bits    Hence, correct answer is option (d).      8. (b)    The given expression is     (?+ ?? + ??) ?(?+ ?? + ?) ?(?+ ?+ ??)     Let P + Q x =     ?( ) ( ) ( )  x R x R P Q + R + ? + +      (By distribution Theorem x + R? . R = (x +   R?) (x  + R) )     ? x. (P ",
+    "position": 982794,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "n Theorem x + R? . R = (x +   R?) (x  + R) )     ? x. (P + Q + R?)    ?( ) ( ) P Q P Q R + ? + +      P PQ + PR + PQ Q Q QR ? + + ? +       P 1 Q +R Q Q R ? ? = + + + ? ?     = P + Q? R?     Hence, correct answer is option (b).      9. (a)    The given expression is    ( ) F P,Q,R PQ + QR PR = +     The Standard canonical form of the above  expression will be given as:           ( ) ( ) ( ) ( ) F P,Q,R PQ R R P P QR P Q Q R = + + + + +",
+    "position": 983255,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " F P,Q,R PQ R R P P QR P Q Q R = + + + + +              PQR PQR + PQR PQR PQR PQR = + + + +        6 7 2 6 4 6 m m m m m m = + + + + +        2 4 6 7 m m m m = + + +      Hence, correct answer is option (a).      10. (a)    The given expression is    (P + Q?) (P.Q? + P.R) (P?.R? + Q?)    ?( ) ( ) PQ PR PQ PQ PR Q + + + ? + R     ?( ) ( ) PQ PR PR Q + ? +     = ( ) ( ) P Q + ? + Q R PR     = ( )( ) +",
+    "position": 983720,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " + + + ? + R     ?( ) ( ) PQ PR PR Q + ? +     = ( ) ( ) P Q + ? + Q R PR     = ( )( ) + + Q R PPR PQ    ( )( ) = + Q R PQ    = + PQ PQR    ( ) 1 = + PQ R     = PQ    Hence, correct answer is option (a).      11. (c)    We will put X1 = 1, X2 = 1, X3 = 1, X4 = 1    1 ? 1 ? 1 ? 1 = 0     By taking the above values ,we will see all the  options one-by-one.    ?  X 1. X 2. X 3. X 4 = 1.1.1.1 = 0             (wrong)    ?  X 1 X 3+ X 2 =",
+    "position": 984115,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": " x4     Substitute values of A, B in equation (i)    x1 ? x2  ? 0 = x3 ? x4     x1 ? x2 = x3 ? x4    We know that      ? = ? A B A B    1 2 3 4 x x  x x = ? ?     1 2 3 4 x x  x x = ? ?     Hence, correct answer is option (c)            12. (a)    Given           x # 0 = x,           x #1 = ??,           x # x = 0 ,          x # ?? = 1                We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,",
+    "position": 985115,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "?,           x # x = 0 ,          x # ?? = 1                We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,                                   x # y = xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Opti",
+    "position": 985459,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Option (a)    (x + y) ? z = x ? (y + z)    (x + y) ? z= (x + y)  z? + (?+ ????????)  z    (x + y) ? z= xz? + y z? + x? y? z    x  ? (y+z)=x(?+ ????????) +x? (y + z)    x  ? (y+z)=x y? z? + x? y + x? z    (x + y) ? z ? ",
+    "position": 985685,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " ? ? P P Q P Q Q ? ? ? ? ? ? ? ? ?              = ? ? ? ? 1 Q P 0 ? ? ?     = Q P ?     = P Q ?     Note: P 1 = P Q 0 = Q P Q = P Q = P Q Z Z = O ?? ? ? ??? ? ? ? ? ?     Hence, correct answer is option (d).         19. (d)    We know that Exclusive NOR of x and y    = ( ) x y ?     = ( ) ( ) x y xy' + x'y ' ? =     = ( )( ) ( ) x' y x y' + +     = x'y' + xy    ?  xy + x'y' = x y   [Exclusive OR]    ?  x ? ",
+    "position": 988058,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "  = ( )( ) ( ) x' y x y' + +     = x'y' + xy    ?  xy + x'y' = x y   [Exclusive OR]    ?  x ? y' = x y   [Exclusive OR]    ?  x' ? y = x y   [Exclusive OR]    ?  x' ? y' = x ? y   [Exclusive NOR]      Hence, correct answer is option (d).      20. (d)    Let us see the output of all the given options we get    (a)      (b)      (c)      (d)      Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates an",
+    "position": 988463,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "   [Exclusive OR]    ?  x' ? y' = x ? y   [Exclusive NOR]      Hence, correct answer is option (d).      20. (d)    Let us see the output of all the given options we get    (a)      (b)      (c)      (d)      Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.13  21. (a)    Let us see the output of the given logic circuit at  each stage, we get          The output of the above logic circuit will be g",
+    "position": 988628,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "we get          The output of the above logic circuit will be given  by    ( )( ) f PQ QR PR QR = + +     f PQR PQR PQR QR = + + +     f PQR QR = +     ( ) f QR P+1 =     f Q +R =     Hence, correct answer is option (a).      22. (b)    The given expression is     f = (AB + C)    By using distribution theorem, we can write above  expression as    f = (A + C)  ? (B + C)    Note: Whenever in the problem, NOR gates are  asked, write the function in POS.",
+    "position": 989080,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "(B + C)    Note: Whenever in the problem, NOR gates are  asked, write the function in POS.    Now, the above expression is in POS form.    Hence, three NOR gates will be required to  implement f as shown below            Hence, correct answer is option (b).      23. (a)    We now, that    NAND/NOR is functionally complete.        And from the above options only EX-NOR is not  functionally complete    Hence, correct answer is option (a).            GATE Wallah CS & IT Topic wise P",
+    "position": 989507,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "ent f as shown below            Hence, correct answer is option (b).      23. (a)    We now, that    NAND/NOR is functionally complete.        And from the above options only EX-NOR is not  functionally complete    Hence, correct answer is option (a).            GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.14    24. (c)          25. (3)     The given function is     f(w,x,y,z) = ?(0, 2, 4, 5, 6, 10)      The k-map of the above function  will be given as  below  ",
+    "position": 989704,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.15  28. (a)        f(w, x, y, z) = ?m(0, 1, 2, 3, 7, 8, 10) + ?d(5, 6, 11, 15)      from above K-Map 2 quad is possible     Therefore  f(w,x,y,z) = ( x + z) ( w + z )    Hence option answer is option (a).      29. (a)    The given function is     F (P, Q, R, S) = PQ + P Q R S    Its standard canonical form will be     F (P, Q, R, S) = PQ (R? + R) (S? + S) + P?QR (S? + S) + P? Q                                         R? S      F(P, Q,",
+    "position": 990724,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "                                 + P Q R S    = PQRS + PQ RS + PQR S + PQRS + PQRS +      PQRS+ PQRS    ?m = (12, 13, 14, 15, 6, 7, 5)    Now, the k-map of the above function will be given  as below      = PQ + QS + QR    Hence, correct answer is option (a).        30. (b)    The given function is     F (P,Q,R,S) = ? 0, 2, 5, 7, 8,10,13,15    The k-map of the above functions is given below        From the above k-map    F = Q S QS +     Hence, correct answer is option (b).       ",
+    "position": 991315,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "e, correct answer is option (a).        30. (b)    The given function is     F (P,Q,R,S) = ? 0, 2, 5, 7, 8,10,13,15    The k-map of the above functions is given below        From the above k-map    F = Q S QS +     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PY",
+    "position": 991554,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "the above k-map    F = Q S QS +     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence, correct answer is option (a).        33. (a) ",
+    "position": 991746,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence, correct answer is option (a).        33. (a)    The given expression is    f (A, B, C, D) = ?m(2, 3, 6, 7, 8, 9, 10, 11, 12 13)    k-map of the above expression will be given as        AC + AC AB f = +     AC + AC B C f = +           We can see from the",
+    "position": 991975,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "?m(2, 3, 6, 7, 8, 9, 10, 11, 12 13)    k-map of the above expression will be given as        AC + AC AB f = +     AC + AC B C f = +           We can see from the above expression that f is     independent of D.    Hence, correct answer is option (a).        ???         GATE Wallah CS  & IT Topic wise PYQs   Design of springs  9.17    C H A P T E R    3    BCD Adder and Subtractor   1. [NAT]                        [GATE-2016: 1M]    Consider  an  eight-bit  ripple-carry  ",
+    "position": 992317,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": " ABC ABC C ABC ABC + + + +   f (ABC) = AB B C+  + C A ABC ABC ABC ABC + + +           f (ABC) = ?m (0, 1, 2, 3, 5)    Now implementing on 2 ? 1 mux.           ? (X0 X1 X2 X3 X4 X5 X6 X7) = (11011100)    Hence correct answer is option (c).      3.  (a)    F = ( ) ( ) X X YZ X X YZ + XYZ XYZ + + + +       = XYZ XYZ XY XYZ + XYZ XYZ Z + + + +      =  ( ) m 0,1,3,4,5,6 ?             GATE Wallah CS  & IT Topic wise PYQs   Combinational Logic ",
+    "position": 997596,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "  MUX -2    output MUX -1                 f1 = P?.0 + P.R = P R    MUX -2 output                X = Q?. R? + Q. f1               X = Q?. R? + Q.P.R    Its minimal sum of product form output               X= Q?.R? + PQR    Hence, correct answer is option (d).       7. (c)    Then given circuit will be as follows       From the given condition if     x =1    y = a    Otherwise, y = b    The truth table of the above circuit will be given as  x  a  b  y  0  0  0  0  0  0  1  1  ",
+    "position": 998683,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "  0  1  0  1  1  0  1  1  1  1  1      GATE Wallah CS  & IT Topic wise PYQs   Digital Logic  9.22    y (x, a, b) =  ?m(1, 3, 6, 7)    The k-map of the above function will be           y = x a + x b        Hence, correct answer is option (c).      8. (b)  Given multiplexer diagram redrawn as      The output of the given multiplexer will be given as    = + + + f PQR PQR PQR PQR        f 1 2 4 7 = m + m + m + m       f  =  ( ) m 1,2,4,7 ?     By using k-ma",
+    "position": 999253,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "er will be given as    = + + + f PQR PQR PQR PQR        f 1 2 4 7 = m + m + m + m       f  =  ( ) m 1,2,4,7 ?     By using k-map we get       = + + + f PQR PQR PQR PQR    f = P Q R ? ?     Hence, correct answer is option (b).      9.  (1034)        1 kB RAM=1024 = 210    m = 10    n = 210 = 1024    m + n = 10 + 1024= 1034      10. (b)      We can see that the given circuit is 3 to 8  decoder and its output will be given as.    ( ) f m 1,3,4,6 ",
+    "position": 999620,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "n circuit is 3 to 8  decoder and its output will be given as.    ( ) f m 1,3,4,6 = ?         GATE Wallah CS  & IT Topic wise PYQs   Combinational Logic Circuits  9.23    By using k-map we get       f = xz + xz    Hence, correct answer is option (b).      11. (a)    We know that    D0 ? MSB     D3 ? LSB    we can see that the given truth table is the truth table  of priority encoder.            V=0 is invalid output.           V=1 is valid output    Hence, correct answer is opti",
+    "position": 1000052,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " is option (b).      11. (a)    We know that    D0 ? MSB     D3 ? LSB    we can see that the given truth table is the truth table  of priority encoder.            V=0 is invalid output.           V=1 is valid output    Hence, correct answer is option (a).    ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  9.24    C H A P T E R    4    Flip Flops  1. [MCQ]                        [GATE-2023: 1M]    The output of a 2-input multiplexer is connected back  to one o",
+    "position": 1000308,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " IT Topic wise PYQs   Sequential Circuits  9.29  CLK  Qn of JK Flip Flop  0  0  1  1  2  1  3  0  4  1  5  1    From the above truth table the Output of JK Flip  Flop will be    0 ? 1?1?0?1?1    = 011011...    Hence, correct answer is option (a).      4. (c)    The truth table of the given flip-flop will be    JK-flip flop  CLK  Q2  Q1  Q0  0  0  0  0  1  1  0  0  2  1  1  0  3  1  1  1    From the above truth table, the state sequence for next  3 clock cycles a",
+    "position": 1009028,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "the given flip-flop will be    JK-flip flop  CLK  Q2  Q1  Q0  0  0  0  0  1  1  0  0  2  1  1  0  3  1  1  1    From the above truth table, the state sequence for next  3 clock cycles are 100, 110 and 111.    Hence, correct answer is option (c).        5. (a)    The number of Flip Flops needed to design Mod-M  counter,          M ? 2n         ?(i)    where n = number of flip flops     to solve (i) by taking log on both sides we get,    n ? log2 M    n ? log2 258     ",
+    "position": 1009339,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "   M ? 2n         ?(i)    where n = number of flip flops     to solve (i) by taking log on both sides we get,    n ? log2 M    n ? log2 258                                [?  M = 258]    n ? 8.01122    9 n ?     Hence, correct answer is option (a).      6. (c)    As per the given conditions, the truth table will be  given as  CLOCK  P  Q  R  0  0  0  0  1  0  1  0  2  0  1  1  3  1  0  0  4  0  0  0    We can see that the above truth table is the output of  a ",
+    "position": 1009701,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "s  CLOCK  P  Q  R  0  0  0  0  1  0  1  0  2  0  1  1  3  1  0  0  4  0  0  0    We can see that the above truth table is the output of  a mod- 4 counter.     Hence total number of distinct states = 4    Hence, correct answer is option (b)        7. (d)    In the circuit PQR = 010    Before applying the clock, input of the Flip-flop  =011    So, in the D-FF whatever the inputs applied that will  come at the output along with clock.    So, output of counter = 011    Henc",
+    "position": 1010055,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "7. (d)    In the circuit PQR = 010    Before applying the clock, input of the Flip-flop  =011    So, in the D-FF whatever the inputs applied that will  come at the output along with clock.    So, output of counter = 011    Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.30  8. (d)    We know that truth table of JK flip-flop is given by   Qn  Qn+1  J  K  0  1  0  X  0  1  1  X  1  0  X  1  1  1  X  0    Now the truth tabl",
+    "position": 1010336,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " 0  ?  1  1  0  0  1  1  ?  1  0  1  0  ?  1  1  1  0  0  0  ?  1  1  1  1  ?  0     Solving J & K using k-map, we get        J xy xy x y = + = ?         K xy y x y x = + = ?     Hence, correct answer is option (d).      9. (a)      The truth table of the above sequential circuit is  given as follows.    CLK  Q1  Q0  0  0  0  1  1  1  2  1  0  3  0  1  4  0  0    From the above truth table, we can see that it is an  output of an As",
+    "position": 1011000,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "above sequential circuit is  given as follows.    CLK  Q1  Q0  0  0  0  1  1  1  2  1  0  3  0  1  4  0  0    From the above truth table, we can see that it is an  output of an Asynchronous down counter.       Hence, correct answer is option (a).      10. (a)    The characteristics table of given sequential  circuit    Clock  3 T = Q  1 D = Q  2 T = Q Q1 Q2 Q3  0  -  -  -  0  1  1  1  0  0  1  0  0  0  2  1  0  0  1  0  0  3  1  1  0  0  1  0  4  1",
+    "position": 1011318,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " Sequential Circuits  9.31  5  0  1  0  1  1  1  6  0  1  1  1  1  0  7  1  1  1  0  1  1    From above table states involved 011, 000, 100,  010, 101, 111, 110. The only state 001 can never  be achieved.    Hence correct answer is option (a).      11. (a)    According to question , the initial state of counter is  PQR = 000        From the truth table the next three states are    011?101?000      12.. (3)     Design the up counter of 3bit ignore the LSB.    So, numeb",
+    "position": 1011976,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "1  0  1  0  1  1  0  1  1  1  0  1  1  0  1  1  1  1  1  0  0    For T0     GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.32      1 0 0 T = Q + Q    For T1       1 1 0 T Q Q =     Hence correct answer is option (b).      15. (d)        0 0 0 0? 0    1 0 0 0? 8    1 1 0 0? 12    1 1 1 0? 14    1 1 1 1? 15    0 1 1 1? 7    0 0 1 1? 3    0 0 0 1? 1      16. (c)    Let 2 ? 4 Decoder as shown below, be at the output       Now, according",
+    "position": 1013055,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "ut of the combination will be given as  A  B  y0  y1  y2  y3  0  0  1  0  0  0  0  1  0  1  0  0  1  0  0  0  1  0  1  1  0  0  0  1            Ring counter of 2n bits i.e. k-bit ring counter.     Hence, correct answer is option (c)       GATE Wallah CS & IT Topic wise PYQs   Sequential Circuits  9.33  17. (c)    Number of required chips for memory capacity      = 256 ?210 ? 8    Number of available chips for RAM capacity     = 32 ?210 ? 1    Now,    Number ",
+    "position": 1013669,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "Answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "?210 ? 8    Number of available chips for RAM capacity     = 32 ?210 ? 1    Now,    Number of chips needed to build 256K-bytes will be    Number of chips = Required Avaliable =  10 10 256 2 8 64 32 ? 2 ? ? =     Hence, correct answer is option (c).    18. (d)      ROM =  Input output 4 4 2 2 2 ? ?         =  28? 23          =  211         =  2? 210          =  2k bits        ???  NOTE :         1.  Proposition Logic   ................................",
+    "position": 1014090,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "b is correct     (c)  ( ) ( )  wx y xz wx y xy + + =        w x y + w x x z + w x y        wxy + wx ? ? ? ? y    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.8       ( ) xy w w +        xy       Hence correct answer is option (c)    (d) (w + y) (wxy + wyz) = wxy +wyz       wxy +wyz + wxy + wyz       wxy + wyz     Therefore, option d is correct.      3.  (b)    We can see that the given truth table is the output of  X ? OR gate and we know that X-OR logic fol",
+    "position": 980986,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "      x #1 = ??,           x # x = 0 ,          x # ?? = 1                We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,                                   x # y = xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Opti",
+    "position": 985445,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "x # y = xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Option (a)    (x + y) ? z = x ? (y + z)    (x + y) ? z= (x + y)  z? + (?+ ????????)  z    (x + y) ? z= xz? + y z? + x? y? z    x  ? (y+z)=x(?+ ????????) +x? (y + z)    x  ? (y+z)=x y? z? + x? y + x? z    (x + y) ? z ? ",
+    "position": 985671,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "      From the above k-map    F = Q S QS +     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence, correct answer is option (a).        33. (a) ",
+    "position": 991732,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "  + AB C A ABC ABC C ABC ABC + + + +   f (ABC) = AB B C+  + C A ABC ABC ABC ABC + + +           f (ABC) = ?m (0, 1, 2, 3, 5)    Now implementing on 2 ? 1 mux.           ? (X0 X1 X2 X3 X4 X5 X6 X7) = (11011100)    Hence correct answer is option (c).      3.  (a)    F = ( ) ( ) X X YZ X X YZ + XYZ XYZ + + + +       = XYZ XYZ XY XYZ + XYZ XYZ Z + + + +      =  ( ) m 0,1,3,4,5,6 ?             GATE Wallah CS  & IT Topic wise PYQs   Combinational Logic ",
+    "position": 997582,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "c wise PYQs   Sequential Circuits  9.31  5  0  1  0  1  1  1  6  0  1  1  1  1  0  7  1  1  1  0  1  1    From above table states involved 011, 000, 100,  010, 101, 111, 110. The only state 001 can never  be achieved.    Hence correct answer is option (a).      11. (a)    According to question , the initial state of counter is  PQR = 000        From the truth table the next three states are    011?101?000      12.. (3)     Design the up counter of 3bit ignore the LSB.    So, numeb",
+    "position": 1011962,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "hence correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": " 0  0  0  1  0  1  0  1  1  0  1  1  1  0  1  1  0  1  1  1  1  1  0  0    For T0     GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.32      1 0 0 T = Q + Q    For T1       1 1 0 T Q Q =     Hence correct answer is option (b).      15. (d)        0 0 0 0? 0    1 0 0 0? 8    1 1 0 0? 12    1 1 1 0? 14    1 1 1 1? 15    0 1 1 1? 7    0 0 1 1? 3    0 0 0 1? 1      16. (c)    Let 2 ? 4 Decoder as shown below, be at the output       Now, according",
+    "position": 1013041,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "    (1217)8 = (001010001111)2     GATE Wallah CS & IT Topic wise PYQ  Number System and binary Codes  9.5    Now, to represent the above number in hexadecimal  form, make the group of 4 bits.    (0010 1000 1111)2 = (028F)16     Hence, correct answer is option (b).      8.  (d)    The given equation is     ( ) ( ) 121 11 r r =     Let r be any base    2 1 0 1 2 1 r r r ? + ? + ? =  1 0 1 1 r r ? + ?     2 2 1 r r + + = r +1    ( ) 2 1 r + = r +1    ? ",
+    "position": 963864,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " ) 2 1 r + = r +1    ? (r + 1) = r + 1    Take negative sign     ? (r + 1) = r + 1     2r + 2 = 0    r = ?1 (radix cannot be negative)    Take positive sign     r + 1 = r + 1    for all value which is greater than 2.    Hence, correct answer is option (d).      9. (c)    To find 2?s complement of -28 first we convert +28  in binary system and then take 2?s  complement       (28)10 =(0000 0000 0001 1100)2    Now  taking 2?s complement of (0000 0000 0001  1100)2=1111 1111 111 0100    Hence",
+    "position": 964362,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "C",
+    "context": "nvert +28  in binary system and then take 2?s  complement       (28)10 =(0000 0000 0001 1100)2    Now  taking 2?s complement of (0000 0000 0001  1100)2=1111 1111 111 0100    Hence                     ?28 ? 1111 1111 1110 0100    Therofre correct answer is option (C)  10. (0.502)  Decimal  Unsigned representation  1  0001  2  0010  3  0011  4  0100  5  0101  6  0110  4  0111  7  0111  8  1000  9  1001  10  1010  11  1011  12  1100  13  1101    From above table 7 number with MSB ?",
+    "position": 964703,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "nt form    The range will be given by      ? (2n?1) to + (2n?1 ?1)    For n = 8 (Given 8 bit number)    The minimum will be     ? ? (28?1)     ? ? (27)     ? ?128     The maximum number will be given as     (2n?1) = 127    Hence, correct answer is option (b).        18. (a)    Method 1:    The given number is     P = (F87B)16    P = 1111100001111011 = (?1925)    2?s complement of the above number will be given  as    = 0000011110000101    Its decimal representation will be    ? 1 ? ",
+    "position": 967788,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "4 + 512 + 256 + 128 + 4+1 = 1925    Now,     8 ? P = 8 ? (?1925) = ?15400    Its binary representation will be 0011110000101000    Now, 2?s complement of the above number will be  given as    1100001111011000    8P ?(C3D8)16    Hence, correct answer is option (a)    Method 2:     P = (F87B)16      = 1111100001111011    By multiplying 21 , number will be shifted to left by  one position, and by multiplying 23 , number will be  shifted by 3 position to the left.    ? 11 00 00 1111011000      8P ",
+    "position": 968365,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " = (F87B)16      = 1111100001111011    By multiplying 21 , number will be shifted to left by  one position, and by multiplying 23 , number will be  shifted by 3 position to the left.    ? 11 00 00 1111011000      8P ? (C3D8)16    Hence, correct answer is option (a)  ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  9.8    C H A P T E R    2    Boolean Algebra  1. [MCQ]  [GATE-2022: 1M]    The dual of a Boolean function F(x1, x2, ..., x, +, ?, ? ),  written as FD, is the sa",
+    "position": 968666,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " of self-dual functions   =  n?1 2 2     Self -Dual:    F = FD    F = AB    FD = A+B    Dual A A ??? ?     Dual A A ??? ?     Ex-    F = AB + BC + AC    FD = (A + B) ?(B + C) (A + C)    FD= AB + BC + AC    Hence, correct answer is option (d)      2. (c)    (a) wx + w (x +y) + x(x +y) = x +wy       wx + wx +wy + x + xy        x [w +w + 1+ y] + wy       = x + wy    Therefore, option a is correct    (b)  ( ) wx y z wx = w + x + yz + +        wx y+z wx  + + ",
+    "position": 980342,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "orrect     (c)  ( ) ( )  wx y xz wx y xy + + =        w x y + w x x z + w x y        wxy + wx ? ? ? ? y    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.8       ( ) xy w w +        xy       Hence correct answer is option (c)    (d) (w + y) (wxy + wyz) = wxy +wyz       wxy +wyz + wxy + wyz       wxy + wyz     Therefore, option d is correct.      3.  (b)    We can see that the given truth table is the output of  X ? OR gate and we know that X-OR logic fol",
+    "position": 980992,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " that the given truth table is the output of  X ? OR gate and we know that X-OR logic follows  both commutative and associative operation.     A ?B = B ?A ? follow commutative law    (A ?B) ?C = A ? (B ?C) Follow associative  law.    Hence, correct answer is option (a).      4.  (a)    The given Boolean expression is    = D AB AC + ACD +ACD + +     =  ( ) D AB AC + CD A+A + +     = D AB AC + CD  + +           =   D CD AB + AC  + +     =   ( )( ) C+D D+D AB AC + +    ",
+    "position": 981430,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "  ? ( ) ( ) C+D AB AC + +     ?  C D AB AC + ? ?     ? CD A  + B A + C  ? ?? ? ? ? ?? ?     ? CD A A + AC AB + BC ? ? ? + ? ?    ? CD AC+AB + BC ? ? ? ?    = AC CD + ABCD + BCCD ?     ? ABCD    Hence, correct answer is option (a).      5.  (a)    Standard mininmal from    F = P + QR    ( )( ) ( ) F = P Q + Q R + Q P + P QR +        = PQR PQR+PQR PQR+PQR+PQR+PQR + +         = ?m(0,1,2,3,7)        = ?M (4,5,6)      6. (a)    The equation of th",
+    "position": 981957,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "   = PQR PQR+PQR PQR+PQR+PQR+PQR + +         = ?m(0,1,2,3,7)        = ?M (4,5,6)      6. (a)    The equation of the given truth table will be given as     ( ) ( ) F x,y = xy xy             = x y y x + + =         Hence, correct answer is option (a)      7. (d)    Let us see the 4-bit number multiplication.      GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.9          Input = 24 ? 24      output = 8    The amount of ROM needed to implement a ",
+    "position": 982357,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "ps  9.9          Input = 24 ? 24      output = 8    The amount of ROM needed to implement a 4 bit  multiplier is      ROM   = 24 ? 24 ? 8               = 28 ?23         = 211         = 2 ? 210         = 2k bits    Hence, correct answer is option (d).      8. (b)    The given expression is     (?+ ?? + ??) ?(?+ ?? + ?) ?(?+ ?+ ??)     Let P + Q x =     ?( ) ( ) ( )  x R x R P Q + R + ? + +      (By distribution Theorem x + R? . R = (x +   R?) (x  + R) )     ? x. (P ",
+    "position": 982786,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "tribution Theorem x + R? . R = (x +   R?) (x  + R) )     ? x. (P + Q + R?)    ?( ) ( ) P Q P Q R + ? + +      P PQ + PR + PQ Q Q QR ? + + ? +       P 1 Q +R Q Q R ? ? = + + + ? ?     = P + Q? R?     Hence, correct answer is option (b).      9. (a)    The given expression is    ( ) F P,Q,R PQ + QR PR = +     The Standard canonical form of the above  expression will be given as:           ( ) ( ) ( ) ( ) F P,Q,R PQ R R P P QR P Q Q R = + + + + +",
+    "position": 983247,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " ) ( ) F P,Q,R PQ R R P P QR P Q Q R = + + + + +              PQR PQR + PQR PQR PQR PQR = + + + +        6 7 2 6 4 6 m m m m m m = + + + + +        2 4 6 7 m m m m = + + +      Hence, correct answer is option (a).      10. (a)    The given expression is    (P + Q?) (P.Q? + P.R) (P?.R? + Q?)    ?( ) ( ) PQ PR PQ PQ PR Q + + + ? + R     ?( ) ( ) PQ PR PR Q + ? +     = ( ) ( ) P Q + ? + Q R PR     = ( )( ) +",
+    "position": 983712,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "Q PR Q + + + ? + R     ?( ) ( ) PQ PR PR Q + ? +     = ( ) ( ) P Q + ? + Q R PR     = ( )( ) + + Q R PPR PQ    ( )( ) = + Q R PQ    = + PQ PQR    ( ) 1 = + PQ R     = PQ    Hence, correct answer is option (a).      11. (c)    We will put X1 = 1, X2 = 1, X3 = 1, X4 = 1    1 ? 1 ? 1 ? 1 = 0     By taking the above values ,we will see all the  options one-by-one.    ?  X 1. X 2. X 3. X 4 = 1.1.1.1 = 0             (wrong)    ?  X 1 X 3+ X 2 =",
+    "position": 984107,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "B = x3 ? x4     Substitute values of A, B in equation (i)    x1 ? x2  ? 0 = x3 ? x4     x1 ? x2 = x3 ? x4    We know that      ? = ? A B A B    1 2 3 4 x x  x x = ? ?     1 2 3 4 x x  x x = ? ?     Hence, correct answer is option (c)            12. (a)    Given           x # 0 = x,           x #1 = ??,           x # x = 0 ,          x # ?? = 1                We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,",
+    "position": 985107,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "x #1 = ??,           x # x = 0 ,          x # ?? = 1                We can see from the given condition that the logic  operator # resembles the logic of EX-OR gate.    Therefore,                                   x # y = xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Opti",
+    "position": 985451,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "= xy +xy        Hence correct answer is option (a)       13. (c)      z = a + b? c    standard canonical form    z = a(b? + b) (c? + c) + (a? + a) b? c    z= ab?c? + ab?c + abc? + abc + a?b?c+ ab? c    z=?m (1,4, 5, 6, 7 )    Hence correct answer is option (c).      14. (a)  Option (a)    (x + y) ? z = x ? (y + z)    (x + y) ? z= (x + y)  z? + (?+ ????????)  z    (x + y) ? z= xz? + y z? + x? y? z    x  ? (y+z)=x(?+ ????????) +x? (y + z)    x  ? (y+z)=x y? z? + x? y + x? z    (x + y) ? z ? ",
+    "position": 985677,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "     = ? ? P P Q P Q Q ? ? ? ? ? ? ? ? ?              = ? ? ? ? 1 Q P 0 ? ? ?     = Q P ?     = P Q ?     Note: P 1 = P Q 0 = Q P Q = P Q = P Q Z Z = O ?? ? ? ??? ? ? ? ? ?     Hence, correct answer is option (d).         19. (d)    We know that Exclusive NOR of x and y    = ( ) x y ?     = ( ) ( ) x y xy' + x'y ' ? =     = ( )( ) ( ) x' y x y' + +     = x'y' + xy    ?  xy + x'y' = x y   [Exclusive OR]    ?  x ? ",
+    "position": 988050,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " =     = ( )( ) ( ) x' y x y' + +     = x'y' + xy    ?  xy + x'y' = x y   [Exclusive OR]    ?  x ? y' = x y   [Exclusive OR]    ?  x' ? y = x y   [Exclusive OR]    ?  x' ? y' = x ? y   [Exclusive NOR]      Hence, correct answer is option (d).      20. (d)    Let us see the output of all the given options we get    (a)      (b)      (c)      (d)      Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates an",
+    "position": 988455,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "y = x y   [Exclusive OR]    ?  x' ? y' = x ? y   [Exclusive NOR]      Hence, correct answer is option (d).      20. (d)    Let us see the output of all the given options we get    (a)      (b)      (c)      (d)      Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Boolean Algebra, Logic Gates and K-Maps  9.13  21. (a)    Let us see the output of the given logic circuit at  each stage, we get          The output of the above logic circuit will be g",
+    "position": 988620,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " stage, we get          The output of the above logic circuit will be given  by    ( )( ) f PQ QR PR QR = + +     f PQR PQR PQR QR = + + +     f PQR QR = +     ( ) f QR P+1 =     f Q +R =     Hence, correct answer is option (a).      22. (b)    The given expression is     f = (AB + C)    By using distribution theorem, we can write above  expression as    f = (A + C)  ? (B + C)    Note: Whenever in the problem, NOR gates are  asked, write the function in POS.",
+    "position": 989072,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "+ C)  ? (B + C)    Note: Whenever in the problem, NOR gates are  asked, write the function in POS.    Now, the above expression is in POS form.    Hence, three NOR gates will be required to  implement f as shown below            Hence, correct answer is option (b).      23. (a)    We now, that    NAND/NOR is functionally complete.        And from the above options only EX-NOR is not  functionally complete    Hence, correct answer is option (a).            GATE Wallah CS & IT Topic wise P",
+    "position": 989499,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " implement f as shown below            Hence, correct answer is option (b).      23. (a)    We now, that    NAND/NOR is functionally complete.        And from the above options only EX-NOR is not  functionally complete    Hence, correct answer is option (a).            GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.14    24. (c)          25. (3)     The given function is     f(w,x,y,z) = ?(0, 2, 4, 5, 6, 10)      The k-map of the above function  will be given as  below  ",
+    "position": 989696,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "+                                      + P Q R S    = PQRS + PQ RS + PQR S + PQRS + PQRS +      PQRS+ PQRS    ?m = (12, 13, 14, 15, 6, 7, 5)    Now, the k-map of the above function will be given  as below      = PQ + QS + QR    Hence, correct answer is option (a).        30. (b)    The given function is     F (P,Q,R,S) = ? 0, 2, 5, 7, 8,10,13,15    The k-map of the above functions is given below        From the above k-map    F = Q S QS +     Hence, correct answer is option (b).       ",
+    "position": 991307,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "   Hence, correct answer is option (a).        30. (b)    The given function is     F (P,Q,R,S) = ? 0, 2, 5, 7, 8,10,13,15    The k-map of the above functions is given below        From the above k-map    F = Q S QS +     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PY",
+    "position": 991546,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "  From the above k-map    F = Q S QS +     Hence, correct answer is option (b).        31. (b)   The given k-map is as shown below      From the given k-map ,function f will be given as                   f = b? c? + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence, correct answer is option (a).        33. (a) ",
+    "position": 991738,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " + b? d?     Hence correct answer is option (b).      32. (a)    GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.16    Given truth table is      From the above k-map the function f will be given as    f = ad + bd    Hence, correct answer is option (a).        33. (a)    The given expression is    f (A, B, C, D) = ?m(2, 3, 6, 7, 8, 9, 10, 11, 12 13)    k-map of the above expression will be given as        AC + AC AB f = +     AC + AC B C f = +           We can see from the",
+    "position": 991967,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "C, D) = ?m(2, 3, 6, 7, 8, 9, 10, 11, 12 13)    k-map of the above expression will be given as        AC + AC AB f = +     AC + AC B C f = +           We can see from the above expression that f is     independent of D.    Hence, correct answer is option (a).        ???         GATE Wallah CS  & IT Topic wise PYQs   Design of springs  9.17    C H A P T E R    3    BCD Adder and Subtractor   1. [NAT]                        [GATE-2016: 1M]    Consider  an  eight-bit  ripple-carry  ",
+    "position": 992309,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "AB C A ABC ABC C ABC ABC + + + +   f (ABC) = AB B C+  + C A ABC ABC ABC ABC + + +           f (ABC) = ?m (0, 1, 2, 3, 5)    Now implementing on 2 ? 1 mux.           ? (X0 X1 X2 X3 X4 X5 X6 X7) = (11011100)    Hence correct answer is option (c).      3.  (a)    F = ( ) ( ) X X YZ X X YZ + XYZ XYZ + + + +       = XYZ XYZ XY XYZ + XYZ XYZ Z + + + +      =  ( ) m 0,1,3,4,5,6 ?             GATE Wallah CS  & IT Topic wise PYQs   Combinational Logic ",
+    "position": 997588,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "input to  MUX -2    output MUX -1                 f1 = P?.0 + P.R = P R    MUX -2 output                X = Q?. R? + Q. f1               X = Q?. R? + Q.P.R    Its minimal sum of product form output               X= Q?.R? + PQR    Hence, correct answer is option (d).       7. (c)    Then given circuit will be as follows       From the given condition if     x =1    y = a    Otherwise, y = b    The truth table of the above circuit will be given as  x  a  b  y  0  0  0  0  0  0  1  1  ",
+    "position": 998675,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "  1  1  0  1  0  1  1  0  1  1  1  1  1      GATE Wallah CS  & IT Topic wise PYQs   Digital Logic  9.22    y (x, a, b) =  ?m(1, 3, 6, 7)    The k-map of the above function will be           y = x a + x b        Hence, correct answer is option (c).      8. (b)  Given multiplexer diagram redrawn as      The output of the given multiplexer will be given as    = + + + f PQR PQR PQR PQR        f 1 2 4 7 = m + m + m + m       f  =  ( ) m 1,2,4,7 ?     By using k-ma",
+    "position": 999245,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "ultiplexer will be given as    = + + + f PQR PQR PQR PQR        f 1 2 4 7 = m + m + m + m       f  =  ( ) m 1,2,4,7 ?     By using k-map we get       = + + + f PQR PQR PQR PQR    f = P Q R ? ?     Hence, correct answer is option (b).      9.  (1034)        1 kB RAM=1024 = 210    m = 10    n = 210 = 1024    m + n = 10 + 1024= 1034      10. (b)      We can see that the given circuit is 3 to 8  decoder and its output will be given as.    ( ) f m 1,3,4,6 ",
+    "position": 999612,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "the given circuit is 3 to 8  decoder and its output will be given as.    ( ) f m 1,3,4,6 = ?         GATE Wallah CS  & IT Topic wise PYQs   Combinational Logic Circuits  9.23    By using k-map we get       f = xz + xz    Hence, correct answer is option (b).      11. (a)    We know that    D0 ? MSB     D3 ? LSB    we can see that the given truth table is the truth table  of priority encoder.            V=0 is invalid output.           V=1 is valid output    Hence, correct answer is opti",
+    "position": 1000044,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "t answer is option (b).      11. (a)    We know that    D0 ? MSB     D3 ? LSB    we can see that the given truth table is the truth table  of priority encoder.            V=0 is invalid output.           V=1 is valid output    Hence, correct answer is option (a).    ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  9.24    C H A P T E R    4    Flip Flops  1. [MCQ]                        [GATE-2023: 1M]    The output of a 2-input multiplexer is connected back  to one o",
+    "position": 1000300,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "lah CS & IT Topic wise PYQs   Sequential Circuits  9.29  CLK  Qn of JK Flip Flop  0  0  1  1  2  1  3  0  4  1  5  1    From the above truth table the Output of JK Flip  Flop will be    0 ? 1?1?0?1?1    = 011011...    Hence, correct answer is option (a).      4. (c)    The truth table of the given flip-flop will be    JK-flip flop  CLK  Q2  Q1  Q0  0  0  0  0  1  1  0  0  2  1  1  0  3  1  1  1    From the above truth table, the state sequence for next  3 clock cycles a",
+    "position": 1009020,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "able of the given flip-flop will be    JK-flip flop  CLK  Q2  Q1  Q0  0  0  0  0  1  1  0  0  2  1  1  0  3  1  1  1    From the above truth table, the state sequence for next  3 clock cycles are 100, 110 and 111.    Hence, correct answer is option (c).        5. (a)    The number of Flip Flops needed to design Mod-M  counter,          M ? 2n         ?(i)    where n = number of flip flops     to solve (i) by taking log on both sides we get,    n ? log2 M    n ? log2 258     ",
+    "position": 1009331,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": "         M ? 2n         ?(i)    where n = number of flip flops     to solve (i) by taking log on both sides we get,    n ? log2 M    n ? log2 258                                [?  M = 258]    n ? 8.01122    9 n ?     Hence, correct answer is option (a).      6. (c)    As per the given conditions, the truth table will be  given as  CLOCK  P  Q  R  0  0  0  0  1  0  1  0  2  0  1  1  3  1  0  0  4  0  0  0    We can see that the above truth table is the output of  a ",
+    "position": 1009693,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": " given as  CLOCK  P  Q  R  0  0  0  0  1  0  1  0  2  0  1  1  3  1  0  0  4  0  0  0    We can see that the above truth table is the output of  a mod- 4 counter.     Hence total number of distinct states = 4    Hence, correct answer is option (b)        7. (d)    In the circuit PQR = 010    Before applying the clock, input of the Flip-flop  =011    So, in the D-FF whatever the inputs applied that will  come at the output along with clock.    So, output of counter = 011    Henc",
+    "position": 1010047,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": "     7. (d)    In the circuit PQR = 010    Before applying the clock, input of the Flip-flop  =011    So, in the D-FF whatever the inputs applied that will  come at the output along with clock.    So, output of counter = 011    Hence, correct answer is option (d).        GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.30  8. (d)    We know that truth table of JK flip-flop is given by   Qn  Qn+1  J  K  0  1  0  X  0  1  1  X  1  0  X  1  1  1  X  0    Now the truth tabl",
+    "position": 1010328,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "d",
+    "context": " 1  1  0  ?  1  1  0  0  1  1  ?  1  0  1  0  ?  1  1  1  0  0  0  ?  1  1  1  1  ?  0     Solving J & K using k-map, we get        J xy xy x y = + = ?         K xy y x y x = + = ?     Hence, correct answer is option (d).      9. (a)      The truth table of the above sequential circuit is  given as follows.    CLK  Q1  Q0  0  0  0  1  1  1  2  1  0  3  0  1  4  0  0    From the above truth table, we can see that it is an  output of an As",
+    "position": 1010992,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " of the above sequential circuit is  given as follows.    CLK  Q1  Q0  0  0  0  1  1  1  2  1  0  3  0  1  4  0  0    From the above truth table, we can see that it is an  output of an Asynchronous down counter.       Hence, correct answer is option (a).      10. (a)    The characteristics table of given sequential  circuit    Clock  3 T = Q  1 D = Q  2 T = Q Q1 Q2 Q3  0  -  -  -  0  1  1  1  0  0  1  0  0  0  2  1  0  0  1  0  0  3  1  1  0  0  1  0  4  1",
+    "position": 1011310,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "a",
+    "context": " PYQs   Sequential Circuits  9.31  5  0  1  0  1  1  1  6  0  1  1  1  1  0  7  1  1  1  0  1  1    From above table states involved 011, 000, 100,  010, 101, 111, 110. The only state 001 can never  be achieved.    Hence correct answer is option (a).      11. (a)    According to question , the initial state of counter is  PQR = 000        From the truth table the next three states are    011?101?000      12.. (3)     Design the up counter of 3bit ignore the LSB.    So, numeb",
+    "position": 1011968,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "b",
+    "context": "0  0  1  0  1  0  1  1  0  1  1  1  0  1  1  0  1  1  1  1  1  0  0    For T0     GATE Wallah CS & IT Topic wise PYQs   Digital Logic  9.32      1 0 0 T = Q + Q    For T1       1 1 0 T Q Q =     Hence correct answer is option (b).      15. (d)        0 0 0 0? 0    1 0 0 0? 8    1 1 0 0? 12    1 1 1 0? 14    1 1 1 1? 15    0 1 1 1? 7    0 0 1 1? 3    0 0 0 1? 1      16. (c)    Let 2 ? 4 Decoder as shown below, be at the output       Now, according",
+    "position": 1013047,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": "e  output of the combination will be given as  A  B  y0  y1  y2  y3  0  0  1  0  0  0  0  1  0  1  0  0  1  0  0  0  1  0  1  1  0  0  0  1            Ring counter of 2n bits i.e. k-bit ring counter.     Hence, correct answer is option (c)       GATE Wallah CS & IT Topic wise PYQs   Sequential Circuits  9.33  17. (c)    Number of required chips for memory capacity      = 256 ?210 ? 8    Number of available chips for RAM capacity     = 32 ?210 ? 1    Now,    Number ",
+    "position": 1013661,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "correct answer is option \\(([a-zA-Z])\\)",
+    "answer": "c",
+    "context": " = 256 ?210 ? 8    Number of available chips for RAM capacity     = 32 ?210 ? 1    Now,    Number of chips needed to build 256K-bytes will be    Number of chips = Required Avaliable =  10 10 256 2 8 64 32 ? 2 ? ? =     Hence, correct answer is option (c).    18. (d)      ROM =  Input output 4 4 2 2 2 ? ?         =  28? 23          =  211         =  2? 210          =  2k bits        ???  NOTE :         1.  Proposition Logic   ................................",
+    "position": 1014082,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "answer": "d",
+    "context": "? next =  NULL;        No way to reach first node                 Option (c) is wrong.     Option (d) q ? next = NULL; p ? next = head;  head = p;      GATE Wallah CS & IT Topic wise PYQs   Arrays and Linked List  5.67        Therefore, option (d) is the correct answer.    11.  (b)    Given,       if(!list||!list?next) return; // 0 or 1 node    Swap data of node pointed by p,q     Q is valid address      ? code inside loop ? execute  swap         p = q ? next    Q = p? P? next: 0  After one it",
+    "position": 636556,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "answer": "b",
+    "context": "t) return;// 0 or 1 node    q is valid address code inside loop swap.     if(!list||!list?next) return;// 0 or 1 node    q = p ? p? next: 0    q = p ? next ? NULL    while (q) Null ? False    Loop terminates    2, 1, 4, 3, 6, 5, 7    Therefore, option (b) is the correct answer.    ???         GATE Wallah CS & IT Topic wise PYQs   Design of springs  5.68    C H A P T E R  6    Operation on Stack  1.  [NAT]            [GATE-2023: 2M]    Consider a sequence a of elements a0 = 1, a1 = 5,  a2 = 7, a3 = 8, a",
+    "position": 637248,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "answer": "a",
+    "context": " 5 size     (Front +1) mode 5 = = 0     (0+1) mode 5 = = 0     1 = = 0      GATE Wallah CS & IT Topic wise PYQs   Stacks and Queues  5.77     False, That?s why option b is wrong.     Condition for FULL: (REAR +1) mod n == Front     Therefore, option (a) is the correct answer.      12. (256)    Let reduce the number of element from 16 to 3 to  solve the questions in easy way.                We can say  (i)  Q: 1,2,3 ? 3 iterations  Now let?s take                        We can say for     Q:",
+    "position": 650977,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  },
+  {
+    "pattern": "[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer",
+    "answer": "b",
+    "context": " it with last element            i.e.  A[i]? A [n]    The, n = n ?1    Apply Heapify algorithm to re- fix the heap    It takess ? O (logn) time in worst case    But here it is given that d is the depth    So, heapify will take O(d).     Therefore, option (b) is the correct answer.        GATE Wallah CS & IT Topic wise PYQs   Programming and Data Structures  5.90  9.  (b)    Given code is Implementation of binary search  whenever we found the target element i.e. x both if  conditions become true.     Code for f",
+    "position": 675571,
+    "question_number": "2",
+    "question_type": "MCQ",
+    "question_year": "2017",
+    "question_text": "2.  [MCQ    [GATE-2017 : 2M]    In a two-level cache system, the access times of L1  and L2 caches are 1 and 8 clock cycles, respectively.  The miss penalty from the L2 cache to main memory  is 18 clock cycles. The miss rate of L1 cache is twice  that of L2. The average memory access time  (AMAT) of this cache system is 2 cycles. The miss  rates of L1 and L2 respectively are:    (a) 0.111 and 0.056  (b) 0.056 and 0.111    (c) 0.0892 and 0.1784  (d) 0.1784 and 0.0892    3.  [MCQ]   [GATE-2014 : 2"
+  }
+]

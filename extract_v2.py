@@ -1,172 +1,86 @@
-import fitz
+"""
+Extract answers from PDF text and apply to questions_with_answers.json
+"""
+
 import re
 import json
-import sys
 
-pdf_path = r"C:\Users\Asus\Downloads\Telegram Desktop\CS_FINAL PYQ BOOK (Updated)_FINAL.pdf"
+# Load decoded PDF text
+with open('C:/Users/Asus/OneDrive/Desktop/GATE/pdf_text_decoded.txt', 'r', encoding='utf-8') as f:
+    text = f.read()
 
-# Subject detection keywords
-subject_keywords = {
-    'dbms': ['database management', 'rdbms', 'sql', 'normalization', 'transaction', 'concurrency', 
-             'relational algebra', 'er model', 'functional dependency', 'bcnf', '3nf', 'indexing',
-             'file organization', 'candidate key', 'super key', 'foreign key', 'primary key'],
-    'cn': ['computer networks', 'network layer', 'transport layer', 'data link layer', 'application layer',
-           'physical layer', 'tcp', 'udp', 'ip', 'routing', 'congestion', 'dns', 'http', 'https',
-           'subnetting', 'cidr', 'nat', 'firewall', 'socket', 'osi model', 'tcp/ip'],
-    'coa': ['computer organization', 'machine instruction', 'addressing mode', 'instruction pipelining',
-            'memory hierarchy', 'cache', 'alu', 'data path', 'control unit', 'pipeline hazard',
-            'interrupt', 'dma', 'i/o', 'number representation', 'floating point', 'fixed point',
-            'microprogramming', 'hardwired'],
-    'pds': ['programming and data structures', 'arrays', 'stacks', 'queues', 'linked list', 'trees',
-            'binary search tree', 'binary heap', 'graphs', 'recursion', 'hashing', 'pointers',
-            'strings', 'c programming', 'tree traversal', 'heap', 'bst'],
-    'algo': ['algorithms', 'searching', 'sorting', 'greedy', 'dynamic programming', 'divide and conquer',
-             'graph search', 'minimum spanning tree', 'shortest path', 'flow network', 'np complete',
-             'backtracking', 'branch and bound', 'asymptotic', 'time complexity', 'space complexity'],
-    'compiler': ['compiler design', 'lexical analysis', 'parsing', 'syntax directed', 'runtime environment',
-                 'intermediate code', 'code generation', 'code optimization', 'lex', 'yacc',
-                 'regular expression', 'finite automata', 'context free grammar', 'pushdown automata',
-                 'top down parsing', 'bottom up parsing', 'slr', 'clr', 'lalr', 'll parser',
-                 'shift reduce', 'recursive descent'],
-    'toc': ['theory of computation', 'turing machine', 'pumping lemma', 'cfl', 'csl', 're', 'r.e.',
-            'undecidability', 'rice theorem', 'myhill nerode', 'minimization', 'nfa', 'dfa',
-            'regular language', 'context free', 'context sensitive', 'pushdown automaton',
-            'pda', 'decidability', 'recursive', 'recursively enumerable'],
-    'digital-logic': ['digital logic', 'boolean algebra', 'combinational', 'sequential circuits',
-                      'k-map', 'quine mccluskey', 'logic gates', 'half adder', 'full adder',
-                      'multiplexer', 'demultiplexer', 'encoder', 'decoder', 'flip flop',
-                      'counter', 'register', 'rom', 'ram', 'prom', 'number system', 'binary',
-                      'octal', 'hexadecimal', 'boolean function'],
-    'discrete-math': ['discrete mathematics', 'propositional logic', 'first order logic', 'predicate logic',
-                      'sets', 'relations', 'functions', 'partial orders', 'lattices', 'monoids', 'groups',
-                      'graphs', 'connectivity', 'matching', 'coloring', 'combinatorics', 'counting',
-                      'recurrence relations', 'generating functions', 'permutations', 'combinations',
-                      'binomial theorem', 'inclusion exclusion', 'pigeonhole'],
-    'engg-math': ['engineering mathematics', 'linear algebra', 'matrices', 'determinants',
-                  'system of linear equations', 'eigenvalues', 'eigenvectors', 'lu decomposition',
-                  'calculus', 'limits', 'continuity', 'differentiability', 'maxima minima',
-                  'mean value theorem', 'integration', 'probability', 'statistics', 'random variables',
-                  'distributions', 'bayes theorem', 'conditional probability', 'uniform', 'normal',
-                  'exponential', 'poisson', 'binomial'],
-}
+# Comprehensive patterns to find answer indicators
+patterns = [
+    r'[Tt]herefore,.? *option *[(]([a-zA-Z])[)] *is *the *correct *answer',
+    r'[Hh]ence,.? *(?:option *[(]([a-zA-Z])[)]|the *correct *answer *is *[(]([a-zA-Z])[)])',
+    r'[Ss]o,.? *(?:option *[(]([a-zA-Z])[)]|the *correct *answer *is *option *[(]([a-zA-Z])[)])',
+    r'[Tt]hus,.? *option *[(]([a-zA-Z])[)] *is *correct *answer',
+    r'option *[(]([a-zA-Z])[)] *is *the *correct *answer',
+    r'correct *answer *is *option *[(]([a-zA-Z])[)]',
+    r'correct *answer *is *[(]([a-zA-Z])[)]',
+    r'correct *answer *is *option *([a-zA-Z])',
+    r'option *([a-zA-Z]) *is *correct *answer',
+    r'option *([a-zA-Z]) *is *the *correct *answer',
+    r'the *correct *answer *is *option *[(]([a-zA-Z])[)]',
+    r'the *correct *answer *is *[(]([a-zA-Z])[)]',
+    r'the *right *answer *is *[(]([a-zA-Z])[)]',
+    r'the *correct *answer *is *([0-9]+)',
+    r'answer *is *option *[(]([a-zA-Z])[)]',
+    r'answer *is *option *([a-zA-Z])',
+    r'answer *is *([a-zA-Z])',
+    r'answer *is *([0-9]+)',
+    r'correct *answer *:? *[(]([a-zA-Z])[)]',
+    r'answer *:? *option *[(]([a-zA-Z])[)]',
+    r'answer *:? *option *([a-zA-Z])',
+    r'answer *:? *([a-zA-Z])',
+    r'[(]([a-zA-Z0-9, ]+)[)] *is *the *correct *answer',
+    r'[(]([a-zA-Z0-9, ]+)[)] *is *answer',
+    r'answer *is *[(]([a-zA-Z0-9, ]+)[)]',
+    r'hence *[(]([a-zA-Z])[)] *is *correct *option',
+    r'hence *[(]([0-9]+)[)] *is *correct *option',
+    r'answer *is *option *([(][a-zA-Z0-9, ]+[)])',
+    r'answer *is *option *([a-zA-Z0-9,]+)',
+]
 
-def detect_subject(text):
-    text_lower = text.lower()
-    scores = {}
-    for subject, keywords in subject_keywords.items():
-        score = sum(1 for kw in keywords if kw in text_lower)
-        scores[subject] = score
-    best_subject = max(scores, key=scores.get)
-    if scores[best_subject] > 0:
-        return best_subject
-    return 'dbms'  # Default
-
-try:
-    doc = fitz.open(pdf_path)
-    print(f"Total pages: {len(doc)}")
-    
-    questions = []
-    
-    for page_num in range(len(doc)):
-        text = doc[page_num].get_text()
-        
-        # Detect subject from page content
-        current_subject = detect_subject(text)
-        
-        # Parse questions
-        question_pattern = re.compile(
-            r'(\d+)\.\s*\[(MCQ|NAT|MSQ|MAT)\]\s*\[GATE-(\d{4})\s*:\s*(\d+)M\]',
-            re.IGNORECASE
-        )
-        
-        matches = list(question_pattern.finditer(text))
-        
-        for match in matches:
-            q_num = match.group(1)
-            q_type = match.group(2).upper()
-            q_year = int(match.group(3))
-            q_marks = int(match.group(4))
-            
-            # Extract question text
-            start_pos = match.end()
-            next_match = None
-            for m in matches:
-                if m.start() > start_pos:
-                    next_match = m
-                    break
-            
-            end_pos = next_match.start() if next_match else len(text)
-            q_text_block = text[start_pos:end_pos].strip()
-            
-            # Clean up
-            q_text_block = re.sub(r'\n+', '\n', q_text_block)
-            q_text_block = re.sub(r'  +', ' ', q_text_block)
-            
-            # Extract options
-            options = []
-            if q_type in ['MCQ', 'MSQ', 'MAT']:
-                option_markers = [(m.start(), m.group(1)) for m in re.finditer(r'\(([a-d])\)', q_text_block, re.IGNORECASE)]
-                
-                for opt_idx, (opt_start, opt_letter) in enumerate(option_markers):
-                    opt_end = option_markers[opt_idx + 1][0] if opt_idx + 1 < len(option_markers) else len(q_text_block)
-                    opt_text = q_text_block[opt_start:opt_end].strip()
-                    opt_text = re.sub(r'^\([a-d]\)\s*', '', opt_text, flags=re.IGNORECASE)
-                    opt_text = re.sub(r'\n+', ' ', opt_text)
-                    opt_text = re.sub(r'\s+', ' ', opt_text).strip()
-                    options.append({
-                        'letter': opt_letter.upper(),
-                        'text': opt_text
-                    })
-            
-            # Extract question text (before options)
-            if options:
-                first_option_pos = q_text_block.find(f'({options[0]["letter"].lower()})')
-                q_text = q_text_block[:first_option_pos].strip() if first_option_pos > 0 else q_text_block
-            else:
-                q_text = q_text_block
-            
-            q_text = re.sub(r'\n+', ' ', q_text)
-            q_text = re.sub(r'\s+', ' ', q_text).strip()
-            
-            # Generate unique ID
-            q_id = f"q-{current_subject}-{q_year}-{q_num}"
-            
-            questions.append({
-                'id': q_id,
-                'subjectId': current_subject,
-                'topic': 'General',
-                'year': q_year,
-                'difficulty': 'Medium',
-                'marks': q_marks,
-                'type': q_type,
-                'questionText': q_text,
-                'options': options,
-                'correctAnswer': None,
-                'explanation': ''
+# Collect all matches
+all_matches = []
+for pattern in patterns:
+    try:
+        for m in re.finditer(pattern, text, re.IGNORECASE):
+            start = max(0, m.start() - 200)
+            end = min(len(text), m.end() + 200)
+            context = text[start:end]
+            context = re.sub(r'[\r\n]+', ' // ', context)
+            answer = m.group(1) if m.groups() else None
+            all_matches.append({
+                'pattern': pattern,
+                'answer': answer,
+                'context': context,
+                'position': m.start()
             })
-    
-    print(f"\nTotal questions extracted: {len(questions)}")
-    
-    # Group by subject
-    by_subject = {}
-    for q in questions:
-        sid = q['subjectId']
-        if sid not in by_subject:
-            by_subject[sid] = 0
-        by_subject[sid] += 1
-    
-    print("\nQuestions by subject:")
-    for sid, count in sorted(by_subject.items()):
-        print(f"  {sid}: {count}")
-    
-    # Save
-    with open("extracted_questions_v2.json", "w", encoding="utf-8") as f:
-        json.dump(questions, f, indent=2, ensure_ascii=False)
-    
-    print(f"\nSaved to extracted_questions_v2.json")
-    
-except Exception as e:
-    print(f"Error: {e}")
-    import traceback
-    traceback.print_exc()
-    sys.exit(1)
+    except re.error as e:
+        print('Skipping invalid pattern: ' + str(e))
+
+print('Total matches: ' + str(len(all_matches)))
+
+# Remove duplicates by position
+seen_positions = set()
+unique_matches = []
+for m in all_matches:
+    pos = m['position']
+    if pos not in seen_positions:
+        seen_positions.add(pos)
+        unique_matches.append(m)
+
+print('Unique matches: ' + str(len(unique_matches)))
+
+# Save extracted answers
+with open('extracted_answers.json', 'w', encoding='utf-8') as f:
+    json.dump(unique_matches, f, ensure_ascii=False, indent=2)
+
+print('Saved to extracted_answers.json')
+print()
+print('First 50 matches:')
+for i, m in enumerate(unique_matches[:50]):
+    ans = m['answer'] if m['answer'] else 'N/A'
+    print(str(i+1) + '. ' + str(ans) + ' | ' + m['pattern'][:80] + '...')
