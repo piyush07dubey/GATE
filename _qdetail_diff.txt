@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -1,4 +1,4 @@
+-import React, { useState, useRef } from 'react';
++?import React, { useState, useRef } from 'react';
+ import { useParams, Link } from 'react-router-dom';
+ import {
+   FiArrowLeft, FiCheck, FiX, FiMessageSquare, FiThumbsUp,
+@@ -736,4 +736,6 @@
+   );
+ };
+ 
+-export default QuestionDetailPage;
++
++
++
